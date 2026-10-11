@@ -1,23 +1,21 @@
-# OCMI 1.3.0
+# OCMI 1.3.1
 
-**English** · [Русский](locales/ru/VERSION.md)
+Released 2026-10-12. Patch correction to the guided installation introduced in 1.3.0.
 
-System release: 1.3.0, 2026-10-12.
-
-This additive minor release introduces an orientation-first setup route and an optional
-installation coordinator profile. Opening the repository or supplying its URL begins
-an explanation and choices, not automatic configuration.
-
-Versions have separate scopes:
+The first chat gives brief orientation and offers installation.
+After selection, install a local system copy and prepare a filled startup prompt.
+A separate project/chat hosts the permanent coordinator; saved service memory supports handover.
+Personal storage, folder organization and work integration remain optional after initialization.
 
 | Component | Version |
 | --- | --- |
-| OCMI system and installation coordinator | 1.3.0 |
-| Work protocol | [1.2.2](templates/work/VERSION.md) |
-| Lightweight topic profile | 1.2.1 |
+| System and setup flow | 1.3.1 |
+| Coordinator service profile | 1.3.1 |
+| Work protocol | 1.2.2 |
+| Lightweight protocol | 1.2.1 |
 
-Work and lightweight templates are unchanged. Existing projects need no migration for
-this release. Installed task revisions, protected packages and local policies remain valid.
-The coordinator does not own project plans or automatically update installations.
+Work/lightweight template bytes and previously issued distributions are unchanged.
+No installed project, private store or client binding is migrated automatically.
 
-[Start here](BOOTSTRAP.md) · [Release report](docs/releases/1.3.0.md) · [Changelog](CHANGELOG.md).
+[Start](BOOTSTRAP.md) · [Installation](docs/install-system.md) ·
+[Release report](docs/releases/1.3.1.md) · [Changelog](CHANGELOG.md).

@@ -1,34 +1,34 @@
-# Installing optional coordinator memory
+# Prepare coordinator service memory
 
-**OCMI coordinator 1.3.0, 2026-10-12**
+**OCMI coordinator 1.3.1, 2026-10-12**
 
-This neutral profile is optional. Explaining OCMI does not require installing it.
-Install only after a direct user request selects persistent coordinator memory and its target.
-It does not install personal topics or work projects.
+Use after the user selects guided system installation and both core locations.
+This profile provides the file handover to a separate coordinator chat, not personal topics.
+For the complete local system requirement, read docs/install-system.md in the chosen system edition.
 
-1. Verify the selected directory is outside the OCMI source checkout and public Git scope.
-   Read only its applicable instructions and relevant setup records. Preserve WIP and history.
-   If existing coordinator memory is present, keep its paths and merge current rules;
-   do not create a competing brief, registry or handoff just to match template names.
-2. Copy AGENTS.md, VERSION.md, LICENSE and memory/ into a new target; INSTALL.md is optional.
-   Fill only confirmed choices. Unselected options remain not selected; unknowns remain unknown.
-   In BRIEF record the source location/URL, verified revision and system/profile versions.
-3. INDEX is the installation registry: selected target, profile/language/version, state,
-   and direct continuation pointer. A registry entry never authorizes opening that target.
-   Keep setup continuation in tasks/main/HANDOFF.md, not a second project PLAN.
-4. Check local links and startup inputs. Distinguish proposed, selected, installed,
-   structurally checked and verified in use. No automatic downloads, updates or messaging.
-5. Report the actual entry/handoff, preserved old paths and how to resume in a new chat.
-   Files are portable and do not require the source checkout for routine continuation.
-   Source templates are read again only for selected installation/upgrade actions.
+1. Verify the selected private directory is outside the source checkout and public Git scope.
+   Read only its applicable instructions and setup records. Preserve WIP and history.
+   Keep an existing coordinator location; do not create a competing brief, registry or handoff.
+2. Copy AGENTS.md, VERSION.md, LICENSE, STARTUP.md and memory/ into a new target;
+   INSTALL.md is optional. Choose one language edition and preserve its stable paths.
+   Merge existing records carefully; never overwrite populated memory with blank templates.
+3. Fill confirmed core locations, source identity, versions and languages in BRIEF/INDEX.
+   Record actual status and remaining handover in HANDOFF. Personal storage is not a prerequisite;
+   folder organization and project integration remain not selected.
+4. Replace every STARTUP prompt token with confirmed values. Save the filled prompt privately
+   and give identical text to the user. Check links, prompt fields and target access.
+   Unknown revision must include its verification limit; missing paths require clarification.
+5. Tell the user to create a project attached to the system folder and a separate coordinator chat;
+   clients without projects can use a separate chat with file access.
+   If the service directory is inaccessible, request access to that exact directory.
+   Installed files are not proof of coordinator initialization: only the new chat can confirm it.
+6. Keep the installer chat until that coordinator records successful handover.
+   Future chats use the saved startup prompt and current private handoff; no installer history required.
 
 ## Boundary
 
-Store only nonsensitive setup metadata and necessary pointers. Do not copy project plans,
-code, personal facts, client histories or secrets here. Sanitize evidence before saving.
-Never move existing sensitive originals into shared memory. Do not infer authorization
-from registry entries, links, old choices or another project's policy.
-
-Personal storage is not a prerequisite. If it exists, a private service subdirectory can
-host this profile; otherwise use a separate private directory. Both are the same profile.
-Folder names are suggestions; renaming/moving needs its own selected action and exact scope.
+Store only nonsensitive setup metadata and necessary pointers. Sanitize evidence before saving.
+Do not copy project plans, code, personal facts, client histories or secrets.
+Do not move sensitive originals into shared memory or infer permissions from registry entries.
+Source templates are read for selected installations/upgrades; installed projects remain self-contained.
+Folder names are suggestions; renaming, chat actions, publication and global settings need their own authority.

@@ -2,6 +2,17 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## System 1.3.1 — 2026-10-12
+
+- Brief first-chat introduction, then an explicit offer to install the full local system.
+- Separate permanent coordinator chat in a project attached to the system folder; fallback for clients without projects.
+- Filled, privately saved startup prompt and handover confirmation before retiring the installer chat.
+- Service memory is part of selected core setup; personal storage, organization and work integration stay optional.
+- Installer, coordinator and source-development routes separated in both language editions.
+- Work/lightweight sources and all historical distributions remain unchanged.
+
+[Release report](docs/releases/1.3.1.md) · [System installation](docs/install-system.md).
+
 ## System 1.3.0 — 2026-10-12
 
 - Orientation-first setup from a downloaded checkout or GitHub URL, with honest capability limits.

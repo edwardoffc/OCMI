@@ -8,9 +8,13 @@ Installed copies are independent; routine chats read their own project's memory.
 
 ## New project
 
-For orientation first, use [BOOTSTRAP](../BOOTSTRAP.md). It offers independent choices;
-no personal store, folder rename or persistent coordinator is required for work projects.
-The direct installation request below already selects its action; do not repeat authorization.
+Start with [BOOTSTRAP](../BOOTSTRAP.md): brief orientation, selected local installation,
+then a separate permanent coordinator in a project attached to the system folder.
+Use the filled private startup prompt; discard the first chat only after confirmed handover.
+The coordinator offers optional personal storage, organization and project integration.
+[System installation](install-system.md) explains paths, access and recovery.
+Direct template adoption below remains available without a central coordinator.
+An explicit installation request already selects its action; do not repeat authorization.
 
 Open the project directory and give the agent the exact path to the selected INSTALL.md:
 

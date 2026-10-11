@@ -1,5 +1,6 @@
 param(
   [string]$Root = (Join-Path $PSScriptRoot '..'),
+  [ValidateSet('1.3.0','1.3.1')][string]$Version = '1.3.1',
   [switch]$ArchivesOnly,
   [switch]$ReleaseOnly
 )
@@ -34,7 +35,20 @@ function Must-Reject([scriptblock]$Body) {
   try { & $Body | Out-Null } catch { $rejected = $true }
   Assert-Valid $rejected 'Invalid input was accepted'
 }
+function Check-Startup([string]$Text) {
+  $match = [regex]::Match($Text, '(?s)\x60{3}text\r?\n(?<body>.*?)\x60{3}')
+  Assert-Valid $match.Success 'Missing startup prompt fence'
+  $body = $match.Groups['body'].Value
+  $tokens = @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>','<SOURCE_REVISION>','<TEMPLATE_LANGUAGE>','<COMMUNICATION_LANGUAGE>')
+  $found = @([regex]::Matches($body, '<[A-Z_]+>') | ForEach-Object { $_.Value })
+  Assert-Valid ($found.Count -eq 5 -and @($found | Select-Object -Unique).Count -eq 5) 'Startup fields missing or duplicated'
+  foreach ($token in $tokens) { Assert-Valid ($token -cin $found) 'Unexpected startup field' }
+  foreach ($relative in @('COORDINATOR.md','VERSION.md','AGENTS.md','memory/INDEX.md','memory/BRIEF.md','memory/tasks/main/HANDOFF.md','STARTUP.md')) {
+    Assert-Valid $body.Contains($relative) 'Missing restoration input'
+  }
+}
 if (!$ReleaseOnly -and !$ArchivesOnly) {
+  Assert-Valid ($Version -ceq '1.3.1') 'Old instructions require ArchivesOnly verification'
   $guards = (Read-Scoped $repo 'localization/onboarding-guards.json') | ConvertFrom-Json
   Assert-Valid ($guards.schemaVersion -eq 1) 'Invalid guard schema'
   $entry = Read-Scoped $repo 'AGENTS.md'
@@ -47,6 +61,8 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     $prefix = if ($language -eq 'ru') { 'locales/ru/' } else { '' }
     $base = Join-Path $repo ($prefix + 'templates/coordinator')
     $texts = @{
+      coordinator = (Read-Scoped $repo ($prefix + 'COORDINATOR.md'))
+      startup = (Read-Scoped $base 'STARTUP.md')
       bootstrap = (Read-Scoped $repo ($prefix + 'BOOTSTRAP.md'))
       install = (Read-Scoped $base 'INSTALL.md')
       agent = (Read-Scoped $base 'AGENTS.md')
@@ -54,9 +70,18 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     }
     Check "$language version agreement" {
       foreach ($relative in @('AGENTS.md','INSTALL.md','VERSION.md')) {
-        Assert-Valid ((Read-Scoped $base $relative).Contains('OCMI coordinator 1.3.0')) 'Wrong coordinator version'
+        Assert-Valid ((Read-Scoped $base $relative).Contains("OCMI coordinator $Version")) 'Wrong coordinator version'
       }
-      Assert-Valid ((Read-Scoped $repo ($prefix + 'VERSION.md')).Contains('1.3.0')) 'Wrong system version'
+      Assert-Valid ((Read-Scoped $repo ($prefix + 'VERSION.md')).Contains($Version)) 'Wrong system version'
+    }
+    Check "$language startup fields and restoration inputs" { Check-Startup $texts.startup }
+    foreach ($token in @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>')) {
+      Check "$language startup field mutation" {
+        Must-Reject { Check-Startup ($texts.startup.Replace($token,'')) }
+      }
+    }
+    Check "$language coordinator route" {
+      Assert-Valid ($entry.Contains('[COORDINATOR](COORDINATOR.md)')) 'Missing permanent role route'
     }
     foreach ($guard in $guards.clauses) {
       $text = $texts[$guard.input]
@@ -81,14 +106,14 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     Check 'unsafe/missing inputs rejected' { Must-Reject { Read-Scoped (Join-Path $repo 'templates/coordinator') $unsafe } }
   }
 }
-$receipt = (Read-Scoped $repo 'docs/releases/1.3.0-validation.json') | ConvertFrom-Json
-Assert-Valid ($receipt.schemaVersion -eq 1 -and $receipt.version -ceq 'OCMI 1.3.0' -and @($receipt.profiles).Count -eq 2) 'Invalid onboarding receipt'
+$receipt = (Read-Scoped $repo ("docs/releases/$Version-validation.json")) | ConvertFrom-Json
+Assert-Valid ($receipt.schemaVersion -eq 1 -and $receipt.version -ceq "OCMI $Version" -and @($receipt.profiles).Count -eq 2) 'Invalid onboarding receipt'
 $languages = @{}
 foreach ($profile in $receipt.profiles) {
-  Assert-Valid ($profile.profile -ceq 'coordinator' -and $profile.version -ceq '1.3.0' -and $profile.language -cin @('en','ru')) 'Invalid coordinator edition'
+  Assert-Valid ($profile.profile -ceq 'coordinator' -and $profile.version -ceq $Version -and $profile.language -cin @('en','ru')) 'Invalid coordinator edition'
   Assert-Valid (!$languages.ContainsKey($profile.language)) 'Duplicate edition'
   $languages[$profile.language] = $true
-  Assert-Valid ($profile.archive -cmatch ('^releases/ocmi-coordinator-1\.3\.0-' + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$')) 'Invalid archive path'
+  Assert-Valid ($profile.archive -cmatch (('^releases/ocmi-coordinator-' + [regex]::Escape($Version) + '-') + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$')) 'Invalid archive path'
   $prefix = if ($profile.language -eq 'ru') { 'locales/ru/' } else { '' }
   $base = Join-Path $repo ($prefix + 'templates/coordinator')
   $expected = @{}
@@ -104,7 +129,7 @@ foreach ($profile in $receipt.profiles) {
   if (!$ArchivesOnly) {
     Assert-Valid (@(Get-ChildItem -LiteralPath $base -Recurse -File).Count -eq $expected.Count) 'Coordinator source inventory differs'
   }
-  Assert-Valid ($expected.Count -eq 7) 'Coordinator inventory differs'
+  Assert-Valid ($expected.Count -eq $(if ($Version -eq '1.3.0') { 7 } else { 8 })) 'Coordinator inventory differs'
   $archiveFile = Scoped-File $repo $profile.archive
   Assert-Valid ((Get-FileHash -LiteralPath $archiveFile).Hash.ToLowerInvariant() -ceq $profile.sha256) 'Coordinator archive digest differs'
   $archive = [IO.Compression.ZipFile]::OpenRead($archiveFile)
@@ -126,7 +151,7 @@ foreach ($profile in $receipt.profiles) {
   Check 'coordinator archive verified' {}
 }
 foreach ($property in $receipt.historicalArchives.PSObject.Properties) {
-  Assert-Valid ($property.Name -cmatch '^ocmi-((work|personal)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') 'Unsafe historical archive name'
+  Assert-Valid ($property.Name -cmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') 'Unsafe historical archive name'
   Assert-Valid ((Get-FileHash -LiteralPath (Scoped-File $repo ('releases/' + $property.Name))).Hash.ToLowerInvariant() -ceq $property.Value) 'Historical archive changed'
 }
 Write-Output "PASS: $passed onboarding checks; two coordinator editions verified; historical archives unchanged. Structural checks do not prove model behavior."

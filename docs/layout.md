@@ -11,8 +11,9 @@ OCMI/
   README.ru.md              Russian entry point
   templates/work/           canonical English work profile
   templates/personal/       canonical English lightweight profile
-  templates/coordinator/    optional installation coordinator profile
-  BOOTSTRAP.md              orientation and user-selected setup route
+  templates/coordinator/    installation coordinator service profile
+  BOOTSTRAP.md              temporary installer route
+  COORDINATOR.md            permanent coordinator route
   VERSION.md                system version, separate from profile versions
   docs/                     English guides, reports, and development memory
   locales/ru/               Russian guides and self-contained templates
@@ -43,24 +44,24 @@ Renaming a folder does not automatically update existing chat bindings.
 
 ## Optional user organization
 
-[BOOTSTRAP](../BOOTSTRAP.md) offers organization; it does not require or apply it.
+[COORDINATOR](../COORDINATOR.md) offers organization after core handover; it does not apply it automatically.
 Folder names and locations are user choices, and work projects may live elsewhere.
 
 ~~~text
 Projects/
   00_OCMI/                         source checkout; no user installation records
+  OCMI-local/coordinator/          private core setup state and filled STARTUP
   01_Personal_memory/              only if selected
-    90-system/ocmi/                optional coordinator memory
     topics/<topic>/               independent lightweight memory when requested
   example-project/                 its own work memory
 ~~~
 
-Persistent coordinator memory is optional and outside the source checkout/public Git scope.
-Without a personal store, use any separate private coordinator directory, such as
-OCMI-local/coordinator. It contains setup choices, nonsensitive installation metadata
+Guided installation prepares private service memory outside the source checkout/public Git scope.
+Personal-topic storage remains optional. Keep an existing private coordinator path;
+a service area in a selected personal store is also possible without moving existing records. It contains setup choices, nonsensitive installation metadata
 and a setup handoff, not project plans or personal content. Registry pointers do not
 authorize reading their targets. Existing setup paths are merged in place rather than
-renamed just to match the example. A new coordinator chat resumes from that local entry.
+renamed just to match the example. A new coordinator chat in the system project uses its filled STARTUP prompt and this private entry.
 The work orchestrator remains responsible for its project's queue and acceptance.
 
 [Usage](usage.md) · [Maintenance](maintaining.md) · [Localization](localization.md).

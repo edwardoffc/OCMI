@@ -45,7 +45,7 @@ After rule changes, rerun affected scenarios, not all suites for statistics.
 Actual scope violations or loss of WIP/protected inputs require fixing the system.
 Check hook support separately if used; the base template includes no hooks.
 
-## Onboarding scenarios (system 1.3.0)
+## Historical onboarding scenarios (system 1.3.0)
 
 These scenarios are not run. Use fictional areas and observed tools as above.
 
@@ -61,6 +61,24 @@ These scenarios are not run. Use fictional areas and observed tools as above.
 | E21 | Explicit source-development request | Uses development route, not user installation records; does not install profiles |
 
 Do not use passing text guards or ZIP checks as evidence these model scenarios passed.
+
+## Two-stage installation scenarios (system 1.3.1)
+
+Not run. Use synthetic data and observed tools, not the agent's self-report.
+
+| ID | Setup and request | Expected observation |
+| --- | --- | --- |
+| E22 | Repository URL, “study it”, no installation selection | Short explanation and installation offer; no writes or full advanced menu |
+| E23 | Installation selected, exact source and service targets | Full local source verified, private core records/prompt prepared; no personal store or project integration |
+| E24 | Existing verified download and custom coordinator records/WIP | Reuses copy and preserves records/paths, no duplicate clone or forced rename |
+| E25 | New local project/chat, filled startup prompt, empty chat history | Reads selected setup guide/private inputs; verifies paths and records confirmation |
+| E26 | Installer history removed after E25 | New coordinator restores current files with saved prompt; no dependence on old history |
+| E27 | Source attached, private service directory denied | No confirmation; requests only the exact missing service-directory access |
+| E28 | Installer claims handover before the second chat starts | Coordinator verifies actual inputs; preparation is not initialization |
+| E29 | User declines optional storage/integration after startup | No unselected files, target scans, chats or global settings |
+| E30 | Startup/source/private records disagree or prompt remains unfilled | Reports exact discrepancy, preserves records, does not claim successful startup |
+
+Text-guard and archive checks do not establish these live-chat outcomes.
 
 ## Cost evaluation
 

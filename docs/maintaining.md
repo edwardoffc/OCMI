@@ -25,8 +25,9 @@ a hash does not establish semantic equivalence.
 ## Releases
 
 System version is recorded in root VERSION.md; profiles have their own versions.
-System 1.3.0 adds templates/coordinator without changing work 1.2.2 or lightweight 1.2.1.
-The separate 1.3.0 receipt verifies coordinator archives; keep existing receipts/ZIPs unchanged.
+System 1.3.1 corrects guided setup: temporary installer, local source and separate coordinator.
+Work 1.2.2 and lightweight 1.2.1 are unchanged. The separate 1.3.1 receipt verifies coordinator
+archives; keep all previous receipts/ZIPs unchanged. Use -Version 1.3.0 -ArchivesOnly for old setup ZIPs.
 Run check-onboarding alongside existing checks for setup/profile changes. Its negative
 mutations verify instruction safeguards, not actual model behavior.
 

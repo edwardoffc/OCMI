@@ -14,7 +14,7 @@ function Scoped-File([string]$Relative) {
 }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repo 'localization/manifest.json') | ConvertFrom-Json
 if ($manifest.canonicalLanguage -cne 'en' -or $manifest.language -cne 'ru' -or $manifest.schemaVersion -ne 1) { throw 'Unsupported localization manifest' }
-$expected = @('README.md','BOOTSTRAP.md','VERSION.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','scripts/README.md','releases/README.md')
+$expected = @('README.md','BOOTSTRAP.md','COORDINATOR.md','VERSION.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','scripts/README.md','releases/README.md')
 foreach ($dir in @('templates','docs')) {
   $expected += @(Get-ChildItem -LiteralPath (Join-Path $repo $dir) -Recurse -File -Filter '*.md' |
     Where-Object { $_.FullName -notlike '*\docs\memory\*' -or $_.FullName -like '*\templates\*' } |

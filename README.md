@@ -9,8 +9,8 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**OCMI system: [1.3.0](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
-[Installation](templates/work/INSTALL.md) · [User guide](docs/usage.md) ·
+**OCMI system: [1.3.1](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
+[Installation](docs/install-system.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
 English is the canonical language for guides, templates, and development instructions.
@@ -31,20 +31,26 @@ A small change does not require a separate branch or a new chat just to follow t
 
 ## Quick start
 
-Open a downloaded copy of this repository in a new AI chat, or give a browsing-capable
-client [the repository URL](https://github.com/edwardoffc/OCMI), and say:
+Open a new chat and give it [the repository URL](https://github.com/edwardoffc/OCMI)
+or a downloaded copy. Ask, for example:
 
-> Study OCMI and help me start using it. Explain it briefly, offer setup options,
-> and let me choose what I need before changing anything.
+> Study OCMI and briefly explain what it is.
 
-The [installation coordinator](BOOTSTRAP.md) explains the system and offers independent
-options: folder organization, persistent coordinator memory, personal storage, and
-integration into a new or existing work project. Explanation only is a valid choice.
-Opening the repository or providing a URL does not install anything or rename folders.
-Persistent memory is optional and belongs outside the source repository/public Git scope.
+1. The first chat gives a short introduction and offers installation.
+2. If you choose to install, it prepares a verified local system copy in `00_OCMI`
+   or `OCMI`, private coordinator service memory, and a filled startup prompt.
+3. Create a local project OCMI attached to the system folder, then a separate
+   “OCMI Coordinator” chat inside it. Send the prepared prompt.
+   Without projects, use a separate chat with access to the required files.
+4. The coordinator verifies saved state and confirms startup. It then offers optional
+   personal storage, folder organization and integration into your work projects.
+5. After confirmation, you may delete/archive the first chat.
+   New coordinator chats resume from the saved startup prompt and current handoff.
 
-A URL alone does not provide local file access. Clients without browsing or writing need
-the supplied setup files or manual saving; the coordinator explains the remaining steps.
+Providing a URL alone installs nothing and grants no local file access.
+If tools cannot download or write, the first chat provides manual steps and reports what remains.
+Private service memory belongs outside the source checkout/public Git.
+See [the two-stage procedure](BOOTSTRAP.md) and [installation details](docs/install-system.md).
 
 ### Direct project installation
 
