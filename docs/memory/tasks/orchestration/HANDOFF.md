@@ -14,9 +14,12 @@ Checks: docs/links/schema/checksums, 67 workflow checks, 47 translation pairs,
 67 onboarding checks, six rejected fixture mutations, exact new ZIP inventories and diff.
 Privacy/secret scan passed for 166 candidate files, 185 ZIP entries and reachable history.
 Behavioral scenarios E14-E21 are not run; token savings remain unmeasured.
-No user store, project, folder binding, global setting or remote state was changed.
+During preparation, no user store, project, folder binding, global setting or remote state was changed.
 cleanup: done for preparation; releases permanent, ignored local evidence retained until
-delivery/recovery verification. Publication requires its own authorization; next work is unassigned.
+delivery/recovery verification. The owner separately authorized publication on 2026-10-12:
+[PR #2](https://github.com/edwardoffc/OCMI/pull/2) requires Documentation and Secrets and privacy.
+Final integration/delivery is verified against public PR/main and the ignored local receipt.
+No subsequent source task is assigned; publication does not migrate installed projects.
 
 Earlier entries below are historical records, not current setup instructions.
 

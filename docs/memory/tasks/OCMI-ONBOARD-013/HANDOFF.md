@@ -46,7 +46,12 @@ Source accepted after review of optionality, setup/development separation, priva
 source/capability limits, en/ru meaning and preservation. Privacy indicators and Gitleaks
 passed for all 166 candidate files, 185 extracted ZIP entries and two reachable commits;
 no current disclosure found. Both source and ArchivesOnly coordinator receipt checks passed.
-Publication is not included in this request. Existing project versions need no update.
+Publication was outside the preparation request. On 2026-10-12 the owner separately
+authorized updating GitHub. Delivery uses [PR #2](https://github.com/edwardoffc/OCMI/pull/2),
+required Documentation and Secrets and privacy checks, and squash integration into main.
+Verify final delivery against the public PR/main and the ignored local delivery receipt;
+the source commit cannot contain its own final integrated SHA. Existing projects need no update.
 cleanup: done for preparation and isolated fixture tests. Distributions are permanent;
 local backup/evidence retained under the condition above. No temporary copy or background
-agent process remains. Public integration remains a separate authorized action.
+agent process remains. Publication transport resources are accounted for in the delivery
+receipt after integration; retain recovery evidence, not a competing source plan.

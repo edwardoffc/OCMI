@@ -16,7 +16,7 @@ Updated: 2026-10-12. The only development queue.
 | OCMI-SEC-010 | Public snapshot privacy/security review | Completed; no current disclosure found; preventive gaps recorded in the handoff, remediation in OCMI-SEC-011 |
 | OCMI-SEC-011 | Sanitized evidence, secret checks, private reporting and protected main | Source accepted after local validation; integration requires both CI checks |
 | OCMI-MIG-012 | Adopt 1.2.2 in two owner-requested local work installations | Completed locally; Russian rules, local policy, queues, task packages and WIP preserved; evidence stays in each installation |
-| OCMI-ONBOARD-013 | Optional orientation-first setup and coordinator profile; system 1.3.0 | [Source accepted](tasks/OCMI-ONBOARD-013/HANDOFF.md); no installed-project migration or publication |
+| OCMI-ONBOARD-013 | Optional orientation-first setup and coordinator profile; system 1.3.0 | [Source accepted](tasks/OCMI-ONBOARD-013/HANDOFF.md); owner-authorized delivery via [PR #2](https://github.com/edwardoffc/OCMI/pull/2); installed projects unchanged |
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.
