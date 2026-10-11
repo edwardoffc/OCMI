@@ -1,0 +1,33 @@
+# Проверки
+
+[English](../../../scripts/README.md) · **Русский**
+
+Из корня репозитория:
+
+~~~powershell
+powershell -NoProfile -File scripts/check-docs.ps1
+powershell -NoProfile -File scripts/check-workflow.ps1
+powershell -NoProfile -File scripts/check-localization.ps1
+powershell -NoProfile -File scripts/check-release.ps1
+git diff --check
+~~~
+
+check-docs проверяет локальные Markdown-ссылки, три схемы карточек и SHA256 архивов
+в обоих языковых комплектах. Внешние URL и якоря заголовков не проверяются.
+
+check-workflow проверяет маршруты ролей, локальность входов, ограничения полномочий,
+cleanup, схему карточки и отрицательные изменения текста на обоих языках.
+Английские процедуры памяти разработки должны совпадать с каноническими шаблонами.
+Модели и уборка не запускаются. [Поведенческие сценарии](../docs/evals/context-recovery.md) оцениваются отдельно.
+
+check-localization проверяет полный состав переводов, проверенные хеши, стабильность путей
+комплектов и копии лицензии. Хеши выявляют устаревание; смысл проверяется человеком.
+Manifest обновляется явно после ревью, а не при запуске проверки.
+
+check-release сверяет исходники каждого языка, receipt, точный состав ZIP, размеры и SHA256,
+а также неизменность исторических архивов.
+Для исторических receipts: -Version 1.2 -ArchivesOnly или -Version 1.2.1 -ArchivesOnly.
+ArchivesOnly сверяет ZIP и receipt без требования исторических исходников в templates/.
+
+Требуются PowerShell 5.1 или новее и поддержка ZIP в .NET.
+Production build, GitHub и ИИ-клиент не нужны. [Процедура выпуска](../docs/maintaining.md).

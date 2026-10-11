@@ -1,0 +1,484 @@
+{
+  "roles": {
+    "en": [
+      "Orchestrator",
+      "Worker",
+      "Consultant"
+    ],
+    "ru": [
+      "Оркестровщик",
+      "Исполнитель",
+      "Консультант"
+    ]
+  },
+  "markers": {
+    "en": "rules revision",
+    "ru": "редакция правил"
+  },
+  "mutations": {
+    "en": {
+      "cleanup": "A safe deletion refusal does not authorize force",
+      "pending": "reason, owner, next action"
+    },
+    "ru": {
+      "cleanup": "Отказ безопасного удаления не разрешает force",
+      "pending": "причина, владелец, следующее действие"
+    }
+  },
+  "clauses": [
+    {
+      "id": "entrypoint",
+      "inputs": [
+        "agent"
+      ],
+      "en": [
+        "RULES",
+        "ORCHESTRATION",
+        "only your own role procedure",
+        "Clarify an unclear role"
+      ],
+      "ru": [
+        "RULES",
+        "ORCHESTRATION",
+        "только процедуру своей роли",
+        "Неясную роль уточнить"
+      ]
+    },
+    {
+      "id": "worker-authority",
+      "inputs": [
+        "agent",
+        "worker"
+      ],
+      "en": [
+        "Without START|without START",
+        "do not choose",
+        "do not.*run checks|do not.*start",
+        "AllowedPaths",
+        "Result body",
+        "do not change.*protected files"
+      ],
+      "ru": [
+        "без .*START",
+        "не выбира",
+        "не .*запуска",
+        "AllowedPaths",
+        "тело Result",
+        "защищ.*не .*меня"
+      ]
+    },
+    {
+      "id": "consultant-authority",
+      "inputs": [
+        "consultant"
+      ],
+      "en": [
+        "Do not change files",
+        "start processes/checks",
+        "assign tasks"
+      ],
+      "ru": [
+        "не .*меня",
+        "не .*запуска",
+        "не .*назнач"
+      ]
+    },
+    {
+      "id": "recovery",
+      "inputs": [
+        "rules"
+      ],
+      "en": [
+        "project/topic.*role.*task/revision",
+        "working copy",
+        "START",
+        "superseded",
+        "Incomplete",
+        "absence",
+        "does not expand"
+      ],
+      "ru": [
+        "проект.*роль.*task/revision",
+        "копи",
+        "START",
+        "superseded",
+        "неполный",
+        "отсутствие",
+        "не расшир"
+      ]
+    },
+    {
+      "id": "start-identity",
+      "inputs": [
+        "start"
+      ],
+      "en": [
+        "Status: ready",
+        "Role: worker",
+        "project",
+        "revision",
+        "Working copy",
+        "WIP",
+        "process"
+      ],
+      "ru": [
+        "Статус.*ready",
+        "Роль.*исполнитель",
+        "проект",
+        "ревиз",
+        "копи",
+        "WIP",
+        "процесс"
+      ]
+    },
+    {
+      "id": "continuation",
+      "inputs": [
+        "worker"
+      ],
+      "en": [
+        "WIP",
+        "do not reset",
+        "Running",
+        "same process",
+        "duplicate",
+        "checker is mandatory"
+      ],
+      "ru": [
+        "WIP",
+        "не .*reset",
+        "Running",
+        "того же процесса",
+        "дубликат",
+        "checker.*обязател"
+      ]
+    },
+    {
+      "id": "acceptance-gates",
+      "inputs": [
+        "coordinator"
+      ],
+      "en": [
+        "BEFORE assignment",
+        "SHA256",
+        "callers",
+        "negative",
+        "first review is complete",
+        "BEFORE another",
+        "integrat",
+        "reuse",
+        "unknown"
+      ],
+      "ru": [
+        "ДО выдачи",
+        "SHA256",
+        "callers",
+        "отрицатель",
+        "Первое ревью полное",
+        "ПЕРЕД очередным",
+        "интегр",
+        "reuse",
+        "unknown"
+      ]
+    },
+    {
+      "id": "protocol",
+      "inputs": [
+        "protocol"
+      ],
+      "en": [
+        "DONE means ready for review",
+        "accepted/rework/blocked",
+        "Do not create a separate Result.md",
+        "new explicit revision"
+      ],
+      "ru": [
+        "DONE.*готовность к ревью",
+        "accepted/rework/blocked",
+        "Result\\.md не",
+        "новая явная ревизия"
+      ]
+    },
+    {
+      "id": "code-map",
+      "inputs": [
+        "map"
+      ],
+      "en": [
+        "commit/snapshot",
+        "Verification source",
+        "caller",
+        "fixtures",
+        "Incomplete",
+        "Result"
+      ],
+      "ru": [
+        "commit/snapshot",
+        "Источник проверки",
+        "caller",
+        "fixtures",
+        "неполный",
+        "Result"
+      ]
+    },
+    {
+      "id": "lessons",
+      "inputs": [
+        "coordinator",
+        "rules"
+      ],
+      "en": [
+        "candidate",
+        "LESSONS",
+        "evidence",
+        "limitations",
+        "superseded",
+        "Do not.*global|do not.*global"
+      ],
+      "ru": [
+        "кандидат",
+        "LESSONS",
+        "доказатель",
+        "ограничен",
+        "superseded",
+        "не .*глобаль"
+      ]
+    },
+    {
+      "id": "lesson-handoff",
+      "inputs": [
+        "card"
+      ],
+      "en": [
+        "lesson candidate",
+        "Lesson: accepted/rejected"
+      ],
+      "ru": [
+        "кандидат.*урок",
+        "урок.*принят|принят.*урок"
+      ]
+    },
+    {
+      "id": "environment",
+      "inputs": [
+        "state"
+      ],
+      "en": [
+        "configured",
+        "available",
+        "verified",
+        "unknown",
+        "version",
+        "does not grant authority"
+      ],
+      "ru": [
+        "настроено",
+        "доступно",
+        "проверено",
+        "unknown",
+        "Версия",
+        "не .*полномоч"
+      ]
+    },
+    {
+      "id": "lightweight-boundaries",
+      "inputs": [
+        "personal"
+      ],
+      "en": [
+        "Do not expand",
+        "Incomplete",
+        "historical",
+        "source",
+        "running processes"
+      ],
+      "ru": [
+        "не расшир",
+        "неполный",
+        "историчес",
+        "источник",
+        "работающие процессы"
+      ]
+    },
+    {
+      "id": "resource-setup",
+      "inputs": [
+        "coordinator"
+      ],
+      "en": [
+        "one primary work context",
+        "R1/R2",
+        "do not take another owner's active resources",
+        "small edit does not require a new branch",
+        "completion event",
+        "keep/archive/remove/transfer",
+        "date does not authorize deletion"
+      ],
+      "ru": [
+        "один основной рабочий контекст",
+        "R1/R2",
+        "активные чужие ресурсы не занимай",
+        "Малой правке не нужна обязательная новая ветка",
+        "событие завершения",
+        "keep/archive/remove/transfer",
+        "Дата не разрешает удаление"
+      ]
+    },
+    {
+      "id": "resource-card",
+      "inputs": [
+        "card"
+      ],
+      "en": [
+        "primary work context",
+        "Temporary task resources",
+        "owner",
+        "completion event",
+        "already-authorized cleanup",
+        "cleanup: done or pending"
+      ],
+      "ru": [
+        "основной контекст",
+        "Временные ресурсы задачи",
+        "владелец",
+        "событие завершения",
+        "уже разрешённой уборки",
+        "cleanup: done либо pending"
+      ]
+    },
+    {
+      "id": "resource-report",
+      "inputs": [
+        "worker"
+      ],
+      "en": [
+        "For temporary task resources",
+        "orchestrator owns completion",
+        "submission does not authorize deleting"
+      ],
+      "ru": [
+        "По временным ресурсам",
+        "Завершение ведёт главный",
+        "сдача не разрешает удалять"
+      ]
+    },
+    {
+      "id": "cleanup-status",
+      "inputs": [
+        "protocol"
+      ],
+      "en": [
+        "cleanup: done",
+        "cleanup: pending",
+        "no temporary resources were created",
+        "reason, owner, next action",
+        "Unknown remaining work cannot be marked done",
+        "Pending does not undo",
+        "closure requires integration and done",
+        "Missing cleanup.*unknown status",
+        "do not append to the protected package"
+      ],
+      "ru": [
+        "cleanup: done",
+        "cleanup: pending",
+        "временные ресурсы не создавались",
+        "причина, владелец, следующее действие",
+        "Неизвестный остаток нельзя считать done",
+        "pending не отменяет",
+        "после интеграции и done",
+        "Отсутствующий cleanup.*неизвестный статус",
+        "не дописывай защищённый пакет"
+      ]
+    },
+    {
+      "id": "bounded-closure",
+      "inputs": [
+        "coordinator"
+      ],
+      "en": [
+        "not after every message",
+        "without a second queue",
+        "does not require.*full test run",
+        "environment/config, rerun the affected check"
+      ],
+      "ru": [
+        "не после каждого сообщения",
+        "без второй очереди",
+        "не требует.*полного прогона",
+        "среду/config, повторить затронутую проверку"
+      ]
+    },
+    {
+      "id": "retention",
+      "inputs": [
+        "rules"
+      ],
+      "en": [
+        "reproducibility",
+        "Untracked/ignored does not mean disposable",
+        "Do not delete unknown",
+        "stable shared cache is allowed",
+        "hash alone does not replace content"
+      ],
+      "ru": [
+        "воспроизводимость",
+        "untracked/ignored не означают ненужное",
+        "Неизвестное не удалять",
+        "Стабильный общий cache допустим",
+        "один хеш не заменяет содержимое"
+      ]
+    },
+    {
+      "id": "completion-evidence",
+      "inputs": [
+        "coordinator"
+      ],
+      "en": [
+        "tracked, untracked, and ignored",
+        "evidence for open findings",
+        "dependent tasks, and consumers",
+        "SHA alone is not a backup",
+        "squash/cherry-pick",
+        "Do not rewrite issued packages",
+        "Current links point to the main source"
+      ],
+      "ru": [
+        "tracked, untracked и ignored",
+        "evidence открытых findings",
+        "зависимые задачи и потребителей",
+        "Один SHA не резервная копия",
+        "squash/cherry-pick",
+        "не переписывать выданные пакеты",
+        "Текущие ссылки ведут в основной исходник"
+      ]
+    },
+    {
+      "id": "cleanup-authority",
+      "inputs": [
+        "coordinator"
+      ],
+      "en": [
+        "exact",
+        "absolute path/name",
+        "supported tool",
+        "Preserve main, pinned, shared, or active copies",
+        "safe deletion refusal does not authorize force",
+        "does not grant them",
+        "outside scope remain pending",
+        "do not authorize deploy, production",
+        "deleting remote branches"
+      ],
+      "ru": [
+        "точный",
+        "абсолютный путь/имя",
+        "штатным инструментом",
+        "Основную, закреплённую, общую или активную копию сохранять",
+        "Отказ безопасного удаления не разрешает force",
+        "не выдаёт их сам",
+        "выход за границы — pending",
+        "не разрешают deploy, production",
+        "удаление удалённых веток"
+      ]
+    }
+  ]
+}
