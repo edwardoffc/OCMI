@@ -2,12 +2,18 @@
 
 [English](../../../scripts/README.md) · **Русский**
 
+check-onboarding проверяет маршруты знакомства/разработки, независимый выбор и границы
+доступа на обоих языках, негативные мутации текста, небезопасные/отсутствующие входы,
+версии/лицензии координатора и точные байты исходников/ZIP. Это не запуск модели.
+check-release также проверяет receipt координатора; -Version 1.3.0 выбирает этот receipt.
+
 Из корня репозитория:
 
 ~~~powershell
 powershell -NoProfile -File scripts/check-docs.ps1
 powershell -NoProfile -File scripts/check-workflow.ps1
 powershell -NoProfile -File scripts/check-localization.ps1
+powershell -NoProfile -File scripts/check-onboarding.ps1
 powershell -NoProfile -File scripts/check-release.ps1
 git diff --check
 ~~~

@@ -1,6 +1,6 @@
 # OCMI PLAN
 
-Updated: 2026-10-11. The only development queue.
+Updated: 2026-10-12. The only development queue.
 
 | ID | Outcome | Status |
 | --- | --- | --- |
@@ -15,6 +15,8 @@ Updated: 2026-10-11. The only development queue.
 | OCMI-I18N-009 | English canonical project, maintained Russian edition, language checks and distributions | Source accepted; see [handoff](tasks/orchestration/HANDOFF.md) |
 | OCMI-SEC-010 | Public snapshot privacy/security review | Completed; no current disclosure found; preventive gaps recorded in the handoff, remediation in OCMI-SEC-011 |
 | OCMI-SEC-011 | Sanitized evidence, secret checks, private reporting and protected main | Source accepted after local validation; integration requires both CI checks |
+| OCMI-MIG-012 | Adopt 1.2.2 in two owner-requested local work installations | Completed locally; Russian rules, local policy, queues, task packages and WIP preserved; evidence stays in each installation |
+| OCMI-ONBOARD-013 | Optional orientation-first setup and coordinator profile; system 1.3.0 | [Source accepted](tasks/OCMI-ONBOARD-013/HANDOFF.md); no installed-project migration or publication |
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.

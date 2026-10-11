@@ -8,6 +8,7 @@ Run from the repository root:
 powershell -NoProfile -File scripts/check-docs.ps1
 powershell -NoProfile -File scripts/check-workflow.ps1
 powershell -NoProfile -File scripts/check-localization.ps1
+powershell -NoProfile -File scripts/check-onboarding.ps1
 powershell -NoProfile -File scripts/check-release.ps1
 git diff --check
 ~~~
@@ -23,6 +24,11 @@ These are structural checks; no model process or cleanup action is launched.
 check-localization checks the maintained translation inventory, reviewed hashes, stable template
 paths, and license copies. Hash agreement detects drift; human review establishes meaning.
 The manifest is updated deliberately after review, never by a validation run.
+
+check-onboarding checks the setup/development entry route, independent choice and access
+clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
+versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
+check-release also validates the coordinator receipt; -Version 1.3.0 selects that receipt.
 
 check-release compares each language distribution with its source, receipt, exact ZIP inventory,
 sizes, and SHA256; it also checks immutable historical archives.

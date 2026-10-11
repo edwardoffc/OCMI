@@ -2,7 +2,23 @@
 
 **OCMI 1.2.2, rules revision 2026-10-11**
 
-Updated: 2026-10-11. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+
+## Current: OCMI-ONBOARD-013 / system 1.3.0
+
+[Source acceptance](../OCMI-ONBOARD-013/HANDOFF.md): optional orientation-first setup,
+root setup/development routing, private coordinator profile, complete en/ru editions.
+Downloaded-checkout and GitHub-URL routes offer choices; no unselected configuration.
+Work 1.2.2/lightweight 1.2.1, existing template bytes and all previous distributions stay unchanged.
+Checks: docs/links/schema/checksums, 67 workflow checks, 47 translation pairs,
+67 onboarding checks, six rejected fixture mutations, exact new ZIP inventories and diff.
+Privacy/secret scan passed for 166 candidate files, 185 ZIP entries and reachable history.
+Behavioral scenarios E14-E21 are not run; token savings remain unmeasured.
+No user store, project, folder binding, global setting or remote state was changed.
+cleanup: done for preparation; releases permanent, ignored local evidence retained until
+delivery/recovery verification. Publication requires its own authorization; next work is unassigned.
+
+Earlier entries below are historical records, not current setup instructions.
 
 ## OCMI-I18N-009: language edition
 
@@ -66,3 +82,14 @@ Final main protection and remote integration are verified in the ignored local d
 cleanup: done for source preparation; release artifacts are permanent. Local evidence/backups are kept
 by the maintainer for recovery, retention reviewed after verified delivery; branch removed after integration.
 No other project or installed memory was changed. Model evaluations remain unmeasured and unassigned.
+
+## Local adoption: OCMI-MIG-012
+
+2026-10-11: two owner-requested work installations upgraded to the Russian 1.2.2 rules.
+Local policies, queues, assignments, task packages and WIP preserved; only explicit instruction/version
+edits and local migration reports were made. Hash and reversible-text checks passed.
+Active instruction links are valid; one installation retains its unchanged historical snapshot-link debt.
+Project details and private evidence remain in those installations. No source-template changes,
+product checks, commits, publication, deployment or new START were performed by this migration.
+cleanup: done; local backup/evidence retained by each installation's orchestrator until acceptance
+and verified recovery, with no automatic deletion or reassessment of old task cleanup.

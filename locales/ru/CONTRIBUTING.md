@@ -21,6 +21,7 @@
 powershell -NoProfile -File scripts/check-docs.ps1
 powershell -NoProfile -File scripts/check-workflow.ps1
 powershell -NoProfile -File scripts/check-localization.ps1
+powershell -NoProfile -File scripts/check-onboarding.ps1
 powershell -NoProfile -File scripts/check-release.ps1
 git diff --check
 ~~~

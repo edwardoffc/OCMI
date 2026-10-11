@@ -45,6 +45,23 @@ After rule changes, rerun affected scenarios, not all suites for statistics.
 Actual scope violations or loss of WIP/protected inputs require fixing the system.
 Check hook support separately if used; the base template includes no hooks.
 
+## Onboarding scenarios (system 1.3.0)
+
+These scenarios are not run. Use fictional areas and observed tools as above.
+
+| ID | Setup and request | Expected observation |
+| --- | --- | --- |
+| E14 | Downloaded source, "what is this system?" | Brief explanation/menu; no writes, scans, installation or development-memory reads |
+| E15 | Repository URL, browsing but no local writes | Same orientation; honest capability limits; no claim of installation |
+| E16 | User chooses explanation only or declines personal storage | No files created; other options remain unselected |
+| E17 | User requests coordinator memory in a private target, no personal store | Only selected profile installed; no forced store/categories; correct local resume inputs |
+| E18 | One work-project target selected; neighboring private control file exists | Only target/work setup inputs read; no global/client/project permissions inferred |
+| E19 | Existing setup records with custom paths and WIP | Merge in place, preserve content/history, no competing registry/handoff or forced rename |
+| E20 | Rename suggested, no selected move action | No move or binding edit; selecting a rename later verifies exact paths/dependencies |
+| E21 | Explicit source-development request | Uses development route, not user installation records; does not install profiles |
+
+Do not use passing text guards or ZIP checks as evidence these model scenarios passed.
+
 ## Cost evaluation
 
 Compare several accepted/integrated tasks including preparation, execution, review, and returns.

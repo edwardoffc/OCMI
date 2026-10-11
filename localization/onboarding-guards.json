@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clauses": [
+    {"id":"orientation inputs", "input":"bootstrap", "en":"Do not load docs/memory", "ru":"Для знакомства не читай docs/memory"},
+    {"id":"independent options", "input":"bootstrap", "en":"No option is mandatory", "ru":"Ни один вариант не обязателен"},
+    {"id":"selection before changes", "input":"bootstrap", "en":"Wait for the user's selection before any writes", "ru":"Дождись выбора пользователя до записи"},
+    {"id":"existing authorization", "input":"bootstrap", "en":"do not\\s+ask again for the same authorization", "ru":"не спрашивай повторно о том же разрешении"},
+    {"id":"unselected actions", "input":"bootstrap", "en":"never apply them automatically", "ru":"не выполняй их автоматически"},
+    {"id":"optional private memory", "input":"bootstrap", "en":"personal storage is not a prerequisite", "ru":"личное хранилище не является обязательным условием"},
+    {"id":"URL capability limit", "input":"bootstrap", "en":"A URL provides source access, not local file access", "ru":"Ссылка даёт доступ к исходнику, а не к локальным файлам"},
+    {"id":"source identity", "input":"bootstrap", "en":"A moving branch alone is not a pinned revision", "ru":"Изменяемая ветка сама по себе не закрепляет ревизию"},
+    {"id":"preserve existing memory", "input":"install", "en":"do not create a competing brief, registry or handoff", "ru":"не создавай вторые описание, реестр или handoff"},
+    {"id":"private coordinator", "input":"agent", "en":"outside the source checkout and public Git scope", "ru":"вне исходного репозитория и публичного Git"},
+    {"id":"pointer is not authority", "input":"agent", "en":"entry or link does not authorize access", "ru":"или ссылка не разрешает доступ"},
+    {"id":"project ownership", "input":"agent", "en":"Project orchestrators own their plans", "ru":"Оркестровщики проектов ведут собственные планы"},
+    {"id":"sanitize records", "input":"agent", "en":"Sanitize evidence before persistence/sharing", "ru":"Очищай доказательства до сохранения/передачи"},
+    {"id":"unselected defaults", "input":"brief", "en":"not selected", "ru":"не выбрано"}
+  ]
+}

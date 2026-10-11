@@ -2,6 +2,18 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## System 1.3.0 — 2026-10-12
+
+- Orientation-first setup from a downloaded checkout or GitHub URL, with honest capability limits.
+- Independent optional folder, coordinator-memory, personal-storage and project-integration choices.
+- No configuration from repository attachment, a question, silence or an unselected option.
+- Optional self-contained coordinator profile; private setup metadata stays outside the source/public Git.
+- Source-development and user-setup routes separated; existing setup memory is merged with its paths preserved.
+- English/Russian instructions, coordinator distributions and structural negative checks.
+- Work 1.2.2 and lightweight 1.2.1 unchanged; existing projects require no migration.
+
+[System version](VERSION.md) · [Start here](BOOTSTRAP.md) · [Release report](docs/releases/1.3.0.md).
+
 ## Work 1.2.2 / lightweight 1.2.1 — 2026-10-11
 
 - Sanitize shared evidence before persistence or publication; restricted originals need explicit authority and retention ownership.

@@ -9,6 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
+**OCMI system: [1.3.0](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
 **Work template: [1.2.2](templates/work/VERSION.md)** ·
 [Installation](templates/work/INSTALL.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
@@ -31,22 +32,33 @@ A small change does not require a separate branch or a new chat just to follow t
 
 ## Quick start
 
-1. Download the [work template](releases/ocmi-work-1.2.2-en-2026-10-11.zip) and extract it
-   outside the target project, or clone this repository.
-2. Open the target project in an AI client with file access and give the agent this prompt:
+Open a downloaded copy of this repository in a new AI chat, or give a browsing-capable
+client [the repository URL](https://github.com/edwardoffc/OCMI), and say:
 
-   > This is a work project. Set up OCMI using INSTALL.md from the template I provide.
-   > Preserve existing instructions, documentation, active tasks, and unfinished work.
-   > Populate project memory with verified facts and check the links.
-   > Explain the setup and communicate with me in English.
+> Study OCMI and help me start using it. Explain it briefly, offer setup options,
+> and let me choose what I need before changing anything.
 
-   Provide the actual path to the extracted `INSTALL.md` or `templates/work/INSTALL.md`.
-3. Ask the orchestrator to prepare a plan and prompts for the roles you want to use.
-   Choose the number of chats and models separately for your project.
+The [installation coordinator](BOOTSTRAP.md) explains the system and offers independent
+options: folder organization, persistent coordinator memory, personal storage, and
+integration into a new or existing work project. Explanation only is a valid choice.
+Opening the repository or providing a URL does not install anything or rename folders.
+Persistent memory is optional and belongs outside the source repository/public Git scope.
 
-Once installed, the project's workflow is self-contained. Routine work does not require
-reading the OCMI source repository. The [user guide](docs/usage.md) covers new projects,
-existing projects, upgrades, and resuming work.
+A URL alone does not provide local file access. Clients without browsing or writing need
+the supplied setup files or manual saving; the coordinator explains the remaining steps.
+
+### Direct project installation
+
+If you already know the target, use [work INSTALL](templates/work/INSTALL.md) or its
+[complete ZIP](releases/ocmi-work-1.2.2-en-2026-10-11.zip), and ask:
+
+> This is a work project. Set up OCMI using INSTALL.md from the template I provide.
+> Preserve existing instructions, documentation, active tasks, and unfinished work.
+> Populate project memory with verified facts and check the links.
+
+Provide the exact template and target paths. Then ask the project orchestrator for the
+plan and role prompts you need. Select chats/models separately. Installed projects are
+self-contained; routine work reads their own memory. See the [user guide](docs/usage.md).
 
 ## What lives in your project
 
