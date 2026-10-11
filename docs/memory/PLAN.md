@@ -20,6 +20,7 @@ Updated: 2026-10-12. The only development queue.
 | OCMI-INSTALL-014 | Temporary installer, local system and separate coordinator; system 1.3.1 | [Source accepted](tasks/OCMI-INSTALL-014/HANDOFF.md); owner-authorized GitHub delivery; verification recorded separately |
 | OCMI-ENTRY-015 | Uniform core entry plus component/global-routing gates; system 1.3.2 | [Source accepted](tasks/OCMI-ENTRY-015/HANDOFF.md); owner-authorized GitHub delivery, verification recorded separately; installed projects unchanged |
 | OCMI-LOCAL-016 | Ignored .local/coordinator inside the system; in-place 1.3.2 correction | [Acceptance](tasks/OCMI-LOCAL-016/HANDOFF.md); source checks and owner-authorized current-release delivery; installed projects unchanged |
+| OCMI-MAC-017 | Common Windows/macOS setup and native Intel/Apple Silicon validation; same 1.3.2 | [Source accepted](tasks/OCMI-MAC-017/HANDOFF.md); native CI passed; installed projects and private memory unchanged; final delivery verified separately |
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.

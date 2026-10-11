@@ -4,7 +4,18 @@
 
 Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-LOCAL-016 / system 1.3.2, distribution r2
+## Current: OCMI-MAC-017 / system 1.3.2, unchanged distribution r2
+
+[Acceptance](../OCMI-MAC-017/HANDOFF.md): same Windows/macOS installation and usage, bilingual
+guides, common PowerShell 7 suite, portable path guards and synthetic privacy/platform fixtures.
+Native Windows, Apple Silicon and Intel CI passed; Windows 5.1 compatibility retained.
+Stable required aggregate names preserve main protection. No new numbered release/component archive;
+templates, receipts, private memory and installed projects are unchanged.
+Final delivery uses protected-main PR #7, renewed CI, existing current-release source and ignored receipt.
+Owned fixtures are removed; recovery/evidence retained until verified delivery and retention review.
+No installed-project migration, next task or model evaluation is assigned.
+
+## Historical: OCMI-LOCAL-016 / system 1.3.2, distribution r2
 
 [Acceptance](../OCMI-LOCAL-016/HANDOFF.md): owner requested private coordinator memory inside
 the system at .local/coordinator and delivery within the existing 1.3.2 release.

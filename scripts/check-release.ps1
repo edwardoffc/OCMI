@@ -5,6 +5,7 @@ param(
   [switch]$SecurityBaseline
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repoRoot = (Resolve-Path -LiteralPath $Root).Path
 if ($SecurityBaseline -and (!$ArchivesOnly -or $Version)) { throw 'SecurityBaseline requires ArchivesOnly and no Version' }
@@ -16,7 +17,7 @@ $languageEdition = !$Version -or $Version -ceq '1.3.2'
 $receipt = if ($SecurityBaseline) { 'docs/releases/security-validation.json' }
   elseif ($languageEdition) { 'docs/releases/1.3.2-components.json' }
   else { "docs/releases/$Version-validation.json" }
-$manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repoRoot $receipt) | ConvertFrom-Json
+$manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Get-OCMIScopedFile $repoRoot $receipt) | ConvertFrom-Json
 if ($Version -and $manifest.version -cne "OCMI $Version") { throw 'Receipt version differs' }
 if ($languageEdition -and !$SecurityBaseline -and $manifest.version -cne 'OCMI 1.3.2') { throw 'Component receipt version differs' }
 if ($languageEdition -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
@@ -44,12 +45,12 @@ foreach ($profile in $manifest.profiles) {
   $expected = @{}
   foreach ($record in $profile.files) {
     if ($record.path -match '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)' -or $expected.ContainsKey($record.path)) { throw 'Unsafe/duplicate manifest entry' }
-    $file = Join-Path $source $record.path
+    $file = if ($ArchivesOnly) { Join-Path $source $record.path } else { Get-OCMIScopedFile $source $record.path }
     if (!$ArchivesOnly -and (!(Test-Path -LiteralPath $file -PathType Leaf) -or (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant() -ne $record.sha256 -or (Get-Item -LiteralPath $file).Length -ne $record.bytes)) { throw "Source mismatch: $($record.path)" }
     $expected[$record.path] = $record
   }
   if (!$ArchivesOnly -and @(Get-ChildItem -LiteralPath $source -Recurse -File).Count -ne $expected.Count) { throw 'Source file inventory differs' }
-  $zipPath = Join-Path $repoRoot $profile.archive
+  $zipPath = Get-OCMIScopedFile $repoRoot $profile.archive
   if ((Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $profile.sha256) { throw 'Archive checksum differs' }
   $archive = [IO.Compression.ZipFile]::OpenRead($zipPath)
   try {

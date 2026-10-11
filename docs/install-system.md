@@ -1,5 +1,8 @@
 # Install OCMI: one result from either starting route
 
+Windows and macOS follow this same flow. Use native paths and resolve `~` in private startup
+records; ordinary file-based installation does not require PowerShell. [Platforms](platforms.md).
+
 Full guided setup requires a local system copy, a client project bound to it,
 private service memory and an initialized coordinator chat inside the project.
 [BOOTSTRAP](../BOOTSTRAP.md) is the temporary installer;

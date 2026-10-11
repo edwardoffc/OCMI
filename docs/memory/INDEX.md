@@ -5,7 +5,8 @@ Scope: this repository. Updated: 2026-10-12.
 [PLAN](PLAN.md) · [STATE](STATE.md) · [CODEMAP](CODEMAP.md).
 
 [Current handoff](tasks/orchestration/HANDOFF.md).
-[System 1.3.2 setup](../releases/1.3.2.md) · [Current acceptance](tasks/OCMI-LOCAL-016/HANDOFF.md).
+[System 1.3.2 setup](../releases/1.3.2.md) · [Current acceptance](tasks/OCMI-MAC-017/HANDOFF.md).
+[Earlier local-memory correction](tasks/OCMI-LOCAL-016/HANDOFF.md).
 [Initial 1.3.2 acceptance](tasks/OCMI-ENTRY-015/HANDOFF.md).
 [Historical 1.3.1 setup](../releases/1.3.1.md) · [Earlier acceptance](tasks/OCMI-INSTALL-014/HANDOFF.md).
 [Historical 1.3.0 setup](../releases/1.3.0.md) · [Earlier acceptance](tasks/OCMI-ONBOARD-013/HANDOFF.md).

@@ -31,6 +31,9 @@ A small change does not require a separate branch or a new chat just to follow t
 
 ## Quick start
 
+Windows and macOS follow the same steps. Ordinary file-based use needs no PowerShell;
+source checks use PowerShell 7. See [platform support](docs/platforms.md).
+
 Both routes reach the same result: **local system → bound client project →
 coordinator chat with saved service memory**.
 

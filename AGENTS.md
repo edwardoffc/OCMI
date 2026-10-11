@@ -46,7 +46,7 @@ Access to another project requires a relevant request.
 Do not overwrite old packages/releases; save new distributions under distinct names.
 Template changes do not automatically update installed projects or protected packages.
 
-Before commit: powershell -NoProfile -File scripts/check-docs.ps1 and git diff --check.
+Before commit: pwsh -NoProfile -File scripts/check-all.ps1 and git diff --check.
 For template/localization changes also run workflow, localization, and release checks.
 Do not run production/build for documentation. Preserve others' changes, WIP, and evidence.
 After a substantial result update the current handoff and only changed memory facts.

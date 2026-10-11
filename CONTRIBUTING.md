@@ -18,15 +18,10 @@ Refresh manifest hashes only after reviewing translation meaning.
 Run from the repository root:
 
 ~~~powershell
-powershell -NoProfile -File scripts/check-docs.ps1
-powershell -NoProfile -File scripts/check-workflow.ps1
-powershell -NoProfile -File scripts/check-localization.ps1
-powershell -NoProfile -File scripts/check-onboarding.ps1
-powershell -NoProfile -File scripts/check-release.ps1
-git diff --check
+pwsh -NoProfile -File scripts/check-all.ps1
 ~~~
 
-Checks target Windows PowerShell 5.1. Templates are ordinary Markdown.
+Checks use PowerShell 7 on Windows/macOS; Windows PowerShell 5.1 remains tested for compatibility. Templates are ordinary Markdown.
 Structural checks do not establish model behavior or token savings.
 For workflow changes, describe verifiable scenarios and limitations.
 
@@ -36,3 +31,5 @@ Installed project memory does not belong in an OCMI pull request.
 Repository materials use the [MIT license](LICENSE).
 
 Run the security check with a verified scanner before publication. Report vulnerabilities privately using [SECURITY](SECURITY.md). Changes enter main through a PR with Documentation and Secrets and privacy checks; no second maintainer approval is required.
+
+Windows/macOS: [common instructions](docs/platforms.md). Checks: pwsh -NoProfile -File scripts/check-all.ps1.

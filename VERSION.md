@@ -24,3 +24,5 @@ No installed project, private store or client binding is migrated automatically.
 
 [Start](BOOTSTRAP.md) · [Installation](docs/install-system.md) ·
 [Release report](docs/releases/1.3.2.md) · [Changelog](CHANGELOG.md).
+
+Windows/macOS compatibility is included in 1.3.2 without a new numbered release. [Platforms](docs/platforms.md).

@@ -15,13 +15,7 @@ check-release также проверяет receipt координатора; -V
 Из корня репозитория:
 
 ~~~powershell
-powershell -NoProfile -File scripts/check-docs.ps1
-powershell -NoProfile -File scripts/check-workflow.ps1
-powershell -NoProfile -File scripts/check-localization.ps1
-powershell -NoProfile -File scripts/check-onboarding.ps1
-powershell -NoProfile -File scripts/check-release.ps1
-powershell -NoProfile -File scripts/check-local-boundary.ps1
-git diff --check
+pwsh -NoProfile -File scripts/check-all.ps1
 ~~~
 
 check-docs проверяет локальные Markdown-ссылки, три схемы карточек и SHA256 архивов
@@ -41,17 +35,24 @@ check-release сверяет исходники каждого языка, recei
 Для исторических receipts: -Version 1.2 -ArchivesOnly или -Version 1.2.1 -ArchivesOnly.
 ArchivesOnly сверяет ZIP и receipt без требования исторических исходников в templates/.
 
-Требуются PowerShell 5.1 или новее и поддержка ZIP в .NET.
+Для проверок исходника требуются Git, PowerShell 7 и поддержка ZIP в .NET на Windows/macOS. Совместимость с Windows PowerShell 5.1 проверяется отдельно.
 Production build, GitHub и ИИ-клиент не нужны. [Процедура выпуска](../docs/maintaining.md).
+
+check-all запускает весь набор и проверку пробелов. check-platform проверяет системные разделители,
+регистр границ Unix, пробелы/Unicode, отклонение симлинков, ограниченную уборку и реально скопированные
+проверки документации/локализации. check-boundaries проверяет исключения Git/export и отклоняет шесть
+искусственных мутаций индекса/истории/ZIP. Примеры не содержат данных пользователя и удаляются после
+проверки границ уборки. Отдельные проверки принимают -Root; скрипты не устанавливают PowerShell
+и не меняют настройки клиента. [Инструкции Windows/macOS](../docs/platforms.md).
 
 ## Проверки безопасности
 
-Перед публикацией запускайте scripts/check-security.ps1 -GitleaksPath <проверенный-gitleaks.exe>.
+Перед публикацией запускайте scripts/check-security.ps1 -GitleaksPath <проверенный-нативный-gitleaks>.
 Проверяются tracked-файлы и доступная история HEAD; каждый ZIP распаковывается явно.
 Небезопасные пути/символьные ссылки архивов и tracked-пути резервов/ключей запрещены;
 домашние идентификаторы и почта вне noreply/example требуют проверки.
 Gitleaks использует встроенные правила без списков исключений репозитория и скрывает значения в выводе.
-CI загружает Gitleaks 8.30.1 из официального выпуска, сверяет закреплённый SHA256 и запускает две обязательные проверки.
+CI загружает нативные бинарники Gitleaks 8.30.1 для Windows x64/macOS ARM64/macOS x64 из официального выпуска, сверяет закреплённый SHA256 и архитектуру раннера и запускает матрицы документации/приватности. Постоянные итоговые Documentation и Secrets and privacy требуют успеха всех платформ.
 Checkout закреплён commit, учётные данные не сохраняются, токены только на чтение, секреты PR не передаются.
 Превышение лимита останавливает проверку. Удаляется только временный каталог, созданный этим запуском.
 

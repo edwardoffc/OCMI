@@ -7,41 +7,94 @@ permissions:
 concurrency:
   group: validation-${{ github.ref }}
   cancel-in-progress: true
+defaults:
+  run:
+    shell: pwsh
 jobs:
+  docs-platform:
+    name: Documentation (${{ matrix.runner }})
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [windows-latest, macos-15, macos-15-intel]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate documentation, distributions and platform boundaries
+        run: ./scripts/check-all.ps1
+      - name: Retain Windows PowerShell 5.1 compatibility
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: ./scripts/check-all.ps1
+  security-platform:
+    name: Secrets and privacy (${{ matrix.runner }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-latest
+            architecture: X64
+            archive: gitleaks_8.30.1_windows_x64.zip
+            sha256: d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e
+            binary: gitleaks.exe
+          - runner: macos-15
+            architecture: ARM64
+            archive: gitleaks_8.30.1_darwin_arm64.tar.gz
+            sha256: b40ab0ae55c505963e365f271a8d3846efbc170aa17f2607f13df610a9aeb6a5
+            binary: gitleaks
+          - runner: macos-15-intel
+            architecture: X64
+            archive: gitleaks_8.30.1_darwin_x64.tar.gz
+            sha256: dfe101a4db2255fc85120ac7f3d25e4342c3c20cf749f2c20a18081af1952709
+            binary: gitleaks
+    runs-on: ${{ matrix.runner }}
+    env:
+      SCANNER_ARCHIVE: ${{ matrix.archive }}
+      SCANNER_SHA256: ${{ matrix.sha256 }}
+      SCANNER_BINARY: ${{ matrix.binary }}
+      EXPECTED_ARCHITECTURE: ${{ matrix.architecture }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify and run platform-specific pinned scanner
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:RUNNER_ARCH -cne $env:EXPECTED_ARCHITECTURE) { throw 'Unexpected runner architecture' }
+          $archive = Join-Path $env:RUNNER_TEMP $env:SCANNER_ARCHIVE
+          $destination = Join-Path $env:RUNNER_TEMP 'gitleaks'
+          Invoke-WebRequest -Uri ('https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/' + $env:SCANNER_ARCHIVE) -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive).Hash.ToLowerInvariant() -cne $env:SCANNER_SHA256) { throw 'Scanner digest mismatch' }
+          New-Item -ItemType Directory -Path $destination -Force | Out-Null
+          if ($env:RUNNER_OS -ceq 'Windows') {
+            Expand-Archive -LiteralPath $archive -DestinationPath $destination
+          } else {
+            tar -xzf $archive -C $destination
+            if ($LASTEXITCODE -ne 0) { throw 'Scanner extraction failed' }
+          }
+          $scanner = Join-Path $destination $env:SCANNER_BINARY
+          if ($env:RUNNER_OS -ceq 'macOS') {
+            chmod +x $scanner
+            if ($LASTEXITCODE -ne 0) { throw 'Scanner executable permission failed' }
+          }
+          ./scripts/check-security.ps1 -GitleaksPath $scanner
   docs:
     name: Documentation
+    needs: docs-platform
+    if: always()
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - name: Validate documentation and distributions
-        shell: powershell
-        run: |
-          $ErrorActionPreference = 'Stop'
-          ./scripts/check-docs.ps1
-          ./scripts/check-workflow.ps1
-          ./scripts/check-localization.ps1
-          ./scripts/check-onboarding.ps1
-          ./scripts/check-release.ps1
-          ./scripts/check-local-boundary.ps1
-          git diff --check
-          if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+      - run: |
+          if ('${{ needs.docs-platform.result }}' -cne 'success') { throw 'A required platform documentation check failed or was skipped' }
   security:
     name: Secrets and privacy
+    needs: security-platform
+    if: always()
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - name: Verify and run pinned scanner
-        shell: powershell
-        run: |
-          $ErrorActionPreference = 'Stop'
-          $zip = Join-Path $env:RUNNER_TEMP 'gitleaks.zip'
-          Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip' -OutFile $zip
-          if ((Get-FileHash -LiteralPath $zip).Hash.ToLowerInvariant() -cne 'd29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e') { throw 'Scanner digest mismatch' }
-          Expand-Archive -LiteralPath $zip -DestinationPath (Join-Path $env:RUNNER_TEMP 'gitleaks')
-          ./scripts/check-security.ps1 -GitleaksPath (Join-Path $env:RUNNER_TEMP 'gitleaks/gitleaks.exe')
+      - run: |
+          if ('${{ needs.security-platform.result }}' -cne 'success') { throw 'A required platform privacy check failed or was skipped' }

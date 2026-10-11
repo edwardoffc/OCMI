@@ -1,20 +1,12 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
 $guards = Get-Content -Raw -Encoding UTF8 (Join-Path $rootPath 'localization/workflow-guards.json') | ConvertFrom-Json
 $passed = 0
 function Assert-Check([bool]$Condition,[string]$Message) { if (!$Condition) { throw $Message } }
 function Read-Scoped([string]$Base,[string]$Relative) {
-  Assert-Check ($Relative -notmatch '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)') "Unsafe path: $Relative"
-  $full=[IO.Path]::GetFullPath((Join-Path $Base $Relative))
-  Assert-Check ($full.StartsWith($Base.TrimEnd('\','/')+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) 'Outside profile'
-  Assert-Check (Test-Path -LiteralPath $full -PathType Leaf) "Missing input: $Relative"
-  $current=Get-Item -LiteralPath $full
-  while($current.FullName -ne $Base) {
-    Assert-Check (!(($current.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) 'Reparse input'
-    if($current -is [IO.FileInfo]){$current=$current.Directory}else{$current=$current.Parent}
-    Assert-Check ($null -ne $current) 'Missing parent'
-  }
+  $full = Get-OCMIScopedFile $Base $Relative
   return [IO.File]::ReadAllText($full)
 }
 function Get-Routes([string]$Text,[string[]]$Names) {
