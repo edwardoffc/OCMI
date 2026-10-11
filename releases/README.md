@@ -5,16 +5,19 @@
 Select a language and extract one complete profile. Current language editions include [MIT](../LICENSE).
 Work uses protocol 1.2.2; lightweight uses 1.2.1. Installation does not update existing projects automatically.
 
-System [1.3.0](../VERSION.md) begins with [orientation and choice](../BOOTSTRAP.md).
-Download a coordinator profile only after choosing persistent setup memory; no personal
-store or work-project installation is mandatory. It is not the whole system checkout.
+System [1.3.1](../VERSION.md) starts with [brief orientation](../BOOTSTRAP.md).
+After installation is selected, a full local system copy and coordinator service memory are required.
+The ZIP below contains only the service profile; personal topics and work integration are optional.
+[System installation](../docs/install-system.md) explains handover to a separate chat.
 
-| Optional profile | English | Russian |
+| Service profile | English | Russian |
 | --- | --- | --- |
-| Coordinator 1.3.0 | [ZIP](ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
+| Coordinator 1.3.1 | [ZIP](ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
+| Historical 1.3.0 | [ZIP](ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
 
-[Coordinator receipt](../docs/releases/1.3.0-validation.json) verifies its seven files per
-language and all prior archive hashes. Work/lightweight sources and ZIPs below are unchanged.
+[1.3.1 receipt](../docs/releases/1.3.1-validation.json) verifies eight files per language
+and all previous archives. [1.3.0 receipt](../docs/releases/1.3.0-validation.json) remains
+available for historical ZIPs. Work/lightweight sources and distributions below are unchanged.
 
 | Profile | English | Russian |
 | --- | --- | --- |

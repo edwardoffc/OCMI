@@ -25,10 +25,11 @@ check-localization checks the maintained translation inventory, reviewed hashes,
 paths, and license copies. Hash agreement detects drift; human review establishes meaning.
 The manifest is updated deliberately after review, never by a validation run.
 
-check-onboarding checks the setup/development entry route, independent choice and access
+check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release also validates the coordinator receipt; -Version 1.3.0 selects that receipt.
+check-release also validates the coordinator receipt; -Version 1.3.1 selects the current receipt;
+-Version 1.3.0 -ArchivesOnly checks historical coordinator distributions.
 
 check-release compares each language distribution with its source, receipt, exact ZIP inventory,
 sizes, and SHA256; it also checks immutable historical archives.

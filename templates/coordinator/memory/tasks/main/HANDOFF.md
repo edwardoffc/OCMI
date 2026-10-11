@@ -1,24 +1,32 @@
 # Setup continuation
 
 Status: template. Updated: [date]. Scope: [BRIEF](../../BRIEF.md).
+Restoration: [saved startup prompt](../../../STARTUP.md).
 
 ## Selected action
 
-[Current requested setup action, target, source revision and authority.]
+[Current setup request, exact targets, source identity and authority.]
 
 ## Actual state
 
-[Completed steps, installed versions and preserved WIP. Separate proposals from execution.]
+[Source installed / handover prepared / coordinator initialized; dates and actual evidence.
+Preserved records and WIP; distinguish proposals from execution.]
+
+## Handover confirmation
+
+[Pending until the separate coordinator reads required inputs and verifies paths/access.
+After confirmation: date, role, verified locations and next step; installer chat is no longer required.
+Do not record confirmation on behalf of a chat that has not started.]
 
 ## Checks and limits
 
-[Commands/observations with dates and scope; unavailable tools and untested behavior.
-Structural checks do not prove new-chat recovery or token savings. No secrets/raw logs.]
+[Commands/observations and scope; missing access, untested behavior.
+Structural checks do not prove live-chat recovery or token savings. No secrets/raw logs.]
 
 ## Next step
 
-[One concrete action within the selected scope, or await user selection.]
+[One selected action, complete handover, or await user choice.]
 
 ## Unselected options
 
-[Options not selected; do not activate them automatically. No separate project queue.]
+[Optional actions not selected; do not activate them. No separate project queue.]

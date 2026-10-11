@@ -1,7 +1,9 @@
 # OCMI durable context
 
-Updated: 2026-10-11.
+Updated: 2026-10-12.
 Build a portable workflow for orchestration, context memory, and code maps.
+System setup: 1.3.1; temporary installer and separate permanent coordinator.
+Private setup records and filled prompt stay outside source; optional personal/work actions follow handover.
 Canonical English work sources: templates/work, OCMI 1.2.2.
 Optional lightweight profile: templates/personal, version 1.2.1.
 Russian guides and complete template equivalents: locales/ru.

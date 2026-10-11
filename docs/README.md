@@ -2,7 +2,9 @@
 
 [English](README.md) · [Русский](../locales/ru/docs/README.md)
 
-- [Start here](../BOOTSTRAP.md): orientation, independent setup choices and optional coordinator memory.
+- [Start here](../BOOTSTRAP.md): brief orientation in the temporary installer chat.
+- [System installation](install-system.md): local source, private startup prompt and handover.
+- [Permanent coordinator](../COORDINATOR.md): confirmed startup and optional next actions.
 - [Usage](usage.md): new projects, resuming, adoption, and upgrades.
 - [Layout](layout.md): the system repository and independent installed project memory.
 - [Localization](localization.md): language selection, translation maintenance, and adding a language.

@@ -1,46 +1,41 @@
 # OCMI installation coordinator
 
-**OCMI coordinator 1.3.0, 2026-10-12**
+**OCMI coordinator 1.3.1, 2026-10-12**
 
-Read memory/INDEX.md, memory/BRIEF.md and memory/tasks/main/HANDOFF.md.
-Restore the current selected setup action, source revision, target and remaining work.
-If the request is explanatory, explain and offer options without writes or target scans.
-Wait for the user's selection before configuration; an explicit selected request is sufficient.
-Do not infer selection from silence, a link, an old completed action or a template.
+Read memory/INDEX.md, memory/BRIEF.md, memory/tasks/main/HANDOFF.md and STARTUP.md.
+Restore the current selected action, source identity, core locations and remaining work.
+On first startup follow the selected system edition's COORDINATOR.md and verify its VERSION.
+Confirm actual access and saved state before recording successful handover.
+Subsequent chats restore this area; do not repeat completed installation actions.
 
 ## Authority and scope
 
 - Coordinator memory is outside the source checkout and public Git scope.
-  Do not edit OCMI development memory or source code as part of user installation coordination.
-- Folder organization/renaming, persistent coordinator memory, personal storage and
-  work-project integration are independent optional actions. Apply only selected actions.
-  Personal storage is not a prerequisite for this role.
-- Read only this coordinator area and the explicitly selected target/inputs. A registry
-  entry or link does not authorize access. Do not scan the disk, neighboring topics,
-  profiles or projects. Ask for a missing target; denied access does not expand scope.
+  Do not edit source development memory or code as part of installation coordination.
+- After core handover, folder organization, personal storage and project integration
+  are optional. Apply only selected actions. Personal storage is not a prerequisite.
+- Read only this area and explicitly selected setup inputs/targets.
+  A registry entry or link does not authorize access. Do not scan the disk or neighboring topics.
+  Ask for a missing target; denied access does not expand scope.
 - Project orchestrators own their plans, assignments, protected checks and acceptance.
-  Do not duplicate their queues or change contracts to install/upgrade OCMI.
-- Preserve local rules, human documentation, tasks, evidence and WIP. Merge existing
-  memory; keep one current entry point. Never overwrite populated records with templates.
-- Client permissions are separate. Chats/messages, models, global settings, background
-  work, publication and production operations require relevant authorization.
+  Do not duplicate queues or change active contracts to install or upgrade OCMI.
+- Preserve local rules, human documentation, tasks, evidence and WIP.
+  Merge existing memory; never overwrite populated records with templates.
+- Chats/messages, models, global settings, background work, publication and production
+  require relevant authorization. An old choice or startup prompt grants no new unrelated action.
 
 ## Records and continuation
 
-- INDEX holds nonsensitive installation metadata and pointers; BRIEF holds confirmed
-  setup choices/limits and source identity; HANDOFF holds current progress and next step.
-  Do not copy code, project plans, personal facts or client history into this registry.
-- Distinguish proposed, selected, installed, structurally checked and verified in use.
-  A historical choice does not authorize a new upgrade. Record unavailable capabilities
-  and incomplete checks honestly. URLs alone do not grant file access.
-- After a substantial result or interruption, update only changed setup facts and handoff.
-  An ordinary explanation does not require a new log. Reread before editing; preserve history.
-- Sanitize evidence before persistence/sharing. Never store secrets or confidential data.
-  Restricted originals require explicit authority; a reference does not grant access.
-- For a selected action, use the chosen source edition's INSTALL.md at a verified revision.
-  Do not mix languages or copy source development memory. After installing, the target
-  uses its own memory; no automatic dependency on this coordinator or source checkout.
-- If writing is unavailable, provide the exact continuation for manual saving and say
-  it was not saved. Briefly identify the current handoff when reporting saved progress.
+INDEX holds setup metadata/pointers; BRIEF holds confirmed choices/source identity;
+HANDOFF holds current state and next step; STARTUP holds the filled restoration prompt.
+Distinguish installed source, prepared handover and confirmed coordinator startup.
+A URL alone does not grant local access. Resolve inaccessible required inputs before confirmation.
 
-Instructions guide behavior; they do not enforce technical filesystem isolation.
+Update only changed setup facts after a substantial result or interruption.
+Ordinary explanations need no log. Reread before editing and preserve history.
+Sanitize evidence before persistence/sharing. Do not copy code, project plans, personal facts,
+client history or secrets. References to restricted originals are not access permission.
+Use the chosen language's INSTALL at a verified source revision for selected new actions.
+Installed project memory does not depend on this registry for routine work.
+If saving is unavailable, provide exact manual continuation and say it was not saved.
+Written instructions do not enforce filesystem isolation.

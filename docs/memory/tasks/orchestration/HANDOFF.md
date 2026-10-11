@@ -4,7 +4,23 @@
 
 Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-ONBOARD-013 / system 1.3.0
+## Current: OCMI-INSTALL-014 / system 1.3.1
+
+[Acceptance](../OCMI-INSTALL-014/HANDOFF.md): user-approved correction to the installation flow.
+Temporary first chat offers local setup; a filled private prompt transfers to a separate permanent
+coordinator in a system-attached project. Confirmation precedes retiring the installer.
+Optional personal/work setup follows startup. English/Russian guides and service profile updated.
+Work 1.2.2/lightweight 1.2.1 and installed projects remain unchanged.
+Source accepted locally: docs/links/checksums, 67 workflow and 115 onboarding checks,
+51 translation pairs, ten negative fixtures, exact ZIPs and privacy/secret scan passed.
+Acceptance records evidence and retained resources; live E22–E30 scenarios are not run.
+No new chat, personal store or project migration was performed. Owner authorized GitHub delivery.
+cleanup: done for local preparation; ignored recovery evidence kept with its owner/retention condition.
+Delivery: protected-main PR, both required CI checks, v1.3.1 and four verified coordinator assets.
+Final publication/branch cleanup is established from origin/main, tag/release and local delivery receipt.
+No next task is assigned; do not repeat publication or upgrade installed projects automatically.
+
+## Historical: OCMI-ONBOARD-013 / system 1.3.0
 
 [Source acceptance](../OCMI-ONBOARD-013/HANDOFF.md): optional orientation-first setup,
 root setup/development routing, private coordinator profile, complete en/ru editions.

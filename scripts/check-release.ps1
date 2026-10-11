@@ -6,8 +6,8 @@ param(
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repoRoot = (Resolve-Path -LiteralPath $Root).Path
-if ($Version -ceq '1.3.0') {
-  & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -ReleaseOnly -ArchivesOnly:$ArchivesOnly
+if ($Version -cin @('1.3.0','1.3.1')) {
+  & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -Version $Version -ReleaseOnly -ArchivesOnly:$ArchivesOnly
   return
 }
 $receipt = if ($Version) { "docs/releases/$Version-validation.json" } else { 'docs/releases/security-validation.json' }
