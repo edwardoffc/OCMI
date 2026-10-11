@@ -1,6 +1,6 @@
-# OCMI 1.2.1 — task and handoff format
+# OCMI 1.2.2 — task and handoff format
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Compatible update to the OCMI 1 process; the task schema and existing exporter fields are preserved.
 [ORCHESTRATION](ORCHESTRATION.md) routes readiness/checks/review; [RULES](RULES.md) defines memory.
@@ -39,7 +39,7 @@ criterion coverage, commands/exit codes/pass-fail-skip, environment/dependencies
 reuse/reasons for reruns, risks/unverified items, remaining work/processes, code-map proposals,
 and a lesson candidate with evidence/scope/limitations.
 Model/effort, time, and cost must be observed values with source/scope, or unknown.
-Keep full logs at accessible paths; a brief chat summary does not replace evidence.
+Keep full sanitized logs at authorized accessible paths under RULES; a brief chat summary does not replace evidence.
 
 DONE means ready for review. The orchestrator checks protected sections before editing Acceptance;
 recording Acceptance completes that review revision without granting the worker permission to edit it.

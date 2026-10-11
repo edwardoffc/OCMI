@@ -1,6 +1,6 @@
 # Using OCMI
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Memory lives in the project; chats can be replaced after saving results and remaining work.
 Three roles: the orchestrator plans and accepts, workers execute assignments, and the consultant is read-only.

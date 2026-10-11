@@ -1,20 +1,21 @@
 # OCMI source map
 
-Verified: 2026-10-11, language edition of work 1.2.1/lightweight 1.2.
+Verified: 2026-10-11, language edition of work 1.2.2/lightweight 1.2.1.
 Hashes identify the inspected file snapshot; refresh only affected entries after changes.
 
 | File / entry | Connections | Verification source |
 | --- | --- | --- |
-| templates/work/INSTALL.md / Installation/migration | VERSION, role procedures, task protocol | 2026-10-11; SHA256 cbe2cf4c3374604b20d5bfec894d8c6e38cd97ddee6e63e6869d71ce76f51509 |
-| templates/work/docs/memory/ORCHESTRATION.md / Role routing | Three role procedures; check-workflow | 2026-10-11; SHA256 fad17a6d629ceb75d650119854f848a75c7065356b5bca8347775c17bc012a9e |
-| templates/personal/AGENTS.md / Lightweight startup | Local INDEX, brief, handoff; check-workflow | 2026-10-11; SHA256 e65761ebdb6ce233f976bc2f1b9182afea947aafe2751c06a8645220ae82d9b3 |
-| templates/work/docs/memory/roles/coordinator.md / Acceptance/resource completion | Contract, Result, Acceptance; protected evidence | 2026-10-11; SHA256 83d89eb10ca94b90d155d193cb6bb2d7b5ba9a1d27b516aa4f0db76590e2ff1c |
-| templates/work/docs/memory/TASK-PROTOCOL.md / Task schema and cleanup | Stable headings and separate done/pending status | 2026-10-11; SHA256 9de4598ec4f3f09c337991a5123b19d4587d78faf38ee90da63fb1c7a37e4007 |
-| scripts/check-docs.ps1 / Markdown/link/schema checks | English/Russian guides and templates; archive checksums | 2026-10-11; SHA256 a964f0222e353936d3d468b85597756f2fc806882c30972791c013a301be040e |
-| scripts/check-workflow.ps1 / Get-Routes / Read-Scoped / Check | localization/workflow-guards.json; both languages | 2026-10-11; SHA256 2e211acc98a95752afd350c33767be0362a4ca6d735b3e2336e540c3830f7607 |
-| scripts/check-localization.ps1 / Scoped-File / pair inventory | localization/manifest.json; hashes and paths | 2026-10-11; SHA256 970662e87b3f69259ba1577bd164d759116fe0f3e0f1dd9dd175bfb2801aa16b |
-| scripts/check-release.ps1 / Receipt/source/ZIP verification | docs/releases/languages-validation.json; historical ArchivesOnly | 2026-10-11; SHA256 11d64056022f7e6afc17dd8d7a61e12ff18c5dd06251122d86b1cf29ca812156 |
+| templates/work/INSTALL.md / Installation/migration | VERSION, role procedures, task protocol | 2026-10-11; SHA256 fbbfb24d480279cb2be6711aff347eb589805307909350d2dd52666057942535 |
+| templates/work/docs/memory/ORCHESTRATION.md / Role routing | Three role procedures; check-workflow | 2026-10-11; SHA256 c30fe3814890ecd5e995eeec8778ad9393e00afc32ef512417a3c2889b11e4ba |
+| templates/personal/AGENTS.md / Lightweight startup | Local INDEX, brief, handoff; check-workflow | 2026-10-11; SHA256 73fd35223e827af7fabe87ba1aae9fb7b6098256943dd395c1e6dcbb16f35da6 |
+| templates/work/docs/memory/roles/coordinator.md / Acceptance/resource completion | Contract, Result, Acceptance; protected evidence | 2026-10-11; SHA256 9f02b621cd35aaa98fe57dbcec2117abb8ebdfad426c7a4f79b824d72fd0f289 |
+| templates/work/docs/memory/TASK-PROTOCOL.md / Task schema and cleanup | Stable headings and separate done/pending status | 2026-10-11; SHA256 e7543bb63b668c4e46ff8149660d22b62e8e17719f5a3d2c4b4f87ef8c8564ad |
+| scripts/check-docs.ps1 / Markdown/link/schema checks | English/Russian guides and templates; archive checksums | 2026-10-11; SHA256 bbbc5864c7745f1963193c3733e85a4fc47e205fa6b74a19f2a6aa3efd03bd0d |
+| scripts/check-workflow.ps1 / Get-Routes / Read-Scoped / Check | localization/workflow-guards.json; both languages | 2026-10-11; SHA256 84946128cf7e632af03951ff99b0fe74115418ad81392cadf7dfeb0da2dfc29e |
+| scripts/check-localization.ps1 / Scoped-File / pair inventory | localization/manifest.json; hashes and paths | 2026-10-11; SHA256 695bbbaccee8a8914db2072ec3a50ae3c6bb95db94e7e796cc33b68bb82162e8 |
+| scripts/check-release.ps1 / Receipt/source/ZIP verification | docs/releases/security-validation.json; historical ArchivesOnly | 2026-10-11; SHA256 68f7fbf8c0b2ca6246bebfd7b40a25ecaa7e58f65e239dda6730a7804bc08be4 |
+| scripts/check-security.ps1 / tracked inventory and extracted archives | Built-in Gitleaks rules, home/email indicators; CI pinned scanner | 2026-10-11; SHA256 71b63fc071928f9c1db4663ea9f2379565f8141f736bee09593516510d2b3301 |
 
 Renames, interfaces, or runner changes invalidate affected rows. Verify only the relevant area.
-The [language receipt](../releases/languages-validation.json) records complete template file snapshots.
+The [language receipt](../releases/security-validation.json) records complete template file snapshots.
 This map locates sources; it does not establish model behavior.

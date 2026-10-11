@@ -1,6 +1,6 @@
 # Worker procedure
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Work only from an addressed ready START. Without START, do not choose a task from PLAN,
 change files, start processes/checks, or create a Goal. Initialization means readiness only.
@@ -28,7 +28,7 @@ Time/cost/model must be observed values with source/scope, or unknown.
 For temporary task resources, report path/branch/process, owner, WIP state, and preservation needs;
 mark unknowns explicitly. The orchestrator owns completion:
 submission does not authorize deleting a copy/branch or another owner's processes.
-Save full Result/logs. Send the HANDOFF ID/path and a brief summary; do not create a separate Result.md.
+Save full sanitized Result/logs under RULES. Send the HANDOFF ID/path and a brief summary; do not create a separate Result.md.
 From another copy, provide its full diff/new files and path. DONE only means ready for review.
 For a blocker: error, reproduction, tested hypotheses, and required external decision.
 Address review findings within agreed scope; new requirements/protected changes require revision.

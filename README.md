@@ -9,7 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**Work template: [1.2.1](templates/work/VERSION.md)** ·
+**Work template: [1.2.2](templates/work/VERSION.md)** ·
 [Installation](templates/work/INSTALL.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
@@ -31,7 +31,7 @@ A small change does not require a separate branch or a new chat just to follow t
 
 ## Quick start
 
-1. Download the [work template](releases/ocmi-work-1.2.1-en-2026-10-11.zip) and extract it
+1. Download the [work template](releases/ocmi-work-1.2.2-en-2026-10-11.zip) and extract it
    outside the target project, or clone this repository.
 2. Open the target project in an AI client with file access and give the agent this prompt:
 
@@ -86,3 +86,5 @@ Workflow sources are in `templates/work`, guides in `docs`, frozen releases in `
 and validation scripts in `scripts`.
 [Repository layout](docs/layout.md) · [Contributing](CONTRIBUTING.md) ·
 [Checks](scripts/README.md) · [Optional lightweight profile](templates/personal/INSTALL.md).
+
+[Security policy](SECURITY.md). Sanitize evidence before saving or publishing it.

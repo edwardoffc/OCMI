@@ -4,7 +4,7 @@ Read docs/memory/RULES.md, ORCHESTRATION.md, your role procedure, and its inputs
 This repository contains the system and neutral templates. Templates are examples,
 not assignments or the active development state.
 
-Current work format: OCMI 1.2.1, rules revision 2026-10-11.
+Current work format: OCMI 1.2.2, rules revision 2026-10-11.
 The orchestrator owns PLAN, criteria/acceptance checks, and acceptance.
 Workers require an addressed ready START; consultants are read-only.
 The current request determines scope and authority, not an old recorded assignment.

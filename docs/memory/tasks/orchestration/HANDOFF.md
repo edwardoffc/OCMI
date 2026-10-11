@@ -1,6 +1,6 @@
 # OCMI development handoff
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Updated: 2026-10-11. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
@@ -40,3 +40,29 @@ Next source task is not assigned; do not start evaluation automatically.
 Existing installation migration was completed separately with local rules and WIP preserved.
 Those projects' reports are outside this repository.
 OCMI-EVAL-001 remains open: model behavior and costs have not been measured.
+
+## Security review: OCMI-SEC-010
+
+2026-10-11: audited public commit 8053da0 (125 files, nine ZIPs/121 entries) and GitHub settings.
+No exposed secrets or private context found in privacy review and three Gitleaks scans.
+Preventive gaps: disabled repository secret scanning/push protection, incomplete log sanitization
+rules, unprotected main, and no private vulnerability-reporting channel. Remediation follows in OCMI-SEC-011.
+Detailed evidence is local and ignored: .codex/security-audit-2026-10-11/REPORT.md.
+No remote settings or published files changed. cleanup: done; audit materials retained by the
+maintainer for reproducibility, with retention review when findings are resolved or superseded.
+
+## Security remediation: OCMI-SEC-011
+
+2026-10-11, owner authorized all four audit fixes and their publication.
+Work 1.2.2/lightweight 1.2.1 add sanitized evidence in both languages; task schema remains stable.
+Nine previous archives/receipts are preserved; four new distributions have a separate security receipt.
+Local checks: 93 Markdown, 387 links, 38 translation pairs, 67 workflow checks, 13 ZIP checksums.
+Security control passed; synthetic home identifiers, a secret inside ZIP and traversal entries were rejected.
+GitHub secret scanning/push protection and private vulnerability reporting are enabled and read back.
+CI uses pinned checkout/scanner, read-only tokens, no persisted credentials or secret-bearing artifacts.
+Source acceptance: accepted; integration requires Documentation and Secrets and privacy checks in the PR.
+Final main protection and remote integration are verified in the ignored local delivery receipt:
+.codex/security-fix-2026-10-11/delivery.json. Current GitHub checks/settings are authoritative.
+cleanup: done for source preparation; release artifacts are permanent. Local evidence/backups are kept
+by the maintainer for recovery, retention reviewed after verified delivery; branch removed after integration.
+No other project or installed memory was changed. Model evaluations remain unmeasured and unassigned.

@@ -1,11 +1,17 @@
-# OCMI 1.2.1
+# OCMI 1.2.2
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Orchestration, Context Memory & Indexing.
-Compatible update to work profile 1.2. The lightweight profile remains at 1.2.
+Compatible security update to work profile 1.2.1. The lightweight profile is now 1.2.1.
 
-## Changes from 1.2
+## Changes from 1.2.1
+
+Sanitize logs, shared memory, fixtures and archives before persistence/publication.
+Necessary originals require explicit restricted storage and retention ownership.
+Preserve task fields and protected packages; handle exposed credentials as incidents.
+
+## Retained changes from 1.2
 
 - One primary work context per task; R1/R2 reuse a suitable existing copy.
   Create a branch/worktree when the task requires it, not for every small change.
@@ -29,6 +35,6 @@ in current handoff/Acceptance, linking to the original without rewriting the pro
 Project permissions are not expanded; there is no automatic deletion or background cleanup.
 Installed projects do not update automatically; see [INSTALL](INSTALL.md).
 Version, rules date, and task revision r1/r2 are different labels.
-Use: OCMI 1.2.1, rules revision 2026-10-11.
+Use: OCMI 1.2.2, rules revision 2026-10-11.
 
 Structural and archive checks do not prove model behavior or token savings.

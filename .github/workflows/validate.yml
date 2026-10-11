@@ -1,0 +1,45 @@
+name: OCMI validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: validation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  docs:
+    name: Documentation
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate documentation and distributions
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          ./scripts/check-docs.ps1
+          ./scripts/check-workflow.ps1
+          ./scripts/check-localization.ps1
+          ./scripts/check-release.ps1
+          git diff --check
+          if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+  security:
+    name: Secrets and privacy
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify and run pinned scanner
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = Join-Path $env:RUNNER_TEMP 'gitleaks.zip'
+          Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip' -OutFile $zip
+          if ((Get-FileHash -LiteralPath $zip).Hash.ToLowerInvariant() -cne 'd29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e') { throw 'Scanner digest mismatch' }
+          Expand-Archive -LiteralPath $zip -DestinationPath (Join-Path $env:RUNNER_TEMP 'gitleaks')
+          ./scripts/check-security.ps1 -GitleaksPath (Join-Path $env:RUNNER_TEMP 'gitleaks/gitleaks.exe')

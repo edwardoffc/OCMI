@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repoRoot = (Resolve-Path -LiteralPath $Root).Path
-$receipt = if ($Version) { "docs/releases/$Version-validation.json" } else { 'docs/releases/languages-validation.json' }
+$receipt = if ($Version) { "docs/releases/$Version-validation.json" } else { 'docs/releases/security-validation.json' }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repoRoot $receipt) | ConvertFrom-Json
 if ($Version -and $manifest.version -cne "OCMI $Version") { throw 'Receipt version differs' }
 if (!$Version -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
@@ -20,7 +20,7 @@ foreach ($profile in $manifest.profiles) {
     $key = $profile.profile
   } else {
     if ($profile.language -cnotin @('en','ru')) { throw 'Invalid language' }
-    $expectedVersion = if ($profile.profile -eq 'work') { '1.2.1' } else { '1.2' }
+    $expectedVersion = if ($profile.profile -eq 'work') { '1.2.2' } else { '1.2.1' }
     if ($profile.version -cne $expectedVersion) { throw 'Invalid language edition version' }
     $archivePattern = '^releases/ocmi-' + $profile.profile + '-' + [regex]::Escape($profile.version) + '-' + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$'
     if ($profile.archive -cnotmatch $archivePattern) { throw 'Invalid language archive path' }
@@ -60,7 +60,7 @@ foreach ($profile in $manifest.profiles) {
   Write-Output "PASS: $($profile.profile) $($expected.Count) files; $scope agree."
 }
 foreach ($property in $manifest.historicalArchives.PSObject.Properties) {
-  if ($property.Name -notmatch '^ocmi-(personal-)?\d+(\.\d+){0,2}-\d{4}-\d{2}-\d{2}\.zip$') { throw 'Unexpected historical archive' }
+  if ($property.Name -notmatch '^ocmi-((work|personal)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') { throw 'Unexpected historical archive' }
   if ((Get-FileHash -LiteralPath (Join-Path $repoRoot ("releases/" + $property.Name)) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $property.Value) { throw "Historical archive changed: $($property.Name)" }
 }
 Write-Output 'PASS: historical archives unchanged.'

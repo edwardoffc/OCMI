@@ -31,3 +31,13 @@ ArchivesOnly compares ZIPs to the selected receipt without requiring historical 
 
 Scripts require PowerShell 5.1 or later and .NET ZIP support. They do not need a production build,
 GitHub access, or installed AI clients. See [maintenance](../docs/maintaining.md) for release procedure.
+
+## Security checks
+
+Run scripts/check-security.ps1 -GitleaksPath <verified-gitleaks.exe> before publication.
+The script scans tracked files and reachable HEAD history, explicitly extracts every ZIP, rejects unsafe
+archive paths/symlinks and tracked backup/key paths, and flags home identifiers or non-example email addresses.
+Gitleaks uses built-in rules without repository allowlists and redacts output. Review personal details manually too.
+CI downloads Gitleaks 8.30.1 from its official release, verifies a pinned SHA256, and runs both required jobs.
+The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
+Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
