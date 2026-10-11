@@ -86,8 +86,8 @@
                   {
                       "source":  "README.md",
                       "translation":  "README.ru.md",
-                      "sourceSha256":  "67166db8adfde29f9955b01440d0d7348f43ed82001544beedaff91c853967ca",
-                      "translationSha256":  "09de89af281e877e424179cb6caff29d1082056735f0d3cf6c2f7967987b3a87"
+                      "sourceSha256":  "a2b6815e7856b525d7bf05a6ba1f10e3e2fb15d9fdbd51d51c52dd338f49e8f9",
+                      "translationSha256":  "2d024c5cd9d40c1cc1670bc9378c711cda4c15fcc8838bdead9a1500a3257855"
                   },
                   {
                       "source":  "releases/README.md",

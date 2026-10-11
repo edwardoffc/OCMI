@@ -11,7 +11,6 @@ OCMI помогает вести проект в нескольких чатах
 результат и проверку.
 
 **Система OCMI: [1.3.0](locales/ru/VERSION.md)** · [Начать](locales/ru/BOOTSTRAP.md) ·
-**Рабочий комплект: [1.2.2](locales/ru/templates/work/VERSION.md)** ·
 [Установка](locales/ru/templates/work/INSTALL.md) · [Руководство](locales/ru/docs/usage.md) ·
 [История версий](locales/ru/CHANGELOG.md) · [MIT](LICENSE)
 

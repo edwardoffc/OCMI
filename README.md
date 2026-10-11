@@ -10,7 +10,6 @@ A code map points agents to the relevant parts of the codebase, while task recor
 requirements, results, and verification.
 
 **OCMI system: [1.3.0](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
-**Work template: [1.2.2](templates/work/VERSION.md)** ·
 [Installation](templates/work/INSTALL.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
