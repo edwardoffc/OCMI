@@ -67,7 +67,8 @@ Already configured projects continue using their own memory.
 
 A question or URL alone installs nothing. If the client cannot bind a project/equivalent workspace
 or access required files, the chat explains remaining steps and reports setup pending.
-Private service memory belongs outside the source/public Git.
+Private service memory lives in `.local/coordinator` inside the system folder;
+`.local` is excluded from Git and public distributions. Personal storage is optional.
 [Full installation guide](docs/install-system.md) · [Installer route](BOOTSTRAP.md).
 
 ## What lives in your project

@@ -6,7 +6,8 @@ Select the route from the current request before reading development memory.
   read [BOOTSTRAP](BOOTSTRAP.md), or [Russian BOOTSTRAP](locales/ru/BOOTSTRAP.md).
   Start with orientation and user choice; do not install, rename, scan projects,
   or create memory merely because this repository was opened or linked.
-  User installation memory belongs outside this repository.
+  Private installation memory belongs in .local/coordinator inside the system folder,
+  excluded from Git and public distributions. Do not read it during source development.
   Core setup comes first: verified local source, client project/folder binding and initialized coordinator.
   Give explicit user steps; reuse a suitable existing source/project. Defer target integration until confirmed.
 - “This is a work project” for a specific target: follow [neutral routing](docs/work-project-routing.md)

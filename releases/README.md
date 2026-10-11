@@ -1,5 +1,9 @@
 # Distributions
 
+Current 1.3.2 distributions use the `-r2` suffix for the local coordinator-memory correction.
+Original 1.3.2 archives are historical; their [coordinator receipt](../docs/releases/1.3.2-initial-validation.json)
+and [component receipt](../docs/releases/1.3.2-initial-components.json) retain the original inventories.
+
 [English](README.md) · [Русский](../locales/ru/releases/README.md)
 
 These are component profiles for the configured coordinator to install into selected targets.
@@ -13,7 +17,7 @@ The ZIP below contains only the service profile; personal topics and work integr
 
 | Service profile | English | Russian |
 | --- | --- | --- |
-| Coordinator 1.3.2 | [ZIP](ocmi-coordinator-1.3.2-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.2-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.2-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.2-ru-2026-10-12.zip.sha256) |
+| Coordinator 1.3.2 | [ZIP](ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip.sha256) |
 | Historical 1.3.1 | [ZIP](ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
 | Historical 1.3.0 | [ZIP](ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
 
@@ -25,8 +29,8 @@ Runtime protocols are unchanged; four new editions contain the updated installat
 
 | Profile | English | Russian |
 | --- | --- | --- |
-| Work 1.2.2 | [ZIP](ocmi-work-1.2.2-en-2026-10-12.zip) · [SHA256](ocmi-work-1.2.2-en-2026-10-12.zip.sha256) | [ZIP](ocmi-work-1.2.2-ru-2026-10-12.zip) · [SHA256](ocmi-work-1.2.2-ru-2026-10-12.zip.sha256) |
-| Lightweight 1.2.1 | [ZIP](ocmi-personal-1.2.1-en-2026-10-12.zip) · [SHA256](ocmi-personal-1.2.1-en-2026-10-12.zip.sha256) | [ZIP](ocmi-personal-1.2.1-ru-2026-10-12.zip) · [SHA256](ocmi-personal-1.2.1-ru-2026-10-12.zip.sha256) |
+| Work 1.2.2 | [ZIP](ocmi-work-1.2.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-work-1.2.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-ru-2026-10-12-r2.zip.sha256) |
+| Lightweight 1.2.1 | [ZIP](ocmi-personal-1.2.1-en-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip.sha256) |
 
 [Current 1.3.2 component receipt](../docs/releases/1.3.2-components.json) records exact source/ZIP inventories.
 Use scripts/check-release.ps1 from the repository root to verify all four editions.

@@ -33,7 +33,7 @@ foreach ($profile in $manifest.profiles) {
     $expectedVersion = if ($profile.profile -eq 'work') { '1.2.2' } else { '1.2.1' }
     if (!$SecurityBaseline -and ($manifest.installerVersion -cne '1.3.2' -or $profile.installerVersion -cne '1.3.2')) { throw 'Wrong installer policy revision' }
     if ($profile.version -cne $expectedVersion) { throw 'Invalid language edition version' }
-    $archivePattern = '^releases/ocmi-' + $profile.profile + '-' + [regex]::Escape($profile.version) + '-' + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$'
+    $archivePattern = '^releases/ocmi-' + $profile.profile + '-' + [regex]::Escape($profile.version) + '-' + $profile.language + '-\d{4}-\d{2}-\d{2}(-r[2-9][0-9]*)?\.zip$'
     if ($profile.archive -cnotmatch $archivePattern) { throw 'Invalid language archive path' }
     $prefix = if ($profile.language -eq 'ru') { 'locales/ru/' } else { '' }
     $source = Join-Path $repoRoot ($prefix + 'templates/' + $profile.profile)
@@ -71,7 +71,7 @@ foreach ($profile in $manifest.profiles) {
   Write-Output "PASS: $($profile.profile) $($expected.Count) files; $scope agree."
 }
 foreach ($property in $manifest.historicalArchives.PSObject.Properties) {
-  if ($property.Name -notmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') { throw 'Unexpected historical archive' }
+  if ($property.Name -notmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}(-r[2-9][0-9]*)?\.zip$') { throw 'Unexpected historical archive' }
   if ((Get-FileHash -LiteralPath (Join-Path $repoRoot ("releases/" + $property.Name)) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $property.Value) { throw "Historical archive changed: $($property.Name)" }
 }
 Write-Output 'PASS: historical archives unchanged.'

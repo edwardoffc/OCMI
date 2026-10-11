@@ -29,7 +29,7 @@ function Check-Text([string]$Text,[string]$Label) {
 }
 try {
   foreach ($relative in $files) {
-    if ($relative -match '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)|^(\.codex|backups|outputs|tmp)/|(^|/)\.env($|\.)|\.(pem|key|pfx|p12|bundle|sqlite|db)$') {
+    if ($relative -match '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)|^(\.codex|backups|outputs|tmp)/|(^|/)\.local(/|$)|(^|/)\.env($|\.)|\.(pem|key|pfx|p12|bundle|sqlite|db)$') {
       throw 'Unsafe/sensitive tracked path'
     }
     $path = [IO.Path]::GetFullPath((Join-Path $repo $relative))
@@ -46,7 +46,7 @@ try {
         foreach ($entry in $archive.Entries) {
           $name = $entry.FullName.Replace('\','/')
           if ($name.EndsWith('/')) { continue }
-          if ($name -match '^[A-Za-z][A-Za-z0-9+.-]*:|^/|(^|/)\.\.(/|$)|:' -or $seen.ContainsKey($name)) { throw 'Unsafe/duplicate archive entry' }
+          if ($name -match '^[A-Za-z][A-Za-z0-9+.-]*:|^/|(^|/)\.\.(/|$)|(^|/)\.local(/|$)|:' -or $seen.ContainsKey($name)) { throw 'Unsafe/duplicate/private archive entry' }
           if ((($entry.ExternalAttributes -shr 16) -band 0xF000) -eq 0xA000) { throw 'Archive symlink' }
           $seen[$name] = $true
           $count++

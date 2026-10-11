@@ -13,6 +13,7 @@ An unfilled template, ordinary AGENTS.md or registry pointer is not an operation
 Every new installation, including adoption in an existing codebase, requires an initialized
 OCMI installation coordinator performing the action. Verify explicitly identified local full source,
 client project/folder binding, private service memory/current handoff and startup evidence.
+For new core setup use .local/coordinator inside the system folder, excluded from Git and public packages.
 If the coordinator is missing or unconfirmed, defer target installation.
 Do not copy templates, create memory or inspect target code/tests before confirmation.
 Explain obtaining/reusing OCMI or 00_OCMI, binding its client project and starting a separate coordinator.

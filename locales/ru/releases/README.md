@@ -1,5 +1,9 @@
 # Установочные комплекты
 
+Текущие комплекты 1.3.2 имеют суффикс `-r2`: исправление локальной памяти координатора.
+Исходные архивы 1.3.2 исторические; первоначальные [receipt координатора](../../../docs/releases/1.3.2-initial-validation.json)
+и [receipt компонентов](../../../docs/releases/1.3.2-initial-components.json) сохраняют их состав.
+
 [English](../../../releases/README.md) · **Русский**
 
 Это профили компонентов для внедрения настроенным координатором в выбранные цели.
@@ -13,7 +17,7 @@ ZIP ниже содержит только служебный профиль; л
 
 | Служебный профиль | Английский | Русский |
 | --- | --- | --- |
-| Координатор 1.3.2 | [ZIP](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12.zip.sha256) |
+| Координатор 1.3.2 | [ZIP](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip.sha256) |
 | Исторический 1.3.1 | [ZIP](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
 | Исторический 1.3.0 | [ZIP](../../../releases/ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
 
@@ -25,8 +29,8 @@ ZIP ниже содержит только служебный профиль; л
 
 | Профиль | Английский | Русский |
 | --- | --- | --- |
-| Рабочий 1.2.2 | [ZIP](../../../releases/ocmi-work-1.2.2-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.2.2-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-ru-2026-10-12.zip.sha256) |
-| Облегчённый 1.2.1 | [ZIP](../../../releases/ocmi-personal-1.2.1-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12.zip.sha256) |
+| Рабочий 1.2.2 | [ZIP](../../../releases/ocmi-work-1.2.2-en-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-en-2026-10-12-r2.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.2.2-ru-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-ru-2026-10-12-r2.zip.sha256) |
+| Облегчённый 1.2.1 | [ZIP](../../../releases/ocmi-personal-1.2.1-en-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-en-2026-10-12-r2.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12-r2.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12-r2.zip.sha256) |
 
 [Receipt компонентов 1.3.2](../../../docs/releases/1.3.2-components.json) содержит точный состав исходников/ZIP.
 Для сверки четырёх комплектов запустите scripts/check-release.ps1 из корня репозитория.

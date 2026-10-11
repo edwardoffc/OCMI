@@ -2,6 +2,36 @@
   "schemaVersion": 1,
   "clauses": [
     {
+      "id": "local coordinator default",
+      "input": "bootstrap",
+      "en": "Use \\.local/coordinator inside the selected system folder",
+      "ru": "Используй \\.local/coordinator внутри выбранной папки системы"
+    },
+    {
+      "id": "ignore before private writes",
+      "input": "install",
+      "en": "before saving user values",
+      "ru": "До записи значений проверь"
+    },
+    {
+      "id": "preserve local updates",
+      "input": "install",
+      "en": "preserve it when updating/replacing the source",
+      "ru": "сохраняй её при обновлении/замене исходника"
+    },
+    {
+      "id": "no installed folder publication",
+      "input": "install",
+      "en": "never ZIP the installed folder",
+      "ru": "не архивируй всю установленную папку"
+    },
+    {
+      "id": "no automatic external memory migration",
+      "input": "install",
+      "en": "not moved without an explicit migration request",
+      "ru": "не переноси без явного запроса миграции"
+    },
+    {
       "id": "orientation inputs",
       "input": "bootstrap",
       "en": "Do not load docs/memory",
@@ -94,8 +124,8 @@
     {
       "id": "private coordinator",
       "input": "agent",
-      "en": "outside the source checkout and public Git scope",
-      "ru": "вне исходного репозитория и публичного Git"
+      "en": "excluded from Git and public distributions",
+      "ru": "исключена из Git и публичных комплектов"
     },
     {
       "id": "pointer is not authority",

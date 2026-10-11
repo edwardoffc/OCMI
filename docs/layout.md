@@ -49,16 +49,18 @@ Folder names and locations are user choices, and work projects may live elsewher
 
 ~~~text
 Projects/
-  00_OCMI/                         source checkout; no user installation records
-  OCMI-local/coordinator/          private core setup state and filled STARTUP
+  00_OCMI/                         system source
+    .local/coordinator/            private setup state and filled STARTUP; excluded from Git/packages
   01_Personal_memory/              only if selected
     topics/<topic>/               independent lightweight memory when requested
   example-project/                 its own work memory
 ~~~
 
-Guided installation prepares private service memory outside the source checkout/public Git scope.
-Personal-topic storage remains optional. Keep an existing private coordinator path;
-a service area in a selected personal store is also possible without moving existing records. It contains setup choices, nonsensitive installation metadata
+Guided installation prepares private service memory in .local/coordinator inside the system folder.
+.gitignore excludes /.local/ and .gitattributes marks /.local export-ignore; checks reject tracked
+local paths and local entries in public ZIPs. Preserve .local during updates and do not read it for source development.
+Personal-topic storage remains optional. Keep existing external coordinator paths until explicit migration.
+The service area contains setup choices, nonsensitive installation metadata
 and a setup handoff, not project plans or personal content. Registry pointers do not
 authorize reading their targets. Existing setup paths are merged in place rather than
 renamed just to match the example. A new coordinator chat in the system-bound project uses its filled STARTUP prompt and this private entry.

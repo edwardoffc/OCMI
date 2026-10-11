@@ -1,6 +1,8 @@
 # OCMI 1.3.2
 
 Released 2026-10-12. Patch correction: unify URL/downloaded entry and make core completion explicit.
+In-place correction: private coordinator memory defaults to .local/coordinator inside the system,
+excluded from Git and public distributions. Distribution revision r2; no new numbered release.
 
 The first chat gives brief orientation and offers installation.
 After selection, install a local system copy and prepare a filled startup prompt.

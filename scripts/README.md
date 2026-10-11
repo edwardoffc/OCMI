@@ -10,6 +10,7 @@ powershell -NoProfile -File scripts/check-workflow.ps1
 powershell -NoProfile -File scripts/check-localization.ps1
 powershell -NoProfile -File scripts/check-onboarding.ps1
 powershell -NoProfile -File scripts/check-release.ps1
+powershell -NoProfile -File scripts/check-local-boundary.ps1
 git diff --check
 ~~~
 
@@ -37,8 +38,10 @@ sizes, and SHA256; it also checks immutable historical archives.
 For historical receipts use -Version 1.2 -ArchivesOnly or -Version 1.2.1 -ArchivesOnly.
 ArchivesOnly compares ZIPs to the selected receipt without requiring historical sources in templates/.
 
-Scripts require PowerShell 5.1 or later and .NET ZIP support. They do not need a production build,
-GitHub access, or installed AI clients. See [maintenance](../docs/maintaining.md) for release procedure.
+Scripts require PowerShell 5.1 or later and .NET ZIP support. The local-boundary check additionally
+requires Git; it checks ignore/export behavior, the index, reachable history and public ZIP paths
+without reading private .local contents. No production build, GitHub access or installed AI client is needed.
+See [maintenance](../docs/maintaining.md) for release procedure.
 
 ## Security checks
 

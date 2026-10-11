@@ -1,6 +1,8 @@
 # OCMI current state
 
 Snapshot: 2026-10-12. System release prepared: 1.3.2 (uniform entry and required core completion).
+Current in-place correction: distribution r2; coordinator memory at .local/coordinator inside the system,
+ignored/export-excluded and rejected from public index/history/ZIPs by CI. No installed memory is moved.
 Work protocol: 1.2.2. Optional lightweight protocol: 1.2.1.
 English is canonical; Russian guides/templates are maintained under locales/ru.
 docs/memory is the single development memory, not installed project data.
@@ -21,7 +23,7 @@ The language edition preserves protocol fields and authority boundaries.
 It does not automatically upgrade installed projects or grant publication authority.
 Only neutral source files, guides, fixtures, and release artifacts belong in the public repository.
 Coordinator service source lives in templates/coordinator; installed setup memory belongs
-outside the source/public Git scope. The temporary installer offers local installation; a separate
+in .local/coordinator inside the system, excluded from Git/public packages. The temporary installer offers local installation; a separate
 permanent coordinator confirms handover and then offers optional personal/work actions.
 Service profile has eight files per language. Work/lightweight runtime files remain unchanged;
 INSTALL entry checks and work VERSION installer notes now require coordinator-led new installation.

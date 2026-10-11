@@ -6,7 +6,8 @@ System setup: 1.3.2; common URL/downloaded entry with explicit folder/project/co
 Core completion requires confirmed client project binding before target integration.
 Both component INSTALLs and neutral routing require coordinator-led new installations;
 operational installed projects retain their own routine workflow.
-Private setup records and filled prompt stay outside source; optional personal/work actions follow handover.
+Private setup records and filled prompt live in ignored .local/coordinator inside the system;
+excluded from Git/public packages and source development reads. Optional actions follow handover.
 Canonical English work sources: templates/work, OCMI 1.2.2.
 Optional lightweight profile: templates/personal, version 1.2.1.
 Russian guides and complete template equivalents: locales/ru.
