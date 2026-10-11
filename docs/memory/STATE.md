@@ -15,8 +15,8 @@ Original Russian archives (18 and 5 files for 1.2/1.2.1) remain unchanged.
 
 | Capability / scope | Requirement | State | Evidence |
 | --- | --- | --- | --- |
-| PowerShell checks / repository root | Windows PowerShell 5.1 and .NET ZIP support | verified for the recorded checks | [Current handoff](tasks/orchestration/HANDOFF.md) |
-| Git / repository root | Git for Windows | available | Diff and publication checks recorded at acceptance |
+| PowerShell checks / repository root | PowerShell 7 and .NET ZIP support; Windows 5.1 compatibility | native Windows/macOS ARM64/x64 verified | [Platform acceptance](tasks/OCMI-MAC-017/HANDOFF.md) |
+| Git / repository root | Native Git on Windows/macOS | available locally and on CI runners | Diff/export/history checks recorded at acceptance |
 | Model behavior and task costs | Separate OCMI-EVAL-001 | unknown | Static checks do not establish behavioral outcomes |
 
 The language edition preserves protocol fields and authority boundaries.

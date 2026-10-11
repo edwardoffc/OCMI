@@ -98,8 +98,8 @@
                   {
                       "source":  "docs/releases/1.3.2.md",
                       "translation":  "locales/ru/docs/releases/1.3.2.md",
-                      "sourceSha256":  "0c556973038247d6a07b7551bcc66124a6549ddd2e9c423afa6d66fbc9ab8154",
-                      "translationSha256":  "bed8dc0fde9740f1aac368ad4bcad72f54030d70b508909fef2490625511a7b7"
+                      "sourceSha256":  "dda7d4cd8b62c1db3416f0fddb14ffc5d43fc8cdeda9b3afa82f2462239323b9",
+                      "translationSha256":  "78d80ace07ca031958df579b03635a5a7e687c900a4029eaba9d2f126fa3b10b"
                   },
                   {
                       "source":  "docs/research/2026-10-11-ecc-review.md",
