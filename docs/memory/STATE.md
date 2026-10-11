@@ -1,6 +1,6 @@
 # OCMI current state
 
-Snapshot: 2026-10-11.
+Snapshot: 2026-10-12. System release: 1.3.0 (optional guided setup).
 Work protocol: 1.2.2. Optional lightweight protocol: 1.2.1.
 English is canonical; Russian guides/templates are maintained under locales/ru.
 docs/memory is the single development memory, not installed project data.
@@ -20,4 +20,6 @@ Original Russian archives (18 and 5 files for 1.2/1.2.1) remain unchanged.
 The language edition preserves protocol fields and authority boundaries.
 It does not automatically upgrade installed projects or grant publication authority.
 Only neutral source files, guides, fixtures, and release artifacts belong in the public repository.
+Optional coordinator source lives in templates/coordinator; installed setup memory belongs
+outside the source/public Git scope. Initial orientation is read-only and options are independent.
 Local backups and credentials are excluded. [Continue here](tasks/orchestration/HANDOFF.md).

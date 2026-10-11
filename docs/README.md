@@ -2,6 +2,7 @@
 
 [English](README.md) · [Русский](../locales/ru/docs/README.md)
 
+- [Start here](../BOOTSTRAP.md): orientation, independent setup choices and optional coordinator memory.
 - [Usage](usage.md): new projects, resuming, adoption, and upgrades.
 - [Layout](layout.md): the system repository and independent installed project memory.
 - [Localization](localization.md): language selection, translation maintenance, and adding a language.

@@ -8,6 +8,10 @@ Installed copies are independent; routine chats read their own project's memory.
 
 ## New project
 
+For orientation first, use [BOOTSTRAP](../BOOTSTRAP.md). It offers independent choices;
+no personal store, folder rename or persistent coordinator is required for work projects.
+The direct installation request below already selects its action; do not repeat authorization.
+
 Open the project directory and give the agent the exact path to the selected INSTALL.md:
 
 > This is a work project. Install OCMI from the supplied template.

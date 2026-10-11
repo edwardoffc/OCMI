@@ -8,6 +8,11 @@ and both complete installation profiles.
 
 ## Choosing a language
 
+Start with root BOOTSTRAP.md or locales/ru/BOOTSTRAP.md for optional guided setup.
+The coordinator profile also has complete editions under templates/coordinator and
+locales/ru/templates/coordinator. System VERSION is maintained in both languages;
+it is separate from the unchanged work/lightweight protocol versions.
+
 Use templates/work/INSTALL.md or templates/personal/INSTALL.md for English.
 For Russian, use the same path beneath locales/ru/. You can also select a language-qualified
 [archive](../releases/README.md). Extract the entire profile, including LICENSE.

@@ -24,6 +24,12 @@ a hash does not establish semantic equivalence.
 
 ## Releases
 
+System version is recorded in root VERSION.md; profiles have their own versions.
+System 1.3.0 adds templates/coordinator without changing work 1.2.2 or lightweight 1.2.1.
+The separate 1.3.0 receipt verifies coordinator archives; keep existing receipts/ZIPs unchanged.
+Run check-onboarding alongside existing checks for setup/profile changes. Its negative
+mutations verify instruction safeguards, not actual model behavior.
+
 1. Change canonical rules/version and update CHANGELOG/usage when behavior changes.
 2. Update affected translations; preserve paths, IDs, schema headings, and machine-readable statuses.
 3. Run check-docs, check-workflow, check-localization, check-release, and git diff --check.

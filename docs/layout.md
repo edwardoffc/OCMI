@@ -11,6 +11,9 @@ OCMI/
   README.ru.md              Russian entry point
   templates/work/           canonical English work profile
   templates/personal/       canonical English lightweight profile
+  templates/coordinator/    optional installation coordinator profile
+  BOOTSTRAP.md              orientation and user-selected setup route
+  VERSION.md                system version, separate from profile versions
   docs/                     English guides, reports, and development memory
   locales/ru/               Russian guides and self-contained templates
   localization/             translation manifest and validation data
@@ -37,5 +40,27 @@ Local reports/backups live in ignored directories. Before publication, review hi
 
 After moving a project, verify the client's working directory.
 Renaming a folder does not automatically update existing chat bindings.
+
+## Optional user organization
+
+[BOOTSTRAP](../BOOTSTRAP.md) offers organization; it does not require or apply it.
+Folder names and locations are user choices, and work projects may live elsewhere.
+
+~~~text
+Projects/
+  00_OCMI/                         source checkout; no user installation records
+  01_Personal_memory/              only if selected
+    90-system/ocmi/                optional coordinator memory
+    topics/<topic>/               independent lightweight memory when requested
+  example-project/                 its own work memory
+~~~
+
+Persistent coordinator memory is optional and outside the source checkout/public Git scope.
+Without a personal store, use any separate private coordinator directory, such as
+OCMI-local/coordinator. It contains setup choices, nonsensitive installation metadata
+and a setup handoff, not project plans or personal content. Registry pointers do not
+authorize reading their targets. Existing setup paths are merged in place rather than
+renamed just to match the example. A new coordinator chat resumes from that local entry.
+The work orchestrator remains responsible for its project's queue and acceptance.
 
 [Usage](usage.md) · [Maintenance](maintaining.md) · [Localization](localization.md).

@@ -23,6 +23,7 @@ jobs:
           ./scripts/check-docs.ps1
           ./scripts/check-workflow.ps1
           ./scripts/check-localization.ps1
+          ./scripts/check-onboarding.ps1
           ./scripts/check-release.ps1
           git diff --check
           if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }

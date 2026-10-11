@@ -14,7 +14,7 @@ function Scoped-File([string]$Relative) {
 }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repo 'localization/manifest.json') | ConvertFrom-Json
 if ($manifest.canonicalLanguage -cne 'en' -or $manifest.language -cne 'ru' -or $manifest.schemaVersion -ne 1) { throw 'Unsupported localization manifest' }
-$expected = @('README.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','scripts/README.md','releases/README.md')
+$expected = @('README.md','BOOTSTRAP.md','VERSION.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','scripts/README.md','releases/README.md')
 foreach ($dir in @('templates','docs')) {
   $expected += @(Get-ChildItem -LiteralPath (Join-Path $repo $dir) -Recurse -File -Filter '*.md' |
     Where-Object { $_.FullName -notlike '*\docs\memory\*' -or $_.FullName -like '*\templates\*' } |
@@ -36,7 +36,7 @@ foreach ($pair in $manifest.files) {
 if ($seen.Count -ne $expected.Count) { throw 'Missing translation record' }
 $actual = @('README.ru.md') + @(Get-ChildItem -LiteralPath (Join-Path $repo 'locales/ru') -Recurse -File -Filter '*.md' | ForEach-Object {$_.FullName.Substring($repo.Length+1).Replace('\','/')})
 if (@(Compare-Object ($translated | Sort-Object) ($actual | Sort-Object)).Count) { throw 'Translation inventory differs' }
-foreach ($profile in @('work','personal')) {
+foreach ($profile in @('work','personal','coordinator')) {
   $en = Join-Path $repo "templates/$profile"
   $ru = Join-Path $repo "locales/ru/templates/$profile"
   $enFiles = @(Get-ChildItem -LiteralPath $en -Recurse -File | ForEach-Object {$_.FullName.Substring($en.Length+1).Replace('\','/')} | Sort-Object)

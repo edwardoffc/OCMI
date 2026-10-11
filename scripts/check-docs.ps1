@@ -2,7 +2,7 @@ param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
 $files = @()
-foreach ($name in @('README.md', 'README.ru.md', 'AGENTS.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'scripts/README.md', 'releases/README.md')) {
+foreach ($name in @('README.md', 'README.ru.md', 'AGENTS.md', 'BOOTSTRAP.md', 'VERSION.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'scripts/README.md', 'releases/README.md')) {
   $p = Join-Path $rootPath $name
   if (Test-Path -LiteralPath $p) { $files += Get-Item -LiteralPath $p }
 }

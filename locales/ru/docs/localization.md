@@ -1,5 +1,9 @@
 # Локализация
 
+Для необязательной настройки начните с корневого BOOTSTRAP.md или locales/ru/BOOTSTRAP.md.
+Полные версии координатора находятся в templates/coordinator и locales/ru/templates/coordinator.
+VERSION системы поддерживается на двух языках и отделён от неизменных версий рабочих/лёгких правил.
+
 [English](../../../docs/localization.md) · **Русский**
 
 Английский — основной язык проекта. README.md, docs/ и templates/ в корне содержат
