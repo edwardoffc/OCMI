@@ -39,7 +39,7 @@ mutations verify instruction safeguards, not actual model behavior.
 
 1. Change canonical rules/version and update CHANGELOG/usage when behavior changes.
 2. Update affected translations; preserve paths, IDs, schema headings, and machine-readable statuses.
-3. Run check-docs, check-workflow, check-localization, check-release, check-local-boundary, and git diff --check.
+3. Run pwsh -NoProfile -File scripts/check-all.ps1 on Windows/macOS; run the verified native secret scanner before publication.
    Structural checks do not replace [model/cost evaluation](evals/context-recovery.md).
 4. Save each changed distribution under a new locale-qualified filename with SHA256 and a receipt.
    Verify exact archive inventory, file sizes, and hashes against the selected language source.

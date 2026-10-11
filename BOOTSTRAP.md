@@ -25,6 +25,9 @@ An explanation-only user may decline; do not configure anything from a question 
 
 ## One installation outcome
 
+Windows and macOS use this same procedure. Resolve native absolute paths in private setup records;
+stable profile paths remain unchanged. [Platform support](docs/platforms.md).
+
 1. Wait for the user's selection before any writes, downloads, clones or target scans.
    An explicit core installation request is sufficient; do not ask again for the same authorization.
    Resolve missing core targets before writes. Core prerequisites do not grant access to work projects.

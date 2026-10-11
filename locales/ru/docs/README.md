@@ -16,3 +16,5 @@
 - [Проверка восстановления](evals/context-recovery.md): структурные проверки и сценарии оценки модели.
 
 Подробные правила рабочего процесса находятся в templates/work; здесь краткие инструкции.
+
+Windows/macOS: [общие инструкции](platforms.md). Проверки: pwsh -NoProfile -File scripts/check-all.ps1.

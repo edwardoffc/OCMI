@@ -1,5 +1,6 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 $repo = (Resolve-Path -LiteralPath $Root).Path
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $ignore = [IO.File]::ReadAllText((Join-Path $repo '.gitignore'))

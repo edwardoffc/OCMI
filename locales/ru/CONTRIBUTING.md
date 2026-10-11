@@ -18,15 +18,10 @@
 Перед отправкой выполните из корня репозитория:
 
 ~~~powershell
-powershell -NoProfile -File scripts/check-docs.ps1
-powershell -NoProfile -File scripts/check-workflow.ps1
-powershell -NoProfile -File scripts/check-localization.ps1
-powershell -NoProfile -File scripts/check-onboarding.ps1
-powershell -NoProfile -File scripts/check-release.ps1
-git diff --check
+pwsh -NoProfile -File scripts/check-all.ps1
 ~~~
 
-Проверки рассчитаны на Windows PowerShell 5.1; шаблоны — обычные Markdown-файлы.
+Проверки используют PowerShell 7 в Windows/macOS; совместимость с Windows PowerShell 5.1 проверяется отдельно. Шаблоны — обычные Markdown-файлы.
 Структурная проверка не доказывает качество работы модели или экономию токенов.
 Для изменения поведения правил укажите проверяемые сценарии и ограничения результата.
 
@@ -37,3 +32,5 @@ git diff --check
 Материалы репозитория распространяются по [MIT](../../LICENSE).
 
 Перед публикацией запускайте проверку безопасности с проверенным сканером. Сообщайте об уязвимостях приватно по [SECURITY](SECURITY.md). Изменения входят в main через PR с Documentation и Secrets and privacy; одобрение второго сопровождающего не требуется.
+
+Windows/macOS: [общие инструкции](docs/platforms.md). Проверки: pwsh -NoProfile -File scripts/check-all.ps1.

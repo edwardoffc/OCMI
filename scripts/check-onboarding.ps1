@@ -5,6 +5,7 @@ param(
   [switch]$ReleaseOnly
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repo = (Resolve-Path -LiteralPath $Root).Path
 $passed = 0
@@ -12,16 +13,7 @@ function Assert-Valid([bool]$Condition, [string]$Message) {
   if (!$Condition) { throw $Message }
 }
 function Scoped-File([string]$Base, [string]$Relative) {
-  Assert-Valid ($Relative -notmatch '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)') 'Unsafe input path'
-  $full = [IO.Path]::GetFullPath((Join-Path $Base $Relative))
-  Assert-Valid ($full.StartsWith($Base.TrimEnd('\','/') + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) 'Outside input root'
-  Assert-Valid (Test-Path -LiteralPath $full -PathType Leaf) "Missing input: $Relative"
-  $item = Get-Item -LiteralPath $full
-  while ($item.FullName -ne $Base) {
-    Assert-Valid (!(($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) 'Reparse input'
-    $item = Get-Item -LiteralPath (Split-Path $item.FullName -Parent)
-  }
-  return $full
+  return Get-OCMIScopedFile $Base $Relative
 }
 function Read-Scoped([string]$Base, [string]$Relative) {
   return [IO.File]::ReadAllText((Scoped-File $Base $Relative))

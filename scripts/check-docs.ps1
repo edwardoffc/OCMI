@@ -1,5 +1,6 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
 $files = @()
 foreach ($name in @('README.md', 'README.ru.md', 'AGENTS.md', 'BOOTSTRAP.md', 'COORDINATOR.md', 'VERSION.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md', 'scripts/README.md', 'releases/README.md')) {
@@ -13,6 +14,7 @@ foreach ($name in @('docs', 'templates', 'locales')) {
 $issues = @()
 $links = 0
 foreach ($file in $files) {
+  Assert-OCMISafePath $rootPath $file.FullName
   $fence = ''
   $number = 0
   foreach ($line in [IO.File]::ReadAllLines($file.FullName)) {
@@ -30,7 +32,7 @@ foreach ($file in $files) {
       if (!$href) { continue }
       $links++
       $target = [IO.Path]::GetFullPath((Join-Path $file.DirectoryName $href))
-      if (!$target.StartsWith($rootPath + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase) -or !(Test-Path -LiteralPath $target)) {
+      if (!(Test-OCMIContainedPath $rootPath $target) -or !(Test-Path -LiteralPath $target)) {
         $issues += "$($file.FullName):$($number): unresolved/outside link: $href"
       }
     }

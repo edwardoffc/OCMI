@@ -24,3 +24,5 @@
 
 [Начать](BOOTSTRAP.md) · [Установка](docs/install-system.md) ·
 [Отчёт версии](docs/releases/1.3.2.md) · [История](CHANGELOG.md).
+
+Совместимость Windows/macOS добавлена в 1.3.2 без нового номерного релиза. [Платформы](docs/platforms.md).

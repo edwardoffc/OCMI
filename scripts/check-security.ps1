@@ -3,6 +3,7 @@ param(
   [Parameter(Mandatory=$true)][string]$GitleaksPath
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 if (!$Root) { $Root = Join-Path $PSScriptRoot '..' }
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repo = (Resolve-Path -LiteralPath $Root).Path
@@ -32,13 +33,7 @@ try {
     if ($relative -match '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)|^(\.codex|backups|outputs|tmp)/|(^|/)\.local(/|$)|(^|/)\.env($|\.)|\.(pem|key|pfx|p12|bundle|sqlite|db)$') {
       throw 'Unsafe/sensitive tracked path'
     }
-    $path = [IO.Path]::GetFullPath((Join-Path $repo $relative))
-    if (!$path.StartsWith($repo+'\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Tracked path outside root' }
-    $item = Get-Item -LiteralPath $path
-    while ($item.FullName -ne $repo) {
-      if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'Tracked reparse path' }
-      $item = Get-Item -LiteralPath (Split-Path $item.FullName -Parent)
-    }
+    $path = Get-OCMIScopedFile $repo $relative
     if ($relative.EndsWith('.zip')) {
       $archive = [IO.Compression.ZipFile]::OpenRead($path)
       try {
@@ -78,7 +73,6 @@ try {
 } finally {
   # Only remove the exact temporary directory this invocation created.
   $resolved = [IO.Path]::GetFullPath($temp)
-  $base = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd('\')+'\'
-  if (!$resolved.StartsWith($base,[StringComparison]::OrdinalIgnoreCase) -or [IO.Path]::GetFileName($resolved) -notmatch '^ocmi-scan-[a-f0-9]{32}$') { throw 'Unsafe scanner cleanup target' }
+  Assert-OCMITemporaryDirectory $resolved ([IO.Path]::GetTempPath()) 'ocmi-scan-'
   Remove-Item -LiteralPath $resolved -Recurse -Force
 }

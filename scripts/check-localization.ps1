@@ -1,24 +1,17 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'path-utils.ps1')
 $repo = (Resolve-Path -LiteralPath $Root).Path
 function Scoped-File([string]$Relative) {
-  if ($Relative -match '^[A-Za-z][A-Za-z0-9+.-]*:|^[/\\]|(^|[/\\])\.\.([/\\]|$)') { throw 'Unsafe translation path' }
-  $full = [IO.Path]::GetFullPath((Join-Path $repo $Relative))
-  if (!$full.StartsWith($repo + '\', [StringComparison]::OrdinalIgnoreCase) -or !(Test-Path -LiteralPath $full -PathType Leaf)) { throw "Missing/outside translation: $Relative" }
-  $item = Get-Item -LiteralPath $full
-  while ($item.FullName -ne $repo) {
-    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'Reparse translation path' }
-    $item = Get-Item -LiteralPath (Split-Path $item.FullName -Parent)
-  }
-  return $full
+  return Get-OCMIScopedFile $repo $Relative
 }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repo 'localization/manifest.json') | ConvertFrom-Json
 if ($manifest.canonicalLanguage -cne 'en' -or $manifest.language -cne 'ru' -or $manifest.schemaVersion -ne 1) { throw 'Unsupported localization manifest' }
 $expected = @('README.md','BOOTSTRAP.md','COORDINATOR.md','VERSION.md','CONTRIBUTING.md','SECURITY.md','CHANGELOG.md','scripts/README.md','releases/README.md')
 foreach ($dir in @('templates','docs')) {
   $expected += @(Get-ChildItem -LiteralPath (Join-Path $repo $dir) -Recurse -File -Filter '*.md' |
-    Where-Object { $_.FullName -notlike '*\docs\memory\*' -or $_.FullName -like '*\templates\*' } |
-    ForEach-Object { $_.FullName.Substring($repo.Length + 1).Replace('\','/') })
+    ForEach-Object { Get-OCMIRelativeFile $repo $_.FullName } |
+    Where-Object { $_ -notlike 'docs/memory/*' })
 }
 $seen = @{}
 $translated = @()

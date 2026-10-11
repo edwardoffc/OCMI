@@ -17,3 +17,5 @@
 
 Detailed workflow rules live in templates/work. Russian guides and self-contained templates are under locales/ru.
 Development memory is maintained once in English; it is not a second translated user guide.
+
+Windows/macOS: [common instructions](platforms.md). Checks: pwsh -NoProfile -File scripts/check-all.ps1.

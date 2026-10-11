@@ -4,6 +4,8 @@
 
 ## System 1.3.2 — 2026-10-12
 
+- In-place platform correction: common Windows/macOS instructions, PowerShell 7 checks, native path guards and Intel/Apple Silicon CI. No new numbered release or component archives; installed projects remain unchanged.
+
 - In-place correction: .local/coordinator inside the system; Git/export/package exclusions and preservation checks.
 - Updated distribution revision r2; original 1.3.2 ZIPs/receipts retained. Existing installations are not migrated.
 - One URL/downloaded outcome: local system, bound client project and initialized coordinator.
