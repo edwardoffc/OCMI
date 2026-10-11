@@ -9,7 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**OCMI system: [1.3.1](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
+**OCMI system: [1.3.2](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
 [Installation](docs/install-system.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
@@ -31,39 +31,44 @@ A small change does not require a separate branch or a new chat just to follow t
 
 ## Quick start
 
-Open a new chat and give it [the repository URL](https://github.com/edwardoffc/OCMI)
-or a downloaded copy. Ask, for example:
+Both routes reach the same result: **local system → bound client project →
+coordinator chat with saved service memory**.
 
-> Study OCMI and briefly explain what it is.
+### From a URL
 
-1. The first chat gives a short introduction and offers installation.
-2. If you choose to install, it prepares a verified local system copy in `00_OCMI`
-   or `OCMI`, private coordinator service memory, and a filled startup prompt.
-3. Create a local project OCMI attached to the system folder, then a separate
-   “OCMI Coordinator” chat inside it. Send the prepared prompt.
-   Without projects, use a separate chat with access to the required files.
-4. The coordinator verifies saved state and confirms startup. It then offers optional
-   personal storage, folder organization and integration into your work projects.
-5. After confirmation, you may delete/archive the first chat.
-   New coordinator chats resume from the saved startup prompt and current handoff.
+Give [the repository URL](https://github.com/edwardoffc/OCMI) to an ordinary chat and ask:
 
-Providing a URL alone installs nothing and grants no local file access.
-If tools cannot download or write, the first chat provides manual steps and reports what remains.
-Private service memory belongs outside the source checkout/public Git.
-See [the two-stage procedure](BOOTSTRAP.md) and [installation details](docs/install-system.md).
+> Study OCMI and help me start using it.
 
-### Direct project installation
+The first chat briefly explains OCMI, gives the folder/project/coordinator steps and offers setup.
+After selection it helps obtain the local system in `00_OCMI` or `OCMI`.
 
-If you already know the target, use [work INSTALL](templates/work/INSTALL.md) or its
-[complete ZIP](releases/ocmi-work-1.2.2-en-2026-10-11.zip), and ask:
+### From a downloaded copy
 
-> This is a work project. Set up OCMI using INSTALL.md from the template I provide.
-> Preserve existing instructions, documentation, active tasks, and unfinished work.
-> Populate project memory with verified facts and check the links.
+Unpack the full repository into your chosen folder. Create a local OCMI project in the AI client,
+attach that folder, open a first chat inside it and send the same request.
+The chat verifies and reuses the download and existing project; no duplicates are needed.
 
-Provide the exact template and target paths. Then ask the project orchestrator for the
-plan and role prompts you need. Select chats/models separately. Installed projects are
-self-contained; routine work reads their own memory. See the [user guide](docs/usage.md).
+### Complete either route
+
+1. The first chat prepares private service memory and a filled startup prompt,
+   then gives user actions with concrete paths and names.
+2. Create/select the OCMI project bound to the system folder.
+   Inside it create a separate “OCMI Coordinator” chat and send the prompt.
+   Allow access to the exact private service directory if needed.
+3. The coordinator verifies files, client project/binding and confirms startup.
+   Until then setup is incomplete; keep the first chat.
+4. The coordinator now explains usage and offers optional personal storage,
+   folder organization and work-project integration. You may retire the first chat.
+
+A first request to “integrate OCMI into my project” also passes through core setup.
+Preserve it as deferred scope; change the target only after coordinator confirmation.
+Already configured projects continue using their own memory.
+
+A question or URL alone installs nothing. If the client cannot bind a project/equivalent workspace
+or access required files, the chat explains remaining steps and reports setup pending.
+Private service memory belongs outside the source/public Git.
+[Full installation guide](docs/install-system.md) · [Installer route](BOOTSTRAP.md).
 
 ## What lives in your project
 

@@ -2,6 +2,19 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## System 1.3.2 — 2026-10-12
+
+- One URL/downloaded outcome: local system, bound client project and initialized coordinator.
+- First chat supplies concrete folder/project/prompt steps; suitable folders/projects are reused.
+- A first integration request is retained and waits for confirmed core setup.
+- Project/binding fields and evidence source; unavailable client capabilities leave setup pending.
+- Removed direct-integration startup shortcuts; installed projects retain their routine workflow.
+- Both component INSTALLs and neutral work-project routing require the coordinator for new installations.
+- Four new component ZIPs include the entry check; runtime protocols remain 1.2.2/1.2.1.
+- Complete English/Russian editions, sixth prompt field and checks. Prior archives remain immutable.
+
+[Release report](docs/releases/1.3.2.md) · [System installation](docs/install-system.md).
+
 ## System 1.3.1 — 2026-10-12
 
 - Brief first-chat introduction, then an explicit offer to install the full local system.

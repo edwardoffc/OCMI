@@ -5,8 +5,10 @@ Status: template. Updated: [date].
 - Coordinator directory and reading boundary: [confirmed private location].
 - Communication language / template edition: [confirmed languages].
 - Local OCMI system folder: [confirmed local location].
+- Client project/workspace and folder binding: [planned / confirmed; evidence source and date].
+- Coordinator chat in this project: [pending / initialized with evidence].
 - Source origin and commit/tag: [verified identity / unknown with verification limit].
-- Source system version: [verified version]; coordinator profile: 1.3.1.
+- Source system version: [verified version]; coordinator profile: 1.3.2.
 - Restoration prompt: [STARTUP](../STARTUP.md).
 - Core setup authority: [current request selecting installation and both core locations].
 

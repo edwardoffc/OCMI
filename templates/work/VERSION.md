@@ -38,3 +38,6 @@ Version, rules date, and task revision r1/r2 are different labels.
 Use: OCMI 1.2.2, rules revision 2026-10-11.
 
 Structural and archive checks do not prove model behavior or token savings.
+
+Installer policy: OCMI system 1.3.2. New installations are performed by the initialized coordinator.
+Runtime protocol remains 1.2.2; this source update does not migrate installed projects.

@@ -1,11 +1,13 @@
 # OCMI installation coordinator
 
-**OCMI coordinator 1.3.1, 2026-10-12**
+**OCMI coordinator 1.3.2, 2026-10-12**
 
 Read memory/INDEX.md, memory/BRIEF.md, memory/tasks/main/HANDOFF.md and STARTUP.md.
 Restore the current selected action, source identity, core locations and remaining work.
 On first startup follow the selected system edition's COORDINATOR.md and verify its VERSION.
-Confirm actual access and saved state before recording successful handover.
+Confirm actual access, saved state and client project/system-folder binding before successful handover.
+Use observed tools or current user confirmation, recording the evidence source; unresolved binding means pending.
+Do not integrate work projects before core confirmation; preserve explicitly deferred scope.
 Subsequent chats restore this area; do not repeat completed installation actions.
 
 ## Authority and scope

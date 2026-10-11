@@ -1,6 +1,6 @@
 # Prepare coordinator service memory
 
-**OCMI coordinator 1.3.1, 2026-10-12**
+**OCMI coordinator 1.3.2, 2026-10-12**
 
 Use after the user selects guided system installation and both core locations.
 This profile provides the file handover to a separate coordinator chat, not personal topics.
@@ -18,8 +18,11 @@ For the complete local system requirement, read docs/install-system.md in the ch
 4. Replace every STARTUP prompt token with confirmed values. Save the filled prompt privately
    and give identical text to the user. Check links, prompt fields and target access.
    Unknown revision must include its verification limit; missing paths require clarification.
-5. Tell the user to create a project attached to the system folder and a separate coordinator chat;
-   clients without projects can use a separate chat with file access.
+5. Give an explicit checklist: create/reuse a local project, bind the exact system folder,
+   open a separate coordinator chat inside it, allow service-directory access, send the filled prompt.
+   Reuse a correctly bound project. If the client cannot bind a project/equivalent workspace,
+   record setup pending; a loose chat does not complete installation.
+   Record the project name, expected binding and actual confirmation separately.
    If the service directory is inaccessible, request access to that exact directory.
    Installed files are not proof of coordinator initialization: only the new chat can confirm it.
 6. Keep the installer chat until that coordinator records successful handover.

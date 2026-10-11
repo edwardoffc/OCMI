@@ -28,8 +28,9 @@ The manifest is updated deliberately after review, never by a validation run.
 check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release also validates the coordinator receipt; -Version 1.3.1 selects the current receipt;
--Version 1.3.0 -ArchivesOnly checks historical coordinator distributions.
+check-release also validates the coordinator receipt; -Version 1.3.2 selects the current receipt;
+-Version 1.3.0 or 1.3.1 with -ArchivesOnly checks historical coordinator distributions.
+Startup validation requires six fields, including the expected client project/binding.
 
 check-release compares each language distribution with its source, receipt, exact ZIP inventory,
 sizes, and SHA256; it also checks immutable historical archives.
@@ -48,3 +49,7 @@ Gitleaks uses built-in rules without repository allowlists and redacts output. R
 CI downloads Gitleaks 8.30.1 from its official release, verifies a pinned SHA256, and runs both required jobs.
 The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
 Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
+
+In 1.3.2, default and -Version 1.3.2 verify four current component editions plus coordinator packages.
+The old security-validation.json is historical: use -SecurityBaseline -ArchivesOnly.
+Both INSTALL entry gates and neutral routing are covered by bilingual check-onboarding guards.

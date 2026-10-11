@@ -1,57 +1,78 @@
-# Install the system and hand over to a coordinator
+# Install OCMI: one result from either starting route
 
-Use [BOOTSTRAP](../BOOTSTRAP.md) for the first chat and
-[COORDINATOR](../COORDINATOR.md) for the permanent chat.
-The first chat explains briefly and offers installation; merely supplying a URL changes nothing.
+Full guided setup requires a local system copy, a client project bound to it,
+private service memory and an initialized coordinator chat inside the project.
+[BOOTSTRAP](../BOOTSTRAP.md) is the temporary installer;
+[COORDINATOR](../COORDINATOR.md) is the permanent role.
+Explanation is read-only; configuration needs selection and exact targets.
 
-## Install after selection
+## From a repository URL
 
-1. Agree on the system folder (`00_OCMI` or `OCMI` are suggested names) and a separate,
-   private service directory such as `OCMI-local/coordinator`.
-   State both targets before writing. No personal topic store is required.
-   Preserve a known existing coordinator directory and its records.
-2. Obtain a full local copy of [the repository](https://github.com/edwardoffc/OCMI).
-   Prefer a verified tag/commit; an existing downloaded checkout is sufficient after verification.
-   Record origin, revision and version. If an archive has no verifiable commit, record that limit;
-   do not describe a moving branch or an unverified archive as pinned.
-   Do not run remote setup scripts or create every profile.
-3. Choose one template edition, English or Russian; communication language can differ.
-   Read its coordinator INSTALL and prepare its private service memory.
-   Use [coordinator INSTALL](../templates/coordinator/INSTALL.md);
-   Russian instructions use the same stable paths under locales/ru.
-4. Fill INDEX, BRIEF and HANDOFF with confirmed core locations, source identity,
-   language and actual status. Optional actions remain not selected.
-   Render [STARTUP](../templates/coordinator/STARTUP.md): replace every angle-bracket token.
-   Save the rendered prompt in private STARTUP.md and give the identical text to the user.
-   Missing authorization/paths must be resolved first; unknown revision may be explicitly
-   recorded as unknown with its verification limit. Do not invent verification.
-5. Check local links, actual read/write capabilities and restoration inputs.
-   Report source installed / handover prepared separately from coordinator initialized.
-   Never put user paths, installation records or filled prompts into the public source checkout.
+Give [the repository URL](https://github.com/edwardoffc/OCMI) to a browsing-capable chat.
+The first response briefly explains OCMI and describes the folder/project/coordinator steps.
+After selection, agree on a system folder (`00_OCMI` or `OCMI`) and obtain the full source.
+The first chat supplies the user checklist below with the actual chosen paths.
 
-## User actions in the AI client
+## From a downloaded copy
 
-Create a local project named OCMI and attach the installed system folder.
-Inside it create a separate chat, for example “OCMI Coordinator”, and send the filled prompt.
-If the client has no projects, a separate chat with access to the system folder is sufficient.
+Unpack the full repository into your chosen system folder.
+Create a local OCMI project in the AI client, attach that exact folder, open a first chat
+inside it and ask it to study OCMI and help with setup.
+This is a temporary installer, not an initialized coordinator.
+The installer verifies and reuses the download and this project; no duplicate clone or project is needed.
+If you started in an ordinary chat instead, it gives the same binding checklist.
+Downloading alone does not initialize the coordinator.
 
-The prompt also identifies the private service directory. If the client denies access,
-grant/attach that specific directory as an additional folder, or use its supported file-access
-mechanism. Attaching the system alone does not guarantee access to a sibling directory.
-No access to unrelated personal topics or work projects is needed for startup.
+## Prepare core setup after selection
 
-The coordinator checks the saved inputs and records confirmation before suggesting optional
-personal storage, organization and project integration. Keep the installer chat until this succeeds.
-After confirmation the user may delete/archive the installer chat; the agent does not do it automatically.
+1. Agree on both system and private service locations, plus an intended client project name.
+   Service memory belongs outside source/public Git; a separate `OCMI-local/coordinator` is one example.
+   No personal topic store is required. Preserve known existing core locations and records.
+2. Verify source origin/revision/version. Prefer an identifiable tag/commit;
+   record an unknown archive revision with its verification limit rather than inventing a pin.
+   Do not execute remote scripts or install all profiles.
+3. Choose one English/Russian template edition and prepare its coordinator service profile.
+   Use [coordinator INSTALL](../templates/coordinator/INSTALL.md).
+4. Fill private INDEX, BRIEF and HANDOFF with confirmed core facts.
+   Record client project/binding and coordinator initialization separately as pending until supported
+   by tools or the user's current confirmation. A proposed name is not a created project.
+   Preserve any explicitly requested integration as deferred scope; read only minimal target instructions to classify an operational installation; defer code/test inspection and writes.
+5. Fill all six tokens in [STARTUP](../templates/coordinator/STARTUP.md).
+   The client-project field identifies the intended project and expected system-folder association.
+   Save the prompt privately and give the user identical text plus the checklist below.
+   Never put user paths or filled prompts in the public source.
+6. Check files/links/access and report what is actually done:
+   source ready → service/prompt ready → project/binding confirmed → coordinator initialized.
+   Do not claim complete installation from files or chat creation alone.
 
-## Continue later
+## Checklist for the user
 
-Open a new coordinator chat in the same project and send the saved private STARTUP.md prompt.
-It restores the current handoff instead of relying on the old conversation.
-A moved folder requires updating confirmed paths and client bindings; do not rewrite history silently.
-Work projects and personal topics continue separately from their own role/entry/handoff.
+The installer must give these steps with the actual selected names and paths:
 
-The coordinator ZIP contains only the service profile. It does not replace the required
-full local system copy in this guided installation flow.
-Experienced users may still adopt a work/lightweight template directly without a central coordinator;
-installed projects remain self-contained.
+1. Create or select the local project OCMI in your AI client.
+2. Attach the exact installed system folder to that project.
+   Reuse an existing correctly bound project; do not create a second one.
+3. Create a separate “OCMI Coordinator” chat inside this project.
+4. Allow access to the exact private service directory if it is not already available.
+   Attaching the source folder does not guarantee sibling-directory access.
+5. Send the filled startup prompt supplied by the installer.
+6. Wait for the coordinator to verify required files and confirm project/binding and startup.
+   If those facts cannot be observed, give the requested current confirmation; do not treat a suggestion as evidence.
+7. After recorded confirmation, you may delete/archive the temporary installer chat.
+
+A client's equivalent folder-bound workspace is acceptable.
+If the client cannot provide this association or required file access, setup remains pending;
+a loose chat is not an equivalent completed installation. Explain the exact unsupported step.
+Agents must not create/message/delete chats or change bindings without relevant authority.
+
+## After confirmation
+
+The coordinator explains practical usage, offers optional personal storage, folder organization
+and work-project integration, and can resume a still-current explicitly deferred request.
+Do not integrate work projects before confirmed core setup. Both component INSTALL files and the work-project routing rule enforce this entry procedure.
+Existing installed projects keep
+their own memory; this entry-route correction does not migrate or interrupt their routine work.
+
+A new coordinator chat in the same bound project uses the privately saved STARTUP.md prompt
+and current handoff. No installer history is required.
+The coordinator ZIP is a service component; use the full repository for the local system.

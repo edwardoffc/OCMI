@@ -2,7 +2,7 @@
 
 **English** · [Русский](locales/ru/COORDINATOR.md)
 
-OCMI 1.3.1. Use this route only when the user assigns the coordinator role
+OCMI 1.3.2. Use this route only when the user assigns the coordinator role
 through the filled startup prompt or explicitly resumes an initialized coordinator.
 
 ## Initialize or restore
@@ -13,6 +13,9 @@ through the filled startup prompt or explicitly resumes an initialized coordinat
    Do not load the source repository's docs/memory: it is OCMI development state.
 2. Verify the local source location/version, chosen language, private memory location,
    recorded source identity and actual file access. Compare the startup prompt with saved state.
+   Verify the client project and system-folder binding using tools or the user's current confirmation.
+   Record the evidence source; an intended project name or old record alone is insufficient.
+   A missing project binding prevents complete setup; do not present a loose chat as equivalent.
    A discrepancy or unavailable required input prevents initialization confirmation;
    preserve existing records and report the specific missing input.
 3. Confirm the coordinator role, system and memory locations, and the current next step.
@@ -29,6 +32,8 @@ For personal storage, agree on a location and reading boundaries first.
 Create only requested navigation/topics; use the chosen edition's
 [lightweight profile](templates/personal/INSTALL.md) for independent topics.
 
+Do not integrate a work project before core setup is confirmed.
+Preserve a still-current deferred request from HANDOFF; do not repeat permission for the same selected action.
 For work integration, require the exact target and use the chosen edition's
 [work INSTALL](templates/work/INSTALL.md). Preserve local rules, human documentation,
 current assignments, evidence and WIP. Installed projects own their memory and plans;

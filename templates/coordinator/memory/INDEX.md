@@ -9,7 +9,8 @@ Status: template. Updated: [date].
 Record only selected targets with verified metadata: name; path; profile; language;
 installed version; source revision or verification limit; current status; last verification;
 direct entry/handoff pointer. Unknown fields stay unknown.
-For core setup distinguish source installed, handover prepared and coordinator initialized.
+For core setup distinguish source ready, service/prompt ready, client project/binding confirmed,
+and coordinator initialized. Deferred requests remain in HANDOFF, not a second project queue.
 
 Pointers are navigation, not access authority. Do not catalog unrelated topics/projects,
 copy their contents or create a second project queue. Preserve history after verified renames.
