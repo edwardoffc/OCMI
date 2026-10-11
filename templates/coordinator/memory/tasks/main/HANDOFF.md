@@ -14,9 +14,15 @@ Preserved records and WIP; distinguish proposals from execution.]
 
 ## Handover confirmation
 
-[Pending until the separate coordinator reads required inputs and verifies paths/access.
+[Pending until the separate coordinator reads inputs and verifies paths/access and client project/folder binding.
+Record tools or current user confirmation; a proposed project name is not proof.
 After confirmation: date, role, verified locations and next step; installer chat is no longer required.
 Do not record confirmation on behalf of a chat that has not started.]
+
+## Deferred request
+
+[Explicit still-current integration: target, scope, authority and pending core prerequisite.
+Do not inspect the target before confirmation; do not repeat permission for the same action after readiness.]
 
 ## Checks and limits
 

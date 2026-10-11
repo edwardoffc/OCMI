@@ -1,23 +1,29 @@
 param(
   [string]$Root = (Join-Path $PSScriptRoot '..'),
   [ValidatePattern('^(\d+\.\d+(\.\d+)?)?$')][string]$Version = '',
-  [switch]$ArchivesOnly
+  [switch]$ArchivesOnly,
+  [switch]$SecurityBaseline
 )
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repoRoot = (Resolve-Path -LiteralPath $Root).Path
+if ($SecurityBaseline -and (!$ArchivesOnly -or $Version)) { throw 'SecurityBaseline requires ArchivesOnly and no Version' }
 if ($Version -cin @('1.3.0','1.3.1')) {
   & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -Version $Version -ReleaseOnly -ArchivesOnly:$ArchivesOnly
   return
 }
-$receipt = if ($Version) { "docs/releases/$Version-validation.json" } else { 'docs/releases/security-validation.json' }
+$languageEdition = !$Version -or $Version -ceq '1.3.2'
+$receipt = if ($SecurityBaseline) { 'docs/releases/security-validation.json' }
+  elseif ($languageEdition) { 'docs/releases/1.3.2-components.json' }
+  else { "docs/releases/$Version-validation.json" }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $repoRoot $receipt) | ConvertFrom-Json
 if ($Version -and $manifest.version -cne "OCMI $Version") { throw 'Receipt version differs' }
-if (!$Version -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
+if ($languageEdition -and !$SecurityBaseline -and $manifest.version -cne 'OCMI 1.3.2') { throw 'Component receipt version differs' }
+if ($languageEdition -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
 $profileKeys = @{}
 foreach ($profile in $manifest.profiles) {
   if ($profile.profile -notin @('work','personal')) { throw 'Invalid profile' }
-  if ($Version) {
+  if (!$languageEdition) {
     $prefix = if ($profile.profile -eq 'personal') { 'ocmi-personal-' } else { 'ocmi-' }
     if ($profile.archive -notmatch ('^releases/' + $prefix + '\d+\.\d+(\.\d+)?-\d{4}-\d{2}-\d{2}\.zip$')) { throw 'Invalid archive path' }
     $source = Join-Path $repoRoot ("templates/" + $profile.profile)
@@ -25,6 +31,7 @@ foreach ($profile in $manifest.profiles) {
   } else {
     if ($profile.language -cnotin @('en','ru')) { throw 'Invalid language' }
     $expectedVersion = if ($profile.profile -eq 'work') { '1.2.2' } else { '1.2.1' }
+    if (!$SecurityBaseline -and ($manifest.installerVersion -cne '1.3.2' -or $profile.installerVersion -cne '1.3.2')) { throw 'Wrong installer policy revision' }
     if ($profile.version -cne $expectedVersion) { throw 'Invalid language edition version' }
     $archivePattern = '^releases/ocmi-' + $profile.profile + '-' + [regex]::Escape($profile.version) + '-' + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$'
     if ($profile.archive -cnotmatch $archivePattern) { throw 'Invalid language archive path' }
@@ -64,10 +71,10 @@ foreach ($profile in $manifest.profiles) {
   Write-Output "PASS: $($profile.profile) $($expected.Count) files; $scope agree."
 }
 foreach ($property in $manifest.historicalArchives.PSObject.Properties) {
-  if ($property.Name -notmatch '^ocmi-((work|personal)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') { throw 'Unexpected historical archive' }
+  if ($property.Name -notmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') { throw 'Unexpected historical archive' }
   if ((Get-FileHash -LiteralPath (Join-Path $repoRoot ("releases/" + $property.Name)) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $property.Value) { throw "Historical archive changed: $($property.Name)" }
 }
 Write-Output 'PASS: historical archives unchanged.'
-if (!$Version) {
+if ($languageEdition -and !$SecurityBaseline) {
   & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -ReleaseOnly -ArchivesOnly:$ArchivesOnly
 }

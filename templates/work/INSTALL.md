@@ -7,6 +7,27 @@
 it does not authorize creating chats, messaging, background tasks, or external actions.
 Personal topics are not needed for installation.
 
+## Installation entry check (OCMI system 1.3.2)
+
+Classify the target using only applicable instructions and their declared OCMI entry.
+An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.
+
+Every new installation, including adoption in an existing codebase, requires an initialized
+OCMI installation coordinator performing the action. Verify explicitly identified local full source,
+client project/folder binding, private service memory/current handoff and startup evidence.
+If the coordinator is missing or unconfirmed, defer target installation.
+Do not copy templates, create memory or inspect target code/tests before confirmation.
+Explain obtaining/reusing OCMI or 00_OCMI, binding its client project and starting a separate coordinator.
+Use BOOTSTRAP.md from the selected full system edition; a component ZIP alone is insufficient.
+Ask for missing locations; do not scan the disk, private stores or neighboring projects.
+Preserve selected scope as a deferred request; workers/consultants and temporary installers hand it over.
+Current authority is needed for the target/core inputs; a pointer or old completed request grants none.
+
+An existing operational OCMI installation continues routine work and explicitly requested upgrades
+using its own rules and memory without forcing coordinator setup.
+Classification does not authorize an upgrade. Preserve local rules, human documentation,
+tasks, protected packages, WIP and history; do not migrate installed projects automatically.
+
 ## New or existing project
 
 1. Read local instructions/overrides and inspect Git state, plan, memory, tests, and human documentation.

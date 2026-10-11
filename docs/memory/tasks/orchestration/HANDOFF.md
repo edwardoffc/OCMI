@@ -4,7 +4,26 @@
 
 Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-INSTALL-014 / system 1.3.1
+## Current: OCMI-ENTRY-015 / system 1.3.2
+
+[Acceptance](../OCMI-ENTRY-015/HANDOFF.md): uniform required startup from URL/download.
+First chat provides concrete folder/project/coordinator actions; direct initial integration is deferred.
+Core completion requires binding evidence and coordinator initialization; unsupported capabilities stay pending.
+Reuse suitable source/client project; preserve still-current deferred scope.
+Owner extended this task to both component INSTALLs, neutral/global work routing and new component packages.
+Runtime work/lightweight files and installed projects remain unchanged; installer instructions changed.
+Old archives, including prepared coordinator ZIPs, remain intact. Four new component editions were added.
+R1 acceptance retained as history. R2 passed docs, 67 workflow and 209 onboarding checks,
+53 language pairs, 19 entry/four release negative fixtures, exact packages and privacy/Gitleaks.
+Acceptance records evidence and retained resources; cleanup: done for preparation.
+Live E31–E47 scenarios are not run. No actual client/project initialization is claimed.
+The owner-authorized neutral client rule was updated; no chats, private installation or work target changed.
+The owner authorized GitHub publication on 2026-10-12; installed projects stay unchanged.
+Delivery requires protected-main PR, both required CI checks, v1.3.2 and twelve verified assets.
+Final integration and branch cleanup are verified against origin/main, PR/tag/release and the ignored receipt.
+No subsequent source task is assigned; do not repeat delivery or migrate installed projects automatically.
+
+## Historical: OCMI-INSTALL-014 / system 1.3.1
 
 [Acceptance](../OCMI-INSTALL-014/HANDOFF.md): user-approved correction to the installation flow.
 Temporary first chat offers local setup; a filled private prompt transfers to a separate permanent

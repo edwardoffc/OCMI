@@ -3,12 +3,33 @@
 **OCMI 1.2.1, rules revision 2026-10-11**
 
 This directory is a portable neutral template. It contains no user data or other project information.
-An agent installs it at the user's request; no program installation is required.
+A confirmed coordinator installs it after the entry check; no executable installer is required.
+
+## Installation entry check (OCMI system 1.3.2)
+
+Classify the target using only applicable instructions and their declared OCMI entry.
+An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.
+
+Every new installation, including adoption in an existing codebase, requires an initialized
+OCMI installation coordinator performing the action. Verify explicitly identified local full source,
+client project/folder binding, private service memory/current handoff and startup evidence.
+If the coordinator is missing or unconfirmed, defer target installation.
+Do not copy templates, create memory or inspect target code/tests before confirmation.
+Explain obtaining/reusing OCMI or 00_OCMI, binding its client project and starting a separate coordinator.
+Use BOOTSTRAP.md from the selected full system edition; a component ZIP alone is insufficient.
+Ask for missing locations; do not scan the disk, private stores or neighboring projects.
+Preserve selected scope as a deferred request; workers/consultants and temporary installers hand it over.
+Current authority is needed for the target/core inputs; a pointer or old completed request grants none.
+
+An existing operational OCMI installation continues routine work and explicitly requested upgrades
+using its own rules and memory without forcing coordinator setup.
+Classification does not authorize an upgrade. Preserve local rules, human documentation,
+tasks, protected packages, WIP and history; do not migrate installed projects automatically.
 
 ## Agent procedure
 
 1. Determine target directory, scope (work/personal), and goal from the current request. The target must differ from the template directory. Clarify only genuinely missing scope/goal information. For an ongoing topic, describe what the user wants to discuss/track instead of a final deliverable.
-2. Read only this template and the target area. No shared directory, profile, or neighboring projects are needed. Follow target instructions; check existing `AGENTS.md`, `AGENTS.override.md`, documents, and memory. In Git, first note the existing changes to preserve others' work.
+2. Read only this template and the target area. No personal profile or neighboring projects are needed; core inputs are explicitly identified by the entry check. Follow target instructions; check existing `AGENTS.md`, `AGENTS.override.md`, documents, and memory. In Git, first note the existing changes to preserve others' work.
 3. Prepare the four files below. **Do not overwrite existing files with templates:** reconcile rules with current instructions and preserve content. If working memory already exists, use its paths and single current entry point instead of creating a second system just for these names.
 4. Fill the brief and first task with confirmed information. Do not present assumed architecture, commands, or wishes as facts. Mark unknowns. Link to original documents rather than duplicating them.
 5. Create additional files as needed: decisions, code map, significant-session log. The initial map lists verified entry points/code areas for the current task; it does not require reading the entire repository. Record source and verification date for each used map area.

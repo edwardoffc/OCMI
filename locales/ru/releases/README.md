@@ -2,30 +2,38 @@
 
 [English](../../../releases/README.md) · **Русский**
 
-Выберите язык и распакуйте профиль целиком. Новые языковые комплекты содержат [MIT](../../../LICENSE).
+Это профили компонентов для внедрения настроенным координатором в выбранные цели.
+Выберите язык и распакуйте профиль целиком. Языковые комплекты содержат [MIT](../../../LICENSE).
 Рабочий протокол — 1.2.2, облегчённый — 1.2.1. Установленные проекты автоматически не обновляются.
 
-Система [1.3.1](../VERSION.md) начинается со [знакомства](../BOOTSTRAP.md).
+Система [1.3.2](../VERSION.md) начинается со [знакомства](../BOOTSTRAP.md).
 После выбора установки нужна полная локальная копия системы и служебная память координатора.
 ZIP ниже содержит только служебный профиль; личные темы и проекты необязательны.
 [Установка системы](../docs/install-system.md) объясняет передачу отдельному чату.
 
 | Служебный профиль | Английский | Русский |
 | --- | --- | --- |
-| Координатор 1.3.1 | [ZIP](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
+| Координатор 1.3.2 | [ZIP](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.2-ru-2026-10-12.zip.sha256) |
+| Исторический 1.3.1 | [ZIP](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
 | Исторический 1.3.0 | [ZIP](../../../releases/ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
 
-[Receipt 1.3.1](../../../docs/releases/1.3.1-validation.json) проверяет восемь файлов
+[Receipt 1.3.2](../../../docs/releases/1.3.2-validation.json) проверяет восемь файлов
 каждого языка и прежние архивы. [Receipt 1.3.0](../../../docs/releases/1.3.0-validation.json)
-сохранён для исторических ZIP. Рабочие/лёгкие исходники и ZIP ниже не менялись.
+сохранён для исторических ZIP. Для установки системы нужны привязанный проект клиента и подтверждённый координатор;
+Оба INSTALL ниже проверяют базовую настройку и роль координатора для новых установок.
+Протоколы не меняются; четыре новых комплекта содержат обновлённые установочные инструкции.
 
 | Профиль | Английский | Русский |
 | --- | --- | --- |
-| Рабочий 1.2.2 | [ZIP](../../../releases/ocmi-work-1.2.2-en-2026-10-11.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-en-2026-10-11.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.2.2-ru-2026-10-11.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-ru-2026-10-11.zip.sha256) |
-| Облегчённый 1.2.1 | [ZIP](../../../releases/ocmi-personal-1.2.1-en-2026-10-11.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-en-2026-10-11.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.2.1-ru-2026-10-11.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-ru-2026-10-11.zip.sha256) |
+| Рабочий 1.2.2 | [ZIP](../../../releases/ocmi-work-1.2.2-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.2.2-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-work-1.2.2-ru-2026-10-12.zip.sha256) |
+| Облегчённый 1.2.1 | [ZIP](../../../releases/ocmi-personal-1.2.1-en-2026-10-12.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-en-2026-10-12.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12.zip) · [SHA256](../../../releases/ocmi-personal-1.2.1-ru-2026-10-12.zip.sha256) |
 
-[Receipt текущего выпуска безопасности](../../../docs/releases/security-validation.json) содержит точный состав исходников/ZIP.
+[Receipt компонентов 1.3.2](../../../docs/releases/1.3.2-components.json) содержит точный состав исходников/ZIP.
 Для сверки четырёх комплектов запустите scripts/check-release.ps1 из корня репозитория.
+
+Старые комплекты 2026-10-11 и [receipt безопасности](../../../docs/releases/security-validation.json)
+сохранены для истории. Проверка: scripts/check-release.ps1 -SecurityBaseline -ArchivesOnly.
+Для новой установки используйте текущие комплекты; старые инструкции не отменяют текущий маршрут.
 
 ## Исторические архивы
 

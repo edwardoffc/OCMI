@@ -144,6 +144,144 @@
       "input": "coordinator",
       "en": "Record the handover confirmation in private HANDOFF",
       "ru": "Запиши подтверждение передачи в служебный HANDOFF"
+    },
+    {
+      "id": "route initial integration",
+      "input": "bootstrap",
+      "en": "first request to integrate OCMI into a project through core setup",
+      "ru": "первую просьбу внедрить её в проект направляй через базовую настройку"
+    },
+    {
+      "id": "defer target integration",
+      "input": "bootstrap",
+      "en": "Do not integrate a work project before core setup is confirmed",
+      "ru": "Не внедряй ОКПИ в рабочий проект до подтверждения базовой настройки"
+    },
+    {
+      "id": "reuse project",
+      "input": "bootstrap",
+      "en": "Reuse an existing correctly bound project",
+      "ru": "Используй существующий подходящий проект"
+    },
+    {
+      "id": "no loose chat completion",
+      "input": "bootstrap",
+      "en": "Core setup is incomplete without the bound client project and initialized coordinator",
+      "ru": "Без привязанного проекта клиента и запущенного координатора базовая установка не завершена"
+    },
+    {
+      "id": "explicit user checklist",
+      "input": "bootstrap",
+      "en": "Give an ordered checklist",
+      "ru": "Выдай шаги по порядку"
+    },
+    {
+      "id": "current binding evidence",
+      "input": "coordinator",
+      "en": "using tools or the user's current confirmation",
+      "ru": "инструментами либо текущим подтверждением пользователя"
+    },
+    {
+      "id": "binding blocks completion",
+      "input": "coordinator",
+      "en": "A missing project binding prevents complete setup",
+      "ru": "Отсутствие привязки проекта не позволяет завершить настройку"
+    },
+    {
+      "id": "entry integration gate",
+      "input": "entry",
+      "en": "Defer target integration until confirmed",
+      "ru": "Defer target integration until confirmed"
+    },
+    {
+      "id": "download route README",
+      "input": "readme",
+      "en": "### From a downloaded copy",
+      "ru": "### По скачанной копии"
+    },
+    {
+      "id": "common outcome README",
+      "input": "readme",
+      "en": "Both routes reach the same result",
+      "ru": "Оба способа приводят к одному результату"
+    },
+    {
+      "id": "workInstall coordinator actor",
+      "input": "workInstall",
+      "en": "OCMI installation coordinator performing the action",
+      "ru": "координатор установки ОКПИ"
+    },
+    {
+      "id": "workInstall missing core defers",
+      "input": "workInstall",
+      "en": "If the coordinator is missing or unconfirmed, defer target installation",
+      "ru": "Если координатор отсутствует или не подтверждён, отложи установку в цель"
+    },
+    {
+      "id": "workInstall standalone ZIP insufficient",
+      "input": "workInstall",
+      "en": "a component ZIP alone is insufficient",
+      "ru": "отдельного ZIP компонента недостаточно"
+    },
+    {
+      "id": "workInstall existing installation continuation",
+      "input": "workInstall",
+      "en": "An existing operational OCMI installation continues routine work and explicitly requested upgrades",
+      "ru": "Действующая установка ОКПИ продолжает обычную работу и явно запрошенные обновления"
+    },
+    {
+      "id": "workInstall no target work before core",
+      "input": "workInstall",
+      "en": "Do not copy templates, create memory or inspect target code/tests before confirmation",
+      "ru": "Не копируй шаблоны, не создавай память и не изучай код/тесты цели до подтверждения"
+    },
+    {
+      "id": "personalInstall coordinator actor",
+      "input": "personalInstall",
+      "en": "OCMI installation coordinator performing the action",
+      "ru": "координатор установки ОКПИ"
+    },
+    {
+      "id": "personalInstall missing core defers",
+      "input": "personalInstall",
+      "en": "If the coordinator is missing or unconfirmed, defer target installation",
+      "ru": "Если координатор отсутствует или не подтверждён, отложи установку в цель"
+    },
+    {
+      "id": "personalInstall standalone ZIP insufficient",
+      "input": "personalInstall",
+      "en": "a component ZIP alone is insufficient",
+      "ru": "отдельного ZIP компонента недостаточно"
+    },
+    {
+      "id": "personalInstall existing installation continuation",
+      "input": "personalInstall",
+      "en": "An existing operational OCMI installation continues routine work and explicitly requested upgrades",
+      "ru": "Действующая установка ОКПИ продолжает обычную работу и явно запрошенные обновления"
+    },
+    {
+      "id": "personalInstall no target work before core",
+      "input": "personalInstall",
+      "en": "Do not copy templates, create memory or inspect target code/tests before confirmation",
+      "ru": "Не копируй шаблоны, не создавай память и не изучай код/тесты цели до подтверждения"
+    },
+    {
+      "id": "routing coordinator actor",
+      "input": "routing",
+      "en": "Every new installation is performed by an initialized installation coordinator",
+      "ru": "Каждую новую установку выполняет настроенный координатор установки"
+    },
+    {
+      "id": "routing existing continuation",
+      "input": "routing",
+      "en": "Existing operational installations use their own instructions, memory and current assignments",
+      "ru": "Действующая установка использует свои инструкции, память и текущие задания"
+    },
+    {
+      "id": "bootstrap installed target exception",
+      "input": "bootstrap",
+      "en": "do not force coordinator setup for that target",
+      "ru": "не навязывай ей настройку координатора"
     }
   ]
 }

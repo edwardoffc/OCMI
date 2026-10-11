@@ -1,6 +1,6 @@
 param(
   [string]$Root = (Join-Path $PSScriptRoot '..'),
-  [ValidateSet('1.3.0','1.3.1')][string]$Version = '1.3.1',
+  [ValidateSet('1.3.0','1.3.1','1.3.2')][string]$Version = '1.3.2',
   [switch]$ArchivesOnly,
   [switch]$ReleaseOnly
 )
@@ -39,16 +39,16 @@ function Check-Startup([string]$Text) {
   $match = [regex]::Match($Text, '(?s)\x60{3}text\r?\n(?<body>.*?)\x60{3}')
   Assert-Valid $match.Success 'Missing startup prompt fence'
   $body = $match.Groups['body'].Value
-  $tokens = @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>','<SOURCE_REVISION>','<TEMPLATE_LANGUAGE>','<COMMUNICATION_LANGUAGE>')
+  $tokens = @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>','<SOURCE_REVISION>','<TEMPLATE_LANGUAGE>','<COMMUNICATION_LANGUAGE>','<CLIENT_PROJECT>')
   $found = @([regex]::Matches($body, '<[A-Z_]+>') | ForEach-Object { $_.Value })
-  Assert-Valid ($found.Count -eq 5 -and @($found | Select-Object -Unique).Count -eq 5) 'Startup fields missing or duplicated'
+  Assert-Valid ($found.Count -eq 6 -and @($found | Select-Object -Unique).Count -eq 6) 'Startup fields missing or duplicated'
   foreach ($token in $tokens) { Assert-Valid ($token -cin $found) 'Unexpected startup field' }
   foreach ($relative in @('COORDINATOR.md','VERSION.md','AGENTS.md','memory/INDEX.md','memory/BRIEF.md','memory/tasks/main/HANDOFF.md','STARTUP.md')) {
     Assert-Valid $body.Contains($relative) 'Missing restoration input'
   }
 }
 if (!$ReleaseOnly -and !$ArchivesOnly) {
-  Assert-Valid ($Version -ceq '1.3.1') 'Old instructions require ArchivesOnly verification'
+  Assert-Valid ($Version -ceq '1.3.2') 'Old instructions require ArchivesOnly verification'
   $guards = (Read-Scoped $repo 'localization/onboarding-guards.json') | ConvertFrom-Json
   Assert-Valid ($guards.schemaVersion -eq 1) 'Invalid guard schema'
   $entry = Read-Scoped $repo 'AGENTS.md'
@@ -61,6 +61,11 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     $prefix = if ($language -eq 'ru') { 'locales/ru/' } else { '' }
     $base = Join-Path $repo ($prefix + 'templates/coordinator')
     $texts = @{
+      routing = (Read-Scoped $repo ($prefix + 'docs/work-project-routing.md'))
+      workInstall = (Read-Scoped $repo ($prefix + 'templates/work/INSTALL.md'))
+      personalInstall = (Read-Scoped $repo ($prefix + 'templates/personal/INSTALL.md'))
+      entry = $entry
+      readme = (Read-Scoped $repo $(if ($language -eq 'ru') { 'README.ru.md' } else { 'README.md' }))
       coordinator = (Read-Scoped $repo ($prefix + 'COORDINATOR.md'))
       startup = (Read-Scoped $base 'STARTUP.md')
       bootstrap = (Read-Scoped $repo ($prefix + 'BOOTSTRAP.md'))
@@ -75,7 +80,7 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
       Assert-Valid ((Read-Scoped $repo ($prefix + 'VERSION.md')).Contains($Version)) 'Wrong system version'
     }
     Check "$language startup fields and restoration inputs" { Check-Startup $texts.startup }
-    foreach ($token in @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>')) {
+    foreach ($token in @('<SYSTEM_PATH>','<COORDINATOR_MEMORY_PATH>','<CLIENT_PROJECT>')) {
       Check "$language startup field mutation" {
         Must-Reject { Check-Startup ($texts.startup.Replace($token,'')) }
       }

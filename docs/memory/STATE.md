@@ -1,6 +1,6 @@
 # OCMI current state
 
-Snapshot: 2026-10-12. System release prepared: 1.3.1 (two-stage guided setup).
+Snapshot: 2026-10-12. System release prepared: 1.3.2 (uniform entry and required core completion).
 Work protocol: 1.2.2. Optional lightweight protocol: 1.2.1.
 English is canonical; Russian guides/templates are maintained under locales/ru.
 docs/memory is the single development memory, not installed project data.
@@ -23,7 +23,11 @@ Only neutral source files, guides, fixtures, and release artifacts belong in the
 Coordinator service source lives in templates/coordinator; installed setup memory belongs
 outside the source/public Git scope. The temporary installer offers local installation; a separate
 permanent coordinator confirms handover and then offers optional personal/work actions.
-Service profile has eight files per language; work/lightweight sources are unchanged.
-Owner-authorized GitHub delivery of 1.3.1 uses protected-main checks and a verified tag/release.
-Confirm publication from origin/main and delivery evidence; template versions do not describe local installations.
+Service profile has eight files per language. Work/lightweight runtime files remain unchanged;
+INSTALL entry checks and work VERSION installer notes now require coordinator-led new installation.
+Four component ZIPs dated 2026-10-12 accompany the two coordinator editions; prior archives are retained.
+System/coordinator 1.3.2 adds the sixth startup field for expected client project/binding.
+First integration waits for core confirmation; suitable existing copies/projects are reused.
+1.3.1 delivery remains historical. The owner authorized 1.3.2 publication;
+remote integration and all six release editions require separate delivery verification.
 Local backups and credentials are excluded. [Continue here](tasks/orchestration/HANDOFF.md).

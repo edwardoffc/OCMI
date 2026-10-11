@@ -2,9 +2,11 @@
 
 [English](usage.md) · [Русский](../locales/ru/docs/usage.md)
 
-Choose the [English work template](../templates/work/INSTALL.md) or
-[Russian work template](../locales/ru/templates/work/INSTALL.md).
-Installed copies are independent; routine chats read their own project's memory.
+For first use, complete [system installation](install-system.md) from either a URL or download.
+A bound client project and initialized coordinator are required before target integration.
+The coordinator selects the [English work template](../templates/work/INSTALL.md) or
+[Russian work template](../locales/ru/templates/work/INSTALL.md) after this prerequisite.
+Already installed projects remain independent and read their own memory for routine work.
 
 ## New project
 
@@ -13,8 +15,8 @@ then a separate permanent coordinator in a project attached to the system folder
 Use the filled private startup prompt; discard the first chat only after confirmed handover.
 The coordinator offers optional personal storage, organization and project integration.
 [System installation](install-system.md) explains paths, access and recovery.
-Direct template adoption below remains available without a central coordinator.
-An explicit installation request already selects its action; do not repeat authorization.
+A first direct integration request is deferred until core confirmation, retaining its selected scope.
+An explicit request selects that action; do not repeat its permission once prerequisites are satisfied.
 
 Open the project directory and give the agent the exact path to the selected INSTALL.md:
 

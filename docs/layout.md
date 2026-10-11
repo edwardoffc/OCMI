@@ -61,7 +61,8 @@ Personal-topic storage remains optional. Keep an existing private coordinator pa
 a service area in a selected personal store is also possible without moving existing records. It contains setup choices, nonsensitive installation metadata
 and a setup handoff, not project plans or personal content. Registry pointers do not
 authorize reading their targets. Existing setup paths are merged in place rather than
-renamed just to match the example. A new coordinator chat in the system project uses its filled STARTUP prompt and this private entry.
+renamed just to match the example. A new coordinator chat in the system-bound project uses its filled STARTUP prompt and this private entry.
+Core setup requires confirmed project binding and startup; reuse existing suitable folders/projects.
 The work orchestrator remains responsible for its project's queue and acceptance.
 
 [Usage](usage.md) · [Maintenance](maintaining.md) · [Localization](localization.md).

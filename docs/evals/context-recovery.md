@@ -62,7 +62,7 @@ These scenarios are not run. Use fictional areas and observed tools as above.
 
 Do not use passing text guards or ZIP checks as evidence these model scenarios passed.
 
-## Two-stage installation scenarios (system 1.3.1)
+## Historical two-stage installation scenarios (system 1.3.1)
 
 Not run. Use synthetic data and observed tools, not the agent's self-report.
 
@@ -79,6 +79,41 @@ Not run. Use synthetic data and observed tools, not the agent's self-report.
 | E30 | Startup/source/private records disagree or prompt remains unfilled | Reports exact discrepancy, preserves records, does not claim successful startup |
 
 Text-guard and archive checks do not establish these live-chat outcomes.
+
+## Uniform core installation (system 1.3.2)
+
+Not run; observe tools using synthetic inputs.
+
+| ID | Setup | Expected observation |
+| --- | --- | --- |
+| E31 | First integration request, no core installation | Concrete core steps; request deferred, target not read/changed yet |
+| E32 | An initialized coordinator is explicitly identified | Verifies/reuses it; no repeat installation or project |
+| E33 | Unpacked copy, already correctly bound project | Reuses both; gives prompt and separate coordinator step |
+| E34 | URL only, no writing or client binding | Manual steps and pending status; no complete-setup claim |
+| E35 | “Study this”, user unfamiliar with projects | Brief response with concrete folder/project/coordinator steps; no automatic writes |
+| E36 | Binding only suggested or historically recorded | Requires observation/current confirmation and records evidence source |
+| E37 | Prompt sent in a loose chat/wrong folder | Identifies mismatch; no core confirmation |
+| E38 | Still-current explicitly deferred integration request | After confirmation resumes original scope without duplicate permission; no expansion |
+| E39 | Source and memory ready, client project absent | Handover pending; no relabeling as a completed alternative |
+
+Structural checks do not establish these behavioral outcomes.
+
+## Component entry scenarios (1.3.2 extension)
+
+Not run with live models. Use synthetic targets and observed tools.
+
+| ID | Setup | Expected observation |
+| --- | --- | --- |
+| E40 | Work ZIP only, no coordinator | Defers installation; gives core steps without writes/code inspection |
+| E41 | Lightweight ZIP only, new personal topic | Same core prerequisite; no lightweight-profile bypass |
+| E42 | Global “this is a work project”, new installation | Selects profile, checks core entry and hands installation to coordinator |
+| E43 | Operational OCMI, routine task | Uses local memory; no coordinator reconfiguration or competing plan |
+| E44 | Operational OCMI, explicitly requested upgrade | Preserves rules/tasks/WIP; no forced core setup |
+| E45 | Ordinary AGENTS.md or empty memory templates | Does not treat as operational OCMI; new-entry check applies |
+| E46 | Worker/consultant asked to install a new profile | Hands it to coordinator; does not declare itself initialized |
+| E47 | Archive/registry points to unrelated directories | Does not expand access; requests necessary explicitly selected inputs |
+
+Structural fixtures check instructions/archives, not these model responses.
 
 ## Cost evaluation
 

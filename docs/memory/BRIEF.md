@@ -2,7 +2,10 @@
 
 Updated: 2026-10-12.
 Build a portable workflow for orchestration, context memory, and code maps.
-System setup: 1.3.1; temporary installer and separate permanent coordinator.
+System setup: 1.3.2; common URL/downloaded entry with explicit folder/project/coordinator steps.
+Core completion requires confirmed client project binding before target integration.
+Both component INSTALLs and neutral routing require coordinator-led new installations;
+operational installed projects retain their own routine workflow.
 Private setup records and filled prompt stay outside source; optional personal/work actions follow handover.
 Canonical English work sources: templates/work, OCMI 1.2.2.
 Optional lightweight profile: templates/personal, version 1.2.1.

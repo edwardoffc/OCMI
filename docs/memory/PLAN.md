@@ -18,6 +18,7 @@ Updated: 2026-10-12. The only development queue.
 | OCMI-MIG-012 | Adopt 1.2.2 in two owner-requested local work installations | Completed locally; Russian rules, local policy, queues, task packages and WIP preserved; evidence stays in each installation |
 | OCMI-ONBOARD-013 | Optional orientation-first setup and coordinator profile; system 1.3.0 | [Source accepted](tasks/OCMI-ONBOARD-013/HANDOFF.md); owner-authorized delivery via [PR #2](https://github.com/edwardoffc/OCMI/pull/2); installed projects unchanged |
 | OCMI-INSTALL-014 | Temporary installer, local system and separate coordinator; system 1.3.1 | [Source accepted](tasks/OCMI-INSTALL-014/HANDOFF.md); owner-authorized GitHub delivery; verification recorded separately |
+| OCMI-ENTRY-015 | Uniform core entry plus component/global-routing gates; system 1.3.2 | [Source accepted](tasks/OCMI-ENTRY-015/HANDOFF.md); owner-authorized GitHub delivery, verification recorded separately; installed projects unchanged |
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.

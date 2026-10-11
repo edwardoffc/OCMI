@@ -3,9 +3,10 @@
 [English](README.md) · [Русский](../locales/ru/docs/README.md)
 
 - [Start here](../BOOTSTRAP.md): brief orientation in the temporary installer chat.
-- [System installation](install-system.md): local source, private startup prompt and handover.
+- [System installation](install-system.md): URL/downloaded entry, bound project and confirmed coordinator.
 - [Permanent coordinator](../COORDINATOR.md): confirmed startup and optional next actions.
 - [Usage](usage.md): new projects, resuming, adoption, and upgrades.
+- [Work-project routing](work-project-routing.md): new installations through the coordinator, existing ones use their memory.
 - [Layout](layout.md): the system repository and independent installed project memory.
 - [Localization](localization.md): language selection, translation maintenance, and adding a language.
 - [Contributing](../CONTRIBUTING.md): proposing changes and required checks.

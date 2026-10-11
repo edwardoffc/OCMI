@@ -9,9 +9,9 @@ the lightweight profile in templates/personal. Russian equivalents live in local
 docs/memory is the single active development memory; installed project data stays outside this repository.
 Use any separate directory. [Layout](layout.md) · [Localization policy](localization.md).
 
-Install directly from one selected template language.
-An exact INSTALL.md path is sufficient; an optional global client rule may point to it,
-but is not required. Installed projects do not depend on this repository for routine work.
+After core initialization, the coordinator installs from one selected template language.
+An exact INSTALL.md path identifies the component; first use follows BOOTSTRAP and confirmed
+client binding/coordinator startup. Installed projects need no repeat core setup for routine work.
 
 ## Changing rules
 
@@ -25,9 +25,10 @@ a hash does not establish semantic equivalence.
 ## Releases
 
 System version is recorded in root VERSION.md; profiles have their own versions.
-System 1.3.1 corrects guided setup: temporary installer, local source and separate coordinator.
-Work 1.2.2 and lightweight 1.2.1 are unchanged. The separate 1.3.1 receipt verifies coordinator
-archives; keep all previous receipts/ZIPs unchanged. Use -Version 1.3.0 -ArchivesOnly for old setup ZIPs.
+System 1.3.2 unifies URL/downloaded startup and requires confirmed client binding before integration.
+Runtime work 1.2.2 and lightweight 1.2.1 are unchanged; both INSTALL entry checks require a coordinator. The separate 1.3.2 receipt verifies coordinator
+archives; 1.3.2-components.json verifies four updated component editions.
+Keep all previous receipts/ZIPs unchanged; use -SecurityBaseline -ArchivesOnly for the old security editions. Use -Version 1.3.0 -ArchivesOnly for old setup ZIPs.
 Run check-onboarding alongside existing checks for setup/profile changes. Its negative
 mutations verify instruction safeguards, not actual model behavior.
 
