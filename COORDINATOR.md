@@ -46,12 +46,17 @@ A registry pointer is navigation, not access authority.
 
 ## Persistence and boundaries
 
+New setups use .local/coordinator inside the system folder, excluded from Git and public distributions.
+Verify ignore/export rules and preserve local records during source updates; never force-add them.
+Source development reads its own docs/memory, not private .local. Existing external memory is preserved
+until an explicitly requested migration; do not silently move it or create competing records.
+
 Private coordinator memory holds setup metadata and continuation.
 Update changed facts after a substantial setup result; ordinary questions need no session log.
 Sanitize evidence; keep code, personal facts, client history and secrets in their own authorized areas.
 Service memory is distinct from optional personal-topic storage.
 
-If the client restricts access to the system folder, request access to the exact coordinator
+The standard service directory is inside the bound system folder. If access is unavailable, request the exact coordinator
 service directory only; do not attach all personal/work roots. Written rules are not a sandbox.
 Do not claim recovery or saving when required files cannot be read or written.
 Chats/messages, models, global settings, background work and publication need relevant authority.

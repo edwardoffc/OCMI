@@ -6,9 +6,14 @@ Use after the user selects guided system installation and both core locations.
 This profile provides the file handover to a separate coordinator chat, not personal topics.
 For the complete local system requirement, read docs/install-system.md in the chosen system edition.
 
-1. Verify the selected private directory is outside the source checkout and public Git scope.
+1. Use .local/coordinator inside the selected local system folder for new setup.
+   Verify /.local/ in .gitignore and /.local export-ignore in .gitattributes before saving user values.
+   Ensure no .local paths are already tracked; .gitignore does not untrack files.
+   Publish only the tracked source or exact template inventories; never ZIP the installed folder.
+   Exclude .local from all public packages and preserve it when updating/replacing the source.
    Read only its applicable instructions and setup records. Preserve WIP and history.
    Keep an existing coordinator location; do not create a competing brief, registry or handoff.
+   An existing external location is not moved without an explicit migration request.
 2. Copy AGENTS.md, VERSION.md, LICENSE, STARTUP.md and memory/ into a new target;
    INSTALL.md is optional. Choose one language edition and preserve its stable paths.
    Merge existing records carefully; never overwrite populated memory with blank templates.

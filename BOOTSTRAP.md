@@ -31,7 +31,9 @@ An explanation-only user may decline; do not configure anything from a question 
 2. After consent, a local system copy is required. Suggest `00_OCMI` or `OCMI`.
    Reuse a verified downloaded copy; do not clone again or force a rename.
    Read [system installation](docs/install-system.md) for source verification and exact handover steps.
-3. Agree on private coordinator memory outside source/public Git; personal storage is optional.
+3. Use .local/coordinator inside the selected system folder for private coordinator memory;
+   exclude .local from Git and public distributions. Personal storage is optional.
+   Verify ignore/export exclusions before saving user values; never force-add local files.
    Preserve existing coordinator paths/records. Save core state and any still-current deferred request.
 4. Save a fully filled startup prompt in private coordinator memory.
    Deliver identical prompt text plus the exact system path, service path and intended client project.

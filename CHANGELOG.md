@@ -4,6 +4,8 @@
 
 ## System 1.3.2 — 2026-10-12
 
+- In-place correction: .local/coordinator inside the system; Git/export/package exclusions and preservation checks.
+- Updated distribution revision r2; original 1.3.2 ZIPs/receipts retained. Existing installations are not migrated.
 - One URL/downloaded outcome: local system, bound client project and initialized coordinator.
 - First chat supplies concrete folder/project/prompt steps; suitable folders/projects are reused.
 - A first integration request is retained and waits for confirmed core setup.

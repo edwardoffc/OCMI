@@ -1,4 +1,5 @@
 .codex/
+/.local/
 tmp/
 outputs/
 backups/

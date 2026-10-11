@@ -2,7 +2,7 @@
 
 Status: template. Updated: [date].
 
-- Coordinator directory and reading boundary: [confirmed private location].
+- Coordinator directory and reading boundary: [system folder]/.local/coordinator; [confirmed path].
 - Communication language / template edition: [confirmed languages].
 - Local OCMI system folder: [confirmed local location].
 - Client project/workspace and folder binding: [planned / confirmed; evidence source and date].

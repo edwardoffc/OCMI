@@ -118,7 +118,7 @@ foreach ($profile in $receipt.profiles) {
   Assert-Valid ($profile.profile -ceq 'coordinator' -and $profile.version -ceq $Version -and $profile.language -cin @('en','ru')) 'Invalid coordinator edition'
   Assert-Valid (!$languages.ContainsKey($profile.language)) 'Duplicate edition'
   $languages[$profile.language] = $true
-  Assert-Valid ($profile.archive -cmatch (('^releases/ocmi-coordinator-' + [regex]::Escape($Version) + '-') + $profile.language + '-\d{4}-\d{2}-\d{2}\.zip$')) 'Invalid archive path'
+  Assert-Valid ($profile.archive -cmatch (('^releases/ocmi-coordinator-' + [regex]::Escape($Version) + '-') + $profile.language + '-\d{4}-\d{2}-\d{2}(-r[2-9][0-9]*)?\.zip$')) 'Invalid archive path'
   $prefix = if ($profile.language -eq 'ru') { 'locales/ru/' } else { '' }
   $base = Join-Path $repo ($prefix + 'templates/coordinator')
   $expected = @{}
@@ -156,7 +156,7 @@ foreach ($profile in $receipt.profiles) {
   Check 'coordinator archive verified' {}
 }
 foreach ($property in $receipt.historicalArchives.PSObject.Properties) {
-  Assert-Valid ($property.Name -cmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}\.zip$') 'Unsafe historical archive name'
+  Assert-Valid ($property.Name -cmatch '^ocmi-((work|personal|coordinator)-)?\d+(\.\d+){0,2}(-(en|ru))?-\d{4}-\d{2}-\d{2}(-r[2-9][0-9]*)?\.zip$') 'Unsafe historical archive name'
   Assert-Valid ((Get-FileHash -LiteralPath (Scoped-File $repo ('releases/' + $property.Name))).Hash.ToLowerInvariant() -ceq $property.Value) 'Historical archive changed'
 }
 Write-Output "PASS: $passed onboarding checks; two coordinator editions verified; historical archives unchanged. Structural checks do not prove model behavior."

@@ -25,8 +25,9 @@ Downloading alone does not initialize the coordinator.
 
 ## Prepare core setup after selection
 
-1. Agree on both system and private service locations, plus an intended client project name.
-   Service memory belongs outside source/public Git; a separate `OCMI-local/coordinator` is one example.
+1. Agree on the system folder and intended client project name.
+   Private service memory lives in `.local/coordinator` inside that system folder.
+   Verify Git ignore/export exclusions and no tracked `.local` files before saving user values.
    No personal topic store is required. Preserve known existing core locations and records.
 2. Verify source origin/revision/version. Prefer an identifiable tag/commit;
    record an unknown archive revision with its verification limit rather than inventing a pin.
@@ -40,7 +41,7 @@ Downloading alone does not initialize the coordinator.
 5. Fill all six tokens in [STARTUP](../templates/coordinator/STARTUP.md).
    The client-project field identifies the intended project and expected system-folder association.
    Save the prompt privately and give the user identical text plus the checklist below.
-   Never put user paths or filled prompts in the public source.
+   Save user paths and filled prompts only in ignored local memory, never in tracked source or public packages.
 6. Check files/links/access and report what is actually done:
    source ready → service/prompt ready → project/binding confirmed → coordinator initialized.
    Do not claim complete installation from files or chat creation alone.
@@ -54,7 +55,7 @@ The installer must give these steps with the actual selected names and paths:
    Reuse an existing correctly bound project; do not create a second one.
 3. Create a separate “OCMI Coordinator” chat inside this project.
 4. Allow access to the exact private service directory if it is not already available.
-   Attaching the source folder does not guarantee sibling-directory access.
+   The standard service directory is inside the bound system folder; verify actual access.
 5. Send the filled startup prompt supplied by the installer.
 6. Wait for the coordinator to verify required files and confirm project/binding and startup.
    If those facts cannot be observed, give the requested current confirmation; do not treat a suggestion as evidence.
@@ -76,3 +77,11 @@ their own memory; this entry-route correction does not migrate or interrupt thei
 A new coordinator chat in the same bound project uses the privately saved STARTUP.md prompt
 and current handoff. No installer history is required.
 The coordinator ZIP is a service component; use the full repository for the local system.
+
+## Updating and sharing
+
+Preserve `.local` when updating the source or replacing a downloaded copy; never overwrite populated memory
+with blank templates. Public source archives and component packages exclude `.local`.
+Use Git source archives or exact template inventories for sharing, never a ZIP of the installed folder.
+Do not read private memory during source development. Existing external coordinator locations remain valid
+until an explicit migration request; do not move them or create competing records automatically.

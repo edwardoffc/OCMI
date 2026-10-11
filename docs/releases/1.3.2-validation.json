@@ -2,6 +2,8 @@
     "schemaVersion":  1,
     "version":  "OCMI 1.3.2",
     "date":  "2026-10-12",
+    "installerVersion":  "1.3.2",
+    "distributionRevision":  "r2",
     "workVersion":  "1.2.2",
     "lightweightVersion":  "1.2.1",
     "profiles":  [
@@ -9,18 +11,20 @@
                          "profile":  "coordinator",
                          "language":  "en",
                          "version":  "1.3.2",
-                         "archive":  "releases/ocmi-coordinator-1.3.2-en-2026-10-12.zip",
-                         "sha256":  "6c2a982bf6ec57e3f4ef595800788d199aeace50152439dc0f347a43c5eaa4b7",
+                         "installerVersion":  "1.3.2",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip",
+                         "sha256":  "27eb2a8dba917c90f55111ec2f0a20ff8524425314f184bdb9b5d29dfd8db782",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
-                                           "bytes":  2850,
-                                           "sha256":  "cc7a83dd2e2c1aec1423fe59a302f3f46e041f26a17a3802296f526e6257a73b"
+                                           "bytes":  3032,
+                                           "sha256":  "7f4773855a1a198bf7f372786aded9dfcab497d2d97e678ed587d8fd52dd904a"
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  2725,
-                                           "sha256":  "e8e425d65220c66cb7659491c12c24868696ac2d6e121ac35e819e63c9d0c9e0"
+                                           "bytes":  3176,
+                                           "sha256":  "99ac5921e76afa8fdc7c00474832f955a25d08dc4ab38c85dc109816a78c5a86"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -29,8 +33,8 @@
                                        },
                                        {
                                            "path":  "memory/BRIEF.md",
-                                           "bytes":  1313,
-                                           "sha256":  "b66568f30a3bf83a7462d36addfe4a598167f5bcf068237bdc2a22dcf618aa6d"
+                                           "bytes":  1337,
+                                           "sha256":  "3907dda452b9c27c023f32df1128341e6e0bea89b4dd58b87500868c420a5e5d"
                                        },
                                        {
                                            "path":  "memory/INDEX.md",
@@ -44,13 +48,13 @@
                                        },
                                        {
                                            "path":  "STARTUP.md",
-                                           "bytes":  1815,
-                                           "sha256":  "e809d452a749af043d54759bd7e37c6db73d8a334dd3dac78d05c3212ed82103"
+                                           "bytes":  1895,
+                                           "sha256":  "1c741f5878108cf8bce02613f294600a7e096a35bb7fb8d1ac1a27312f65582d"
                                        },
                                        {
                                            "path":  "VERSION.md",
-                                           "bytes":  472,
-                                           "sha256":  "9dd86435d739ed251e664a03166493b9eced45467423f5c2616d91aab2677e4c"
+                                           "bytes":  572,
+                                           "sha256":  "5c58cd51019d3025ea29c8df5266320251064a04b212d2dc9692cafd1b60a50a"
                                        }
                                    ]
                      },
@@ -58,18 +62,20 @@
                          "profile":  "coordinator",
                          "language":  "ru",
                          "version":  "1.3.2",
-                         "archive":  "releases/ocmi-coordinator-1.3.2-ru-2026-10-12.zip",
-                         "sha256":  "f23b58bdc17ee93cedeee06c0776149a6c063fe6df4c38571d219e506508bb0f",
+                         "installerVersion":  "1.3.2",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip",
+                         "sha256":  "367145a9746d72c9c23e64e8184b1d23b54b5d72e69abb53ac8f13e1ca9f6e98",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
-                                           "bytes":  5027,
-                                           "sha256":  "c9a72e62e7bca68ec39bb84ad58c4b2396d17c985c0f3955af4eec2c709fa61c"
+                                           "bytes":  5338,
+                                           "sha256":  "4e5d1b2cccf329413e2744eee4d8c7577d6e1f7056357df8a1a9ba264c428ec3"
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  4599,
-                                           "sha256":  "d0291bbc0ba70bee2a2cdbc06de82d006062e4c163af8fd8b54902b79c516ab2"
+                                           "bytes":  5376,
+                                           "sha256":  "6cc26449d7307fb62fba5646d2eb04c2ec68c9de668188e0fe56663ee0052f65"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -78,8 +84,8 @@
                                        },
                                        {
                                            "path":  "memory/BRIEF.md",
-                                           "bytes":  2301,
-                                           "sha256":  "e5000827f0ad0e89845e48e848d105352c640ab2e41d9162229be52585a89dfe"
+                                           "bytes":  2314,
+                                           "sha256":  "6f080024eeee0e7b259e75671ec004cf9423267de917c96ad36fd84e6a16e058"
                                        },
                                        {
                                            "path":  "memory/INDEX.md",
@@ -93,13 +99,13 @@
                                        },
                                        {
                                            "path":  "STARTUP.md",
-                                           "bytes":  3228,
-                                           "sha256":  "c6be18a0dcf7175e5e11376196947c67128c0c2596877c9e33925d8db2504c7e"
+                                           "bytes":  3410,
+                                           "sha256":  "73ff957065edb00914997a681385d14a1eb743d08007226fca8482d8bf576d3a"
                                        },
                                        {
                                            "path":  "VERSION.md",
-                                           "bytes":  806,
-                                           "sha256":  "42c2005aaf21c57f3110615eb5da7b0053d2e3cadcddaf322409ee84957b8b90"
+                                           "bytes":  969,
+                                           "sha256":  "616c0e37bb54c10422fdf67eedd72c66cbb92fb38a1389269dbcff890948ad5d"
                                        }
                                    ]
                      }
@@ -113,14 +119,20 @@
                                "ocmi-coordinator-1.3.0-ru-2026-10-12.zip":  "618b37e89dfdf042c0d3d1a2e17ecd02d6f3985b02f494a9a7de4e755498d166",
                                "ocmi-coordinator-1.3.1-en-2026-10-12.zip":  "bae4ae90542345962e76f4ce7ab0bc955ff0f9dcb00900a6dae7b484d6a3173b",
                                "ocmi-coordinator-1.3.1-ru-2026-10-12.zip":  "65f8898b57f2ece12949b6e410746fdf44a43bb8182bf0474e28fa469264c5ea",
+                               "ocmi-coordinator-1.3.2-en-2026-10-12.zip":  "6c2a982bf6ec57e3f4ef595800788d199aeace50152439dc0f347a43c5eaa4b7",
+                               "ocmi-coordinator-1.3.2-ru-2026-10-12.zip":  "f23b58bdc17ee93cedeee06c0776149a6c063fe6df4c38571d219e506508bb0f",
                                "ocmi-personal-1.2-2026-10-11.zip":  "7274c588c176b34658a7355c1892506c179d49282e7a41dcbe00076776db4536",
                                "ocmi-personal-1.2-en-2026-10-11.zip":  "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
                                "ocmi-personal-1.2-ru-2026-10-11.zip":  "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
                                "ocmi-personal-1.2.1-en-2026-10-11.zip":  "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+                               "ocmi-personal-1.2.1-en-2026-10-12.zip":  "ca5bfafbce25a36ef047526dab0eb433f9e2a59ccc30f0c974c64f2115e0f7ef",
                                "ocmi-personal-1.2.1-ru-2026-10-11.zip":  "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+                               "ocmi-personal-1.2.1-ru-2026-10-12.zip":  "2a7d6cad4068e1e07d085db697f1bae27ed7357105f29fdc30889017c07449c1",
                                "ocmi-work-1.2.1-en-2026-10-11.zip":  "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
                                "ocmi-work-1.2.1-ru-2026-10-11.zip":  "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb",
                                "ocmi-work-1.2.2-en-2026-10-11.zip":  "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
-                               "ocmi-work-1.2.2-ru-2026-10-11.zip":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e"
+                               "ocmi-work-1.2.2-en-2026-10-12.zip":  "798ce311ea7eae6de24c9c15bebb3e798f916d33d9c3bf665774c74e9f4a6b53",
+                               "ocmi-work-1.2.2-ru-2026-10-11.zip":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e",
+                               "ocmi-work-1.2.2-ru-2026-10-12.zip":  "592e8305d5a89cf723d7796bb523565af7e1f070f4106c99d4e4727a85abbb91"
                            }
 }

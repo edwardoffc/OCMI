@@ -8,14 +8,14 @@
                   {
                       "source":  "BOOTSTRAP.md",
                       "translation":  "locales/ru/BOOTSTRAP.md",
-                      "sourceSha256":  "bb5dafcf207570e59a929f6640f45b1b05721ed45ed84ae4708b2f7e108e59f3",
-                      "translationSha256":  "7d9421e33dfc842d5ba2df02042a679f430d07f28828f5d42dded81d5893d0ba"
+                      "sourceSha256":  "ef66d4762017252276acac2ae980ed7a78cf6486e3203a1b5bc0c313455ca6cd",
+                      "translationSha256":  "32caff3ff304df325d83405e8fbc51cb8da79ee9e69a17fe36f1ab859404cd39"
                   },
                   {
                       "source":  "CHANGELOG.md",
                       "translation":  "locales/ru/CHANGELOG.md",
-                      "sourceSha256":  "6175e531e5586d4136156ed3d568852ad38d5203582f17ce851eea5bf0813fe2",
-                      "translationSha256":  "5958b0eee0cd9413769b727427ded1e7490fba6ae89ab1aa2f7442800474cddc"
+                      "sourceSha256":  "0519b62ce3e3b83c7ec94d944472caf63f3379a29faaba25004c2c532e99aee4",
+                      "translationSha256":  "9fee2dc335dfd698f5c6b2261dc7fd458c39ee16bd9f7efe0bd05c41ed9b8856"
                   },
                   {
                       "source":  "CONTRIBUTING.md",
@@ -26,8 +26,8 @@
                   {
                       "source":  "COORDINATOR.md",
                       "translation":  "locales/ru/COORDINATOR.md",
-                      "sourceSha256":  "9f103ed9dfad2fea6f2bcb320c1cf2964c558035651059e0a388b654d86bcf56",
-                      "translationSha256":  "331c7d7ebe567a25b81d2abfe30f3c453c98184a3c34d214bf3bcb0a27b8c93d"
+                      "sourceSha256":  "bbef218b8e81fb99a2dadf3003b94bb0287517d29f12c4c639bd8350c7204de2",
+                      "translationSha256":  "7b9947e57562e71c3205d90cc6ee714349ea25e27cac679dce571d25bbf41cde"
                   },
                   {
                       "source":  "docs/evals/context-recovery.md",
@@ -38,14 +38,14 @@
                   {
                       "source":  "docs/install-system.md",
                       "translation":  "locales/ru/docs/install-system.md",
-                      "sourceSha256":  "ceeabf42f7b6dad045013afaf82e76ce7e6dff4ff5c76441c5aec8c84c2ece02",
-                      "translationSha256":  "aa9e9d83064674a6bd9274e59b79ebdb3dd8d8a6b82be41ba0b9ef158ee12c79"
+                      "sourceSha256":  "4b3457957bf60d517edaf3a08c97001be465daf322b97297b4c34354daf5dc3a",
+                      "translationSha256":  "4cd1a0a8a3f1ebff8ec998dded32fc8818f56e0f5adf78c7811bf67bea8e73f7"
                   },
                   {
                       "source":  "docs/layout.md",
                       "translation":  "locales/ru/docs/layout.md",
-                      "sourceSha256":  "45e46e71b0188c798a1f13f96ad76d0db4615f2b3193d2acb06a1787520a0083",
-                      "translationSha256":  "5b9425ab966b96deac7f6cdd5229da64c43bd6d3b94802ac60b840fef7e76078"
+                      "sourceSha256":  "dffe9b002b90b486f06265f8c32f667777d709b805f19bd1d06c4ec677f3c19e",
+                      "translationSha256":  "4d06ce3f8db27a7b47a8223146ba2d3c82cf79d8be057fd0df389b22308096bb"
                   },
                   {
                       "source":  "docs/localization.md",
@@ -56,8 +56,8 @@
                   {
                       "source":  "docs/maintaining.md",
                       "translation":  "locales/ru/docs/maintaining.md",
-                      "sourceSha256":  "3bc50960987d3680e6db86364ffc55a550df53d3ddba82d8230c301a2e5984ea",
-                      "translationSha256":  "6dfc9858916d90f4e2139ad1ab5364761efd4f790f6022ff22848558274e4e3e"
+                      "sourceSha256":  "04042ef4550d245c2db1b6c5789a0bc0d5953eb788b1bfff52e7e20e52e779e7",
+                      "translationSha256":  "ab43068e09c34146da1e6bbb1b4bc25f3b6ce5b11e02233d46701895d35b1e5b"
                   },
                   {
                       "source":  "docs/README.md",
@@ -92,8 +92,8 @@
                   {
                       "source":  "docs/releases/1.3.2.md",
                       "translation":  "locales/ru/docs/releases/1.3.2.md",
-                      "sourceSha256":  "b13289ea10c4cad399705f525c60d5f74a8b3386cbae2872592a191b3ea6cb4c",
-                      "translationSha256":  "dc2e0441ef77ce9865ed072f00f09012925d0c8cfc3bdd616bfcb8da6e60fc63"
+                      "sourceSha256":  "0c556973038247d6a07b7551bcc66124a6549ddd2e9c423afa6d66fbc9ab8154",
+                      "translationSha256":  "bed8dc0fde9740f1aac368ad4bcad72f54030d70b508909fef2490625511a7b7"
                   },
                   {
                       "source":  "docs/research/2026-10-11-ecc-review.md",
@@ -116,20 +116,20 @@
                   {
                       "source":  "README.md",
                       "translation":  "README.ru.md",
-                      "sourceSha256":  "c105ec8ee23569b5eb9df006ce1697a8184cd191f1be1bb58aa7f1e4d2bb48ce",
-                      "translationSha256":  "946be6aa77dd89ca3e104bdc5c08248a8e62875d82eb2b72bf3a28ff480bf761"
+                      "sourceSha256":  "3c54901a3063db6daca1b0676cfdfd859473a4845288b3e10b6a6be13d78d8b0",
+                      "translationSha256":  "3b1fe20905ca668bdafe211ed7591b020632adeebc667667737f49c05ebc4b66"
                   },
                   {
                       "source":  "releases/README.md",
                       "translation":  "locales/ru/releases/README.md",
-                      "sourceSha256":  "8381b61282659cdae2a0702326a05efd390982ac3add7199bcacdad6a62b61b1",
-                      "translationSha256":  "cbc50d83ab46111a298adfa8cfd969b44e4d65119418eca7aa1780379a812373"
+                      "sourceSha256":  "195380e97b6e80cac0e907d5023f8f03778ea56134f00d67b80c614ea8881d67",
+                      "translationSha256":  "93cbf96af41d447f94782c89a0c2003365e7d4345b8b05f9e5585d5320d7fd9f"
                   },
                   {
                       "source":  "scripts/README.md",
                       "translation":  "locales/ru/scripts/README.md",
-                      "sourceSha256":  "4cfd31963537ab0e1dde0efae0b2ccc537a9bbf22ac7bcb084aeed4fbb5b90e1",
-                      "translationSha256":  "be21fb7b14c8021f50978858d8af2fd10ae83ea116b27932a59d5ab3c5680139"
+                      "sourceSha256":  "777a913847f1be1f0159bd9afcc37f13c73662d24dae7e174758bce739017a9a",
+                      "translationSha256":  "93ebbf210028cbb85a73c96bd443f8c881352ba9a51519eba1d0244b5ef5eb2d"
                   },
                   {
                       "source":  "SECURITY.md",
@@ -140,20 +140,20 @@
                   {
                       "source":  "templates/coordinator/AGENTS.md",
                       "translation":  "locales/ru/templates/coordinator/AGENTS.md",
-                      "sourceSha256":  "cc7a83dd2e2c1aec1423fe59a302f3f46e041f26a17a3802296f526e6257a73b",
-                      "translationSha256":  "c9a72e62e7bca68ec39bb84ad58c4b2396d17c985c0f3955af4eec2c709fa61c"
+                      "sourceSha256":  "7f4773855a1a198bf7f372786aded9dfcab497d2d97e678ed587d8fd52dd904a",
+                      "translationSha256":  "4e5d1b2cccf329413e2744eee4d8c7577d6e1f7056357df8a1a9ba264c428ec3"
                   },
                   {
                       "source":  "templates/coordinator/INSTALL.md",
                       "translation":  "locales/ru/templates/coordinator/INSTALL.md",
-                      "sourceSha256":  "e8e425d65220c66cb7659491c12c24868696ac2d6e121ac35e819e63c9d0c9e0",
-                      "translationSha256":  "d0291bbc0ba70bee2a2cdbc06de82d006062e4c163af8fd8b54902b79c516ab2"
+                      "sourceSha256":  "99ac5921e76afa8fdc7c00474832f955a25d08dc4ab38c85dc109816a78c5a86",
+                      "translationSha256":  "6cc26449d7307fb62fba5646d2eb04c2ec68c9de668188e0fe56663ee0052f65"
                   },
                   {
                       "source":  "templates/coordinator/memory/BRIEF.md",
                       "translation":  "locales/ru/templates/coordinator/memory/BRIEF.md",
-                      "sourceSha256":  "b66568f30a3bf83a7462d36addfe4a598167f5bcf068237bdc2a22dcf618aa6d",
-                      "translationSha256":  "e5000827f0ad0e89845e48e848d105352c640ab2e41d9162229be52585a89dfe"
+                      "sourceSha256":  "3907dda452b9c27c023f32df1128341e6e0bea89b4dd58b87500868c420a5e5d",
+                      "translationSha256":  "6f080024eeee0e7b259e75671ec004cf9423267de917c96ad36fd84e6a16e058"
                   },
                   {
                       "source":  "templates/coordinator/memory/INDEX.md",
@@ -170,14 +170,14 @@
                   {
                       "source":  "templates/coordinator/STARTUP.md",
                       "translation":  "locales/ru/templates/coordinator/STARTUP.md",
-                      "sourceSha256":  "e809d452a749af043d54759bd7e37c6db73d8a334dd3dac78d05c3212ed82103",
-                      "translationSha256":  "c6be18a0dcf7175e5e11376196947c67128c0c2596877c9e33925d8db2504c7e"
+                      "sourceSha256":  "1c741f5878108cf8bce02613f294600a7e096a35bb7fb8d1ac1a27312f65582d",
+                      "translationSha256":  "73ff957065edb00914997a681385d14a1eb743d08007226fca8482d8bf576d3a"
                   },
                   {
                       "source":  "templates/coordinator/VERSION.md",
                       "translation":  "locales/ru/templates/coordinator/VERSION.md",
-                      "sourceSha256":  "9dd86435d739ed251e664a03166493b9eced45467423f5c2616d91aab2677e4c",
-                      "translationSha256":  "42c2005aaf21c57f3110615eb5da7b0053d2e3cadcddaf322409ee84957b8b90"
+                      "sourceSha256":  "5c58cd51019d3025ea29c8df5266320251064a04b212d2dc9692cafd1b60a50a",
+                      "translationSha256":  "616c0e37bb54c10422fdf67eedd72c66cbb92fb38a1389269dbcff890948ad5d"
                   },
                   {
                       "source":  "templates/personal/AGENTS.md",
@@ -188,8 +188,8 @@
                   {
                       "source":  "templates/personal/INSTALL.md",
                       "translation":  "locales/ru/templates/personal/INSTALL.md",
-                      "sourceSha256":  "0cd898b472e11e6681bc1f004c6e22922132f0f7f8d850d9bb580cde79fa33a2",
-                      "translationSha256":  "5638cdc8c23acb438732b449893dc87c17abb9da14abafb4b25ddc5f48777d81"
+                      "sourceSha256":  "f0f461495722dd1a6384ff2d76513d4d0adc066cafb645cad1888ef389cd616e",
+                      "translationSha256":  "843b654a59d0b6246d3e50caeff972261bfadf0c3b251a3eb90f83279a9af5e5"
                   },
                   {
                       "source":  "templates/personal/memory/BRIEF.md",
@@ -308,8 +308,8 @@
                   {
                       "source":  "templates/work/INSTALL.md",
                       "translation":  "locales/ru/templates/work/INSTALL.md",
-                      "sourceSha256":  "064896519e0d8978ae8d9bc05c48a42c3730801416d26c2dbc03bae6abc23e1e",
-                      "translationSha256":  "6d0f8cd09346a68c8d8b4804efd2690888dd1651f287fe71743f735707f15b67"
+                      "sourceSha256":  "59580fa9d3c9db593416a701d71c239fcc7200ad8668d9dcc1a0f70d4ad26f39",
+                      "translationSha256":  "13edb44f334f6ba1d7e98701beedcffb325fada6f8437138324a840512af74b7"
                   },
                   {
                       "source":  "templates/work/VERSION.md",
@@ -320,8 +320,8 @@
                   {
                       "source":  "VERSION.md",
                       "translation":  "locales/ru/VERSION.md",
-                      "sourceSha256":  "0cd91bf1370bfb304ad9fbcc0b38e0008e9885c4ee6817682e153deb19a99a46",
-                      "translationSha256":  "2e28672ad61628142a74e80df4615357715a1fdd90ccc13fd6cbe5a527fef017"
+                      "sourceSha256":  "f14f8ce6c1c59141afdbeb0d2fd046bab7d6bf34df3d7669ca63ec0c7607e01b",
+                      "translationSha256":  "e6585523f41228cf4b28124bd8fbdb436b36a4dc3e76778775ed522c3a8c6a24"
                   }
               ]
 }

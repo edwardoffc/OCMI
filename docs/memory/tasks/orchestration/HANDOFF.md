@@ -4,7 +4,19 @@
 
 Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-ENTRY-015 / system 1.3.2
+## Current: OCMI-LOCAL-016 / system 1.3.2, distribution r2
+
+[Acceptance](../OCMI-LOCAL-016/HANDOFF.md): owner requested private coordinator memory inside
+the system at .local/coordinator and delivery within the existing 1.3.2 release.
+Git/export exclusions, boundary CI, bilingual setup/preservation rules and six r2 packages prepared.
+Prior ZIPs and initial receipts retained; existing private installations and work projects are unchanged.
+Source development must not read .local. New setups use it; existing external paths are not auto-migrated.
+Static checks and isolated boundary fixtures establish file safeguards, not live-model recovery.
+Final delivery is verified through protected-main PR/CI, current release/tag and ignored local receipt.
+Owned synthetic fixtures are removed; publication-branch cleanup follows integration/recovery verification.
+No subsequent task or installed-project migration is assigned.
+
+## Historical: OCMI-ENTRY-015 / initial system 1.3.2
 
 [Acceptance](../OCMI-ENTRY-015/HANDOFF.md): uniform required startup from URL/download.
 First chat provides concrete folder/project/coordinator actions; direct initial integration is deferred.

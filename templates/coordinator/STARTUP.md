@@ -1,6 +1,7 @@
 # Coordinator startup prompt
 
-Template: render into the selected private STARTUP.md; do not save user values in the source.
+Template: render into .local/coordinator/STARTUP.md inside the installed system.
+User values belong only in ignored local memory, never in tracked source or public packages.
 Replace all six tokens. Reuse the filled prompt for a new coordinator chat.
 
 ```text

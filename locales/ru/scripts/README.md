@@ -1,5 +1,8 @@
 # Проверки
 
+check-local-boundary требует Git: проверяет исключения Git/export, индекс, достижимую историю
+и пути публичных ZIP, не читая содержимое служебной .local.
+
 [English](../../../scripts/README.md) · **Русский**
 
 check-onboarding проверяет маршруты знакомства/разработки, передачу установщик/координатор и границы
@@ -17,6 +20,7 @@ powershell -NoProfile -File scripts/check-workflow.ps1
 powershell -NoProfile -File scripts/check-localization.ps1
 powershell -NoProfile -File scripts/check-onboarding.ps1
 powershell -NoProfile -File scripts/check-release.ps1
+powershell -NoProfile -File scripts/check-local-boundary.ps1
 git diff --check
 ~~~
 

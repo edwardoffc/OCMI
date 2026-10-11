@@ -7,6 +7,8 @@
 This repository is the primary source. English work rules live in templates/work,
 the lightweight profile in templates/personal. Russian equivalents live in locales/ru.
 docs/memory is the single active development memory; installed project data stays outside this repository.
+Private coordinator setup lives in .local/coordinator, excluded from Git and public distributions.
+Source development must not read .local; updates preserve it. Never share an installed-folder ZIP.
 Use any separate directory. [Layout](layout.md) · [Localization policy](localization.md).
 
 After core initialization, the coordinator installs from one selected template language.
@@ -29,12 +31,15 @@ System 1.3.2 unifies URL/downloaded startup and requires confirmed client bindin
 Runtime work 1.2.2 and lightweight 1.2.1 are unchanged; both INSTALL entry checks require a coordinator. The separate 1.3.2 receipt verifies coordinator
 archives; 1.3.2-components.json verifies four updated component editions.
 Keep all previous receipts/ZIPs unchanged; use -SecurityBaseline -ArchivesOnly for the old security editions. Use -Version 1.3.0 -ArchivesOnly for old setup ZIPs.
+The owner-authorized in-place 1.3.2 correction uses distinct r2 filenames and retained initial receipts;
+current receipts describe r2. Refreshing an existing public release/tag requires explicit authority,
+verified original refs, preserved recovery history and renewed source-download verification.
 Run check-onboarding alongside existing checks for setup/profile changes. Its negative
 mutations verify instruction safeguards, not actual model behavior.
 
 1. Change canonical rules/version and update CHANGELOG/usage when behavior changes.
 2. Update affected translations; preserve paths, IDs, schema headings, and machine-readable statuses.
-3. Run check-docs, check-workflow, check-localization, check-release, and git diff --check.
+3. Run check-docs, check-workflow, check-localization, check-release, check-local-boundary, and git diff --check.
    Structural checks do not replace [model/cost evaluation](evals/context-recovery.md).
 4. Save each changed distribution under a new locale-qualified filename with SHA256 and a receipt.
    Verify exact archive inventory, file sizes, and hashes against the selected language source.

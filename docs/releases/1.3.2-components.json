@@ -3,6 +3,7 @@
     "version":  "OCMI 1.3.2",
     "date":  "2026-10-12",
     "installerVersion":  "1.3.2",
+    "distributionRevision":  "r2",
     "workVersion":  "1.2.2",
     "lightweightVersion":  "1.2.1",
     "profiles":  [
@@ -11,8 +12,9 @@
                          "language":  "en",
                          "version":  "1.2.2",
                          "installerVersion":  "1.3.2",
-                         "archive":  "releases/ocmi-work-1.2.2-en-2026-10-12.zip",
-                         "sha256":  "798ce311ea7eae6de24c9c15bebb3e798f916d33d9c3bf665774c74e9f4a6b53",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-work-1.2.2-en-2026-10-12-r2.zip",
+                         "sha256":  "4fbdb6b63b2d30658925a70fb69a6aa69a7e7e63d34501d9b0772954cc1baae7",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
@@ -96,8 +98,8 @@
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  8127,
-                                           "sha256":  "064896519e0d8978ae8d9bc05c48a42c3730801416d26c2dbc03bae6abc23e1e"
+                                           "bytes":  8234,
+                                           "sha256":  "59580fa9d3c9db593416a701d71c239fcc7200ad8668d9dcc1a0f70d4ad26f39"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -116,8 +118,9 @@
                          "language":  "ru",
                          "version":  "1.2.2",
                          "installerVersion":  "1.3.2",
-                         "archive":  "releases/ocmi-work-1.2.2-ru-2026-10-12.zip",
-                         "sha256":  "592e8305d5a89cf723d7796bb523565af7e1f070f4106c99d4e4727a85abbb91",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-work-1.2.2-ru-2026-10-12-r2.zip",
+                         "sha256":  "cc6cdabb6cd1911e85bfd98842455ab179a395c6642bad7d613d5b3de19dc145",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
@@ -201,8 +204,8 @@
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  13931,
-                                           "sha256":  "6d0f8cd09346a68c8d8b4804efd2690888dd1651f287fe71743f735707f15b67"
+                                           "bytes":  14126,
+                                           "sha256":  "13edb44f334f6ba1d7e98701beedcffb325fada6f8437138324a840512af74b7"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -221,8 +224,9 @@
                          "language":  "en",
                          "version":  "1.2.1",
                          "installerVersion":  "1.3.2",
-                         "archive":  "releases/ocmi-personal-1.2.1-en-2026-10-12.zip",
-                         "sha256":  "ca5bfafbce25a36ef047526dab0eb433f9e2a59ccc30f0c974c64f2115e0f7ef",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-personal-1.2.1-en-2026-10-12-r2.zip",
+                         "sha256":  "15762427d098f5cc124e07e7456ddfbd3225ad7fb51df96cc9ce8a1a3a3419b6",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
@@ -231,8 +235,8 @@
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  6165,
-                                           "sha256":  "0cd898b472e11e6681bc1f004c6e22922132f0f7f8d850d9bb580cde79fa33a2"
+                                           "bytes":  6272,
+                                           "sha256":  "f0f461495722dd1a6384ff2d76513d4d0adc066cafb645cad1888ef389cd616e"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -261,8 +265,9 @@
                          "language":  "ru",
                          "version":  "1.2.1",
                          "installerVersion":  "1.3.2",
-                         "archive":  "releases/ocmi-personal-1.2.1-ru-2026-10-12.zip",
-                         "sha256":  "2a7d6cad4068e1e07d085db697f1bae27ed7357105f29fdc30889017c07449c1",
+                         "distributionRevision":  "r2",
+                         "archive":  "releases/ocmi-personal-1.2.1-ru-2026-10-12-r2.zip",
+                         "sha256":  "975a2ffc5dbecc057bc11182a279130a8d7e608a0a74ec14d2302848068a8497",
                          "files":  [
                                        {
                                            "path":  "AGENTS.md",
@@ -271,8 +276,8 @@
                                        },
                                        {
                                            "path":  "INSTALL.md",
-                                           "bytes":  11438,
-                                           "sha256":  "5638cdc8c23acb438732b449893dc87c17abb9da14abafb4b25ddc5f48777d81"
+                                           "bytes":  11633,
+                                           "sha256":  "843b654a59d0b6246d3e50caeff972261bfadf0c3b251a3eb90f83279a9af5e5"
                                        },
                                        {
                                            "path":  "LICENSE",
@@ -312,10 +317,14 @@
                                "ocmi-personal-1.2-en-2026-10-11.zip":  "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
                                "ocmi-personal-1.2-ru-2026-10-11.zip":  "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
                                "ocmi-personal-1.2.1-en-2026-10-11.zip":  "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+                               "ocmi-personal-1.2.1-en-2026-10-12.zip":  "ca5bfafbce25a36ef047526dab0eb433f9e2a59ccc30f0c974c64f2115e0f7ef",
                                "ocmi-personal-1.2.1-ru-2026-10-11.zip":  "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+                               "ocmi-personal-1.2.1-ru-2026-10-12.zip":  "2a7d6cad4068e1e07d085db697f1bae27ed7357105f29fdc30889017c07449c1",
                                "ocmi-work-1.2.1-en-2026-10-11.zip":  "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
                                "ocmi-work-1.2.1-ru-2026-10-11.zip":  "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb",
                                "ocmi-work-1.2.2-en-2026-10-11.zip":  "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
-                               "ocmi-work-1.2.2-ru-2026-10-11.zip":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e"
+                               "ocmi-work-1.2.2-en-2026-10-12.zip":  "798ce311ea7eae6de24c9c15bebb3e798f916d33d9c3bf665774c74e9f4a6b53",
+                               "ocmi-work-1.2.2-ru-2026-10-11.zip":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e",
+                               "ocmi-work-1.2.2-ru-2026-10-12.zip":  "592e8305d5a89cf723d7796bb523565af7e1f070f4106c99d4e4727a85abbb91"
                            }
 }

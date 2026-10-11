@@ -12,7 +12,9 @@ Subsequent chats restore this area; do not repeat completed installation actions
 
 ## Authority and scope
 
-- Coordinator memory is outside the source checkout and public Git scope.
+- Coordinator memory lives in .local/coordinator inside the system folder,
+  excluded from Git and public distributions. Never force-add it or publish a whole-folder ZIP.
+  Source development must not read private setup memory. Preserve it during updates.
   Do not edit source development memory or code as part of installation coordination.
 - After core handover, folder organization, personal storage and project integration
   are optional. Apply only selected actions. Personal storage is not a prerequisite.
