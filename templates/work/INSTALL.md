@@ -1,6 +1,6 @@
 # Installing the OCMI work profile
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 [Version and changes](VERSION.md). This is a neutral template, not an active project.
 "This is a work project", referring to a specific directory, selects this profile;
@@ -48,7 +48,7 @@ Do not claim automatic protection without verification.
 
 ## Upgrade OCMI 1 or 1.1 → 1.2
 
-When installing current 1.2.1, also apply the resource-completion section below.
+When installing current 1.2.2, also apply the resource-completion section below.
 
 Contract/Result/Acceptance and exporter fields remain compatible.
 Install the three role procedures with the new ORCHESTRATION router; check links before switching AGENTS.
@@ -59,7 +59,7 @@ Scenarios/structural checkers do not prove model behavior in a new chat. Updatin
 On a separate owner request, merge new rules with local ones while preserving current assignments.
 Prioritize: an end-to-end consumer/protocol scenario before assignment; accessible pinned links
 instead of history copies; delta review after full review; dependency-based reuse; updates to changed facts only.
-Current label: OCMI 1.2.1, rules revision 2026-10-11. Preserve historical labels.
+Current label: OCMI 1.2.2, rules revision 2026-10-11. Preserve historical labels.
 
 Issued packages/checkers are immutable. Changing an active contract/tests/baseline/check requires
 an agreed explicit revision preserving WIP, finding IDs, and evidence, not bypassing the checker.
@@ -82,3 +82,10 @@ and "main copy depends on temporary copy" scenarios; do not delete real data to 
 The lightweight profile remains 1.2; do not add branches/worktrees or work-profile acceptance to it.
 
 Start: [AGENTS](AGENTS.md), [guide](docs/guides/agent-workflow.md), [process](docs/memory/ORCHESTRATION.md).
+
+## Upgrade 1.2.1 → 1.2.2
+
+Merge Sensitive evidence in RULES and sanitized-log references in worker/protocol/START.
+Preserve local rules, active assignments and protected packages. Do not copy raw logs into memory.
+Existing sensitive material requires owner-directed containment; do not silently rewrite evidence.
+The lightweight 1.2.1 profile uses the same sanitization rule without work-role machinery.

@@ -1,6 +1,6 @@
 # Working with this project's memory
 
-**OCMI 1.2, rules revision 2026-10-11**
+**OCMI 1.2.1, rules revision 2026-10-11**
 
 ## Startup and scope
 
@@ -31,3 +31,13 @@
 
 These rules apply within this project and constrain agent behavior.
 They do not configure filesystem permissions or the client's built-in automatic memory.
+
+## Sensitive evidence
+
+Never save secret values or confidential personal/client data in shared memory, logs, Result/HANDOFF,
+fixtures, or publication archives. Redact before saving or sharing; prefer fictional fixtures.
+Preserve complete sanitized evidence, commands and outcomes; mark redactions without the removed values.
+Necessary originals require an explicitly authorized restricted location, an owner and retention condition;
+a nonsensitive reference does not grant access. Do not rewrite protected packages to conceal an incident:
+stop sharing the affected material and escalate; an exposed credential must be revoked/rotated.
+Evidence preservation does not authorize publication. .gitignore does not inspect file contents.

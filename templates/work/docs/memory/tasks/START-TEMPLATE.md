@@ -1,6 +1,6 @@
 # START — message to the worker
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Template: do not begin until fields are filled and readiness is verified.
 Status: ready [only after orchestrator verification]. Role: worker for project [name / root].
@@ -16,6 +16,6 @@ For a new assignment check the baseline; for continuation preserve Result/WIP an
 Do not start from an archived START or file recency alone; clarify contradictory assignments.
 Change only AllowedPaths and the Result body; do not change Contract/Acceptance/JSON or protected files.
 Meet criteria and mandatory checks; reuse only within the contract and checker.
-Save the full Result/logs, send the record ID/path and a brief summary.
+Save the full sanitized Result/logs under RULES, send the record ID/path and a brief summary.
 For a blocker: reproduction, tested hypotheses, and required external action.
 Do not choose the next task. Do not copy history or unchanged rules into the message.

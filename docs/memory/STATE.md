@@ -1,7 +1,7 @@
 # OCMI current state
 
 Snapshot: 2026-10-11.
-Work protocol: 1.2.1. Optional lightweight protocol: 1.2.
+Work protocol: 1.2.2. Optional lightweight protocol: 1.2.1.
 English is canonical; Russian guides/templates are maintained under locales/ru.
 docs/memory is the single development memory, not installed project data.
 

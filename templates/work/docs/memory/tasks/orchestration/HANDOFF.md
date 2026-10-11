@@ -1,6 +1,6 @@
 # Orchestrator handoff
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Status: template; fill during installation. [PLAN](../../PLAN.md) · [Process](../../ORCHESTRATION.md).
 

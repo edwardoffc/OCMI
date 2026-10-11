@@ -1,0 +1,307 @@
+{
+    "schemaVersion":  1,
+    "editionDate":  "2026-10-11",
+    "canonicalLanguage":  "en",
+    "staticWorkflowChecks":  67,
+    "liveModelEvaluation":  "not-run",
+    "tokenSavings":  "unknown",
+    "profiles":  [
+                     {
+                         "profile":  "work",
+                         "language":  "en",
+                         "version":  "1.2.2",
+                         "archive":  "releases/ocmi-work-1.2.2-en-2026-10-11.zip",
+                         "sha256":  "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  1040,
+                                           "sha256":  "375a48c0c0c112ec0c807fc1024f4295625eb63a1e24a5fb1a66f79a3c3bedf0"
+                                       },
+                                       {
+                                           "path":  "docs/guides/agent-workflow.md",
+                                           "bytes":  4171,
+                                           "sha256":  "d49b5cddc5e76837f43d8c36cf6d80641cb01b8aafe8d9e0699ab50ae0d19231"
+                                       },
+                                       {
+                                           "path":  "docs/memory/BRIEF.md",
+                                           "bytes":  459,
+                                           "sha256":  "43f8f40245e716c74310dcc6456375e4560894f300ca41cebe3455bab5f06911"
+                                       },
+                                       {
+                                           "path":  "docs/memory/CODEMAP.md",
+                                           "bytes":  1173,
+                                           "sha256":  "4869170ebb1d2f5d925c3f6a5682b58d46c7f41e5a7a1e234821cc3573ad5677"
+                                       },
+                                       {
+                                           "path":  "docs/memory/INDEX.md",
+                                           "bytes":  1002,
+                                           "sha256":  "1fb25a713be0ebf399995e20440d8c17dc3f72341a3b3125ec82f3fe243ddb8a"
+                                       },
+                                       {
+                                           "path":  "docs/memory/ORCHESTRATION.md",
+                                           "bytes":  1349,
+                                           "sha256":  "c30fe3814890ecd5e995eeec8778ad9393e00afc32ef512417a3c2889b11e4ba"
+                                       },
+                                       {
+                                           "path":  "docs/memory/PLAN.md",
+                                           "bytes":  694,
+                                           "sha256":  "ce5718c8a4cdf7af35309437a7e42b7bcdb4206ee7405919824c6fc2dd1d6554"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/consultant.md",
+                                           "bytes":  713,
+                                           "sha256":  "29970a9d7cbb9eec98e1757611fe4c9e2d6d320fdbf3d4f78ccee82bd5b94a6b"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/coordinator.md",
+                                           "bytes":  9828,
+                                           "sha256":  "9f02b621cd35aaa98fe57dbcec2117abb8ebdfad426c7a4f79b824d72fd0f289"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/worker.md",
+                                           "bytes":  2778,
+                                           "sha256":  "361c70711d5b37b0d42fe9557532ab76a0c01498d2f2171e033405042fee2c25"
+                                       },
+                                       {
+                                           "path":  "docs/memory/RULES.md",
+                                           "bytes":  5444,
+                                           "sha256":  "72921919a9e14fa56d84e450e1154099afdae036cac68cc1f7ab5a028a065bd5"
+                                       },
+                                       {
+                                           "path":  "docs/memory/STATE.md",
+                                           "bytes":  1176,
+                                           "sha256":  "e86ae55afcd5d229cb04bcf6e6fe571aca2f86ecbaee012e57de8322fc81e51a"
+                                       },
+                                       {
+                                           "path":  "docs/memory/TASK-PROTOCOL.md",
+                                           "bytes":  5204,
+                                           "sha256":  "e7543bb63b668c4e46ff8149660d22b62e8e17719f5a3d2c4b4f87ef8c8564ad"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/orchestration/HANDOFF.md",
+                                           "bytes":  1377,
+                                           "sha256":  "91529f9f3ad03b97be707db4e936fa3071b74eb05394136837e9f3c83ce8da60"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/START-TEMPLATE.md",
+                                           "bytes":  1479,
+                                           "sha256":  "ac65d61ae36a731f6ff671f8c03045a800328c93ec5ec980eff0b73d55d62d6e"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/TEMPLATE.md",
+                                           "bytes":  4196,
+                                           "sha256":  "f8249e26b08fce75717e5b003674c2ade87ec7cb0be2da1f41288ce111570b4a"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  6599,
+                                           "sha256":  "fbbfb24d480279cb2be6711aff347eb589805307909350d2dd52666057942535"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "VERSION.md",
+                                           "bytes":  2355,
+                                           "sha256":  "bc7e95c021b7fba6b53d113c6e344831bfd66a642ce69034b9db3539f350656b"
+                                       }
+                                   ]
+                     },
+                     {
+                         "profile":  "personal",
+                         "language":  "en",
+                         "version":  "1.2.1",
+                         "archive":  "releases/ocmi-personal-1.2.1-en-2026-10-11.zip",
+                         "sha256":  "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  4165,
+                                           "sha256":  "73fd35223e827af7fabe87ba1aae9fb7b6098256943dd395c1e6dcbb16f35da6"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  4574,
+                                           "sha256":  "d40e437316026ef17ee07e7275050f159aadec2d0a9a61243472af9ff2acf75e"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "memory/BRIEF.md",
+                                           "bytes":  834,
+                                           "sha256":  "44dd4639eaf2316bc5e170e379e099470df30d573467ce28b36e416106e2084e"
+                                       },
+                                       {
+                                           "path":  "memory/INDEX.md",
+                                           "bytes":  573,
+                                           "sha256":  "7b65f5738e26cced7b298476c5f971c7e233e82da01f2c58311045a71c475a3b"
+                                       },
+                                       {
+                                           "path":  "memory/tasks/main/HANDOFF.md",
+                                           "bytes":  849,
+                                           "sha256":  "7e08c191bd6bd4295f0b643d48bbb1926408da15d0ca58984f8d9ad3663c4b50"
+                                       }
+                                   ]
+                     },
+                     {
+                         "profile":  "work",
+                         "language":  "ru",
+                         "version":  "1.2.2",
+                         "archive":  "releases/ocmi-work-1.2.2-ru-2026-10-11.zip",
+                         "sha256":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  1754,
+                                           "sha256":  "7d5fc77624c490c51fa9a33f59408f686cf5e4d481e46353873b3ccca30af494"
+                                       },
+                                       {
+                                           "path":  "docs/guides/agent-workflow.md",
+                                           "bytes":  7191,
+                                           "sha256":  "3b2b144a2ed3eeab83a3a00ffe036517eb8d3ed6c99148173b982c1083aedad0"
+                                       },
+                                       {
+                                           "path":  "docs/memory/BRIEF.md",
+                                           "bytes":  834,
+                                           "sha256":  "9b9041ea69a8135d9f12fec65f66749449ac9fadf0ada99ccf24d1f0e6a3e727"
+                                       },
+                                       {
+                                           "path":  "docs/memory/CODEMAP.md",
+                                           "bytes":  1925,
+                                           "sha256":  "36340edd235975ea7fd2c9fa668fc3b408d2af81a9c429a88e6bf8cbd1fc204a"
+                                       },
+                                       {
+                                           "path":  "docs/memory/INDEX.md",
+                                           "bytes":  1706,
+                                           "sha256":  "c4fdfda5715bc985945266f6dd7fe70da5545411fae84133c3bb591d62e75646"
+                                       },
+                                       {
+                                           "path":  "docs/memory/ORCHESTRATION.md",
+                                           "bytes":  2025,
+                                           "sha256":  "9eee23a3558fff16bbf1d5df21295afccf0db22f1b8ab5934000dba96bec6321"
+                                       },
+                                       {
+                                           "path":  "docs/memory/PLAN.md",
+                                           "bytes":  1133,
+                                           "sha256":  "1afc4b60ed0d9bbc7b4a552683ca371e4ec42174530da38c9746542d71d63f9d"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/consultant.md",
+                                           "bytes":  1290,
+                                           "sha256":  "8e6274e4f99241d347f317bbfd19fbafcf3e0d149aa673b9ba65ad3077f368f0"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/coordinator.md",
+                                           "bytes":  16734,
+                                           "sha256":  "a766edc74d73909b87ae390b08f03461c3313939d0a25add605eb589de83fd29"
+                                       },
+                                       {
+                                           "path":  "docs/memory/roles/worker.md",
+                                           "bytes":  4361,
+                                           "sha256":  "b9fa0b345ef5bcbf6d9f6207d83955bdc1cdf6928e3119b2dd1d2be34c8692fe"
+                                       },
+                                       {
+                                           "path":  "docs/memory/RULES.md",
+                                           "bytes":  8772,
+                                           "sha256":  "d40306399f2d325b501bc9dbaf5b512d5c22d4d62020c66705fe14ab4e88193e"
+                                       },
+                                       {
+                                           "path":  "docs/memory/STATE.md",
+                                           "bytes":  2078,
+                                           "sha256":  "7852da03917a6132a89c2022e0c792ec11923488563abcf9163e41cfebf9c4f3"
+                                       },
+                                       {
+                                           "path":  "docs/memory/TASK-PROTOCOL.md",
+                                           "bytes":  8286,
+                                           "sha256":  "0eb74d70a1b33712f1197980a4c61142a58294499d098ea0840c8f0017080811"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/orchestration/HANDOFF.md",
+                                           "bytes":  2311,
+                                           "sha256":  "698e1f39aa7e755743722b8b0f61e722f2af45d493df27c1535d03d3fe65ce20"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/START-TEMPLATE.md",
+                                           "bytes":  2360,
+                                           "sha256":  "e0abffc1a7ff387dab42f73222b82be8f99d1d29d28bd2e74fb38b98f3f6ecba"
+                                       },
+                                       {
+                                           "path":  "docs/memory/tasks/TEMPLATE.md",
+                                           "bytes":  6979,
+                                           "sha256":  "07612ddd75abbfb2b9217629101fe4ac3d59d4f5befd08e288c10f6a1f0b128d"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  11240,
+                                           "sha256":  "211b6ec6f6e8b99bbc463d85bff2f870baa528653dd11093ca0c106e1a10ab6b"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "VERSION.md",
+                                           "bytes":  4134,
+                                           "sha256":  "cd5d79909f5ea6190b34595fdda6ec57e5586a2db1531ea93f36590368ab92b8"
+                                       }
+                                   ]
+                     },
+                     {
+                         "profile":  "personal",
+                         "language":  "ru",
+                         "version":  "1.2.1",
+                         "archive":  "releases/ocmi-personal-1.2.1-ru-2026-10-11.zip",
+                         "sha256":  "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  7792,
+                                           "sha256":  "9cc7fe5bb2bd0dfb2092967dc4ecb12d6816afe85e7e5c79a98718105abbd913"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  8635,
+                                           "sha256":  "4928ca6b715348521b39f54fa3817cc5c0026b9a8d240e6d750d0181196dcdcd"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "memory/BRIEF.md",
+                                           "bytes":  1622,
+                                           "sha256":  "5650f9a19b571e096914e1d5a6ebc4e389870c8a752acbedbb29274ffc240587"
+                                       },
+                                       {
+                                           "path":  "memory/INDEX.md",
+                                           "bytes":  988,
+                                           "sha256":  "20aa343d63d0f99285e859c25d95771331f1b8d084b947ba463804ed2c77cf86"
+                                       },
+                                       {
+                                           "path":  "memory/tasks/main/HANDOFF.md",
+                                           "bytes":  1678,
+                                           "sha256":  "65845b345361d33a7aa8387c8ea1685cdb688571ef729367edd318398f4d0f39"
+                                       }
+                                   ]
+                     }
+                 ],
+    "historicalArchives":  {
+                               "ocmi-1-2026-10-03.zip":  "d578cbb24535ad61d8d051f703754060242dd31f09fee4c40ce85e81c6046047",
+                               "ocmi-1.1-2026-10-05.zip":  "92c4c865d5f0dce6cbffa36e0002fb38370049446611d8c3e22cfab58ec0c737",
+                               "ocmi-1.2-2026-10-11.zip":  "f251abb6d1ce103e69a3c2c31fa5fd6cbfe1122380783caba4250398634216d8",
+                               "ocmi-1.2.1-2026-10-11.zip":  "b1367343658d68e93ccf2fa85e1c357fe3b5238d8ae9d0bd4aa3a866f7849a4e",
+                               "ocmi-personal-1.2-2026-10-11.zip":  "7274c588c176b34658a7355c1892506c179d49282e7a41dcbe00076776db4536",
+                               "ocmi-personal-1.2-en-2026-10-11.zip":  "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
+                               "ocmi-personal-1.2-ru-2026-10-11.zip":  "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
+                               "ocmi-work-1.2.1-en-2026-10-11.zip":  "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
+                               "ocmi-work-1.2.1-ru-2026-10-11.zip":  "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb"
+                           }
+}

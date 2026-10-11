@@ -13,6 +13,8 @@ Updated: 2026-10-11. The only development queue.
 | OCMI-MIG-006 | Validate adoption in existing installations | Completed locally with WIP preserved; evidence stays in those projects |
 | OCMI-PUBLIC-007 / OCMI-README-008 | Public documentation, MIT, bilingual entry point | Completed preparation; superseded by the complete language edition below |
 | OCMI-I18N-009 | English canonical project, maintained Russian edition, language checks and distributions | Source accepted; see [handoff](tasks/orchestration/HANDOFF.md) |
+| OCMI-SEC-010 | Public snapshot privacy/security review | Completed; no current disclosure found; preventive gaps recorded in the handoff, remediation in OCMI-SEC-011 |
+| OCMI-SEC-011 | Sanitized evidence, secret checks, private reporting and protected main | Source accepted after local validation; integration requires both CI checks |
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.

@@ -67,3 +67,5 @@ If the client does not discover AGENTS.md, provide instructions and relevant fil
 File rules guide context selection; they do not establish technical access permissions.
 
 [Layout](layout.md) · [Checks](../scripts/README.md).
+
+Work 1.2.2 and lightweight 1.2.1 add sanitization before persistence/sharing. Merge those rules explicitly; do not replace active memory or protected packages. See the security policy before publishing logs.

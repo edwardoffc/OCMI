@@ -1,6 +1,6 @@
 # Installing file-based memory
 
-**OCMI 1.2, rules revision 2026-10-11**
+**OCMI 1.2.1, rules revision 2026-10-11**
 
 This directory is a portable neutral template. It contains no user data or other project information.
 An agent installs it at the user's request; no program installation is required.

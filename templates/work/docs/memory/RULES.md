@@ -1,6 +1,6 @@
 # Project memory rules
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 ## One primary location per fact
 
@@ -68,3 +68,13 @@ Do not read personal stores, neighboring projects, secrets, or private dumps wit
 Do not expand scope merely because a link exists. Models, budgets, and permissions do not carry over from another project.
 External actions, messages, and publication require current authorization; instructions are not technical isolation.
 If writing is unavailable, say so and provide the exact remaining state for manual saving.
+
+## Sensitive evidence
+
+Never save secret values or confidential personal/client data in shared memory, logs, Result/HANDOFF,
+fixtures, or publication archives. Redact before saving or sharing; prefer fictional fixtures.
+Preserve complete sanitized evidence, commands and outcomes; mark redactions without the removed values.
+Necessary originals require an explicitly authorized restricted location, an owner and retention condition;
+a nonsensitive reference does not grant access. Do not rewrite protected packages to conceal an incident:
+stop sharing the affected material and escalate; an exposed credential must be revoked/rotated.
+Evidence preservation does not authorize publication. .gitignore does not inspect file contents.

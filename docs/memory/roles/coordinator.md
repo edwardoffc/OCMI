@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.2.2, rules revision 2026-10-11**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.

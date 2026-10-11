@@ -33,3 +33,5 @@ Do not overwrite released ZIP files. Template changes require a distinct distrib
 and receipt following the [release procedure](docs/maintaining.md).
 Installed project memory does not belong in an OCMI pull request.
 Repository materials use the [MIT license](LICENSE).
+
+Run the security check with a verified scanner before publication. Report vulnerabilities privately using [SECURITY](SECURITY.md). Changes enter main through a PR with Documentation and Secrets and privacy checks; no second maintainer approval is required.

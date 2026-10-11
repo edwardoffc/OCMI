@@ -2,6 +2,14 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## Work 1.2.2 / lightweight 1.2.1 — 2026-10-11
+
+- Sanitize shared evidence before persistence or publication; restricted originals need explicit authority and retention ownership.
+- Complete logs mean complete sanitized evidence; incident handling preserves protected packages without sharing exposed material.
+- English/Russian security policy and private vulnerability reporting.
+- Pinned secret scanning of reachable Git history, tracked text and all extracted ZIP entries; generic privacy indicators.
+- Read-only CI checks and protected main for a solo maintainer; old distributions/receipts remain unchanged.
+
 ## Language editions — 2026-10-11
 
 - English is the canonical language for guides, templates, and development instructions.
