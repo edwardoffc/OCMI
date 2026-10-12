@@ -1,14 +1,14 @@
 # OCMI durable context
 
-Updated: 2026-10-12.
+Updated: 2026-10-13.
 Build a portable workflow for orchestration, context memory, and code maps.
-System setup: 1.3.2; common URL/downloaded entry with explicit folder/project/coordinator steps.
+System: 1.3.3; setup policy: 1.3.2; common URL/downloaded entry with explicit folder/project/coordinator steps.
 Core completion requires confirmed client project binding before target integration.
 Both component INSTALLs and neutral routing require coordinator-led new installations;
 operational installed projects retain their own routine workflow.
 Private setup records and filled prompt live in ignored .local/coordinator inside the system;
 excluded from Git/public packages and source development reads. Optional actions follow handover.
-Canonical English work sources: templates/work, OCMI 1.2.2.
+Canonical English work sources: templates/work, OCMI 1.2.3. Compact tasks are risk-selected; checks/rework require sufficient causal evidence.
 Optional lightweight profile: templates/personal, version 1.2.1.
 Russian guides and complete template equivalents: locales/ru.
 One primary location per fact; new chats recover saved state and remaining work.

@@ -2,6 +2,17 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## System 1.3.3 / work 1.2.3 — 2026-10-13
+
+- Compact Contract/Result/Acceptance for bounded reversible low-risk tasks; sensitive or uncertain work keeps the full format.
+- Validate sufficient existing checks before START; new tests fill gaps. Relevant cheap checks precede costly CI without waiving project gates.
+- Preserve failed evidence; successful retries alone are not causal fixes. Repeated rework records cause/hypothesis and a changed diagnostic step.
+- Delta reading requires verified retained context; new-chat recovery remains mandatory.
+- Bilingual schema/policy regressions and two new work distributions. Coordinator/setup 1.3.2 and lightweight 1.2.1 remain unchanged.
+- Installed projects and issued packets are preserved; publication is a separate action.
+
+[Release report](docs/releases/1.3.3.md).
+
 ## System 1.3.2 — 2026-10-12
 
 - In-place platform correction: common Windows/macOS instructions, PowerShell 7 checks, native path guards and Intel/Apple Silicon CI. No new numbered release or component archives; installed projects remain unchanged.

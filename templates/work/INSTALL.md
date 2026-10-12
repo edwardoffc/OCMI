@@ -1,6 +1,6 @@
 # Installing the OCMI work profile
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 [Version and changes](VERSION.md). This is a neutral template, not an active project.
 "This is a work project", referring to a specific directory, selects this profile;
@@ -53,9 +53,9 @@ tasks, protected packages, WIP and history; do not migrate installed projects au
    lines/bytes, duplication, stale statuses, and required input availability.
    A map/archive being in the package does not require reading all of it.
    Run existing documentation checks, not production/build for text; bytes are not tokens.
-8. Select the first real task and prepare it according to the process: consumer/formats, full scope,
-   external prerequisites, evidence matrix, protected tests BEFORE assignment, verified baseline/commands,
-   one end-to-end path and material failures, reuse conditions, and a final integration check.
+8. Select the first real task and its risk-based full/compact format: consumer/formats, full scope,
+   external prerequisites, criterion coverage (inline for compact), sufficient protected checks BEFORE assignment,
+   verified baseline/commands, relevant consumer path and material failures, reuse and final integration checks.
    An unmet mandatory prerequisite prevents ready status; do not invent tasks to fill slots.
 9. Complete a small real task through acceptance and integration. Distinguish "template installed"
    from "workflow verified in use"; assess savings over several results.
@@ -68,9 +68,17 @@ use verified project tooling or standard snapshot/Git with hashes.
 A package includes the actual required tests/inputs, not only descriptions.
 Do not claim automatic protection without verification.
 
+## Upgrade work 1.2.2 → 1.2.3
+
+Merge TASK-PROTOCOL, RULES, role procedures and both task templates with local policy on an explicit upgrade request.
+Choose compact/full for new tasks; preserve issued contracts/checkers, WIP and evidence.
+Inline criterion coverage is sufficient for a compact card; mandatory gates and protected checks still apply.
+Validate existing coverage before adding tests. Diagnose recurring failures before another expensive full run.
+An operational installed project needs no repeat core setup. This source update does not migrate it.
+
 ## Upgrade OCMI 1 or 1.1 → 1.2
 
-When installing current 1.2.2, also apply the resource-completion section below.
+When installing current 1.2.3, also apply the resource-completion section below.
 
 Contract/Result/Acceptance and exporter fields remain compatible.
 Install the three role procedures with the new ORCHESTRATION router; check links before switching AGENTS.
@@ -81,7 +89,7 @@ Scenarios/structural checkers do not prove model behavior in a new chat. Updatin
 On a separate owner request, merge new rules with local ones while preserving current assignments.
 Prioritize: an end-to-end consumer/protocol scenario before assignment; accessible pinned links
 instead of history copies; delta review after full review; dependency-based reuse; updates to changed facts only.
-Current label: OCMI 1.2.2, rules revision 2026-10-11. Preserve historical labels.
+Current label: OCMI 1.2.3, rules revision 2026-10-13. Preserve historical labels.
 
 Issued packages/checkers are immutable. Changing an active contract/tests/baseline/check requires
 an agreed explicit revision preserving WIP, finding IDs, and evidence, not bypassing the checker.

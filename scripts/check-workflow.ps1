@@ -68,9 +68,9 @@ foreach($language in @('en','ru')) {
   Check "$language versions" {
     $marker=$guards.markers.$language
     foreach($key in @('agent','rules','router','protocol','card','start','coordinator','worker','consultant')) {
-      Assert-Check ($texts[$key].Contains("OCMI 1.2.2, $marker 2026-10-11")) "Wrong version: $key"
+      Assert-Check ($texts[$key].Contains("OCMI 1.2.3, $marker 2026-10-13")) "Wrong version: $key"
     }
-    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI 1.2.2, $marker 2026-10-11")) 'Wrong VERSION'
+    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI 1.2.3, $marker 2026-10-13")) 'Wrong VERSION'
     Assert-Check ($texts.personal.Contains("OCMI 1.2.1, $marker 2026-10-11")) 'Wrong lightweight version'
   }
   Check "$language lightweight startup" {
@@ -89,7 +89,7 @@ foreach($language in @('en','ru')) {
   }
 }
 Check 'English development procedures match canonical templates' {
-  foreach($path in @('ORCHESTRATION.md','TASK-PROTOCOL.md','roles/coordinator.md','roles/worker.md','roles/consultant.md','tasks/TEMPLATE.md','tasks/START-TEMPLATE.md')){
+  foreach($path in @('ORCHESTRATION.md','TASK-PROTOCOL.md','roles/coordinator.md','roles/worker.md','roles/consultant.md','tasks/TEMPLATE.md','tasks/START-TEMPLATE.md','tasks/SMALL-TEMPLATE.md')){
     Assert-Check ((Read-Scoped (Join-Path $rootPath 'templates/work/docs/memory') $path) -ceq (Read-Scoped (Join-Path $rootPath 'docs/memory') $path)) "Development drift: $path"
   }
 }

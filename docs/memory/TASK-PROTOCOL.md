@@ -1,6 +1,6 @@
-# OCMI 1.2.2 — task and handoff format
+# OCMI 1.2.3 — task and handoff format
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Compatible update to the OCMI 1 process; the task schema and existing exporter fields are preserved.
 [ORCHESTRATION](ORCHESTRATION.md) routes readiness/checks/review; [RULES](RULES.md) defines memory.
@@ -19,6 +19,25 @@ Keep a large contract in the package and link to it. Do not create a separate Re
 A new task record contains relevant facts, the matrix, and differences from the previous revision;
 do not copy permanent rules or past history. Links must lead to accessible pinned inputs;
 "same as before" is insufficient for a new chat.
+
+## Task format selection
+
+The orchestrator chooses full or compact before START. Compact work must be bounded, reversible and low risk,
+with one observable result, known dependencies and sufficient checks. Line count does not establish risk.
+Use [SMALL-TEMPLATE](tasks/SMALL-TEMPLATE.md); keep the same Contract/Result/Acceptance and one HANDOFF.
+Full format is required for financial behavior, authorization/security, persistent data or migration,
+recovery guarantees, external contracts, release/deployment, shared CI/toolchain changes or broad impact.
+Unknown risk or an unresolved mandatory prerequisite requires full format and prevents ready status
+until resolved. A documentation correction about a sensitive area can be compact only if behavior,
+permissions, operational commands and release conditions do not change.
+
+Compact Contract still fixes task/revision/owner/copy, result/criterion/consumer, scope/AllowedPaths,
+baseline/WIP, protected checks/hashes, criterion coverage, commands/environment/evidence reuse,
+accessible inputs, permissions and resources/cleanup. Inline criterion-to-check mapping is enough;
+an extra matrix, packet or separate report is unnecessary unless needed to preserve fixed inputs.
+Existing project gates and the issued checker remain mandatory. Compact does not mean automatic
+acceptance, skipped safety checks or permission to modify protected inputs. Scope/risk changes need
+an explicit full-contract revision with WIP/evidence preserved; issued packages are not shortened retroactively.
 
 ## START, package, and continuation
 

@@ -1,9 +1,11 @@
 # TASK-ID: objective
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Template, not an assignment. Create tasks/<id>/HANDOFF.md; preserve exact headings
 and existing exporter fields. [Protocol](../TASK-PROTOCOL.md), [process](../ORCHESTRATION.md).
+Full format; bounded reversible low-risk work may use [SMALL-TEMPLATE](SMALL-TEMPLATE.md)
+after the orchestrator verifies eligibility. Existing packets/checkers are not reduced retroactively.
 
 ## Contract
 
@@ -16,7 +18,8 @@ and existing exporter fields. [Protocol](../TASK-PROTOCOL.md), [process](../ORCH
 - AllowedPaths and current HANDOFF (Result body only); full callers/schema/config/CI/environment chain checked:
 - ProtectedPaths/SHA256: tests, fixtures, runner/config, Contract/Acceptance/JSON; no conflict with scope:
 - Minimum context: exact rule/input versions, paths/sections/symbols; accessible to a new chat:
-- Orchestrator acceptance tests BEFORE assignment; baseline/valid control and causal explanation of results:
+- Orchestrator-approved sufficient existing acceptance checks BEFORE assignment; new tests for gaps;
+  baseline/valid control and causal explanation of results:
 - Environment profile: STATE/runbook link, client version/conditions/evidence date; explicit unknowns:
 - Checks: cwd, actual commands, environment, expected/skips, Result format, and current checker:
 - Check dependencies/fingerprints, sufficiency, rerun/reuse conditions; final integration check:
@@ -50,7 +53,8 @@ Not performed. Orchestrator only:
 
 - Full first review; list of ID/reproduction/impact/required outcome/check and finding category.
 - After rework: delta, previous findings, and affected connections; broaden review according to risk.
-- Before another substantive return: recurrence cause, preserved WIP/evidence, and selected approach.
+- Before another substantive return: cause category, preserved failure/WIP, hypothesis, changed approach,
+  next diagnostic and expected new evidence; affected check before any justified full rerun.
 - Decision/date, accepted version, integrated version/joint checks or a specific prerequisite.
 - Returns/reasons, repeated checks/reasons, confirmed reuse, report corrections without falsifying Result.
 - Available time/cost through integration with source/scope; do not estimate unknowns.

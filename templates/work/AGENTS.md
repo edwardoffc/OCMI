@@ -1,6 +1,6 @@
 # Project memory entry point
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Read [RULES](docs/memory/RULES.md), then [ORCHESTRATION](docs/memory/ORCHESTRATION.md)
 and only your own role procedure from its table.

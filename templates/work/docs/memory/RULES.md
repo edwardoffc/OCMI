@@ -1,6 +1,6 @@
 # Project memory rules
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 ## One primary location per fact
 
@@ -27,6 +27,11 @@ request the specific missing input.
 Preserve Result/WIP; check the existing process/cursor before starting another run.
 A short continuation records this identity, exact remaining work, and links, without repeating history.
 Fixed inputs must be available to a new chat at the required version, not only in an old conversation.
+
+During continuation with verified assignment and retained context, read changed records and needed sources;
+do not reload the entire memory or history. Confirm current assignment/WIP/processes and relevant changes.
+New chats, uncertain changes or incomplete recovery require restoring the relevant role/assignment inputs;
+pinned contract inputs remain mandatory. A date alone does not prove that retained context is current.
 
 Distinguish current, historical, superseded, and rejected information; a link to a new entry
 does not automatically cancel the old one. Verify important facts against a current source;

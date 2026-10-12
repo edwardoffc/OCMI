@@ -13,13 +13,15 @@ if ($Version -cin @('1.3.0','1.3.1')) {
   & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -Version $Version -ReleaseOnly -ArchivesOnly:$ArchivesOnly
   return
 }
-$languageEdition = !$Version -or $Version -ceq '1.3.2'
+$componentVersion = if ($Version) {$Version} else {'1.3.3'}
+$languageEdition = !$Version -or $Version -cin @('1.3.2','1.3.3')
+if (!$SecurityBaseline -and $componentVersion -ceq '1.3.2' -and !$ArchivesOnly) {throw 'Historical 1.3.2 components require ArchivesOnly; current source is 1.3.3'}
 $receipt = if ($SecurityBaseline) { 'docs/releases/security-validation.json' }
-  elseif ($languageEdition) { 'docs/releases/1.3.2-components.json' }
+  elseif ($languageEdition) { "docs/releases/$componentVersion-components.json" }
   else { "docs/releases/$Version-validation.json" }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Get-OCMIScopedFile $repoRoot $receipt) | ConvertFrom-Json
 if ($Version -and $manifest.version -cne "OCMI $Version") { throw 'Receipt version differs' }
-if ($languageEdition -and !$SecurityBaseline -and $manifest.version -cne 'OCMI 1.3.2') { throw 'Component receipt version differs' }
+if ($languageEdition -and !$SecurityBaseline -and $manifest.version -cne "OCMI $componentVersion") { throw 'Component receipt version differs' }
 if ($languageEdition -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
 $profileKeys = @{}
 foreach ($profile in $manifest.profiles) {
@@ -31,7 +33,9 @@ foreach ($profile in $manifest.profiles) {
     $key = $profile.profile
   } else {
     if ($profile.language -cnotin @('en','ru')) { throw 'Invalid language' }
-    $expectedVersion = if ($profile.profile -eq 'work') { '1.2.2' } else { '1.2.1' }
+    $expectedVersion = if ($profile.profile -eq 'work') {
+      if (!$SecurityBaseline -and $componentVersion -ceq '1.3.3') {'1.2.3'} else {'1.2.2'}
+    } else {'1.2.1'}
     if (!$SecurityBaseline -and ($manifest.installerVersion -cne '1.3.2' -or $profile.installerVersion -cne '1.3.2')) { throw 'Wrong installer policy revision' }
     if ($profile.version -cne $expectedVersion) { throw 'Invalid language edition version' }
     $archivePattern = '^releases/ocmi-' + $profile.profile + '-' + [regex]::Escape($profile.version) + '-' + $profile.language + '-\d{4}-\d{2}-\d{2}(-r[2-9][0-9]*)?\.zip$'

@@ -1,6 +1,6 @@
 # Using OCMI
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Memory lives in the project; chats can be replaced after saving results and remaining work.
 Three roles: the orchestrator plans and accepts, workers execute assignments, and the consultant is read-only.
@@ -25,6 +25,14 @@ For manual handoff, forward it to the worker, then give the orchestrator the tas
 containing the completed Result. A different working copy also requires changes and new files.
 The orchestrator records Acceptance, integrates accepted work, and checks the combined result.
 Passing tests alone are not acceptance.
+
+## Small tasks and sufficient checks in 1.2.3
+
+Ask for the [compact card](../memory/tasks/SMALL-TEMPLATE.md) when scope is bounded, reversible and low-risk.
+The orchestrator selects the format; sensitive or uncertain tasks keep the full contract.
+Existing proven checks cover criteria first; new tests fill gaps. Scope, protected inputs and mandatory gates remain.
+Run relevant cheap checks before expensive CI. Preserve unexplained failures; repeated rework needs a cause/hypothesis and a new diagnostic step.
+Within verified retained context, read changed records and relevant sources; a new chat still restores its required inputs.
 
 ## What changed in 1.2
 

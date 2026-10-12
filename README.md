@@ -9,7 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**OCMI system: [1.3.2](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
+**OCMI system: [1.3.3](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
 [Installation](docs/install-system.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 

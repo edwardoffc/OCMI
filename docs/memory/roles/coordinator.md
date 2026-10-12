@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.
@@ -17,6 +17,8 @@ keep/archive/remove/transfer, and the basis for already-authorized cleanup. A da
 
 ## Readiness before START
 
+Choose full or compact using [format selection](../TASK-PROTOCOL.md). For compact work retain the
+same readiness safeguards; record criterion coverage inline and only relevant details, not repeated rules.
 Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md):
 
 1. One observable integrable result, its consumer, criteria, and dependencies from PLAN.
@@ -26,7 +28,8 @@ Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md)
    AllowedPaths and do not conflict with ProtectedPaths or other assignments.
    Name external access, quotas, and decisions in advance; mocks do not prove their availability.
 4. The matrix "requirement → behavior → test/fixture/runner → sufficiency".
-   For behavioral changes, the orchestrator writes protected acceptance tests BEFORE assignment.
+   The orchestrator selects and validates sufficient existing acceptance checks BEFORE assignment;
+   it adds new tests only for uncovered requirements or risks. Freeze the approved checks/inputs.
    A baseline failure must be caused by the requirement, not a broken test/environment;
    choose a valid control according to risk; preserved behavior may already pass.
 5. Verified commands/cwd/environment/skips, Result format, and the existing checker.
@@ -34,9 +37,9 @@ Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md)
 6. Exact code/test baseline, protected SHA256 (tests, fixtures, runner/config,
    Contract/Acceptance), unaccepted WIP, worker, copy, resources, and stop conditions.
 
-First design and prepare a check of one end-to-end path through real callers,
-substituting external I/O when needed; then add material negative scenarios.
-This orders check design; it does not require the orchestrator to implement the task first.
+For behavioral changes, first select and validate a check of one end-to-end path through real callers,
+substituting external I/O when needed; then cover material negative scenarios. Use existing coverage when sufficient.
+This orders coverage verification; it does not require the orchestrator to implement the task first.
 Before ready, verify actual formats and sufficiency of all required checks; one successful path is insufficient.
 Give a component a consumer and the next joint check. An unavailable mandatory prerequisite
 prevents ready status; independent work may proceed as a separate task.
@@ -46,6 +49,10 @@ research needs sources and verifiable conclusions. Artificial tests are unnecess
 ## Checks and review
 
 Additional tests cover gaps; justify oracles/mutations by specific risk and sufficiency.
+Order relevant checks from cheap to expensive. Before costly CI, require a valid preflight for the
+changed scope; existing evidence may be reused only under its dependency/condition rules.
+For behavioral changes include a real consumer path in isolated conditions, substituting external I/O
+where required. Do not require a product end-to-end run for a documentation-only task.
 Rerun when runtime, tests, fixtures, schema, config, toolchain, callers/environment change,
 when evidence is unreliable, or for integration. Test-only work usually needs the changed test
 and affected checks; broad impact needs corresponding regression coverage.
@@ -54,6 +61,12 @@ Reuse is allowed after confirming unchanged relevant dependencies/conditions: pr
 command, exit code, log, and check scope. Unknown conditions require rerunning the affected check.
 Result-only edits do not invalidate runtime evidence: extract counters from logs, not another suite run.
 The issued checker is mandatory even with a stricter fingerprint; exceptions require a new explicit revision.
+
+A successful retry alone does not resolve the original failure. Preserve the failed log and conditions;
+classify implementation, check/contract, environment or flakiness and record the causal evidence.
+A confirmed transient infrastructure failure can close without a code change when the evidence and
+project policy support that conclusion; an unexplained green rerun is not proof of a fix.
+Unexplained mandatory safety failures remain blockers according to the project gates and risk.
 
 The first review is complete: matrix, diff, callers, protected hashes, and evidence sufficiency.
 Return one consolidated list of ID/reproduction/impact/required outcome/check, classified as:
@@ -65,7 +78,9 @@ Return one consolidated list of ID/reproduction/impact/required outcome/check, c
 
 After rework, check changes, previous findings, and affected connections; expand review for new risk.
 BEFORE another substantive return following consolidated rework, investigate its cause,
-preserve WIP/evidence, and record the approach in Acceptance. Do not automatically add revisions.
+preserve the failure log and WIP; record the cause category, hypothesis, changed approach,
+next diagnostic and expected new evidence in Acceptance. Do not automatically repeat a full run
+or add revisions. Start with the affected diagnostic; broaden when dependencies, integration or risk require it.
 This does not justify accepting a defect, changing model/budget, or setting a Goal to blocked/paused.
 For reporting inaccuracies supported by verified facts, the worker corrects Result or the orchestrator
 annotates Acceptance while preserving the author's Result; formatting does not need another implementation cycle.

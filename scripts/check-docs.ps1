@@ -38,7 +38,9 @@ foreach ($file in $files) {
     }
   }
 }
-foreach ($p in @('templates/work/docs/memory/tasks/TEMPLATE.md', 'docs/memory/tasks/TEMPLATE.md', 'locales/ru/templates/work/docs/memory/tasks/TEMPLATE.md')) {
+$cardPaths=@('templates/work/docs/memory/tasks/TEMPLATE.md','docs/memory/tasks/TEMPLATE.md','locales/ru/templates/work/docs/memory/tasks/TEMPLATE.md',
+  'templates/work/docs/memory/tasks/SMALL-TEMPLATE.md','docs/memory/tasks/SMALL-TEMPLATE.md','locales/ru/templates/work/docs/memory/tasks/SMALL-TEMPLATE.md')
+foreach ($p in $cardPaths) {
   $headings = @([IO.File]::ReadAllLines((Join-Path $rootPath $p)) | Where-Object { $_ -match '^## ' })
   if (($headings -join '|') -cne '## Contract|## Result|## Acceptance') { $issues += "Card schema mismatch: $p" }
 }
@@ -52,4 +54,4 @@ foreach ($file in Get-ChildItem -LiteralPath (Join-Path $rootPath 'releases') -F
   $archives++
 }
 if ($issues.Count) { throw ($issues -join [Environment]::NewLine) }
-Write-Output "PASS: $($files.Count) Markdown files; $links local links; 3 card schemas; $archives archive checksums."
+Write-Output "PASS: $($files.Count) Markdown files; $links local links; $($cardPaths.Count) card schemas; $archives archive checksums."
