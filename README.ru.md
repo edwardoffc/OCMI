@@ -10,7 +10,7 @@ OCMI помогает вести проект в нескольких чатах
 Карта кода направляет агента к нужной области, а карточка задачи связывает требования,
 результат и проверку.
 
-**Система OCMI: [1.3.2](locales/ru/VERSION.md)** · [Начать](locales/ru/BOOTSTRAP.md) ·
+**Система OCMI: [1.3.3](locales/ru/VERSION.md)** · [Начать](locales/ru/BOOTSTRAP.md) ·
 [Установка](locales/ru/docs/install-system.md) · [Руководство](locales/ru/docs/usage.md) ·
 [История версий](locales/ru/CHANGELOG.md) · [MIT](LICENSE)
 

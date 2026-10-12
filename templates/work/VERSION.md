@@ -1,9 +1,19 @@
-# OCMI 1.2.2
+# OCMI 1.2.3
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Orchestration, Context Memory & Indexing.
-Compatible security update to work profile 1.2.1. The lightweight profile is now 1.2.1.
+Compatible workflow patch to work profile 1.2.2. The lightweight profile remains 1.2.1.
+
+## Changes from 1.2.2
+
+- Select a compact card for bounded, reversible low-risk tasks; keep the full format for sensitive or uncertain work.
+- Validate sufficient existing checks before START; add tests for gaps. Run relevant cheap checks before expensive CI.
+- Preserve failed evidence: a successful retry alone does not explain the failure. Repeated rework requires a cause/hypothesis and a changed diagnostic approach.
+- Continue from changed records when context is verified; restore required inputs for a new chat or uncertain state.
+
+System patch 1.3.3 includes this work protocol. Coordinator/installation policy remains 1.3.2.
+Issued contracts, mandatory project gates and protected checkers remain binding.
 
 ## Changes from 1.2.1
 
@@ -35,9 +45,9 @@ in current handoff/Acceptance, linking to the original without rewriting the pro
 Project permissions are not expanded; there is no automatic deletion or background cleanup.
 Installed projects do not update automatically; see [INSTALL](INSTALL.md).
 Version, rules date, and task revision r1/r2 are different labels.
-Use: OCMI 1.2.2, rules revision 2026-10-11.
+Use: OCMI 1.2.3, rules revision 2026-10-13.
 
 Structural and archive checks do not prove model behavior or token savings.
 
 Installer policy: OCMI system 1.3.2. New installations are performed by the initialized coordinator.
-Runtime protocol remains 1.2.2; this source update does not migrate installed projects.
+Runtime protocol is 1.2.3; this source update does not migrate installed projects.

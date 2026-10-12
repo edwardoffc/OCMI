@@ -1,10 +1,25 @@
 # OCMI development handoff
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
-Updated: 2026-10-12. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-13. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-MAC-017 / system 1.3.2, unchanged distribution r2
+## Current: OCMI-FLOW-018 / system 1.3.3, work protocol 1.2.3
+
+The owner authorized stage one of [PLAN](../../PLAN.md) in the base system only.
+[Acceptance](../OCMI-FLOW-018/HANDOFF.md): compact low-risk cards, sufficient existing checks,
+cheap preflight, causal retry/rework diagnosis and verified delta continuation in both languages.
+Scope/protected inputs, mandatory gates and current assignments remain binding.
+Two new work ZIPs; setup/coordinator 1.3.2 and lightweight 1.2.1 reused unchanged.
+Local source accepted: full PowerShell 7/5.1 suites, bilingual negative guards, exact ZIPs and privacy scan pass.
+cleanup: done for preparation; retained resources are accounted in Acceptance. The owner authorized 1.3.3 GitHub delivery.
+Final integration, native CI, v1.3.3, downloaded source/assets and branch cleanup are verified through remote state and the ignored delivery receipt.
+No installed project or private memory was read or changed.
+SPECIAL-019, DOCTOR-020, CONTEXT-021, AUTO-022 and live EVAL-001 stay deferred.
+Retain the task branch/recovery under the maintainer until delivery or explicit abandonment;
+do not publish, migrate projects, start another stage, create chats or launch model runs automatically.
+
+## Historical: OCMI-MAC-017 / system 1.3.2, unchanged distribution r2
 
 [Acceptance](../OCMI-MAC-017/HANDOFF.md): same Windows/macOS installation and usage, bilingual
 guides, common PowerShell 7 suite, portable path guards and synthetic privacy/platform fixtures.

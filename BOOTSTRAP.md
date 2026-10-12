@@ -2,7 +2,7 @@
 
 **English** · [Русский](locales/ru/BOOTSTRAP.md)
 
-OCMI 1.3.2. This procedure belongs to the first, temporary installation chat.
+OCMI system 1.3.3; installation policy 1.3.2. This procedure belongs to the first, temporary installation chat.
 
 ## First request
 

@@ -1,6 +1,6 @@
 # OCMI PLAN
 
-Updated: 2026-10-12. The only development queue.
+Updated: 2026-10-13. The only development queue.
 
 | ID | Outcome | Status |
 | --- | --- | --- |
@@ -21,6 +21,52 @@ Updated: 2026-10-12. The only development queue.
 | OCMI-ENTRY-015 | Uniform core entry plus component/global-routing gates; system 1.3.2 | [Source accepted](tasks/OCMI-ENTRY-015/HANDOFF.md); owner-authorized GitHub delivery, verification recorded separately; installed projects unchanged |
 | OCMI-LOCAL-016 | Ignored .local/coordinator inside the system; in-place 1.3.2 correction | [Acceptance](tasks/OCMI-LOCAL-016/HANDOFF.md); source checks and owner-authorized current-release delivery; installed projects unchanged |
 | OCMI-MAC-017 | Common Windows/macOS setup and native Intel/Apple Silicon validation; same 1.3.2 | [Source accepted](tasks/OCMI-MAC-017/HANDOFF.md); native CI passed; installed projects and private memory unchanged; final delivery verified separately |
+| OCMI-FLOW-018 | Risk-based compact tasks, sufficient existing acceptance checks and causal rerun policy | [Source accepted](tasks/OCMI-FLOW-018/HANDOFF.md); stage one only; system 1.3.3/work 1.2.3; owner-authorized GitHub delivery; final integration/cleanup verified separately |
+| OCMI-SPECIAL-019 | Optional specialist delegation and selectively loaded skill pilot | Deferred; depends on FLOW-018; no new roles/chats/models are assigned |
+| OCMI-DOCTOR-020 | Scoped installation/assignment diagnostics and protected-input integrity checks | Deferred; specify requirements and fixtures before choosing a runtime |
+| OCMI-CONTEXT-021 | Role/task context assembly over Markdown and verified code-map entries | Deferred; depends on diagnostics/provenance; generated indexes remain rebuildable |
+| OCMI-AUTO-022 | Optional client lifecycle adapters and verified lessons promoted into skills | Exploratory/deferred; requires measured manual workflow and client capability evidence |
+
+## Saved development scope — stage one authorized only
+
+The owner saved this proposal on 2026-10-13, then explicitly authorized FLOW-018 in the base system.
+Only stage one is assigned: system patch 1.3.3/work 1.2.3. The remaining stages below stay deferred.
+The order expands the queue items, not a second PLAN; no next-stage START or model run is assigned. The owner separately authorized 1.3.3 publication.
+
+1. **FLOW-018:** choose a compact Contract/Result/Acceptance for reversible low-risk tasks;
+   size by risk, not line count. Preserve financial/security/data-integrity gates, fixed inputs and WIP.
+   Before START, select and validate sufficient existing acceptance checks; write new checks for gaps.
+   Run project-appropriate cheap checks before costly CI. An unexplained successful retry does not
+   establish that the original failure is fixed. Before repeated substantive rework, record cause,
+   hypothesis, changed approach and expected new evidence in existing Acceptance.
+   Clarify delta reading during an established continuation without weakening new-chat recovery.
+2. **SPECIAL-019:** keep one orchestrator responsible for the only PLAN, approved criteria,
+   protected check baseline, consolidated feedback, acceptance and integration. Pilot test-design
+   and read-only review specialists; CI/release and architecture/planning specializations are optional.
+   Delegated test preparation needs orchestrator validation before freezing/implementation.
+   Specialists return bounded evidence; do not require duplicate full review/runs or a permanent chat
+   for every function. Existing permissions remain the boundary, including separate release authority.
+   First skills: search-first, test-design, security-review and OCMI-specific ci-triage.
+   Follow with api-design, database-migrations, e2e-testing and error-handling as tasks justify them.
+   Select skills in START; review/adapt source instructions and retain attribution; load only selected skills.
+3. **DOCTOR-020 → CONTEXT-021:** diagnose current assignment/revision/copy, missing or stale links,
+   incomplete scans and protected input changes first; distinguish current records from historical packets.
+   Then assemble scoped role/task context and code-map references with verified provenance/freshness.
+   Markdown remains authoritative; caches/indexes are reconstructable. No cross-project/private search
+   by default. Choose SQLite/JSON-schema/parsers only after requirements, not as mandatory dependencies.
+4. **Existing EVAL-001 throughout:** capture an available baseline and compare completed tasks through
+   acceptance/integration: outcome, returns/reasons, repeated checks/reasons and observed time/cost.
+   Test missing/old START, wrong copy, WIP/running processes, stale maps, access boundaries and role limits.
+   Existing fixtures and evidence are reused when valid. Live model runs need their own authorization;
+   neither smaller files nor more agents establish savings. Expand adoption only after useful pilot results.
+5. **AUTO-022 later:** optional verified SessionStart/checkpoint adapters with exact scope,
+   manual recovery and duplicate-launch protection. Saved drafts do not replace accepted memory.
+   Promote a verified recurring lesson into a targeted skill through review; no default transcript
+   collection, background learning or global rule promotion.
+
+Project CI optimization remains a separate project assignment: diagnose queue/setup/check/build/deploy
+time from existing logs, isolate independent jobs/resources, preserve every mandatory release gate,
+and compare subsequent verified deliveries. Saving this system plan does not assign that project work.
 
 Do not start the next task automatically. Historical archives remain immutable.
 Updating these sources does not change installed project memory.

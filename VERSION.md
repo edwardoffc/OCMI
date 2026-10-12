@@ -1,28 +1,25 @@
-# OCMI 1.3.2
+# OCMI 1.3.3
 
-Released 2026-10-12. Patch correction: unify URL/downloaded entry and make core completion explicit.
-In-place correction: private coordinator memory defaults to .local/coordinator inside the system,
-excluded from Git and public distributions. Distribution revision r2; no new numbered release.
-
-The first chat gives brief orientation and offers installation.
-After selection, install a local system copy and prepare a filled startup prompt.
-A bound client project hosts the permanent coordinator; binding and startup must be confirmed.
-First integration requests defer target work until this core setup is complete.
-Personal storage, folder organization and work integration remain optional after initialization.
+Release date: 2026-10-13. Compatible workflow patch: compact low-risk tasks, sufficient checks and causal failure diagnosis.
 
 | Component | Version |
 | --- | --- |
-| System and setup flow | 1.3.2 |
-| Coordinator service profile | 1.3.2 |
-| Work protocol | 1.2.2 |
+| System | 1.3.3 |
+| Coordinator service profile and setup policy | 1.3.2 |
+| Work protocol | 1.2.3 |
 | Lightweight protocol | 1.2.1 |
 
-Work/lightweight runtime protocols are unchanged; INSTALL entry checks and work VERSION notes now require
-coordinator-led new installations. Four new component ZIPs accompany the two coordinator editions.
-All previously issued distributions remain unchanged.
-No installed project, private store or client binding is migrated automatically.
+Choose full/compact by risk; scope, protected inputs, required project gates and acceptance remain mandatory.
+Validate existing coverage before adding tests; run relevant cheap checks before expensive CI.
+A successful retry alone does not resolve a failure. Repeated rework needs preserved evidence and a changed diagnostic approach.
+Read changed records during a verified continuation; new chats still restore required inputs.
+
+Installation keeps the same URL/downloaded flow, local source, bound client project and initialized coordinator.
+Private coordinator memory stays in ignored/export-excluded .local/coordinator.
+Personal storage, folder organization and work integration remain optional after initialization.
+Two new work ZIPs accompany unchanged coordinator 1.3.2-r2 and lightweight 1.2.1-r2 editions.
+Previously issued archives/contracts remain unchanged. Installed projects are not migrated automatically.
+Windows/macOS use the same process; new changes require native CI verification at delivery.
 
 [Start](BOOTSTRAP.md) · [Installation](docs/install-system.md) ·
-[Release report](docs/releases/1.3.2.md) · [Changelog](CHANGELOG.md).
-
-Windows/macOS compatibility is included in 1.3.2 without a new numbered release. [Platforms](docs/platforms.md).
+[Release report](docs/releases/1.3.3.md) · [Changelog](CHANGELOG.md) · [Platforms](docs/platforms.md).

@@ -8,13 +8,15 @@ Run from the repository root:
 pwsh -NoProfile -File scripts/check-all.ps1
 ~~~
 
-check-docs checks local Markdown file links, three task schemas, and archive checksums.
+check-docs checks local Markdown file links, six full/compact task schemas, and archive checksums.
 It includes English and Russian guides/templates. External URLs and heading anchors are not checked.
 
 check-workflow checks role routing, scoped inputs, authority and cleanup clauses, task schema,
 and negative mutations in both languages. English development procedures must match canonical templates.
 These are structural checks; no model process or cleanup action is launched.
 [Behavioral evaluation](../docs/evals/context-recovery.md) remains separate.
+
+check-flow checks compact fields, risk selection, coverage, preflight, causal retries, repeated rework and verified continuation in both languages. Missing-field/schema/policy mutations must be rejected. These are instruction regressions, not live-agent or cost measurements.
 
 check-localization checks the maintained translation inventory, reviewed hashes, stable template
 paths, and license copies. Hash agreement detects drift; human review establishes meaning.
@@ -23,7 +25,7 @@ The manifest is updated deliberately after review, never by a validation run.
 check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release also validates the coordinator receipt; -Version 1.3.2 selects the current receipt;
+check-release also validates the unchanged coordinator 1.3.2 receipt; default or -Version 1.3.3 selects current components;
 -Version 1.3.0 or 1.3.1 with -ArchivesOnly checks historical coordinator distributions.
 Startup validation requires six fields, including the expected client project/binding.
 
@@ -54,6 +56,6 @@ CI downloads native Windows x64/macOS ARM64/macOS x64 Gitleaks 8.30.1 binaries f
 The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
 Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
 
-In 1.3.2, default and -Version 1.3.2 verify four current component editions plus coordinator packages.
+Default and -Version 1.3.3 verify work 1.2.3/lightweight 1.2.1 in both languages plus coordinator 1.3.2 packages. Use -Version 1.3.2 -ArchivesOnly for historical components.
 The old security-validation.json is historical: use -SecurityBaseline -ArchivesOnly.
 Both INSTALL entry gates and neutral routing are covered by bilingual check-onboarding guards.

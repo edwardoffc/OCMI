@@ -1,6 +1,6 @@
 # START — message to the worker
 
-**OCMI 1.2.2, rules revision 2026-10-11**
+**OCMI 1.2.3, rules revision 2026-10-13**
 
 Template: do not begin until fields are filled and readiness is verified.
 Status: ready [only after orchestrator verification]. Role: worker for project [name / root].

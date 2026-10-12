@@ -27,12 +27,17 @@ a hash does not establish semantic equivalence.
 ## Releases
 
 System version is recorded in root VERSION.md; profiles have their own versions.
+Current system 1.3.3 contains work protocol 1.2.3. Setup/coordinator 1.3.2 and lightweight 1.2.1 are unchanged.
+1.3.3-components.json verifies new work editions and reused lightweight editions; the coordinator uses its existing 1.3.2 receipt.
+Run check-flow for compact/coverage/retry changes. Historical components use -Version 1.3.2 -ArchivesOnly.
+
+Historical setup changes:
 System 1.3.2 unifies URL/downloaded startup and requires confirmed client binding before integration.
 Runtime work 1.2.2 and lightweight 1.2.1 are unchanged; both INSTALL entry checks require a coordinator. The separate 1.3.2 receipt verifies coordinator
 archives; 1.3.2-components.json verifies four updated component editions.
 Keep all previous receipts/ZIPs unchanged; use -SecurityBaseline -ArchivesOnly for the old security editions. Use -Version 1.3.0 -ArchivesOnly for old setup ZIPs.
 The owner-authorized in-place 1.3.2 correction uses distinct r2 filenames and retained initial receipts;
-current receipts describe r2. Refreshing an existing public release/tag requires explicit authority,
+the 1.3.2 receipts describe r2. Refreshing an existing public release/tag requires explicit authority,
 verified original refs, preserved recovery history and renewed source-download verification.
 Run check-onboarding alongside existing checks for setup/profile changes. Its negative
 mutations verify instruction safeguards, not actual model behavior.

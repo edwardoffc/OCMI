@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "guards": [
+    {
+      "id": "compact-eligibility",
+      "input": "protocol",
+      "en": ["bounded, reversible and low risk", "financial", "authorization", "migration", "release", "Unknown risk.*full", "Existing project gates.*mandatory"],
+      "ru": ["ограничена, обратима и имеет низкий риск", "финансов", "доступ", "миграци", "выпуск", "Неизвестный риск.*полный", "Действующие проверки проекта.*обязательны"]
+    },
+    {
+      "id": "sufficient-checks",
+      "input": "coordinator",
+      "en": ["selects and validates sufficient existing acceptance checks BEFORE assignment", "new tests only for uncovered requirements or risks", "baseline failure.*requirement", "record criterion coverage inline"],
+      "ru": ["выбирает и проверяет достаточные существующие приёмочные проверки ДО выдачи", "новые тесты только для непокрытых требований или рисков", "Падение.*baseline.*требованием", "покрытие критериев укажи прямо в тексте"]
+    },
+    {
+      "id": "cheap-preflight",
+      "input": "worker",
+      "en": ["Before the first expensive check", "formatting/static checks", "affected tests", "real consumer path", "does not waive.*mandatory"],
+      "ru": ["До первой дорогой проверки", "форматирование/статические проверки", "затронутые тесты", "реальный путь потребителя", "не отменяет.*обязательные"]
+    },
+    {
+      "id": "causal-retry",
+      "input": "coordinator",
+      "en": ["A successful retry alone does not resolve the original failure", "implementation, check/contract, environment or flakiness", "confirmed transient infrastructure", "Unexplained mandatory safety failures remain blockers"],
+      "ru": ["Успешный повтор сам по себе не устраняет исходное падение", "реализация, проверка/контракт, среда или нестабильность", "подтверждённый временный инфраструктурный сбой", "Необъяснённые падения обязательных проверок безопасности остаются блокерами"]
+    },
+    {
+      "id": "rework-diagnosis",
+      "input": "coordinator",
+      "en": ["preserve the failure log and WIP", "hypothesis", "next diagnostic", "expected new evidence", "Do not automatically repeat a full run"],
+      "ru": ["сохрани лог падения и WIP", "гипотез", "следующую адресную диагностику", "ожидаемое новое доказательство", "Не повторяй полный прогон автоматически"]
+    },
+    {
+      "id": "continuation-delta",
+      "input": "rules",
+      "en": ["verified assignment and retained context", "changed records and needed sources", "New chats, uncertain changes or incomplete recovery", "pinned contract inputs remain mandatory"],
+      "ru": ["проверенном назначении и сохранённом контексте", "изменившиеся записи и нужные исходники", "Новый чат, неизвестные изменения или неполное восстановление", "закреплённые контрактные входы остаются обязательными"]
+    }
+  ],
+  "fields": {
+    "en": ["Format: compact", "Risk: low", "Status: draft", "Task / revision / owner / working copy", "Result / criterion / consumer", "Scope / AllowedPaths / baseline / WIP", "ProtectedPaths / hashes", "Checks / evidence / sufficiency", "Inputs / permissions / resources"],
+    "ru": ["Format: compact", "Risk: low", "Status: draft", "Задача / ревизия / владелец / рабочая копия", "Результат / критерий / потребитель", "Область / AllowedPaths / baseline / WIP", "ProtectedPaths / хеши", "Проверки / evidence / достаточность", "Входы / полномочия / ресурсы"]
+  }
+}

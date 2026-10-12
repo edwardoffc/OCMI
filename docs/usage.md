@@ -47,6 +47,13 @@ A worker also needs its current assignment, START/revision, and working copy.
 It verifies their validity before implementation. An old START alone does not authorize work.
 Unsaved conversations cannot be restored automatically.
 
+## Small tasks in work 1.2.3
+
+The orchestrator chooses the [compact card](../templates/work/docs/memory/tasks/SMALL-TEMPLATE.md) for bounded reversible low-risk work. Sensitive or uncertain tasks stay full.
+Validated existing checks cover criteria first; new checks fill gaps. Scope/protection and mandatory gates remain.
+Cheap relevant checks precede costly CI; failures retain causal evidence, and recurring rework changes the diagnostic approach.
+Continuation reads changed records only when context is verified; a new chat restores required inputs.
+
 ## Everyday cycle
 
 The orchestrator prepares criteria, checks, and START. The worker implements the task,

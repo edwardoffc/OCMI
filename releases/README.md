@@ -1,6 +1,6 @@
 # Distributions
 
-Current 1.3.2 distributions use the `-r2` suffix for the local coordinator-memory correction.
+Coordinator/lightweight 1.3.2 distributions use the `-r2` suffix for the local coordinator-memory correction.
 Original 1.3.2 archives are historical; their [coordinator receipt](../docs/releases/1.3.2-initial-validation.json)
 and [component receipt](../docs/releases/1.3.2-initial-components.json) retain the original inventories.
 
@@ -8,9 +8,9 @@ and [component receipt](../docs/releases/1.3.2-initial-components.json) retain t
 
 These are component profiles for the configured coordinator to install into selected targets.
 Choose one language and extract a complete profile. Current editions include [MIT](../LICENSE).
-Work uses protocol 1.2.2; lightweight uses 1.2.1. Installation does not update existing projects automatically.
+Work uses protocol 1.2.3; lightweight uses 1.2.1. Installation does not update existing projects automatically.
 
-System [1.3.2](../VERSION.md) starts with [brief orientation](../BOOTSTRAP.md).
+System [1.3.3](../VERSION.md) starts with [brief orientation](../BOOTSTRAP.md).
 After installation is selected, a full local system copy and coordinator service memory are required.
 The ZIP below contains only the service profile; personal topics and work integration are optional.
 [System installation](../docs/install-system.md) explains handover to a separate chat.
@@ -25,14 +25,15 @@ The ZIP below contains only the service profile; personal topics and work integr
 and all previous archives. [1.3.0 receipt](../docs/releases/1.3.0-validation.json) remains
 available for historical ZIPs. System setup requires a bound client project and confirmed coordinator;
 Both INSTALLs below check core setup and the coordinator role for new installations.
-Runtime protocols are unchanged; four new editions contain the updated installation instructions.
+Work 1.2.3 adds compact tasks and sufficient/causal checks; coordinator/lightweight editions are reused unchanged.
 
 | Profile | English | Russian |
 | --- | --- | --- |
-| Work 1.2.2 | [ZIP](ocmi-work-1.2.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-work-1.2.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-ru-2026-10-12-r2.zip.sha256) |
+| Work 1.2.3 | [ZIP](ocmi-work-1.2.3-en-2026-10-13.zip) · [SHA256](ocmi-work-1.2.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-work-1.2.3-ru-2026-10-13.zip) · [SHA256](ocmi-work-1.2.3-ru-2026-10-13.zip.sha256) |
+| Historical work 1.2.2 | [ZIP](ocmi-work-1.2.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-work-1.2.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-ru-2026-10-12-r2.zip.sha256) |
 | Lightweight 1.2.1 | [ZIP](ocmi-personal-1.2.1-en-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip.sha256) |
 
-[Current 1.3.2 component receipt](../docs/releases/1.3.2-components.json) records exact source/ZIP inventories.
+[Current 1.3.3 component receipt](../docs/releases/1.3.3-components.json) records exact source/ZIP inventories (20 work files per language). [Historical 1.3.2 receipt](../docs/releases/1.3.2-components.json) remains available with -Version 1.3.2 -ArchivesOnly.
 Use scripts/check-release.ps1 from the repository root to verify all four editions.
 
 The 2026-10-11 editions and [security receipt](../docs/releases/security-validation.json) remain historical.
