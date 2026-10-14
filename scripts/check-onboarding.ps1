@@ -1,6 +1,6 @@
 param(
   [string]$Root = (Join-Path $PSScriptRoot '..'),
-  [ValidateSet('1.3.0','1.3.1','1.3.2')][string]$Version = '1.3.2',
+  [ValidateSet('1.3.0','1.3.1','1.3.2','1.3.3')][string]$Version = '1.3.3',
   [switch]$ArchivesOnly,
   [switch]$ReleaseOnly
 )
@@ -40,7 +40,7 @@ function Check-Startup([string]$Text) {
   }
 }
 if (!$ReleaseOnly -and !$ArchivesOnly) {
-  Assert-Valid ($Version -ceq '1.3.2') 'Old instructions require ArchivesOnly verification'
+  Assert-Valid ($Version -ceq '1.3.3') 'Old instructions require ArchivesOnly verification'
   $guards = (Read-Scoped $repo 'localization/onboarding-guards.json') | ConvertFrom-Json
   Assert-Valid ($guards.schemaVersion -eq 1) 'Invalid guard schema'
   $entry = Read-Scoped $repo 'AGENTS.md'
@@ -67,7 +67,7 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     }
     Check "$language version agreement" {
       foreach ($relative in @('AGENTS.md','INSTALL.md','VERSION.md')) {
-        Assert-Valid ((Read-Scoped $base $relative).Contains("OCMI coordinator $Version")) 'Wrong coordinator version'
+        Assert-Valid ((Read-Scoped $base $relative).Contains("OCMI $Version")) 'Wrong coordinator version'
       }
       Assert-Valid ((Read-Scoped $repo ($prefix + 'VERSION.md')).Contains($Version)) 'Wrong system version'
     }
@@ -103,10 +103,18 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     Check 'unsafe/missing inputs rejected' { Must-Reject { Read-Scoped (Join-Path $repo 'templates/coordinator') $unsafe } }
   }
 }
-$receipt = (Read-Scoped $repo ("docs/releases/$Version-validation.json")) | ConvertFrom-Json
-Assert-Valid ($receipt.schemaVersion -eq 1 -and $receipt.version -ceq "OCMI $Version" -and @($receipt.profiles).Count -eq 2) 'Invalid onboarding receipt'
+$receiptPath = if ($Version -ceq '1.3.3') {'docs/releases/1.3.3-flow.json'} else {"docs/releases/$Version-validation.json"}
+$receipt = (Read-Scoped $repo $receiptPath) | ConvertFrom-Json
+if ($Version -ceq '1.3.3') {
+  Assert-Valid ($receipt.schemaVersion -eq 2 -and $receipt.numbering -ceq 'unified' -and @($receipt.profiles).Count -eq 6) 'Invalid unified receipt'
+  $profiles = @($receipt.profiles | Where-Object {$_.profile -ceq 'coordinator'})
+} else {
+  Assert-Valid ($receipt.schemaVersion -eq 1) 'Invalid historical onboarding schema'
+  $profiles = @($receipt.profiles)
+}
+Assert-Valid ($receipt.version -ceq "OCMI $Version" -and $profiles.Count -eq 2) 'Invalid onboarding receipt'
 $languages = @{}
-foreach ($profile in $receipt.profiles) {
+foreach ($profile in $profiles) {
   Assert-Valid ($profile.profile -ceq 'coordinator' -and $profile.version -ceq $Version -and $profile.language -cin @('en','ru')) 'Invalid coordinator edition'
   Assert-Valid (!$languages.ContainsKey($profile.language)) 'Duplicate edition'
   $languages[$profile.language] = $true

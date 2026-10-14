@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-14**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.
@@ -51,6 +51,8 @@ research needs sources and verifiable conclusions. Artificial tests are unnecess
 Additional tests cover gaps; justify oracles/mutations by specific risk and sufficiency.
 Order relevant checks from cheap to expensive. Before costly CI, require a valid preflight for the
 changed scope; existing evidence may be reused only under its dependency/condition rules.
+Verify affected runner/config consumers in the actual CI mode/tool versions and isolated fixtures;
+record missing prerequisites rather than treating a different local mode as equivalent.
 For behavioral changes include a real consumer path in isolated conditions, substituting external I/O
 where required. Do not require a product end-to-end run for a documentation-only task.
 Rerun when runtime, tests, fixtures, schema, config, toolchain, callers/environment change,
@@ -77,10 +79,13 @@ Return one consolidated list of ID/reproduction/impact/required outcome/check, c
 - New critical security, financial, or data-integrity risk: a blocker even late; report immediately.
 
 After rework, check changes, previous findings, and affected connections; expand review for new risk.
-BEFORE another substantive return following consolidated rework, investigate its cause,
-preserve the failure log and WIP; record the cause category, hypothesis, changed approach,
-next diagnostic and expected new evidence in Acceptance. Do not automatically repeat a full run
-or add revisions. Start with the affected diagnostic; broaden when dependencies, integration or risk require it.
+From the second unexpected failed delivery/review/CI cycle for one integrated result or release,
+BEFORE another substantive return or costly run, preserve the failure log and WIP; briefly record
+the cause category, hypothesis, changed approach, next diagnostic and expected new evidence,
+the sufficient check set and reason for any broad rerun in existing Acceptance or the release's orchestration handoff.
+Include prerequisite repairs; new task IDs, revisions and green intermediate runs do not reset this history.
+Do not automatically repeat a full run or add revisions. Start with the affected diagnostic;
+broaden when dependencies, integration or risk require it. No separate tracker is needed.
 This does not justify accepting a defect, changing model/budget, or setting a Goal to blocked/paused.
 For reporting inaccuracies supported by verified facts, the worker corrects Result or the orchestrator
 annotates Acceptance while preserving the author's Result; formatting does not need another implementation cycle.

@@ -1,6 +1,6 @@
-# OCMI 1.2.3 — task and handoff format
+# OCMI 1.3.3 — task and handoff format
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-14**
 
 Compatible update to the OCMI 1 process; the task schema and existing exporter fields are preserved.
 [ORCHESTRATION](ORCHESTRATION.md) routes readiness/checks/review; [RULES](RULES.md) defines memory.
@@ -63,7 +63,8 @@ Keep full sanitized logs at authorized accessible paths under RULES; a brief cha
 DONE means ready for review. The orchestrator checks protected sections before editing Acceptance;
 recording Acceptance completes that review revision without granting the worker permission to edit it.
 Record accepted/rework/blocked, findings, accepted version, and integrated version separately.
-Accounting continues through integration; release requires its own authorization. Report format does not prove behavior.
+Accounting covers the integrated result/release and dependent repairs across task IDs; apply the orchestrator's
+repeated-failure rule to that whole chain. Release requires its own authorization. Report format does not prove behavior.
 The orchestrator accepts lessons after verification; only then may they become local rules or LESSONS.
 Retain source and status; do not automatically promote local experience to global rules.
 In a shared directory, provide the ID and HANDOFF path; in another copy, also provide the full diff/new files and copy path.

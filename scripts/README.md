@@ -25,7 +25,7 @@ The manifest is updated deliberately after review, never by a validation run.
 check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release also validates the unchanged coordinator 1.3.2 receipt; default or -Version 1.3.3 selects current components;
+check-release and check-onboarding use the current unified six-profile receipt; default or -Version 1.3.3 selects OCMI 1.3.3;
 -Version 1.3.0 or 1.3.1 with -ArchivesOnly checks historical coordinator distributions.
 Startup validation requires six fields, including the expected client project/binding.
 
@@ -56,6 +56,6 @@ CI downloads native Windows x64/macOS ARM64/macOS x64 Gitleaks 8.30.1 binaries f
 The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
 Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
 
-Default and -Version 1.3.3 verify work 1.2.3/lightweight 1.2.1 in both languages plus coordinator 1.3.2 packages. Use -Version 1.3.2 -ArchivesOnly for historical components.
+Default and -Version 1.3.3 verify all profiles at OCMI 1.3.3. check-versioning rejects component-version drift and independent counters. Original 1.3.3 components require -Version 1.3.3 -LegacyComponents -ArchivesOnly; earlier receipts use their version with -ArchivesOnly.
 The old security-validation.json is historical: use -SecurityBaseline -ArchivesOnly.
 Both INSTALL entry gates and neutral routing are covered by bilingual check-onboarding guards.

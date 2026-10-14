@@ -12,7 +12,7 @@ Start with root BOOTSTRAP.md or locales/ru/BOOTSTRAP.md for the temporary instal
 COORDINATOR.md has matching editions for the permanent role and filled-prompt handover.
 The coordinator profile also has complete editions under templates/coordinator and
 locales/ru/templates/coordinator. System VERSION is maintained in both languages;
-it is separate from the unchanged work/lightweight protocol versions.
+all current profiles share that release number, including unchanged profiles.
 
 Use templates/work/INSTALL.md or templates/personal/INSTALL.md for English.
 For Russian, use the same path beneath locales/ru/. You can also select a language-qualified
@@ -33,7 +33,7 @@ preserve local rules, assignments, WIP, and protected evidence; review affected 
 - Keep one development queue: docs/memory is intentionally English-only.
   Executable scripts, machine-readable receipts, and the MIT license also have one canonical version.
 - Historical ZIPs remain in their original language. Do not rewrite an old release to translate it.
-  New language editions include a locale in their filename; a translation alone does not change protocol version.
+  New language editions include a locale in their filename; a translation alone does not change the OCMI release number.
 
 ## Maintaining translations
 

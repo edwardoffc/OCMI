@@ -2,6 +2,23 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## OCMI 1.3.3 — workflow clarification, 2026-10-14
+
+- Local rules specialize the installed workflow baseline; user-authorized exceptions are explicit.
+- Repeated-failure handling covers the whole integrated result/release and prerequisite repairs across task IDs.
+- From the second unexpected failed cycle, the next costly run needs a changed diagnostic approach and sufficient check selection in existing Acceptance/handoff.
+- Preflight checks affected consumers in the actual CI mode, tool versions and isolated fixtures.
+- Bilingual guards and distinct work ZIPs; no new numbered release, installed-project migration or authority change.
+
+## OCMI 1.3.3 — unified numbering correction
+
+- One release number for the system and every current profile, even when component behavior is unchanged.
+- Removes independent work/personal/coordinator version counters from current instructions and the unified receipt.
+- Six new en/ru ZIPs, updated guides and version-drift checks. Workflow, setup, permissions and task schemas are unchanged.
+- Previous archives/receipts and fixed task records remain immutable. Adoption in installed projects is explicit.
+
+[Correction report](docs/releases/1.3.3-unified.md).
+
 ## System 1.3.3 / work 1.2.3 — 2026-10-13
 
 - Compact Contract/Result/Acceptance for bounded reversible low-risk tasks; sensitive or uncertain work keeps the full format.

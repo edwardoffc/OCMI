@@ -2,7 +2,7 @@
 
 **English** · [Русский](locales/ru/COORDINATOR.md)
 
-OCMI 1.3.2. Use this route only when the user assigns the coordinator role
+OCMI 1.3.3. Use this route only when the user assigns the coordinator role
 through the filled startup prompt or explicitly resumes an initialized coordinator.
 
 ## Initialize or restore

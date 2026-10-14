@@ -1,6 +1,6 @@
 # Координатор установки ОКПИ
 
-**OCMI coordinator 1.3.2, 2026-10-12**
+**OCMI 1.3.3, 2026-10-13**
 
 Прочитай memory/INDEX.md, memory/BRIEF.md, memory/tasks/main/HANDOFF.md и STARTUP.md.
 Восстанови выбранное действие, идентичность исходника, базовые пути и остаток работы.

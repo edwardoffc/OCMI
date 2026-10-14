@@ -2,6 +2,24 @@
   "schemaVersion": 1,
   "guards": [
     {
+      "id": "shared-workflow-baseline",
+      "input": "orchestration",
+      "en": ["shared workflow baseline", "do not silently weaken readiness, evidence, review, repeated-failure or safety requirements", "user-authorized exceptions.*scope/reason", "resolve conflicts before affected work", "do not rewrite issued packages or auto-update installations"],
+      "ru": ["общая основа процесса", "не ослабляй незаметно готовность, evidence, ревью, разбор повторных неудач и безопасность", "Разрешённые пользователем исключения.*областью/причиной", "конфликты разрешай до затронутой работы", "выданные пакеты не переписывать, установки автоматически не обновлять"]
+    },
+    {
+      "id": "whole-result-failure-history",
+      "input": "coordinator",
+      "en": ["second unexpected failed delivery/review/CI cycle.*integrated result or release", "BEFORE.*costly run", "sufficient check set and reason for any broad rerun.*existing Acceptance", "Include prerequisite repairs", "new task IDs, revisions and green intermediate runs do not reset this history", "No separate tracker is needed"],
+      "ru": ["второго неожиданно неуспешного цикла сдачи/ревью/CI.*результата или выпуска", "ПЕРЕД.*дорогим прогоном", "достаточный набор проверок и причину широкого повтора.*действующем Acceptance", "Учитывай ремонт предпосылок", "новые ID задач, ревизии и промежуточные зелёные прогоны не обнуляют эту историю", "Отдельный журнал не нужен"]
+    },
+    {
+      "id": "actual-ci-consumer-preflight",
+      "input": "coordinator",
+      "en": ["actual CI mode/tool versions and isolated fixtures", "record missing prerequisites.*different local mode as equivalent"],
+      "ru": ["настоящем режиме CI.*версиями инструментов и изолированными fixtures", "отсутствующие предпосылки.*другой локальный режим за эквивалентный"]
+    },
+    {
       "id": "compact-eligibility",
       "input": "protocol",
       "en": ["bounded, reversible and low risk", "financial", "authorization", "migration", "release", "Unknown risk.*full", "Existing project gates.*mandatory"],

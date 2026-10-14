@@ -1,6 +1,6 @@
 # Worker procedure
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
 Work only from an addressed ready START. Without START, do not choose a task from PLAN,
 change files, start processes/checks, or create a Goal. Initialization means readiness only.

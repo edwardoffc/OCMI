@@ -26,10 +26,11 @@ a hash does not establish semantic equivalence.
 
 ## Releases
 
-System version is recorded in root VERSION.md; profiles have their own versions.
-Current system 1.3.3 contains work protocol 1.2.3. Setup/coordinator 1.3.2 and lightweight 1.2.1 are unchanged.
-1.3.3-components.json verifies new work editions and reused lightweight editions; the coordinator uses its existing 1.3.2 receipt.
-Run check-flow for compact/coverage/retry changes. Historical components use -Version 1.3.2 -ArchivesOnly.
+Root VERSION.md supplies the single OCMI release number for every current profile, including unchanged components.
+Record unchanged behavior in CHANGELOG, not an independent component version counter.
+1.3.3-flow.json verifies the current six editions; the original 1.3.3-unified.json remains immutable.
+check-versioning rejects inconsistent labels and separate version fields.
+Keep all prior archives/receipts fixed. Original 1.3.3 components use -Version 1.3.3 -LegacyComponents -ArchivesOnly.
 
 Historical setup changes:
 System 1.3.2 unifies URL/downloaded startup and requires confirmed client binding before integration.
@@ -55,7 +56,7 @@ mutations verify instruction safeguards, not actual model behavior.
 6. Record cleanup: done/pending in Acceptance; pending has reason, owner, and next action.
    Release artifacts are permanent; other resources follow their stated purpose.
 
-Protocol versions and localization editions are distinct.
+The OCMI release number and translation language are distinct metadata.
 The English 1.2.1 work distribution and English 1.2 lightweight distribution translate existing rules;
 they do not migrate projects or claim new behavior.
 Original Russian archives remain immutable. Historical reports and byte measurements refer to their original text.
