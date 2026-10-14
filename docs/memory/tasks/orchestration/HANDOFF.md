@@ -1,10 +1,33 @@
 # OCMI development handoff
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
-Updated: 2026-10-13. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-14. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-FLOW-018 / system 1.3.3, work protocol 1.2.3
+## Current: OCMI-FLOW-024 / local workflow clarification
+
+Owner authorized concise base changes, checks and a separate private project CI/process assignment.
+[Current record](../OCMI-FLOW-024/HANDOFF.md) covers shared baseline/local specialization, whole-result
+failure history across prerequisite repairs and actual-CI preflight. Unified OCMI 1.3.3 stays current;
+no new numbered release, installed-project edits or messages are assigned.
+Existing numbering WIP/packages and deferred roadmap stages are preserved. Accepted locally:
+PowerShell 7/5.1 suites, bilingual guards, exact ZIPs/history and privacy/Gitleaks passed.
+Net workflow growth nine lines per edition; no new schema, role or tracker. Private assignment stays
+ignored and outside public packages. Cleanup done for preparation; retained resources are in Acceptance.
+Owner now authorizes GitHub delivery including the prepared unified-numbering correction.
+Final PR/main, native CI, additive current-release assets and source download are verified from remote
+state and ignored delivery receipt; original tag/assets are preserved. No project migration follows.
+
+## Historical: OCMI-VERSION-023 / unified OCMI 1.3.3
+
+The owner selected one version for system/work/personal/coordinator profiles and explicitly selected local adoption.
+[Acceptance](../OCMI-VERSION-023/HANDOFF.md) records label/checker/translation/archive verification.
+New six-profile receipt and archives preserve every previous release, fixed assignment and WIP.
+Workflow, setup, authority and schemas are unchanged. All later skill/automation stages remain deferred.
+GitHub publication is not assigned by this correction; source development does not read private coordinator memory.
+Resource retention and selected-installation evidence are recorded in acceptance/local receipts.
+
+## Historical: OCMI-FLOW-018 / original system 1.3.3, work protocol 1.2.3
 
 The owner authorized stage one of [PLAN](../../PLAN.md) in the base system only.
 [Acceptance](../OCMI-FLOW-018/HANDOFF.md): compact low-risk cards, sufficient existing checks,

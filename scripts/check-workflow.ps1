@@ -68,10 +68,11 @@ foreach($language in @('en','ru')) {
   Check "$language versions" {
     $marker=$guards.markers.$language
     foreach($key in @('agent','rules','router','protocol','card','start','coordinator','worker','consultant')) {
-      Assert-Check ($texts[$key].Contains("OCMI 1.2.3, $marker 2026-10-13")) "Wrong version: $key"
+      $revision=if($key -cin @('router','protocol','coordinator')){'2026-10-14'}else{'2026-10-13'}
+      Assert-Check ($texts[$key].Contains("OCMI 1.3.3, $marker $revision")) "Wrong version/revision: $key"
     }
-    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI 1.2.3, $marker 2026-10-13")) 'Wrong VERSION'
-    Assert-Check ($texts.personal.Contains("OCMI 1.2.1, $marker 2026-10-11")) 'Wrong lightweight version'
+    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI 1.3.3, $marker 2026-10-13")) 'Wrong VERSION'
+    Assert-Check ($texts.personal.Contains("OCMI 1.3.3, $marker 2026-10-13")) 'Wrong lightweight version'
   }
   Check "$language lightweight startup" {
     Assert-Check ($texts.personal -notmatch '\]\([^)]*ORCHESTRATION\.md\)') 'Heavy lightweight startup'

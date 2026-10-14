@@ -26,7 +26,7 @@ foreach ($language in @('en','ru')) {
   $prefix=if ($language -ceq 'ru') {'locales/ru/'} else {''}
   $memory=Join-Path $repo ($prefix+'templates/work/docs/memory')
   $texts=@{}
-  foreach ($pair in @(@('protocol','TASK-PROTOCOL.md'),@('coordinator','roles/coordinator.md'),@('worker','roles/worker.md'),@('rules','RULES.md'))) {
+  foreach ($pair in @(@('protocol','TASK-PROTOCOL.md'),@('coordinator','roles/coordinator.md'),@('worker','roles/worker.md'),@('rules','RULES.md'),@('orchestration','ORCHESTRATION.md'))) {
     $texts[$pair[0]]=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory $pair[1]))
   }
   $small=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory 'tasks/SMALL-TEMPLATE.md'))
@@ -47,4 +47,10 @@ foreach ($language in @('en','ru')) {
     }
   }
 }
-Write-Output "PASS: $passed bilingual compact/schema/coverage/preflight/retry/recovery guards and negative mutations. Instruction checks, not live-agent behavior."
+foreach ($pair in @(@('orchestration','ORCHESTRATION.md'),@('coordinator','roles/coordinator.md'))) {
+  $text=[IO.File]::ReadAllText((Get-OCMIScopedFile $repo ('docs/memory/'+$pair[1])))
+  foreach ($guard in @($guards.guards | Where-Object {$_.input -ceq $pair[0]})) {
+    Clauses $text @($guard.en); $passed++
+  }
+}
+Write-Output "PASS: $passed bilingual compact/schema/coverage/preflight/retry/recovery and shared-baseline guards, negative mutations and development-rule parity. Instruction checks, not live-agent behavior."

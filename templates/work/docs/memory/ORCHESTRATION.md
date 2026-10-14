@@ -1,10 +1,13 @@
 # Roles and procedure selection
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-14**
 
 After [RULES](RULES.md), select exactly your own procedure; read another only for a relevant action.
 Inputs required by the current START/contract remain mandatory regardless of this routing.
-These rules apply to new assignments/explicit revisions; do not rewrite issued packages.
+The installed profile is the shared workflow baseline. Local commands, environment and domain rules
+specialize or strengthen it; do not silently weaken readiness, evidence, review, repeated-failure or safety requirements.
+Record user-authorized exceptions with their scope/reason in existing local rules; resolve conflicts before affected work.
+These rules apply to new assignments/explicit revisions; do not rewrite issued packages or auto-update installations.
 
 | Role | Procedure | Context after the shared rules |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 # OCMI PLAN
 
-Updated: 2026-10-13. The only development queue.
+Updated: 2026-10-14. The only development queue.
 
 | ID | Outcome | Status |
 | --- | --- | --- |
@@ -26,11 +26,13 @@ Updated: 2026-10-13. The only development queue.
 | OCMI-DOCTOR-020 | Scoped installation/assignment diagnostics and protected-input integrity checks | Deferred; specify requirements and fixtures before choosing a runtime |
 | OCMI-CONTEXT-021 | Role/task context assembly over Markdown and verified code-map entries | Deferred; depends on diagnostics/provenance; generated indexes remain rebuildable |
 | OCMI-AUTO-022 | Optional client lifecycle adapters and verified lessons promoted into skills | Exploratory/deferred; requires measured manual workflow and client capability evidence |
+| OCMI-VERSION-023 | One OCMI 1.3.3 label for all current profiles; retain historical receipts/assignments | [Source accepted locally](tasks/OCMI-VERSION-023/HANDOFF.md); selected adoption verified; cleanup: done for preparation; no other migration/publication |
+| OCMI-FLOW-024 | Shared workflow baseline, whole-result failure history and actual-CI preflight | [Source accepted](tasks/OCMI-FLOW-024/HANDOFF.md); owner-authorized GitHub delivery includes unified numbering; final delivery verified separately; no project migration |
 
-## Saved development scope — stage one authorized only
+## Saved development scope — stages after FLOW-018 remain deferred
 
 The owner saved this proposal on 2026-10-13, then explicitly authorized FLOW-018 in the base system.
-Only stage one is assigned: system patch 1.3.3/work 1.2.3. The remaining stages below stay deferred.
+Stage one was completed in OCMI 1.3.3; its old protocol labels remain historical. The remaining stages below stay deferred.
 The order expands the queue items, not a second PLAN; no next-stage START or model run is assigned. The owner separately authorized 1.3.3 publication.
 
 1. **FLOW-018:** choose a compact Contract/Result/Acceptance for reversible low-risk tasks;

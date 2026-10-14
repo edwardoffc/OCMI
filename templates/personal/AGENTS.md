@@ -1,6 +1,6 @@
 # Working with this project's memory
 
-**OCMI 1.2.1, rules revision 2026-10-11**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
 ## Startup and scope
 

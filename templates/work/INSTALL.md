@@ -1,13 +1,13 @@
 # Installing the OCMI work profile
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
 [Version and changes](VERSION.md). This is a neutral template, not an active project.
 "This is a work project", referring to a specific directory, selects this profile;
 it does not authorize creating chats, messaging, background tasks, or external actions.
 Personal topics are not needed for installation.
 
-## Installation entry check (OCMI system 1.3.2)
+## Installation entry check (OCMI 1.3.3)
 
 Classify the target using only applicable instructions and their declared OCMI entry.
 An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.
@@ -78,7 +78,7 @@ An operational installed project needs no repeat core setup. This source update 
 
 ## Upgrade OCMI 1 or 1.1 → 1.2
 
-When installing current 1.2.3, also apply the resource-completion section below.
+When installing current 1.3.3, also apply the resource-completion section below.
 
 Contract/Result/Acceptance and exporter fields remain compatible.
 Install the three role procedures with the new ORCHESTRATION router; check links before switching AGENTS.
@@ -89,7 +89,7 @@ Scenarios/structural checkers do not prove model behavior in a new chat. Updatin
 On a separate owner request, merge new rules with local ones while preserving current assignments.
 Prioritize: an end-to-end consumer/protocol scenario before assignment; accessible pinned links
 instead of history copies; delta review after full review; dependency-based reuse; updates to changed facts only.
-Current label: OCMI 1.2.3, rules revision 2026-10-13. Preserve historical labels.
+Current label: OCMI 1.3.3, rules revision 2026-10-13. Preserve historical labels.
 
 Issued packages/checkers are immutable. Changing an active contract/tests/baseline/check requires
 an agreed explicit revision preserving WIP, finding IDs, and evidence, not bypassing the checker.

@@ -1,6 +1,6 @@
 # TASK-ID: objective
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
 Template, not an assignment. Create tasks/<id>/HANDOFF.md; preserve exact headings
 and existing exporter fields. [Protocol](../TASK-PROTOCOL.md), [process](../ORCHESTRATION.md).

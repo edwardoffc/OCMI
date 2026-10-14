@@ -47,7 +47,7 @@ A worker also needs its current assignment, START/revision, and working copy.
 It verifies their validity before implementation. An old START alone does not authorize work.
 Unsaved conversations cannot be restored automatically.
 
-## Small tasks in work 1.2.3
+## Small tasks in OCMI 1.3.3
 
 The orchestrator chooses the [compact card](../templates/work/docs/memory/tasks/SMALL-TEMPLATE.md) for bounded reversible low-risk work. Sensitive or uncertain tasks stay full.
 Validated existing checks cover criteria first; new checks fill gaps. Scope/protection and mandatory gates remain.
@@ -85,4 +85,4 @@ File rules guide context selection; they do not establish technical access permi
 
 [Layout](layout.md) · [Checks](../scripts/README.md).
 
-Work 1.2.2 and lightweight 1.2.1 add sanitization before persistence/sharing. Merge those rules explicitly; do not replace active memory or protected packages. See the security policy before publishing logs.
+Historical work 1.2.2 and lightweight 1.2.1 introduced sanitization before persistence/sharing. Current profiles share the OCMI release number. Merge those rules explicitly; do not replace active memory or protected packages. See the security policy before publishing logs.

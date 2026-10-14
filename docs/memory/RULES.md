@@ -1,6 +1,6 @@
 # Project memory rules
 
-**OCMI 1.2.3, rules revision 2026-10-13**
+**OCMI 1.3.3, rules revision 2026-10-13**
 
 ## One primary location per fact
 
