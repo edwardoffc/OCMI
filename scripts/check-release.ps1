@@ -16,18 +16,19 @@ if ($Version -cin @('1.3.0','1.3.1')) {
   & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -Version $Version -ReleaseOnly -ArchivesOnly:$ArchivesOnly
   return
 }
-$componentVersion = if ($Version) {$Version} else {'1.3.3'}
-$languageEdition = !$Version -or $Version -cin @('1.3.2','1.3.3')
-$unified = !$SecurityBaseline -and !$LegacyComponents -and $componentVersion -ceq '1.3.3'
-if (!$SecurityBaseline -and $componentVersion -ceq '1.3.2' -and !$ArchivesOnly) {throw 'Historical 1.3.2 components require ArchivesOnly; current source is 1.3.3'}
+$currentVersion = Get-OCMIReleaseVersion $repoRoot
+$componentVersion = if ($Version) {$Version} else {$currentVersion}
+$unified = !$SecurityBaseline -and !$LegacyComponents -and [version]$componentVersion -ge [version]'1.3.3'
+$languageEdition = $unified -or !$Version -or $Version -cin @('1.3.2','1.3.3')
+if (!$SecurityBaseline -and $componentVersion -cne $currentVersion -and !$ArchivesOnly) {throw 'Historical components require ArchivesOnly'}
 $receipt = if ($SecurityBaseline) { 'docs/releases/security-validation.json' }
-  elseif ($unified) {'docs/releases/1.3.3-flow.json'}
+  elseif ($unified) {Get-OCMIReleaseReceipt $componentVersion}
   elseif ($languageEdition) { "docs/releases/$componentVersion-components.json" }
   else { "docs/releases/$Version-validation.json" }
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath (Get-OCMIScopedFile $repoRoot $receipt) | ConvertFrom-Json
 if ($Version -and $manifest.version -cne "OCMI $Version") { throw 'Receipt version differs' }
 if ($languageEdition -and !$SecurityBaseline -and $manifest.version -cne "OCMI $componentVersion") { throw 'Component receipt version differs' }
-if ($unified) {Assert-OCMIUnifiedReceipt $manifest (Get-OCMIReleaseVersion $repoRoot)}
+if ($unified) {Assert-OCMIUnifiedReceipt $manifest $componentVersion}
 elseif ($languageEdition -and ($manifest.schemaVersion -ne 1 -or @($manifest.profiles).Count -ne 4)) { throw 'Invalid language receipt' }
 $profileKeys = @{}
 foreach ($profile in $manifest.profiles) {
@@ -87,6 +88,6 @@ foreach ($property in $manifest.historicalArchives.PSObject.Properties) {
 }
 Write-Output 'PASS: historical archives unchanged.'
 if ($languageEdition -and !$SecurityBaseline) {
-  $coordinatorVersion = if ($unified) {'1.3.3'} else {'1.3.2'}
+  $coordinatorVersion = if ($unified) {$componentVersion} else {'1.3.2'}
   & (Join-Path $PSScriptRoot 'check-onboarding.ps1') -Root $repoRoot -Version $coordinatorVersion -ReleaseOnly -ArchivesOnly:$ArchivesOnly
 }

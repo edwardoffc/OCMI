@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.3.3, rules revision 2026-10-14**
+**OCMI 1.3.4, rules revision 2026-10-16**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.
@@ -16,6 +16,11 @@ In Contract, record temporary task resources: path/branch/process, owner, comple
 keep/archive/remove/transfer, and the basis for already-authorized cleanup. A date does not authorize deletion.
 
 ## Readiness before START
+
+For a real task gap, read skills/catalog.json metadata and selected skill bodies only.
+Use docs/guides/skills.md when an optional specialist contribution is needed.
+List selected paths/revisions in existing START inputs; no extra role/chat or bulk skill loading.
+Optional advice stays within current authority; one orchestrator retains checks and acceptance.
 
 Choose full or compact using [format selection](../TASK-PROTOCOL.md). For compact work retain the
 same readiness safeguards; record criterion coverage inline and only relevant details, not repeated rules.

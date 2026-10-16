@@ -1,12 +1,12 @@
-# OCMI 1.3.3
+# OCMI 1.3.4
 
 One release number covers the system, coordinator, work and personal profiles in both languages.
-An unchanged component still receives the current OCMI release label; its unchanged behavior is recorded in CHANGELOG.
+This release adds coordinator-led diagnostics, selected portable skills/optional specialists and
+scoped code context. Personal-profile behavior is unchanged; all profiles share the release label.
 
-The numbering correction does not change installation, workflow, permissions or task schemas.
-Existing contracts, protected checkers, archives and historical labels remain fixed.
-Installed projects adopt updated labels only through an explicitly requested merge, preserving local rules and WIP.
-Rules dates, source commits/hashes and task revisions describe provenance; they are not independent OCMI versions.
+Setup, role authority, Contract/Result/Acceptance and protected existing assignments remain compatible.
+Installed projects adopt changes only through an explicitly requested merge, preserving local rules,
+language, tasks and WIP. Rules dates, source hashes and task revisions describe provenance, not versions.
 
-[Numbering correction](docs/releases/1.3.3-unified.md) · [Original 1.3.3 changes](docs/releases/1.3.3.md) ·
-[Start](BOOTSTRAP.md) · [Installation](docs/install-system.md) · [Changelog](CHANGELOG.md).
+[Release guide](docs/releases/1.3.4.md) · [Start](BOOTSTRAP.md) ·
+[Installation](docs/install-system.md) · [Changelog](CHANGELOG.md).

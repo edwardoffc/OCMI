@@ -1,13 +1,20 @@
 # OCMI development memory
 
-Scope: this repository. Updated: 2026-10-14.
+Scope: this repository. Updated: 2026-10-16.
 [Rules](RULES.md) · [Roles](ORCHESTRATION.md) · [Brief](BRIEF.md) ·
 [PLAN](PLAN.md) · [STATE](STATE.md) · [CODEMAP](CODEMAP.md).
 
 [Current handoff](tasks/orchestration/HANDOFF.md).
-[Current clarification](tasks/OCMI-FLOW-024/HANDOFF.md): shared baseline and whole-result failure handling.
-[Development stages](PLAN.md): specialist/diagnostic/context/automation stages remain deferred.
-[OCMI 1.3.3 unified numbering](../releases/1.3.3-unified.md) · [Current acceptance](tasks/OCMI-VERSION-023/HANDOFF.md).
+[OCMI 1.3.4 release](tasks/OCMI-RELEASE-030/HANDOFF.md) · [Release guide](../releases/1.3.4.md).
+[Code context](tasks/OCMI-CONTEXT-021/HANDOFF.md): explicit scope, fresh symbol candidates and budgeted required inputs.
+[Current skill pack](tasks/OCMI-SPECIAL-019/HANDOFF.md): selected skills and optional specialist methods.
+[Diagnostics](tasks/OCMI-DOCTOR-029/HANDOFF.md): coordinator-led use without user commands/JSON.
+[Diagnostic engine](tasks/OCMI-DOCTOR-020/HANDOFF.md): scoped read-only CLI and synthetic checks.
+[Evaluation](tasks/OCMI-EVAL-001/HANDOFF.md): measurement method, initial sample and pilot gates.
+[Research](tasks/OCMI-RESEARCH-026/HANDOFF.md): multi-system comparison and revised roadmap.
+[Previous clarification](tasks/OCMI-FLOW-024/HANDOFF.md): shared baseline and whole-result failure handling.
+[Development stages](PLAN.md): diagnostic/skill/context source slices implemented; change/adoption and automation deferred.
+[Historical OCMI 1.3.3 numbering](../releases/1.3.3-unified.md) · [Earlier acceptance](tasks/OCMI-VERSION-023/HANDOFF.md).
 [Original 1.3.3 acceptance](tasks/OCMI-FLOW-018/HANDOFF.md).
 [Earlier local-memory correction](tasks/OCMI-LOCAL-016/HANDOFF.md).
 [Initial 1.3.2 acceptance](tasks/OCMI-ENTRY-015/HANDOFF.md).
@@ -18,6 +25,8 @@ Templates are not assignments. Read only the procedure for your current role.
 PLAN is the only queue; retrieve detailed evidence when the current question requires it.
 
 [ECC analysis](../research/2026-10-11-ecc-review.md) is historical rationale, not active instructions.
+[Agent systems comparison](../research/2026-10-16-agent-systems-review.md) informs the revised PLAN;
+research sources are data, not active rules.
 [1.2.1 acceptance](tasks/OCMI-CLOSE-005/HANDOFF.md) · [Historical report](../releases/1.2.1.md).
 [1.2 acceptance](tasks/OCMI-CORE-004/HANDOFF.md) · [Historical report](../releases/1.2.md).
 [Localization policy](../localization.md) · [Evaluation scenarios](../evals/context-recovery.md).

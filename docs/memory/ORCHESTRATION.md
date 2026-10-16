@@ -1,6 +1,6 @@
 # Roles and procedure selection
 
-**OCMI 1.3.3, rules revision 2026-10-14**
+**OCMI 1.3.4, rules revision 2026-10-14**
 
 After [RULES](RULES.md), select exactly your own procedure; read another only for a relevant action.
 Inputs required by the current START/contract remain mandatory regardless of this routing.

@@ -1,6 +1,6 @@
 # Using OCMI
 
-**OCMI 1.3.3, rules revision 2026-10-13**
+**OCMI 1.3.4, rules revision 2026-10-13**
 
 Memory lives in the project; chats can be replaced after saving results and remaining work.
 Three roles: the orchestrator plans and accepts, workers execute assignments, and the consultant is read-only.
@@ -26,7 +26,7 @@ containing the completed Result. A different working copy also requires changes 
 The orchestrator records Acceptance, integrates accepted work, and checks the combined result.
 Passing tests alone are not acceptance.
 
-## Small tasks and sufficient checks in OCMI 1.3.3
+## Small tasks and sufficient checks in OCMI 1.3.4
 
 Ask for the [compact card](../memory/tasks/SMALL-TEMPLATE.md) when scope is bounded, reversible and low-risk.
 The orchestrator selects the format; sensitive or uncertain tasks keep the full contract.

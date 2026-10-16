@@ -9,7 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**OCMI system: [1.3.3](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
+**OCMI system: [1.3.4](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
 [Installation](docs/install-system.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
@@ -28,6 +28,10 @@ See the [localization policy](docs/localization.md) for supported paths and main
 The cycle: **plan → assign → implement → verify → accept → integrate → update memory**.
 After integration, the orchestrator accounts for unfinished work and temporary task resources.
 A small change does not require a separate branch or a new chat just to follow the process.
+
+Optional [diagnostics](docs/doctor.md), [selected skills](templates/work/docs/guides/skills.md)
+and [code context](docs/context.md) help check saved state and retrieve relevant evidence.
+They keep the same role boundaries and required inputs. [What's new in 1.3.4](docs/releases/1.3.4.md).
 
 ## Quick start
 

@@ -29,7 +29,7 @@ Read docs/memory/RULES.md, ORCHESTRATION.md, your role procedure, and its inputs
 This repository contains the system and neutral templates. Templates are examples,
 not assignments or the active development state.
 
-Current OCMI version: OCMI 1.3.3, rules revision 2026-10-14.
+Current OCMI version: OCMI 1.3.4, rules revision 2026-10-16.
 The orchestrator owns PLAN, criteria/acceptance checks, and acceptance.
 Workers require an addressed ready START; consultants are read-only.
 The current request determines scope and authority, not an old recorded assignment.
@@ -37,6 +37,8 @@ Chats, messages, models, background work, and publication need relevant authoriz
 
 English is the canonical source language. Shared work rules live in templates/work;
 the lightweight profile lives in templates/personal. Russian translations live in locales/ru.
+For source-development skill selection, use templates/work/skills/catalog.json and its selected bodies;
+the optional specialist procedure is templates/work/docs/guides/skills.md. Do not install client skills.
 Follow docs/localization.md and keep translation coverage/freshness checks passing.
 Do not mix language variants during installation. Stable paths, schema headings, IDs, and statuses stay unchanged.
 docs/memory is the single active development memory; do not create translated competing plans or handoffs.

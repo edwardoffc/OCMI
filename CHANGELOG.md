@@ -2,6 +2,20 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## OCMI 1.3.4 — diagnostics, selected skills and code context, 2026-10-16
+
+- Scoped code indexing/context assembly: fresh content fingerprints, disposable session outlines,
+  required-input priority, explicit budget gaps and no automatic semantic-server installation.
+- Coordinator-led read-only diagnostics, in-memory target selection and explicit unknown/manual findings.
+- Five portable work skills, metadata-first selection and optional bounded specialist functions.
+- One orchestrator retains protected checks, consolidated review and acceptance; no automatic chats/models.
+- Unified OCMI 1.3.4 for all six English/Russian editions; personal-profile behavior is unchanged.
+- New installation includes the skill catalog/bodies and guides; context tools remain optional.
+- Prior distributions, installed projects and private memory are preserved; adoption is a separate request.
+- Expanded evaluation method; synthetic retrieval/diagnostic/routing checks do not prove live token/time savings.
+
+[Release guide](docs/releases/1.3.4.md).
+
 ## OCMI 1.3.3 — workflow clarification, 2026-10-14
 
 - Local rules specialize the installed workflow baseline; user-authorized exceptions are explicit.

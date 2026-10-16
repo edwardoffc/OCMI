@@ -1,7 +1,9 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'path-utils.ps1')
+. (Join-Path $PSScriptRoot 'version-utils.ps1')
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
+$version = Get-OCMIReleaseVersion $rootPath
 $guards = Get-Content -Raw -Encoding UTF8 (Join-Path $rootPath 'localization/workflow-guards.json') | ConvertFrom-Json
 $passed = 0
 function Assert-Check([bool]$Condition,[string]$Message) { if (!$Condition) { throw $Message } }
@@ -68,11 +70,11 @@ foreach($language in @('en','ru')) {
   Check "$language versions" {
     $marker=$guards.markers.$language
     foreach($key in @('agent','rules','router','protocol','card','start','coordinator','worker','consultant')) {
-      $revision=if($key -cin @('router','protocol','coordinator')){'2026-10-14'}else{'2026-10-13'}
-      Assert-Check ($texts[$key].Contains("OCMI 1.3.3, $marker $revision")) "Wrong version/revision: $key"
+      $revision=if($key -ceq 'coordinator'){'2026-10-16'}elseif($key -cin @('router','protocol')){'2026-10-14'}else{'2026-10-13'}
+      Assert-Check ($texts[$key].Contains("OCMI $version, $marker $revision")) "Wrong version/revision: $key"
     }
-    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI 1.3.3, $marker 2026-10-13")) 'Wrong VERSION'
-    Assert-Check ($texts.personal.Contains("OCMI 1.3.3, $marker 2026-10-13")) 'Wrong lightweight version'
+    Assert-Check ((Read-Scoped $work 'VERSION.md').Contains("OCMI $version, $marker 2026-10-13")) 'Wrong VERSION'
+    Assert-Check ($texts.personal.Contains("OCMI $version, $marker 2026-10-13")) 'Wrong lightweight version'
   }
   Check "$language lightweight startup" {
     Assert-Check ($texts.personal -notmatch '\]\([^)]*ORCHESTRATION\.md\)') 'Heavy lightweight startup'

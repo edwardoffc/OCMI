@@ -1,11 +1,11 @@
 # Installing file-based memory
 
-**OCMI 1.3.3, rules revision 2026-10-13**
+**OCMI 1.3.4, rules revision 2026-10-13**
 
 This directory is a portable neutral template. It contains no user data or other project information.
 A confirmed coordinator installs it after the entry check; no executable installer is required.
 
-## Installation entry check (OCMI 1.3.3)
+## Installation entry check (OCMI 1.3.4)
 
 Classify the target using only applicable instructions and their declared OCMI entry.
 An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.

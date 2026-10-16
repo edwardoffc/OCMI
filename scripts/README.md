@@ -16,6 +16,10 @@ and negative mutations in both languages. English development procedures must ma
 These are structural checks; no model process or cleanup action is launched.
 [Behavioral evaluation](../docs/evals/context-recovery.md) remains separate.
 
+check-doctor exercises the optional [scoped diagnostic CLI](../docs/doctor.md): explicit root/profile,
+bounded inputs, canonical diagnostic blocks, dependency/resource/protected-input findings, real exits
+and target preservation. It runs through check-all on Windows/macOS; no installed projects are read.
+
 check-flow checks compact fields, risk selection, coverage, preflight, causal retries, repeated rework and verified continuation in both languages. Missing-field/schema/policy mutations must be rejected. These are instruction regressions, not live-agent or cost measurements.
 
 check-localization checks the maintained translation inventory, reviewed hashes, stable template
@@ -25,7 +29,7 @@ The manifest is updated deliberately after review, never by a validation run.
 check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release and check-onboarding use the current unified six-profile receipt; default or -Version 1.3.3 selects OCMI 1.3.3;
+check-release and check-onboarding use the current unified six-profile receipt; default or -Version 1.3.4 selects OCMI 1.3.4;
 -Version 1.3.0 or 1.3.1 with -ArchivesOnly checks historical coordinator distributions.
 Startup validation requires six fields, including the expected client project/binding.
 
@@ -48,6 +52,15 @@ Individual checks accept -Root; no script installs PowerShell or changes client 
 
 ## Security checks
 
+check-context tests scoped [code context](../docs/context.md): actual definitions/callers/contracts/tests,
+dirty hashes, cache invalidation, budget gaps, boundaries and CLI/installed consumers. context-lib.ps1
+and ocmi-context.ps1 match the self-contained work helpers byte for byte; no discovery/persistent cache.
+
+check-skills validates bilingual catalog/frontmatter agreement, need/intent/assigned-ID routing,
+metadata-only reads and rejection of invalid/excessive selections. skill-lib.ps1 exposes optional
+Get-OCMISkillSelection over an explicit work-profile root; no body loading, dispatch or readiness.
+The installed [guide](../templates/work/docs/guides/skills.md) works without this base helper.
+
 Run scripts/check-security.ps1 -GitleaksPath <verified-native-gitleaks> before publication.
 The script scans tracked files and reachable HEAD history, explicitly extracts every ZIP, rejects unsafe
 archive paths/symlinks and tracked backup/key paths, and flags home identifiers or non-example email addresses.
@@ -56,6 +69,6 @@ CI downloads native Windows x64/macOS ARM64/macOS x64 Gitleaks 8.30.1 binaries f
 The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
 Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
 
-Default and -Version 1.3.3 verify all profiles at OCMI 1.3.3. check-versioning rejects component-version drift and independent counters. Original 1.3.3 components require -Version 1.3.3 -LegacyComponents -ArchivesOnly; earlier receipts use their version with -ArchivesOnly.
+Default and -Version 1.3.4 verify all profiles at OCMI 1.3.4. Historical 1.3.3 requires -Version 1.3.3 -ArchivesOnly. check-versioning rejects component-version drift and independent counters. Original 1.3.3 components require -Version 1.3.3 -LegacyComponents -ArchivesOnly; earlier receipts use their version with -ArchivesOnly.
 The old security-validation.json is historical: use -SecurityBaseline -ArchivesOnly.
 Both INSTALL entry gates and neutral routing are covered by bilingual check-onboarding guards.

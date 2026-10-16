@@ -1,6 +1,6 @@
-# OCMI 1.3.3 — task and handoff format
+# OCMI 1.3.4 — task and handoff format
 
-**OCMI 1.3.3, rules revision 2026-10-14**
+**OCMI 1.3.4, rules revision 2026-10-14**
 
 Compatible update to the OCMI 1 process; the task schema and existing exporter fields are preserved.
 [ORCHESTRATION](ORCHESTRATION.md) routes readiness/checks/review; [RULES](RULES.md) defines memory.

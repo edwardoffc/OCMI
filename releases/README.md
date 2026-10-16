@@ -1,17 +1,31 @@
 # Distributions
 
-## Current OCMI 1.3.3 — unified numbering
+## Current OCMI 1.3.4
+
+All six profiles use OCMI 1.3.4. The full repository is the system; these component ZIPs support
+coordinator-led setup/integration. Choose one language. Existing projects need an explicit merge
+preserving local rules, assignments and WIP. Personal-profile behavior is unchanged.
+[Exact six-profile receipt](../docs/releases/1.3.4.json) · [Release guide](../docs/releases/1.3.4.md).
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| work 1.3.4 | [ZIP](ocmi-work-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-work-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-work-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-work-1.3.4-ru-2026-10-16.zip.sha256) |
+| personal 1.3.4 | [ZIP](ocmi-personal-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-personal-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-ru-2026-10-16.zip.sha256) |
+| coordinator 1.3.4 | [ZIP](ocmi-coordinator-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-coordinator-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-ru-2026-10-16.zip.sha256) |
+
+## OCMI 1.3.3 — preserved preparation
 
 All profiles use OCMI 1.3.3, including components whose behavior did not change.
 The full repository is the system; these component ZIPs support coordinator-led setup/integration.
 Choose one language. Existing projects require an explicit merge preserving local rules and WIP.
-[Exact six-profile receipt](../docs/releases/1.3.3-flow.json) · [Numbering correction](../docs/releases/1.3.3-unified.md).
-Work editions include the workflow clarification of 2026-10-14; the other four editions are unchanged.
+[Exact six-profile receipt](../docs/releases/1.3.3-context.json) · [Numbering correction](../docs/releases/1.3.3-unified.md).
+Locally prepared work editions include selected skills/specialist procedures of 2026-10-16;
+the other four editions are unchanged. This does not claim new GitHub publication.
 The [original unified receipt](../docs/releases/1.3.3-unified.json) and every prior archive remain immutable.
 
 | Profile | English | Russian |
 | --- | --- | --- |
-| work 1.3.3 | [ZIP](ocmi-work-1.3.3-en-2026-10-14.zip) · [SHA256](ocmi-work-1.3.3-en-2026-10-14.zip.sha256) | [ZIP](ocmi-work-1.3.3-ru-2026-10-14.zip) · [SHA256](ocmi-work-1.3.3-ru-2026-10-14.zip.sha256) |
+| work 1.3.3 | [ZIP](ocmi-work-1.3.3-en-2026-10-16-r3.zip) · [SHA256](ocmi-work-1.3.3-en-2026-10-16-r3.zip.sha256) | [ZIP](ocmi-work-1.3.3-ru-2026-10-16-r3.zip) · [SHA256](ocmi-work-1.3.3-ru-2026-10-16-r3.zip.sha256) |
 | personal 1.3.3 | [ZIP](ocmi-personal-1.3.3-en-2026-10-13.zip) · [SHA256](ocmi-personal-1.3.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-personal-1.3.3-ru-2026-10-13.zip) · [SHA256](ocmi-personal-1.3.3-ru-2026-10-13.zip.sha256) |
 | coordinator 1.3.3 | [ZIP](ocmi-coordinator-1.3.3-en-2026-10-13.zip) · [SHA256](ocmi-coordinator-1.3.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-coordinator-1.3.3-ru-2026-10-13.zip) · [SHA256](ocmi-coordinator-1.3.3-ru-2026-10-13.zip.sha256) |
 

@@ -1,6 +1,6 @@
 # OCMI installation coordinator
 
-**OCMI 1.3.3, 2026-10-13**
+**OCMI 1.3.4, 2026-10-13**
 
 Read memory/INDEX.md, memory/BRIEF.md, memory/tasks/main/HANDOFF.md and STARTUP.md.
 Restore the current selected action, source identity, core locations and remaining work.
