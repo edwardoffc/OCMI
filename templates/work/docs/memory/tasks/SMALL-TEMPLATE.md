@@ -1,6 +1,6 @@
 # TASK-ID: one bounded result
 
-**OCMI 1.3.3, rules revision 2026-10-13**
+**OCMI 1.3.4, rules revision 2026-10-13**
 
 Format: compact
 Risk: low

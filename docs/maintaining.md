@@ -28,7 +28,7 @@ a hash does not establish semantic equivalence.
 
 Root VERSION.md supplies the single OCMI release number for every current profile, including unchanged components.
 Record unchanged behavior in CHANGELOG, not an independent component version counter.
-1.3.3-flow.json verifies the current six editions; the original 1.3.3-unified.json remains immutable.
+1.3.4.json verifies the current six editions; the original 1.3.3-unified.json remains immutable.
 check-versioning rejects inconsistent labels and separate version fields.
 Keep all prior archives/receipts fixed. Original 1.3.3 components use -Version 1.3.3 -LegacyComponents -ArchivesOnly.
 

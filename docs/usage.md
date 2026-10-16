@@ -47,7 +47,7 @@ A worker also needs its current assignment, START/revision, and working copy.
 It verifies their validity before implementation. An old START alone does not authorize work.
 Unsaved conversations cannot be restored automatically.
 
-## Small tasks in OCMI 1.3.3
+## Small tasks
 
 The orchestrator chooses the [compact card](../templates/work/docs/memory/tasks/SMALL-TEMPLATE.md) for bounded reversible low-risk work. Sensitive or uncertain tasks stay full.
 Validated existing checks cover criteria first; new checks fill gaps. Scope/protection and mandatory gates remain.

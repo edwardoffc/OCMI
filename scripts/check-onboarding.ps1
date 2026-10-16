@@ -1,13 +1,18 @@
 param(
   [string]$Root = (Join-Path $PSScriptRoot '..'),
-  [ValidateSet('1.3.0','1.3.1','1.3.2','1.3.3')][string]$Version = '1.3.3',
+  [ValidatePattern('^(\d+\.\d+\.\d+)?$')][string]$Version = '',
   [switch]$ArchivesOnly,
   [switch]$ReleaseOnly
 )
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'path-utils.ps1')
+. (Join-Path $PSScriptRoot 'version-utils.ps1')
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $repo = (Resolve-Path -LiteralPath $Root).Path
+$currentVersion = Get-OCMIReleaseVersion $repo
+if (!$Version) {$Version=$currentVersion}
+if ($Version -cne $currentVersion -and !$ArchivesOnly) {throw 'Historical onboarding requires ArchivesOnly'}
+$unified = [version]$Version -ge [version]'1.3.3'
 $passed = 0
 function Assert-Valid([bool]$Condition, [string]$Message) {
   if (!$Condition) { throw $Message }
@@ -40,7 +45,7 @@ function Check-Startup([string]$Text) {
   }
 }
 if (!$ReleaseOnly -and !$ArchivesOnly) {
-  Assert-Valid ($Version -ceq '1.3.3') 'Old instructions require ArchivesOnly verification'
+  Assert-Valid ($Version -ceq $currentVersion) 'Old instructions require ArchivesOnly verification'
   $guards = (Read-Scoped $repo 'localization/onboarding-guards.json') | ConvertFrom-Json
   Assert-Valid ($guards.schemaVersion -eq 1) 'Invalid guard schema'
   $entry = Read-Scoped $repo 'AGENTS.md'
@@ -103,9 +108,9 @@ if (!$ReleaseOnly -and !$ArchivesOnly) {
     Check 'unsafe/missing inputs rejected' { Must-Reject { Read-Scoped (Join-Path $repo 'templates/coordinator') $unsafe } }
   }
 }
-$receiptPath = if ($Version -ceq '1.3.3') {'docs/releases/1.3.3-flow.json'} else {"docs/releases/$Version-validation.json"}
+$receiptPath = if ($unified) {Get-OCMIReleaseReceipt $Version} else {"docs/releases/$Version-validation.json"}
 $receipt = (Read-Scoped $repo $receiptPath) | ConvertFrom-Json
-if ($Version -ceq '1.3.3') {
+if ($unified) {
   Assert-Valid ($receipt.schemaVersion -eq 2 -and $receipt.numbering -ceq 'unified' -and @($receipt.profiles).Count -eq 6) 'Invalid unified receipt'
   $profiles = @($receipt.profiles | Where-Object {$_.profile -ceq 'coordinator'})
 } else {

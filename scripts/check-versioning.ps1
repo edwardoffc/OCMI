@@ -4,9 +4,13 @@ $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot 'version-utils.ps1')
 $repo=(Resolve-Path -LiteralPath $Root).Path
 $version=Get-OCMIReleaseVersion $repo
-$receipt=Get-Content -Raw -Encoding UTF8 -LiteralPath (Get-OCMIScopedFile $repo ("docs/releases/$version-flow.json"))|ConvertFrom-Json
+$receipt=Get-Content -Raw -Encoding UTF8 -LiteralPath (Get-OCMIScopedFile $repo (Get-OCMIReleaseReceipt $version))|ConvertFrom-Json
 $passed=0
 function Reject([scriptblock]$Body){$rejected=$false;try{& $Body|Out-Null}catch{$rejected=$true};if(!$rejected){throw 'Version drift mutation accepted'};$script:passed++}
+if ((Get-OCMIReleaseReceipt '1.3.3') -cne 'docs/releases/1.3.3-context.json' -or (Get-OCMIReleaseReceipt '1.3.4') -cne 'docs/releases/1.3.4.json') {throw 'Current/historical receipt route differs'}
+$passed++
+Reject {Get-OCMIReleaseReceipt '../1.3.4'}
+Reject {Get-OCMIReleaseReceipt '1.3.2'}
 Assert-OCMIUnifiedReceipt $receipt $version;$passed++
 foreach($index in 0..5){
   $mutant=($receipt|ConvertTo-Json -Depth 12)|ConvertFrom-Json

@@ -1,13 +1,13 @@
 # Installing the OCMI work profile
 
-**OCMI 1.3.3, rules revision 2026-10-13**
+**OCMI 1.3.4, rules revision 2026-10-13**
 
 [Version and changes](VERSION.md). This is a neutral template, not an active project.
 "This is a work project", referring to a specific directory, selects this profile;
 it does not authorize creating chats, messaging, background tasks, or external actions.
 Personal topics are not needed for installation.
 
-## Installation entry check (OCMI 1.3.3)
+## Installation entry check (OCMI 1.3.4)
 
 Classify the target using only applicable instructions and their declared OCMI entry.
 An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.
@@ -33,7 +33,8 @@ tasks, protected packages, WIP and history; do not migrate installed projects au
 
 1. Read local instructions/overrides and inspect Git state, plan, memory, tests, and human documentation.
    Preserve current work; do not reset untracked files/WIP.
-2. For a new project, install AGENTS.md, docs/memory, and docs/guides/agent-workflow.md;
+2. For a new project, install AGENTS.md, docs/memory, docs/guides, and skills (catalog and bodies);
+   tools contains optional PowerShell context helpers; without them use the guide's manual fallback.
    retain VERSION.md as the installed version description. Copying INSTALL.md is optional.
    Fill facts from sources, leave unknowns unknown, and do not present a template as a completed project.
 3. For an existing project, merge rules rather than overwriting them with templates.
@@ -68,6 +69,14 @@ use verified project tooling or standard snapshot/Git with hashes.
 A package includes the actual required tests/inputs, not only descriptions.
 Do not claim automatic protection without verification.
 
+## Upgrade OCMI 1.3.3 → 1.3.4
+
+Only on an explicit upgrade request, merge the selected-language rules and guides; add the portable
+skills catalog/bodies and optionally tools, resolving existing path conflicts without overwriting WIP.
+Verify local commands, links, current assignments and required inputs; retain one PLAN and the local
+language/domain rules. Keep issued packages/checkers fixed. Populate CODEMAP only from actual sources;
+do not copy a base-system index or private context. Diagnostics/context retrieval grant no new authority.
+
 ## Upgrade work 1.2.2 → 1.2.3
 
 Merge TASK-PROTOCOL, RULES, role procedures and both task templates with local policy on an explicit upgrade request.
@@ -78,7 +87,7 @@ An operational installed project needs no repeat core setup. This source update 
 
 ## Upgrade OCMI 1 or 1.1 → 1.2
 
-When installing current 1.3.3, also apply the resource-completion section below.
+When installing current 1.3.4, also apply the resource-completion section below.
 
 Contract/Result/Acceptance and exporter fields remain compatible.
 Install the three role procedures with the new ORCHESTRATION router; check links before switching AGENTS.
@@ -89,7 +98,7 @@ Scenarios/structural checkers do not prove model behavior in a new chat. Updatin
 On a separate owner request, merge new rules with local ones while preserving current assignments.
 Prioritize: an end-to-end consumer/protocol scenario before assignment; accessible pinned links
 instead of history copies; delta review after full review; dependency-based reuse; updates to changed facts only.
-Current label: OCMI 1.3.3, rules revision 2026-10-13. Preserve historical labels.
+Current label: OCMI 1.3.4, rules revision 2026-10-13. Preserve historical labels.
 
 Issued packages/checkers are immutable. Changing an active contract/tests/baseline/check requires
 an agreed explicit revision preserving WIP, finding IDs, and evidence, not bypassing the checker.

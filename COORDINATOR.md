@@ -2,7 +2,7 @@
 
 **English** · [Русский](locales/ru/COORDINATOR.md)
 
-OCMI 1.3.3. Use this route only when the user assigns the coordinator role
+OCMI 1.3.4. Use this route only when the user assigns the coordinator role
 through the filled startup prompt or explicitly resumes an initialized coordinator.
 
 ## Initialize or restore
@@ -43,6 +43,40 @@ Suggest `00_OCMI` and `01_Personal_memory` only as organization examples.
 Renaming or moving requires a selected action and verified exact paths/bindings.
 Do not scan the disk, read neighboring projects or copy private content to the public source.
 A registry pointer is navigation, not access authority.
+
+## Optional work skills
+
+For skill/specialist questions, explain the [work profile's optional procedures](templates/work/docs/guides/skills.md).
+The selected project's orchestrator chooses task skills; this does not authorize integration/upgrade,
+new chats or native client skill installation. Existing projects receive changes only by explicit merge.
+
+## Diagnostics on request
+
+For “check OCMI”, “is the installation correct?” or a reported recovery problem, follow
+[scoped diagnostics](docs/doctor.md) on demand. The user does not run commands or fill JSON.
+Use the bound system for a generic request; for a project/task require the exact selected target
+and current reading authority. Ask only for a missing/ambiguous target; a registry is not permission.
+No recurring/per-message check, disk scan or automatic upgrade/repair is implied.
+
+Run the smallest supported read-only check yourself when execution is available. For task scope,
+derive only exact relevant paths and approved baseline hashes from authorized current records;
+pass temporary -Selection in memory, not a user-created request file. Do not invent states/hashes,
+add diagnostic blocks to frozen records, change ignore rules or make users maintain machine metadata.
+With legacy prose, review only the selected canonical records and distinguish manual findings from
+automatic checks. Missing evidence, unclear status or unavailable execution stays unverified;
+explain the limitation instead of asking the user for JSON or claiming success.
+
+Summarize: checked scope; verified facts; issues; unverified items; one next action. Explain ordinary
+language results, not raw codes alone. Client binding/private setup confirmation remains the existing
+initialize/restore procedure within your authorized service area, separate from doctor; never pass
+private memory into it. Diagnosis grants no readiness/acceptance/release, repair or wider access.
+Keep only a sanitized substantial result in your existing private handoff; no second project queue.
+
+## Code context on request
+
+Explain the [context method](docs/context.md) when asked. The project orchestrator selects its task,
+required inputs and authorized area; users need no commands/JSON. Indexes are disposable locators,
+not memory/assignment authority. Do not scan or upgrade projects merely to demonstrate this feature.
 
 ## Persistence and boundaries
 

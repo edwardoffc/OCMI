@@ -1,6 +1,6 @@
 param([string]$Root = (Join-Path $PSScriptRoot '..'))
 $ErrorActionPreference = 'Stop'
-foreach ($name in @('check-docs','check-workflow','check-flow','check-versioning','check-localization','check-onboarding','check-release','check-local-boundary','check-platform','check-boundaries')) {
+foreach ($name in @('check-docs','check-workflow','check-flow','check-versioning','check-localization','check-onboarding','check-release','check-local-boundary','check-platform','check-boundaries','check-doctor','check-skills','check-context')) {
   & (Join-Path $PSScriptRoot ($name+'.ps1')) -Root $Root
 }
 git -C $Root diff --check

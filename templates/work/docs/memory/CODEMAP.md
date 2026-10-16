@@ -16,3 +16,6 @@ Incomplete search/unavailable input does not establish that a symbol is absent.
 Do not limit completeness by file/pass count.
 Put correction proposals and evidence in Result; the orchestrator updates the shared map.
 Line numbers are optional; the map locates sources and does not prove behavior.
+
+For bounded symbol/context retrieval and manual fallback, use [the context guide](../guides/context.md)
+when needed. Disposable indexes never replace this verified map or required assignment inputs.

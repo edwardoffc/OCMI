@@ -1,10 +1,82 @@
 # OCMI development handoff
 
-**OCMI 1.3.3, rules revision 2026-10-13**
+**OCMI 1.3.4, rules revision 2026-10-13**
 
-Updated: 2026-10-14. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-16. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-FLOW-024 / local workflow clarification
+## Current: OCMI-RELEASE-030 / OCMI 1.3.4
+
+Owner authorizes packaging accepted evaluation/diagnostic/skill/context stages and GitHub delivery.
+[Release record](../OCMI-RELEASE-030/HANDOFF.md) covers unified labels, bilingual docs, exact six packs,
+protected PR/native CI, main/tag/release/download verification and owned resource completion.
+Preserve old refs/receipts/archives and prior WIP; no installed-project/private memory access.
+Stop further feature work. Project adoption and roadmap/personal-profile discussion follow later.
+Source acceptance is recorded in the task; final external evidence belongs to the ignored delivery
+receipt and GitHub state. Do not infer a completed delivery from this preparation record alone.
+
+## Historical: OCMI-CONTEXT-021 / code indexing and context assembly
+
+Owner requests stage-four implementation/checks in base only. [Task record](../OCMI-CONTEXT-021/HANDOFF.md)
+covers explicit-scope CODEMAP/rg retrieval, current file hashes, AST/lexical outlines and disposable
+session cache. Required inputs precede optional snippets; incomplete coverage remains visible.
+Helpers/guides are self-contained in both work languages; new packages preserve earlier archives.
+Acceptance records checks/limits. Semantic completeness/live savings/native CI are not inferred.
+Prior WIP, private memory and installed projects stay untouched; no later stage/publication assigned.
+OCMI stays unified 1.3.3.
+
+## Historical: OCMI-SPECIAL-019 / selected skills and optional specialists
+
+Owner requests stage-three implementation/checks in base only. [Task record](../OCMI-SPECIAL-019/HANDOFF.md)
+covers five portable skills, metadata-first selection and optional bounded specialist contributions.
+The orchestrator owns PLAN/checks/consolidated acceptance; workers load addressed inputs, no automatic
+agents/chats/models, native installations or extra review chain. Existing format/permissions remain.
+Two new work editions and a new six-profile receipt preserve every earlier archive/receipt.
+Acceptance records actual checks; live specialist trials/savings and native CI are not claimed.
+Prior research/evaluation/diagnostic WIP and installed projects/private memory are preserved.
+No later-stage implementation, project migration or publication is assigned. OCMI stays 1.3.3.
+
+## Historical: OCMI-DOCTOR-029 / coordinator-led diagnostics
+
+Owner requests ordinary-language diagnostics without user commands/JSON, base only.
+[Task record](../OCMI-DOCTOR-029/HANDOFF.md): existing restored coordinator guide now routes requests
+to the exact authorized target/minimal check; derived selections stay in memory. Legacy source review
+is separate from automatic evidence; missing capability/state remains unverified. Plain report gives
+scope/facts/issues/limits/next action. No metadata migration, automatic repair or readiness authority.
+Acceptance records validation. Existing startup already reads COORDINATOR; templates/packages/private
+records and work projects are unchanged. No live model experiment, next stage or publication assigned.
+
+## Historical: OCMI-DOCTOR-020 / scoped read-only diagnostics
+
+Owner authorized stage-two implementation/checks in base only. [Task record](../OCMI-DOCTOR-020/HANDOFF.md)
+covers explicit root/profile, layout/version/local links and optional selected canonical diagnostic blocks
+for identity/copy, protected hashes, integration dependencies/cycles and resource claims.
+Legacy/ambiguous/limited evidence stays incomplete; no readiness/acceptance/release authority.
+CLI/library, bilingual guide and synthetic tests join check-all/native CI configuration.
+Acceptance records actual local verification; native CI/live-model savings remain unclaimed.
+Existing templates, private memory, installed projects, version/packages and prior WIP are preserved.
+No next stage, migration, chat/model launch or publication is assigned.
+
+## Historical: OCMI-EVAL-001 / stage-one measurement method and baseline
+
+Owner authorized stage one and local checks; installed projects remain excluded.
+[Task record](../OCMI-EVAL-001/HANDOFF.md) applies the expanded bilingual evaluation method to
+three existing development records and defines sourced/unknown metrics, worked measurement cases
+and pilot gates. Reuses E01–E47; adds five dependency/context-integrity scenarios, not live-run verdicts.
+Acceptance records validation and limits. No collector, new card schema, runtime template change,
+next-stage START, live model experiment, private memory read or publication is assigned.
+Version stays 1.3.3. Observation continues during ordinary work; full-chain savings remain unmeasured.
+
+## Historical: OCMI-RESEARCH-026 / comparative research and revised roadmap
+
+Owner requested ECC and comparable-system research and an updated saved plan, not implementation.
+[Task record](../OCMI-RESEARCH-026/HANDOFF.md) and [research](../../../research/2026-10-16-agent-systems-review.md)
+cover nine systems with pinned official sources. PLAN now prioritizes measurement/scoped diagnostics,
+selected skills and optional specialists, incremental symbol context, optional change deltas and safe
+adoption previews; lifecycle automation stays last. Earlier completed workflow rules remain in force.
+Local validation is recorded in Acceptance. No next-stage START, model run, installed-project update,
+private coordinator read or publication is assigned. OCMI stays 1.3.3; packages/templates unchanged.
+
+## Historical: OCMI-FLOW-024 / local workflow clarification
 
 Owner authorized concise base changes, checks and a separate private project CI/process assignment.
 [Current record](../OCMI-FLOW-024/HANDOFF.md) covers shared baseline/local specialization, whole-result
