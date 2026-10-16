@@ -120,7 +120,13 @@ try {
   Reset
   if ([Environment]::OSVersion.Platform -ne [PlatformID]::Win32NT) {
     $request.protected=@($request.protected[0],@{path='RUNNER.ps1';sha256=$request.protected[0].sha256}); Save
-    Require (Has (Run) INPUT_UNAVAILABLE) 'Unix case boundary ignored'; Reset
+    $caseReport=Run
+    if ([IO.File]::Exists((Join-Path $base 'RUNNER.ps1'))) {
+      # Default macOS volumes can be case-insensitive. Prove that the ordinal cache rereads the alias.
+      $alias=@($caseReport.observations | Where-Object {$_.path -ceq 'RUNNER.ps1'})
+      Require ($alias.Count -eq 1 -and $alias[0].sha256 -ceq $request.protected[0].sha256 -and !(Has $caseReport INPUT_UNAVAILABLE)) 'Case-alias input was skipped or read from wrong cache key'
+    } else {Require (Has $caseReport INPUT_UNAVAILABLE) 'Case-sensitive volume accepted missing path'}
+    Reset
   }
   $exe=(Get-Process -Id $PID).Path
   $json=& $exe -NoProfile -File (Join-Path $repo 'scripts/ocmi-doctor.ps1') -Root $base -Profile work -InputFile request.json -Json

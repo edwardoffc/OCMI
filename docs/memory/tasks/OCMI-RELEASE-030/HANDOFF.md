@@ -60,3 +60,13 @@ No project upgrades or next roadmap/personal-profile work are assigned by delive
 cleanup: done for local preparation — owned checker fixtures/processes finished; packages are permanent.
 Publication branch is retained until verified integration/recovery; final disposition is in the ignored
 delivery receipt. Maintainer retains recovery/bundle/logs/downloads until delivery/recovery review.
+
+Native preflight finding: first branch/PR CI at 5dc6ee3 fails the doctor fixture's assumption that every
+Unix volume is case-sensitive. Saved macOS job log identifies that exact assertion; other preceding
+checks/privacy pass. Changed approach: probe actual volume behavior, then require either missing-path
+rejection or an independently read/hash-verified case alias. Context fixtures likewise distinguish
+two actual case-sensitive files from a native case alias without overwriting a fixture. No source
+guard/cache policy is weakened, no failed check is skipped, and no runtime/profile/package changes.
+Run affected doctor/context checks on Windows before the next native integration run; inspect the
+native results causally rather than accepting a successful retry of the old test. Final proof stays
+in GitHub and the delivery receipt; this source note preserves the original failed evidence.

@@ -112,9 +112,12 @@ try {
   $unicode=Invoke-OCMIContext -Root $temp -Files ('src/name '+[char]0x03A9+'.ts') -Terms Charge
   Require ($unicode.selected.Count -eq 1) 'Unicode/spaces scope failed'
   if ([Environment]::OSVersion.Platform -ne [PlatformID]::Win32NT) {
-    Put 'src/Case.ts' 'Charge(3)';Put 'src/case.ts' 'Charge(4)'
+    Put 'src/Case.ts' 'Charge(3)'
+    $caseAlias=[IO.File]::Exists((Join-Path $temp 'src/case.ts'))
+    if (!$caseAlias) {Put 'src/case.ts' 'Charge(4)'}
     $case=Invoke-OCMIContext -Root $temp -Files src/Case.ts,src/case.ts -Terms Charge
-    Require ($case.metrics.filesRead -eq 2 -and $case.selected.Count -eq 2) 'Unix file case collapsed'
+    $sameHash=$case.provenance.files[0].sha256 -ceq $case.provenance.files[1].sha256
+    Require ($case.metrics.filesRead -eq 2 -and $case.selected.Count -eq 2 -and $sameHash -eq $caseAlias) 'Native volume case handling/cache scope differs'
   }
   foreach ($path in @('context-lib.ps1','ocmi-context.ps1')) {
     Require ((Get-FileHash -LiteralPath (Join-Path $repo ('scripts/'+$path))).Hash -ceq (Get-FileHash -LiteralPath (Join-Path $repo ('templates/work/tools/'+$path))).Hash) 'Installed English helper drift'
