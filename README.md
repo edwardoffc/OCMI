@@ -9,7 +9,7 @@ Roles, decisions, task assignments, and next steps live alongside the project in
 A code map points agents to the relevant parts of the codebase, while task records connect
 requirements, results, and verification.
 
-**OCMI system: [1.3.4](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
+**OCMI system: [1.3.5](VERSION.md)** · [Start here](BOOTSTRAP.md) ·
 [Installation](docs/install-system.md) · [User guide](docs/usage.md) ·
 [Changelog](CHANGELOG.md) · [MIT](LICENSE)
 
@@ -31,7 +31,7 @@ A small change does not require a separate branch or a new chat just to follow t
 
 Optional [diagnostics](docs/doctor.md), [selected skills](templates/work/docs/guides/skills.md)
 and [code context](docs/context.md) help check saved state and retrieve relevant evidence.
-They keep the same role boundaries and required inputs. [What's new in 1.3.4](docs/releases/1.3.4.md).
+They keep the same role boundaries and required inputs. [What's new in 1.3.5](docs/releases/1.3.5.md).
 
 ## Quick start
 
@@ -118,3 +118,5 @@ and validation scripts in `scripts`.
 [Checks](scripts/README.md) · [Optional lightweight profile](templates/personal/INSTALL.md).
 
 [Security policy](SECURITY.md). Sanitize evidence before saving or publishing it.
+
+OCMI 1.3.5 also covers [bounded waiting](docs/waiting.md) and [everyday personal topics](docs/personal-memory.md), including selective portable handover.

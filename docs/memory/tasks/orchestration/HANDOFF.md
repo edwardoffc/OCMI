@@ -2,9 +2,28 @@
 
 **OCMI 1.3.4, rules revision 2026-10-13**
 
-Updated: 2026-10-16. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-19. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-RELEASE-030 / OCMI 1.3.4
+## Current: OCMI-RELEASE-032 / OCMI 1.3.5
+
+Owner authorizes waiting/recovery and everyday personal-memory scenarios, inclusion of FLOW-031,
+unified packaging/publication and preserving upgrades of the two selected work installations.
+[Task record](../OCMI-RELEASE-032/HANDOFF.md) owns criteria, checks and delivery/adoption evidence.
+No personal content/private coordinator reads, product execution, chat/model changes or automatic monitoring.
+Preserve old artifacts and active work; no later roadmap stage is assigned.
+
+## Historical: OCMI-FLOW-031 / concise workflow correction
+
+Owner authorizes base clarifications/checks and a private local-repair prompt; no installed-project changes,
+messages, publication or live-agent runs. [Task record](../OCMI-FLOW-031/HANDOFF.md) covers risky-premise
+control evidence before START, diagnosis before speculative algorithm changes/retries, bounded preparation
+and affected current-state consistency. Existing records/safety gates remain; no new roles/schema/tracker.
+Prepared work packs/receipt are additive under 1.3.4 pending a later numbered-release/publication decision.
+Accepted locally: PS7/5.1 suites and affected final checks; 257 bilingual flow guards, 14 prior-policy
+controls and exact packs. Acceptance records preservation, cleanup and live-behavior limits.
+No further work is assigned; later roadmap stages remain deferred.
+
+## Historical: OCMI-RELEASE-030 / OCMI 1.3.4
 
 Owner authorizes packaging accepted evaluation/diagnostic/skill/context stages and GitHub delivery.
 [Release record](../OCMI-RELEASE-030/HANDOFF.md) covers unified labels, bilingual docs, exact six packs,

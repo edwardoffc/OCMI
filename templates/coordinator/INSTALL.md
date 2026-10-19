@@ -1,6 +1,6 @@
 # Prepare coordinator service memory
 
-**OCMI 1.3.4, 2026-10-13**
+**OCMI 1.3.5, 2026-10-13**
 
 Use after the user selects guided system installation and both core locations.
 This profile provides the file handover to a separate coordinator chat, not personal topics.

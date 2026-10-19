@@ -1,9 +1,16 @@
-# OCMI 1.3.4
+# OCMI 1.3.5
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-13**
 
 Orchestration, Context Memory & Indexing.
-All current profiles use OCMI 1.3.4; existing authority, task schema and protected assignments remain.
+All current profiles use OCMI 1.3.5; existing authority, task schema and protected assignments remain.
+
+## Changes in 1.3.5
+
+- Risky test premises need relevant control evidence before START; diagnose early setup/barrier failures causally.
+- Keep bounded known preparation together; research needs a decision-changing question and stop condition.
+- Bounded waiting/checkpoints distinguish execution, external events and no observed progress.
+- Reconcile affected current state; preserve local authority, protected checks and history.
 
 ## Changes in 1.3.4
 
@@ -54,9 +61,9 @@ in current handoff/Acceptance, linking to the original without rewriting the pro
 Project permissions are not expanded; there is no automatic deletion or background cleanup.
 Installed projects do not update automatically; see [INSTALL](INSTALL.md).
 Version, rules date, and task revision r1/r2 are different labels.
-Use: OCMI 1.3.4, rules revision 2026-10-13.
+Use: OCMI 1.3.5, rules revision 2026-10-13.
 
 Structural and archive checks do not prove model behavior or token savings.
 
-Installation belongs to OCMI 1.3.4. New installations are performed by the initialized coordinator.
+Installation belongs to OCMI 1.3.5. New installations are performed by the initialized coordinator.
 This source update does not migrate installed projects or rewrite fixed task inputs.

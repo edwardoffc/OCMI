@@ -1,15 +1,29 @@
 # Distributions
 
-## Current OCMI 1.3.4
+## Current OCMI 1.3.5
+
+All profiles share OCMI 1.3.5. Full-system setup remains required; component packs support coordinator-led selected actions.
+Existing projects require a preserving merge. [Receipt](../docs/releases/1.3.5.json) · [Guide](../docs/releases/1.3.5.md).
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| work 1.3.5 | [ZIP](ocmi-work-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-work-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-work-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-work-1.3.5-ru-2026-10-19.zip.sha256) |
+| personal 1.3.5 | [ZIP](ocmi-personal-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-personal-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-personal-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-personal-1.3.5-ru-2026-10-19.zip.sha256) |
+| coordinator 1.3.5 | [ZIP](ocmi-coordinator-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-coordinator-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-coordinator-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-coordinator-1.3.5-ru-2026-10-19.zip.sha256) |
+
+## Historical OCMI 1.3.4 preparation
+
+Unpublished source clarification, 2026-10-19: two prepared work packs below; no new numbered release
+or GitHub delivery. The [original published receipt](../docs/releases/1.3.4.json) and its archives remain fixed.
 
 All six profiles use OCMI 1.3.4. The full repository is the system; these component ZIPs support
 coordinator-led setup/integration. Choose one language. Existing projects need an explicit merge
 preserving local rules, assignments and WIP. Personal-profile behavior is unchanged.
-[Exact six-profile receipt](../docs/releases/1.3.4.json) · [Release guide](../docs/releases/1.3.4.md).
+[Exact six-profile receipt](../docs/releases/1.3.4-flow.json) · [Release guide](../docs/releases/1.3.4.md).
 
 | Profile | English | Russian |
 | --- | --- | --- |
-| work 1.3.4 | [ZIP](ocmi-work-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-work-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-work-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-work-1.3.4-ru-2026-10-16.zip.sha256) |
+| work 1.3.4 | [ZIP](ocmi-work-1.3.4-en-2026-10-19.zip) · [SHA256](ocmi-work-1.3.4-en-2026-10-19.zip.sha256) | [ZIP](ocmi-work-1.3.4-ru-2026-10-19.zip) · [SHA256](ocmi-work-1.3.4-ru-2026-10-19.zip.sha256) |
 | personal 1.3.4 | [ZIP](ocmi-personal-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-personal-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-ru-2026-10-16.zip.sha256) |
 | coordinator 1.3.4 | [ZIP](ocmi-coordinator-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-coordinator-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-ru-2026-10-16.zip.sha256) |
 

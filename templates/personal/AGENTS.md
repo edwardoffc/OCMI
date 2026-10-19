@@ -1,6 +1,6 @@
 # Working with this project's memory
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-19**
 
 ## Startup and scope
 
@@ -9,6 +9,11 @@
 - Restore the goal and next action. Open decisions, maps, sources, and old sessions only as needed. Do not load all memory at startup.
 - Read/search only within the selected project or topic. Do not open other projects, topics, shared profiles, or external stores without a relevant direct user request. A link alone does not expand access scope. Do not expand scope after denied access.
 - Current user instructions take precedence over old notes. Clarify material contradictions and update current state.
+
+For an undecided topic, another chat, move/merge, stale facts, archive or cloud transfer, read only
+the relevant scenario in [topic guide](memory/GUIDE.md). No whole-store scan or work protocol is required.
+For waiting, save the operation/cursor, evidence, remaining work and next event/check in the handoff;
+without a local rule end observation after three unchanged polls, with no duplicate operation or background promise.
 
 ## Reliability and code
 
@@ -23,7 +28,7 @@
 
 - After a substantial result, direction change, and before ending a substantive session, update the current task handoff: goal, actual state, linked decisions, checks, unknowns, and exact next step. Do not mark proposals as completed work.
 - Save long-term decisions in `memory/DECISIONS.md` and a map in `memory/CODEMAP.md` when needed. Add index links after creating files.
-- For a significant session, add a short `memory/tasks/<task-id>/sessions/YYYY-MM-DD-topic.md` log. Do not overwrite old logs; add a suffix on collision. An ordinary short exchange does not need a separate log.
+- Add a short `memory/tasks/<task-id>/sessions/YYYY-MM-DD-topic.md` note only for useful unique context; do not duplicate the handoff or transcribe the chat. Preserve old notes; add a suffix on collision.
 - Keep details in one location and link elsewhere. Do not repeat the same personal/project facts in every file.
 - Use separate handoffs for independent tasks. Reread shared records before editing to preserve concurrent changes. For branches/worktrees, record applicable branch, commit, and uncommitted changes; state does not merge automatically.
 - Keep current files concise. Mark finished tasks complete in the index and preserve results/important decisions; do not delete history automatically.

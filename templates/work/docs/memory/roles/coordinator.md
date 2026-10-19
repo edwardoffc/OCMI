@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.3.4, rules revision 2026-10-16**
+**OCMI 1.3.5, rules revision 2026-10-19**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.
@@ -36,7 +36,10 @@ Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md)
    The orchestrator selects and validates sufficient existing acceptance checks BEFORE assignment;
    it adds new tests only for uncovered requirements or risks. Freeze the approved checks/inputs.
    A baseline failure must be caused by the requirement, not a broken test/environment;
-   choose a valid control according to risk; preserved behavior may already pass.
+   validate risky nonstandard setup/concurrency/transaction/recovery premises on the actual engine/harness.
+   Link the relevant known-correct control and targeted wrong behavior or justified oracle in this matrix;
+   static advice or an unrelated passing control is insufficient. Unverified material premises prevent START.
+   Reuse valid controls under their dependency/condition rules; preserved behavior may already pass.
 5. Verified commands/cwd/environment/skips, Result format, and the existing checker.
    Each check's dependencies, evidence reuse conditions, and an overall integration check.
 6. Exact code/test baseline, protected SHA256 (tests, fixtures, runner/config,
@@ -50,6 +53,8 @@ Give a component a consumer and the next joint check. An unavailable mandatory p
 prevents ready status; independent work may proceed as a separate task.
 A small reversible text edit needs criteria and documentation checks;
 research needs sources and verifiable conclusions. Artificial tests are unnecessary.
+
+For long waits follow RULES waiting/continuation; an elapsed wait does not authorize retries or new START.
 
 ## Checks and review
 
@@ -71,6 +76,8 @@ The issued checker is mandatory even with a stricter fingerprint; exceptions req
 
 A successful retry alone does not resolve the original failure. Preserve the failed log and conditions;
 classify implementation, check/contract, environment or flakiness and record the causal evidence.
+For unexplained setup/barrier failures before behavioral assertions, require a discriminating diagnostic
+before speculative product changes or repeats; keep observation/hypothesis/next check in existing Result/Acceptance.
 A confirmed transient infrastructure failure can close without a code change when the evidence and
 project policy support that conclusion; an unexplained green rerun is not proof of a fix.
 Unexplained mandatory safety failures remain blockers according to the project gates and risk.
@@ -116,6 +123,7 @@ Make a short pass over task resources without scanning neighboring projects:
    After squash/cherry-pick, verify actual integration and availability of source history/artifacts;
    --merged or a SHA alone is insufficient. Unknown files/dependencies or insufficient authority mean pending.
 5. At acceptance/integration, update only changed PLAN/STATE/INDEX/CODEMAP/handoff facts;
+   reconcile affected IDs/status/next action across current entries; explicitly supersede conflicting instructions.
    at closure, check affected links. Current links point to the main source; historical links point to
    an accessible pinned version with a recovery method. Do not rewrite issued packages:
    record a missing route in current Acceptance. Mark old results historical; retain open findings and next steps.

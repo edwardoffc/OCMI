@@ -1,27 +1,22 @@
 # OCMI current state
 
-Snapshot: 2026-10-16. Current source is unified OCMI 1.3.4 for every profile/language.
-[Release record](tasks/OCMI-RELEASE-030/HANDOFF.md): owner-authorized packaging and GitHub delivery
-of accepted EVAL/DOCTOR/SPECIAL/CONTEXT stages. Feature expansion stops; installed-project adoption,
-future roadmap review and personal-profile discussion follow later. No private/project access.
+Snapshot: 2026-10-19. RELEASE-032 prepares unified OCMI 1.3.5, including accepted FLOW-031,
+bounded waiting/recovery and everyday personal-memory scenarios in both languages.
+[Task record](tasks/OCMI-RELEASE-032/HANDOFF.md) carries actual local/native CI and delivery status.
+Owner authorizes publication and preserving work-installation upgrades; exact target data/evidence
+remain local to those installations. No personal-store migration or private coordinator reads.
 
-English is canonical; Russian guides/templates are maintained. docs/memory is the only development
-memory. Private installation memory remains ignored/export-excluded .local/coordinator, outside
-source-development reads. No global/client settings or model roles are changed by this release.
+[Current receipt](../releases/1.3.5.json): six distinct editions, work 31/personal 7/coordinator 8
+files per language. All earlier archives/receipts are preserved; no automatic installation update.
+English remains canonical; docs/memory is the single source-development memory.
 
-[Current receipt](../releases/1.3.4.json) has six editions: work 30, personal 6 and coordinator 8 files
-per language, all labeled 1.3.4. Personal behavior is unchanged. New installation includes all work
-guides and skill catalog/bodies; optional tools have scoped manual fallback. Six new ZIPs retain
-all 43 earlier ZIPs/checksums and receipts. [Distribution index](../../releases/README.md).
+| Capability | State / limitation |
+| --- | --- |
+| Workflow | Risky-premise controls, early diagnosis, bounded preparation and current-state reconciliation; live-agent efficacy unmeasured |
+| Waiting | Execution/external event/no observed progress, checkpoint and bounded observation; no application-hang fix or automatic background work |
+| Personal topics | Self-contained selected-topic recovery/move/merge/archive/portable guide; cloud/client permissions need separate verification |
+| Diagnostics/skills/context | Existing read-only diagnostics, five selected procedures and scoped current-hash context remain; semantic completeness/live savings unverified |
+| Delivery/adoption | Source acceptance and remote delivery/target preservation recorded separately; local packages alone prove neither |
 
-| Capability / scope | State | Evidence |
-| --- | --- | --- |
-| Diagnostics | Explicit installation/task; conversational coordinator route, bounded read-only checks and separate legacy/manual evidence | DOCTOR-020/029 Acceptance; docs/doctor.md |
-| Skills/specialists | Five portable procedures, metadata-first selection, optional contributions and one acceptance owner | SPECIAL-019 Acceptance; live efficacy unknown |
-| Code context | Explicit files/current hashes, PowerShell AST and lexical candidates, session-only cache and required-input priority | CONTEXT-021 Acceptance; semantic completeness/live savings unknown |
-| Measurement | Method, historical evidence-gap sample and synthetic context comparison | EVAL-001/CONTEXT-021 Acceptance; whole-task token/time/cost unknown |
-| Delivery | Source acceptance and current authorizations in RELEASE-030; final integration/native CI/tag/download evidence verified separately | GitHub PR/main/release and ignored delivery receipt |
-
-Original v1.3.3 refs/assets remain historical and fixed. Local preparation records retain their
-original labels; they do not update installations. Check actual GitHub state for final delivery;
-a local acceptance or generated archive alone does not establish publication.
+Current release number is shared by all profiles. Protected historical tasks/versions and WIP
+retain their original identity; source updates never grant new target runtime authority.

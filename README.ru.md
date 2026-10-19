@@ -12,9 +12,9 @@ OCMI помогает вести проект в нескольких чатах
 
 Необязательные [диагностика](locales/ru/docs/doctor.md), [навыки](locales/ru/templates/work/docs/guides/skills.md)
 и [контекст кода](locales/ru/docs/context.md) помогают проверить сохранённое состояние и найти нужные
-доказательства, сохраняя роли и обязательные входы. [Новое в 1.3.4](locales/ru/docs/releases/1.3.4.md).
+доказательства, сохраняя роли и обязательные входы. [Новое в 1.3.5](locales/ru/docs/releases/1.3.5.md).
 
-**Система OCMI: [1.3.4](locales/ru/VERSION.md)** · [Начать](locales/ru/BOOTSTRAP.md) ·
+**Система OCMI: [1.3.5](locales/ru/VERSION.md)** · [Начать](locales/ru/BOOTSTRAP.md) ·
 [Установка](locales/ru/docs/install-system.md) · [Руководство](locales/ru/docs/usage.md) ·
 [История версий](locales/ru/CHANGELOG.md) · [MIT](LICENSE)
 
@@ -118,3 +118,5 @@ OCMI — инструкции и шаблоны, а не сервер или а�
 [Проверки](locales/ru/scripts/README.md) · [Дополнительный облегчённый профиль](locales/ru/templates/personal/INSTALL.md).
 
 [Безопасность](locales/ru/SECURITY.md). Очищайте доказательства до сохранения или публикации.
+
+OCMI 1.3.5 также описывает [ограниченное ожидание](locales/ru/docs/waiting.md) и [повседневные личные темы](locales/ru/docs/personal-memory.md), включая выборочную передачу.

@@ -54,8 +54,66 @@
       "input": "rules",
       "en": ["verified assignment and retained context", "changed records and needed sources", "New chats, uncertain changes or incomplete recovery", "pinned contract inputs remain mandatory"],
       "ru": ["проверенном назначении и сохранённом контексте", "изменившиеся записи и нужные исходники", "Новый чат, неизвестные изменения или неполное восстановление", "закреплённые контрактные входы остаются обязательными"]
+    },
+    {
+      "id": "validated-risky-premise",
+      "input": "coordinator",
+      "en": ["validate risky nonstandard setup/concurrency/transaction/recovery premises on the actual engine/harness","Link the relevant known-correct control and targeted wrong behavior or justified oracle in this matrix","static advice or an unrelated passing control is insufficient","Unverified material premises prevent START","Reuse valid controls under their dependency/condition rules"],
+      "ru": ["рискованные нестандартные предпосылки подготовки/конкурентности/транзакций/восстановления проверены на настоящем движке/harness","В этой матрице укажи релевантный корректный контроль и адресное неверное поведение либо обоснованный oracle","статического совета или постороннего зелёного контроля недостаточно","Непроверенные существенные предпосылки исключают START","Актуальный контроль используй повторно по условиям зависимостей/среды"]
+    },
+    {
+      "id": "early-failure-diagnosis-main",
+      "input": "coordinator",
+      "en": ["unexplained setup/barrier failures before behavioral assertions.*discriminating diagnostic","before speculative product changes or repeats","observation/hypothesis/next check in existing Result/Acceptance"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions.*различающую диагностику","до предположительных правок продукта или повторов","наблюдение/гипотезу/следующий check запиши в действующем Result/Acceptance"]
+    },
+    {
+      "id": "early-failure-diagnosis-worker",
+      "input": "worker",
+      "en": ["unexplained setup/barrier failures before behavioral assertions","smallest authorized discriminating diagnostic before changing the product algorithm or repeating the run","Record observation/hypothesis/next check in Result","demonstrated implementation defect may be fixed directly","Diagnosis stays within AllowedPaths/resources","Preserve failures/conditions and recurrence hypotheses/next diagnostic"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions","минимальную разрешённую различающую диагностику до изменения алгоритма продукта или повторного запуска","Наблюдение/гипотезу/следующий check запиши в Result","доказанный дефект реализации можно исправлять сразу","Диагностика ограничена AllowedPaths/ресурсами","Сохраняй падения/условия и при повторении гипотезы/следующую диагностику"]
+    },
+    {
+      "id": "bounded-preparation-research",
+      "input": "protocol",
+      "en": ["Keep known sequential preparation with its bounded result","split only for an independent deliverable","unresolved decision or resource/authority boundary","Research names the unanswered question, decision-changing","evidence and stop condition","repeat only for a new question/evidence/decision, not to occupy free slots"],
+      "ru": ["Известную последовательную подготовку оставляй с её ограниченным результатом","отделяй только самостоятельный результат","нерешённый вопрос или границу ресурсов/полномочий","Исследование называет неизвестный вопрос, влияющее на решение","evidence и условие остановки","повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов"]
+    },
+    {
+      "id": "affected-current-consistency",
+      "input": "coordinator",
+      "en": ["reconcile affected IDs/status/next action across current entries","explicitly supersede conflicting instructions","Do not rewrite issued packages"],
+      "ru": ["согласовать затронутые ID/статус/следующее действие в текущих записях","явно отменить противоречащие указания","Не переписывать выданные пакеты"]
+    },
+    {
+      "id": "selected-oracle-control",
+      "input": "testdesign",
+      "en": ["exact premise on the actual engine/harness before ready","Separate the behavioral invariant from scheduler/internal observations","Link the relevant control command/result","Static advice or another case.s green control is insufficient","not a separate control task for every assertion","issued protected checker changes only through an explicit revision"],
+      "ru": ["точную предпосылку на настоящем движке/harness до ready","Отделите поведенческий инвариант от наблюдений за планировщиком/внутренним устройством","укажите команду/результат релевантного контроля","Статического совета или зелёного контроля другого случая недостаточно","не отдельная контрольная задача для каждого assertion","выданный защищённый checker меняется лишь явной редакцией"]
+    },
+    {
+      "id": "selected-early-triage",
+      "input": "triage",
+      "en": ["unexplained setup/barrier failure.*before behavioral assertions","before speculative product-algorithm changes or repeats","run only authorized diagnostics","demonstrated implementation defect may be fixed directly","control that disproves a test premise does not validate the product","protected inputs still require an explicit orchestrator revision"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions","до предположительных правок алгоритма продукта или повторов","выполняйте только разрешённую диагностику","Доказанный дефект реализации можно исправлять сразу","Контроль, опровергший предпосылку теста, не подтверждает продукт","защищённые входы по-прежнему требуют явной ревизии оркестровщика"]
     }
   ],
+  "weakenings": {
+    "en": [
+      ["coordinator", "Unverified material premises prevent START", "Unverified material premises allow START"],
+      ["worker", "diagnostic before changing", "diagnostic after changing"],
+      ["testdesign", "exact premise on the actual engine/harness before ready", "exact premise on the actual engine/harness after ready"],
+      ["triage", "does not validate the product", "validates the product"],
+      ["protocol", "repeat only for a new question/evidence/decision, not to occupy free slots", "repeat to occupy free slots"]
+    ],
+    "ru": [
+      ["coordinator", "Непроверенные существенные предпосылки исключают START", "Непроверенные существенные предпосылки разрешают START"],
+      ["worker", "диагностику до изменения", "диагностику после изменения"],
+      ["testdesign", "точную предпосылку на настоящем движке/harness до ready", "точную предпосылку на настоящем движке/harness после ready"],
+      ["triage", "не подтверждает продукт", "подтверждает продукт"],
+      ["protocol", "повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов", "повторять для занятости свободных слотов"]
+    ]
+  },
   "fields": {
     "en": ["Format: compact", "Risk: low", "Status: draft", "Task / revision / owner / working copy", "Result / criterion / consumer", "Scope / AllowedPaths / baseline / WIP", "ProtectedPaths / hashes", "Checks / evidence / sufficiency", "Inputs / permissions / resources"],
     "ru": ["Format: compact", "Risk: low", "Status: draft", "Задача / ревизия / владелец / рабочая копия", "Результат / критерий / потребитель", "Область / AllowedPaths / baseline / WIP", "ProtectedPaths / хеши", "Проверки / evidence / достаточность", "Входы / полномочия / ресурсы"]

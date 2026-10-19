@@ -1,6 +1,6 @@
-# OCMI 1.3.4
+# OCMI 1.3.5
 
-Coordinator profile of OCMI 1.3.4. All profiles share the system release number.
+Coordinator profile of OCMI 1.3.5. All profiles share the system release number.
 Setup behavior and authority stay compatible. The full system guide adds conversational diagnostics and optional skill/context orientation.
 Service memory and the filled startup prompt support a separate permanent coordinator.
 Core handover requires a bound client project and initialized coordinator;

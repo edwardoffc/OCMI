@@ -1,11 +1,11 @@
 # Installing file-based memory
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-13**
 
 This directory is a portable neutral template. It contains no user data or other project information.
 A confirmed coordinator installs it after the entry check; no executable installer is required.
 
-## Installation entry check (OCMI 1.3.4)
+## Installation entry check (OCMI 1.3.5)
 
 Classify the target using only applicable instructions and their declared OCMI entry.
 An unfilled template, ordinary AGENTS.md or registry pointer is not an operational installation.
@@ -31,7 +31,7 @@ tasks, protected packages, WIP and history; do not migrate installed projects au
 
 1. Determine target directory, scope (work/personal), and goal from the current request. The target must differ from the template directory. Clarify only genuinely missing scope/goal information. For an ongoing topic, describe what the user wants to discuss/track instead of a final deliverable.
 2. Read only this template and the target area. No personal profile or neighboring projects are needed; core inputs are explicitly identified by the entry check. Follow target instructions; check existing `AGENTS.md`, `AGENTS.override.md`, documents, and memory. In Git, first note the existing changes to preserve others' work.
-3. Prepare the four files below. **Do not overwrite existing files with templates:** reconcile rules with current instructions and preserve content. If working memory already exists, use its paths and single current entry point instead of creating a second system just for these names.
+3. Prepare the entry, memory and on-demand guide below. **Do not overwrite existing files with templates:** reconcile rules with current instructions and preserve content. If working memory already exists, use its paths and single current entry point instead of creating a second system just for these names.
 4. Fill the brief and first task with confirmed information. Do not present assumed architecture, commands, or wishes as facts. Mark unknowns. Link to original documents rather than duplicating them.
 5. Create additional files as needed: decisions, code map, significant-session log. The initial map lists verified entry points/code areas for the current task; it does not require reading the entire repository. Record source and verification date for each used map area.
 6. Check relative links, the initial handoff, and instruction discovery when the client opens the target directory. Respect existing `AGENTS.override.md` precedence. Documentation checks do not require running the whole application. Do not claim new-chat recovery was tested unless it was.
@@ -51,6 +51,7 @@ Destination paths are relative to the selected project/topic root.
 | [INDEX.md](memory/INDEX.md) | `memory/INDEX.md` — navigation and tasks |
 | [BRIEF.md](memory/BRIEF.md) | `memory/BRIEF.md` — goal, scope, initial facts |
 | [HANDOFF.md](memory/tasks/main/HANDOFF.md) | `memory/tasks/main/HANDOFF.md` — first task state |
+| [GUIDE.md](memory/GUIDE.md) | `memory/GUIDE.md` — on-demand everyday and portable-topic scenarios |
 
 Copying INSTALL.md is optional. The other files form a self-contained system without a link to the source setup store.
 

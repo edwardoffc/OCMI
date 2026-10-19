@@ -1,15 +1,29 @@
 # Комплекты
 
-## Текущая OCMI 1.3.4
+## Текущая OCMI 1.3.5
+
+Все профили используют OCMI 1.3.5. Полная локальная установка обязательна; компоненты поддерживают выбранные действия координатора.
+Существующие проекты обновляются с сохранением работы. [Receipt](../../../docs/releases/1.3.5.json) · [Описание](../docs/releases/1.3.5.md).
+
+| Профиль | Английский | Русский |
+| --- | --- | --- |
+| work 1.3.5 | [ZIP](../../../releases/ocmi-work-1.3.5-en-2026-10-19.zip) · [SHA256](../../../releases/ocmi-work-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.3.5-ru-2026-10-19.zip) · [SHA256](../../../releases/ocmi-work-1.3.5-ru-2026-10-19.zip.sha256) |
+| personal 1.3.5 | [ZIP](../../../releases/ocmi-personal-1.3.5-en-2026-10-19.zip) · [SHA256](../../../releases/ocmi-personal-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.3.5-ru-2026-10-19.zip) · [SHA256](../../../releases/ocmi-personal-1.3.5-ru-2026-10-19.zip.sha256) |
+| coordinator 1.3.5 | [ZIP](../../../releases/ocmi-coordinator-1.3.5-en-2026-10-19.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.5-ru-2026-10-19.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.5-ru-2026-10-19.zip.sha256) |
+
+## Историческая подготовка OCMI 1.3.4
+
+Неопубликованное уточнение исходников, 2026-10-19: ниже два подготовленных рабочих комплекта;
+нового номерного выпуска и публикации нет. [Исходный опубликованный receipt](../../../docs/releases/1.3.4.json) и архивы неизменны.
 
 Все шесть профилей используют OCMI 1.3.4. Полный репозиторий — сама система; ZIP компонентов нужны
 координатору для настройки/внедрения. Выберите один язык. Действующим проектам нужно явное объединение
 с сохранением правил, назначений и WIP. Поведение личного профиля не меняется.
-[Точный receipt шести комплектов](../../../docs/releases/1.3.4.json) · [Выпуск](../docs/releases/1.3.4.md).
+[Точный receipt шести комплектов](../../../docs/releases/1.3.4-flow.json) · [Выпуск](../docs/releases/1.3.4.md).
 
 | Профиль | English | Русский |
 | --- | --- | --- |
-| Рабочий 1.3.4 | [ZIP](../../../releases/ocmi-work-1.3.4-en-2026-10-16.zip) · [SHA256](../../../releases/ocmi-work-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.3.4-ru-2026-10-16.zip) · [SHA256](../../../releases/ocmi-work-1.3.4-ru-2026-10-16.zip.sha256) |
+| Рабочий 1.3.4 | [ZIP](../../../releases/ocmi-work-1.3.4-en-2026-10-19.zip) · [SHA256](../../../releases/ocmi-work-1.3.4-en-2026-10-19.zip.sha256) | [ZIP](../../../releases/ocmi-work-1.3.4-ru-2026-10-19.zip) · [SHA256](../../../releases/ocmi-work-1.3.4-ru-2026-10-19.zip.sha256) |
 | Личный 1.3.4 | [ZIP](../../../releases/ocmi-personal-1.3.4-en-2026-10-16.zip) · [SHA256](../../../releases/ocmi-personal-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](../../../releases/ocmi-personal-1.3.4-ru-2026-10-16.zip) · [SHA256](../../../releases/ocmi-personal-1.3.4-ru-2026-10-16.zip.sha256) |
 | Координатор 1.3.4 | [ZIP](../../../releases/ocmi-coordinator-1.3.4-en-2026-10-16.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](../../../releases/ocmi-coordinator-1.3.4-ru-2026-10-16.zip) · [SHA256](../../../releases/ocmi-coordinator-1.3.4-ru-2026-10-16.zip.sha256) |
 

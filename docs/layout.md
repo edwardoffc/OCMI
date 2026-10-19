@@ -14,7 +14,7 @@ OCMI/
   templates/coordinator/    installation coordinator service profile
   BOOTSTRAP.md              temporary installer route
   COORDINATOR.md            permanent coordinator route
-  VERSION.md                system version, separate from profile versions
+  VERSION.md                one version for the system and every profile
   docs/                     English guides, reports, and development memory
   locales/ru/               Russian guides and self-contained templates
   localization/             translation manifest and validation data
@@ -52,7 +52,8 @@ Projects/
   00_OCMI/                         system source
     .local/coordinator/            private setup state and filled STARTUP; excluded from Git/packages
   01_Personal_memory/              only if selected
-    topics/<topic>/               independent lightweight memory when requested
+    inbox/<topic-id>/             undecided independent topic, when requested
+    topics/<topic-id>/            settled independent topic, when requested
   example-project/                 its own work memory
 ~~~
 

@@ -2,20 +2,20 @@
   "schemaVersion": 1,
   "canonicalLanguage": "en",
   "language": "ru",
-  "reviewedDate": "2026-10-16",
+  "reviewedDate": "2026-10-19",
   "note": "Reviewed revision hashes detect drift, not semantic equivalence.",
   "files": [
     {
       "source": "BOOTSTRAP.md",
       "translation": "locales/ru/BOOTSTRAP.md",
-      "sourceSha256": "925c18c363aa9f1f3d355fde5674976fdc78a23dbbda21a08f70506c477e1f7a",
-      "translationSha256": "0614770b6036dca60522d0ed2f868d68f81a89f279bc15c2d19ff682648fb2d7"
+      "sourceSha256": "75fd81d712f1657f42a08e9a10038ebc745269c62f5c2b0d52eda1ee735ae2ce",
+      "translationSha256": "f0a0c5e044be47aa5d58b82be7b8155431de1d9085602a0198d34d05a3d41851"
     },
     {
       "source": "CHANGELOG.md",
       "translation": "locales/ru/CHANGELOG.md",
-      "sourceSha256": "06db69e26dabfb94756bd0548762a4f1e4b03a5c18e26f2d7ad8bfe6838f4dcb",
-      "translationSha256": "e35fb6ea305ebfa1881a0aaad087483892d06de5de07e11c46ccd22975b267f5"
+      "sourceSha256": "e4d32ddcdacbd353408bad762d06d48409692458b26f6364d96afc51e9f28cee",
+      "translationSha256": "bd6810902a74eccbf19b5834aabb1e7e0b3b5faa29538600c40957abe595958b"
     },
     {
       "source": "CONTRIBUTING.md",
@@ -26,20 +26,50 @@
     {
       "source": "COORDINATOR.md",
       "translation": "locales/ru/COORDINATOR.md",
-      "sourceSha256": "cdad757f1f8dcb371ab41f60024250524d01fa26f7d811e10861334669ea23fe",
-      "translationSha256": "a1c6e9caead48dbef3ece70f2fef87eb041de1d318c188cfa567b5c86eeb77cb"
+      "sourceSha256": "c68b4d177c519d79585965ab00590aa152a7158ecc08f6697476596a4bad538d",
+      "translationSha256": "ae512783c132fff669a0349afe1b5654a6edfeb9c0d0bb9ac334ba67dc3bc149"
+    },
+    {
+      "source": "README.md",
+      "translation": "README.ru.md",
+      "sourceSha256": "18a249cfe7df7120e79693db27cde8ea897cc63418685de4b3493d2e2920867e",
+      "translationSha256": "d619d4b5af88c5597a41fe85483729d021b1d67f052b25312720bdfb77543b58"
+    },
+    {
+      "source": "SECURITY.md",
+      "translation": "locales/ru/SECURITY.md",
+      "sourceSha256": "7a97ff3369f96fd6441d4f3fc3c3b4cdf2003247b8f164aa6c64340d2f122daf",
+      "translationSha256": "d746471272de7d44b7f5b3aeff405e0a19192c71b90818e2569d5c39933ea3ac"
+    },
+    {
+      "source": "VERSION.md",
+      "translation": "locales/ru/VERSION.md",
+      "sourceSha256": "6fb35b1812ae17d8ecfa9e82229ca8ac1788ad3e60dbf2cb103ff22b261a095b",
+      "translationSha256": "91f47df613851267f074baba3985c6ab1fe74b936a00bc787ec974e5c1b739c0"
+    },
+    {
+      "source": "docs/README.md",
+      "translation": "locales/ru/docs/README.md",
+      "sourceSha256": "6d5770d9dff3b6b593b176c86f26825f63c3eb4dad96e2d1b8594181870cda28",
+      "translationSha256": "ccb534c285a143edc92f27e0e74bb62c8771b19af745da824de857eddc561b9f"
+    },
+    {
+      "source": "docs/context.md",
+      "translation": "locales/ru/docs/context.md",
+      "sourceSha256": "f93a64dd2d7e9744d49b970d050080babacfdcbe98e49cfd2639dbd6a41dac86",
+      "translationSha256": "6e33728db9025b361e681c7595c7ab9e669d1b9a7595cbd3e672931c442434c0"
     },
     {
       "source": "docs/doctor.md",
       "translation": "locales/ru/docs/doctor.md",
-      "sourceSha256": "6284ddaad3f1ff62efc21a207f4aab7fdc9aed0fd702cf05e2fec9d111f7bddc",
-      "translationSha256": "6ea8f83f6f45a4a5c28fab456a4489bad6a09a29d7f50cc66f1ad98909fa9b5b"
+      "sourceSha256": "60988701b64ef2cb6aa5e13930a498046e21c804019057f9db9029052f414592",
+      "translationSha256": "0e1539b6e91b50fe4ed1914ca621feabd3836eacd3169f913e8f3e9a8270732a"
     },
     {
       "source": "docs/evals/context-recovery.md",
       "translation": "locales/ru/docs/evals/context-recovery.md",
-      "sourceSha256": "1c04815405f7cc7b0a7746a85cf456d1e6b39b7df6128c0171c4fb5b450b5244",
-      "translationSha256": "f8b65d56cd775d3ddabb8f148ceac7750542a3ad25ce0be9939d0196cb30a34d"
+      "sourceSha256": "cb7e40aebccae55a831854f43b18ab29fe48dadb017a6fd72ee41b73cadc817b",
+      "translationSha256": "328d9ec85c20b33197087bac2acd1e93812ab3bc6466bd942a2192d25b82c46c"
     },
     {
       "source": "docs/install-system.md",
@@ -50,8 +80,8 @@
     {
       "source": "docs/layout.md",
       "translation": "locales/ru/docs/layout.md",
-      "sourceSha256": "dffe9b002b90b486f06265f8c32f667777d709b805f19bd1d06c4ec677f3c19e",
-      "translationSha256": "4d06ce3f8db27a7b47a8223146ba2d3c82cf79d8be057fd0df389b22308096bb"
+      "sourceSha256": "ec8d1563cb8284d11d19d4df3e72a4034297e0d79059bf3e0f0b9e67f2ab47f3",
+      "translationSha256": "f0d7568290247618904c74173c72a94f5c46327e0ed4263fb4f733a789b018a4"
     },
     {
       "source": "docs/localization.md",
@@ -62,20 +92,20 @@
     {
       "source": "docs/maintaining.md",
       "translation": "locales/ru/docs/maintaining.md",
-      "sourceSha256": "05de1681c1cae1f56876286b84d6ae5b7171af28fec2352392d57a81a025fad4",
-      "translationSha256": "4c53e7d43d7ecfeea29859f33db063ecdc57ed06835a6fe0e2cef34202e15b43"
+      "sourceSha256": "b08985ad98911e3661a5ee6309052e0b35c09d557c226a098f6eb598c18fd78c",
+      "translationSha256": "edce1d1d3ac48f82dc086efbe8ce1deb635e0cc28c616bfa4c8fe45726e7e3b6"
+    },
+    {
+      "source": "docs/personal-memory.md",
+      "translation": "locales/ru/docs/personal-memory.md",
+      "sourceSha256": "44f5368b0a00376139770fd94f351065c3f8b31aef1e33e8ac7baf7d94085c5d",
+      "translationSha256": "1715beb5aa0e6d6440b0a4e6e0f40b59a0f89e3dee5c910b0d52250bd291cb8e"
     },
     {
       "source": "docs/platforms.md",
       "translation": "locales/ru/docs/platforms.md",
       "sourceSha256": "f6e2e47bc0998eb51e9e764c4a7726433b21256fd1cc6d671bde39b45956c744",
       "translationSha256": "87dd42f7808fa2741103d84adfd9e7876aa195e4b099f752702a7315e03f9036"
-    },
-    {
-      "source": "docs/README.md",
-      "translation": "locales/ru/docs/README.md",
-      "sourceSha256": "6d5770d9dff3b6b593b176c86f26825f63c3eb4dad96e2d1b8594181870cda28",
-      "translationSha256": "ccb534c285a143edc92f27e0e74bb62c8771b19af745da824de857eddc561b9f"
     },
     {
       "source": "docs/releases/1.2.1.md",
@@ -120,6 +150,18 @@
       "translationSha256": "7744d21402dafbd7c63cdea13d1f59cbef96c0685745c62b6b39692676240408"
     },
     {
+      "source": "docs/releases/1.3.4.md",
+      "translation": "locales/ru/docs/releases/1.3.4.md",
+      "sourceSha256": "7ade6c8c8d16fed4704b9ea207a38d41279cb54744df2c1f70047d67469e3b85",
+      "translationSha256": "99716da1e90065d36a15fed1a05662f5869d316d97656fc11feb3d30e0b17723"
+    },
+    {
+      "source": "docs/releases/1.3.5.md",
+      "translation": "locales/ru/docs/releases/1.3.5.md",
+      "sourceSha256": "105d98c46ab5437924c4421224d9dabbc7925bd1a101b32234f7a0141efa9fa8",
+      "translationSha256": "af1f3727938d796eac24965ba8636d0bc068bd34fd9010b06f469c8bd9caa45e"
+    },
+    {
       "source": "docs/research/2026-10-11-ecc-review.md",
       "translation": "locales/ru/docs/research/2026-10-11-ecc-review.md",
       "sourceSha256": "8beb4f43e28e39bb2678713b8e43fe08c19cf12c8eac97689b3b39f81a562b61",
@@ -134,8 +176,14 @@
     {
       "source": "docs/usage.md",
       "translation": "locales/ru/docs/usage.md",
-      "sourceSha256": "aa07d2eee2bbaf8177e8226020cc6ca0ca9b5bc6d25b868b767ef10f27349421",
-      "translationSha256": "6b2aa49f27b43be49423ee13b5708cfa98574292e15e6099e59e4b52d095584f"
+      "sourceSha256": "e1aefcfa4f11fe46b964beb4382e94110c9d3efc6a84099f1087f6e442865156",
+      "translationSha256": "a93fb7a42fba361bb74e2f28ef93905e98e623194db8cde3629d3e6ac98d7869"
+    },
+    {
+      "source": "docs/waiting.md",
+      "translation": "locales/ru/docs/waiting.md",
+      "sourceSha256": "d028356db84f5fa5ec7ebe528dfbd0637f3ef1b8d03aa53854f745aa1eb3629f",
+      "translationSha256": "f23c4440e31d88c0153861c0aa56bf7ca31ba3f14bf1937a3f2b746103519a88"
     },
     {
       "source": "docs/work-project-routing.md",
@@ -144,40 +192,40 @@
       "translationSha256": "6408eb1dafea5fa80e720ae26524180ccd50d32e1ae19e938e983077382bd09e"
     },
     {
-      "source": "README.md",
-      "translation": "README.ru.md",
-      "sourceSha256": "f62a7714c9ceeca1a7c1878168deb5b1b8fafa1f13239528f3672b013751d1e5",
-      "translationSha256": "2911a5ce461c7b1fbd812f88985b37244814cc181506628ed232155ca799fb93"
-    },
-    {
       "source": "releases/README.md",
       "translation": "locales/ru/releases/README.md",
-      "sourceSha256": "5b16223d322310ea941fc516bffd68daa3b2e255d6738a4fabddaeb39392adca",
-      "translationSha256": "473d4d23bea1a9c4854332f1a35c72d6e50bd5bed5d99f4b87fae6748576bcde"
+      "sourceSha256": "34cecf8c4ed44092b199057f5b6f4c48b09d2fc963cbd304e5a308b671a84c10",
+      "translationSha256": "cb7bf1c500ac9d3d64a54725dd5e7f7fe358e0cca8b2b9cc00b160d659ab2b0b"
     },
     {
       "source": "scripts/README.md",
       "translation": "locales/ru/scripts/README.md",
-      "sourceSha256": "f5c18645360033587252af107b500a5e96c2be3c83649aada829c4dae953170d",
-      "translationSha256": "573d483611689b241e834003b6bbb6acfbe37a8c676e7a79e8329f64ba764909"
-    },
-    {
-      "source": "SECURITY.md",
-      "translation": "locales/ru/SECURITY.md",
-      "sourceSha256": "7a97ff3369f96fd6441d4f3fc3c3b4cdf2003247b8f164aa6c64340d2f122daf",
-      "translationSha256": "d746471272de7d44b7f5b3aeff405e0a19192c71b90818e2569d5c39933ea3ac"
+      "sourceSha256": "a21f927a0b051fb3117e1ca1ef8988f02b1c0cf1b53e8595b59005296de1b83b",
+      "translationSha256": "7abc992df4dbaad4f3153af7e1795b58749fe73727cede172b77b4118f161a30"
     },
     {
       "source": "templates/coordinator/AGENTS.md",
       "translation": "locales/ru/templates/coordinator/AGENTS.md",
-      "sourceSha256": "25022139d3d73f01dc9f3c62301b6404417d8f5ec4c89b44dec7c8b50fe08562",
-      "translationSha256": "fb8d89322e7660fe346790e8c0675f88f27d4eca886a2f5cf650c6d9d8fb3855"
+      "sourceSha256": "048eb7965e9de77e85b995ef547f82db5831345b3937e2b282dab2505c263004",
+      "translationSha256": "5287cc9bca9e7de7efaba83fd757e299a2d77c2b0b7caf0455cd0414839a8ffe"
     },
     {
       "source": "templates/coordinator/INSTALL.md",
       "translation": "locales/ru/templates/coordinator/INSTALL.md",
-      "sourceSha256": "93579c8d8d446c27ef76db32476241b3ae3bf8f829b3bb7cd146391f4e113a06",
-      "translationSha256": "c56713f87f9de97c940871cb82b1f4f1aeabeee17171784bbb2abf8ffbee4e39"
+      "sourceSha256": "514f499f00e2076c04493f1b50263f43ff64b7a23f88e0685861503977c4257c",
+      "translationSha256": "a3af855db3163e37c9c892ecec8043131ab9f278fc43060f0d6515eacc8ed030"
+    },
+    {
+      "source": "templates/coordinator/STARTUP.md",
+      "translation": "locales/ru/templates/coordinator/STARTUP.md",
+      "sourceSha256": "1c741f5878108cf8bce02613f294600a7e096a35bb7fb8d1ac1a27312f65582d",
+      "translationSha256": "73ff957065edb00914997a681385d14a1eb743d08007226fca8482d8bf576d3a"
+    },
+    {
+      "source": "templates/coordinator/VERSION.md",
+      "translation": "locales/ru/templates/coordinator/VERSION.md",
+      "sourceSha256": "1eb232242fcf95d4f517359a5253f77713ced2be0d65e8e99f1ce28c055a7832",
+      "translationSha256": "e302d5878fc12a64cd934b42b36373a6566edcefd8acf65f9fbb25c1181f62ae"
     },
     {
       "source": "templates/coordinator/memory/BRIEF.md",
@@ -198,34 +246,28 @@
       "translationSha256": "9c44d42aa9f4f459f5f8ebf35ae684038580d7e5bc1f1dd7af55fab6a8e504b3"
     },
     {
-      "source": "templates/coordinator/STARTUP.md",
-      "translation": "locales/ru/templates/coordinator/STARTUP.md",
-      "sourceSha256": "1c741f5878108cf8bce02613f294600a7e096a35bb7fb8d1ac1a27312f65582d",
-      "translationSha256": "73ff957065edb00914997a681385d14a1eb743d08007226fca8482d8bf576d3a"
-    },
-    {
-      "source": "templates/coordinator/VERSION.md",
-      "translation": "locales/ru/templates/coordinator/VERSION.md",
-      "sourceSha256": "4e06d83221fdce42acb4d0569983cd80f2df394efeaa327cc86625e37088e48d",
-      "translationSha256": "be12aac271bdd95cdb14919701191019e82f2d55e07176e355b050c234507b13"
-    },
-    {
       "source": "templates/personal/AGENTS.md",
       "translation": "locales/ru/templates/personal/AGENTS.md",
-      "sourceSha256": "3f06ef2ebd4e8c93c308ee3b55ee99efad7f773b503354855483be52d755118d",
-      "translationSha256": "570f620b56d686929331672d8635af9b5a8964a6282addac47dee52fa39432a1"
+      "sourceSha256": "d7cbfce406d239bb9947f497df618950ff6a594e0d302e2a2fc9de1fff038f93",
+      "translationSha256": "7087ee9e00eebc3a2978b8e6a7c1bd74633265b7ba23c7997445936f37b0b294"
     },
     {
       "source": "templates/personal/INSTALL.md",
       "translation": "locales/ru/templates/personal/INSTALL.md",
-      "sourceSha256": "f10b4e9d900c496a8ea46564783846d0305c67442bb22544a5efec8234ca5db0",
-      "translationSha256": "02432ccea7372ce5c2c24cbb81eee8c589508363b8a84a581b7ac7cb9d747b04"
+      "sourceSha256": "87807501bba5f7d6624628ce885dad6227f058c834b45bf8239aee2a385e3732",
+      "translationSha256": "d84214acf80332f22e40ebbf616f649093c97a426e76adcd34dce42817d9bd17"
     },
     {
       "source": "templates/personal/memory/BRIEF.md",
       "translation": "locales/ru/templates/personal/memory/BRIEF.md",
-      "sourceSha256": "44dd4639eaf2316bc5e170e379e099470df30d573467ce28b36e416106e2084e",
-      "translationSha256": "5650f9a19b571e096914e1d5a6ebc4e389870c8a752acbedbb29274ffc240587"
+      "sourceSha256": "175aed3d12e2f6b69d1f52150cc390fdbca298d1522dc2bdde9c4d33428cf31e",
+      "translationSha256": "3a0c870cb36198fe8453fbf096113181585a5daeeeaae5837dcb5ba500189ea3"
+    },
+    {
+      "source": "templates/personal/memory/GUIDE.md",
+      "translation": "locales/ru/templates/personal/memory/GUIDE.md",
+      "sourceSha256": "7ac893c66ff21296ec916ff56edeebcd186e2725dbdfee0c5631bcadf24c3f63",
+      "translationSha256": "b0fe4266a36a2a79cd0a3dda86bc92493ddf51e968c80a2bc4dde287a851e166"
     },
     {
       "source": "templates/personal/memory/INDEX.md",
@@ -236,26 +278,50 @@
     {
       "source": "templates/personal/memory/tasks/main/HANDOFF.md",
       "translation": "locales/ru/templates/personal/memory/tasks/main/HANDOFF.md",
-      "sourceSha256": "7e08c191bd6bd4295f0b643d48bbb1926408da15d0ca58984f8d9ad3663c4b50",
-      "translationSha256": "65845b345361d33a7aa8387c8ea1685cdb688571ef729367edd318398f4d0f39"
+      "sourceSha256": "251b8edfddd880833e4953ba7885125424d2379fe44edfbecba16efe9cc378cc",
+      "translationSha256": "0de188234c744f5c868afc9df3ae050e0e4378cad5d5336f9d0afee2332e1ad4"
     },
     {
       "source": "templates/work/AGENTS.md",
       "translation": "locales/ru/templates/work/AGENTS.md",
-      "sourceSha256": "38217f5222e2626b5520df3760c0f70848d8965e3c5ddd85b62c35721ade5376",
-      "translationSha256": "302222f31ac5e01de0a8b7ec6a95a3f9322c0faab78f6ef02c22314b4adf133a"
+      "sourceSha256": "79ff493ac32b014316f8066347bf1c09471e84a087678886d74aeb726d63cb58",
+      "translationSha256": "7f5d215023121750ba77a8e5bb89796603f3b6f255b512c1475a18effbc791fb"
+    },
+    {
+      "source": "templates/work/INSTALL.md",
+      "translation": "locales/ru/templates/work/INSTALL.md",
+      "sourceSha256": "71b0b67751d5ff4d94930c5c197d613ceb29fad83cf400724bceb4112bb8da31",
+      "translationSha256": "388126ed18ff8b6bc09d19e67485b00e7967aa7686b58f917af5a28efe6cbf17"
+    },
+    {
+      "source": "templates/work/VERSION.md",
+      "translation": "locales/ru/templates/work/VERSION.md",
+      "sourceSha256": "93c807e76a4595d89f56d3c4d9ad74c0475b196d4da0d9844f77732a9a1539af",
+      "translationSha256": "37e9f8c3b849d672bf69d5f52ebcaa5c3842bec74402beb25c52d1f6b69368cf"
     },
     {
       "source": "templates/work/docs/guides/agent-workflow.md",
       "translation": "locales/ru/templates/work/docs/guides/agent-workflow.md",
-      "sourceSha256": "815501b0a24c719f62be199bacda3d9ba347f1a75a2b837195f76e3b6a48b96c",
-      "translationSha256": "9ca0fb75d7db6988cd86350cad3343d0b3ebb7a266ab7c10d5ab530433c2fb62"
+      "sourceSha256": "d767ef6724c9cdc2ec34d90281e042900c78b5caff541a337d903ff8c73941f8",
+      "translationSha256": "13d0ccb6d63c14cdcc276c5175dbf432f1b7251760fe0aff77d7a4d39121bc40"
+    },
+    {
+      "source": "templates/work/docs/guides/context.md",
+      "translation": "locales/ru/templates/work/docs/guides/context.md",
+      "sourceSha256": "bbc3b0f548dd05a6363ba6419ced5bcb69db84cf34452d0f75d6e906015a3c7c",
+      "translationSha256": "aecfe484c305134d0545e6f194e0dca9dfc87f7da196bd3fc555791668957e2f"
     },
     {
       "source": "templates/work/docs/guides/skills.md",
       "translation": "locales/ru/templates/work/docs/guides/skills.md",
-      "sourceSha256": "d73ce8507243fa12fb6bd849a485239bddb40bb15a07eb9ab4d809349fb09e51",
-      "translationSha256": "f7a28e1ee42d19f3bca1329c6a2855b7a548f596ceb74c93b9114c241382c28a"
+      "sourceSha256": "6ae8e5ad47cccb50905c8841d2126821e9c80d32bda7cdeb9ac7c9f3fabfaf69",
+      "translationSha256": "467f2990f35853d5f82ee7895e46da123a8179c67fed91b66ea3216397133c89"
+    },
+    {
+      "source": "templates/work/docs/guides/waiting.md",
+      "translation": "locales/ru/templates/work/docs/guides/waiting.md",
+      "sourceSha256": "c43b6c81dc1b2313e61fb205cf5981d62d4e987c327784c57261aa586f929e8a",
+      "translationSha256": "202d68b340b3000025f96d32a9f849ed4e630776953002cc3d276eb0e41e1694"
     },
     {
       "source": "templates/work/docs/memory/BRIEF.md",
@@ -278,8 +344,8 @@
     {
       "source": "templates/work/docs/memory/ORCHESTRATION.md",
       "translation": "locales/ru/templates/work/docs/memory/ORCHESTRATION.md",
-      "sourceSha256": "d1693b554aee9929fc9bdcb8107b517b4249b8302e5c4f1a0c3c495dacc66464",
-      "translationSha256": "f3b5c63782920929e245e7943364ceb2d07574e588b5e73aa2472acad7ee7bfe"
+      "sourceSha256": "c97ff0c3cc148ab624100f6c191a2785861fe5f3f34136a7f337052087201cb9",
+      "translationSha256": "3d05ed9e75db5026c88ffe2032a8233539e1aef5836ffc58249754900e38130d"
     },
     {
       "source": "templates/work/docs/memory/PLAN.md",
@@ -288,28 +354,10 @@
       "translationSha256": "1afc4b60ed0d9bbc7b4a552683ca371e4ec42174530da38c9746542d71d63f9d"
     },
     {
-      "source": "templates/work/docs/memory/roles/consultant.md",
-      "translation": "locales/ru/templates/work/docs/memory/roles/consultant.md",
-      "sourceSha256": "fb8b2e7fcb5bdf51162d38c28a2044532dc95d09ecbd206996027b46b6388156",
-      "translationSha256": "5f9fddb6279cf5a71a594033ebc79b8297bff0e9674ebe870d601b250a8a9580"
-    },
-    {
-      "source": "templates/work/docs/memory/roles/coordinator.md",
-      "translation": "locales/ru/templates/work/docs/memory/roles/coordinator.md",
-      "sourceSha256": "f80b1f8dfeeb922e7418c3c459012d9acb2f5026f8bca8358f8f794c919349b8",
-      "translationSha256": "43326105d008edeb46afa43e9b62ef90f0b167a463f4f07137a52f544d577d24"
-    },
-    {
-      "source": "templates/work/docs/memory/roles/worker.md",
-      "translation": "locales/ru/templates/work/docs/memory/roles/worker.md",
-      "sourceSha256": "7678374f7a57f4666ec355ee96c27e42ea16828f1779ce2474c5116651d28d93",
-      "translationSha256": "fed1d4b9317cf4d90b7ca6aab58320e1700c8d36ae6fb694a89175e28005fd99"
-    },
-    {
       "source": "templates/work/docs/memory/RULES.md",
       "translation": "locales/ru/templates/work/docs/memory/RULES.md",
-      "sourceSha256": "bb800612ddbfe4fb6335c81359bba719ce9f03b977241e0a279c6cf0c5e6f6e1",
-      "translationSha256": "38494161a0cc575758a2078f53a1e7f9d985456fe70073be668813c174363d87"
+      "sourceSha256": "194328e98c44dd7b7b736eca6dd6b085be5b0024afac85ecade9e7fc5ce88dd4",
+      "translationSha256": "1961cbd72475f0c1bde7709a483a068beff215317489aeb6b7554b65ea294fda"
     },
     {
       "source": "templates/work/docs/memory/STATE.md",
@@ -320,44 +368,56 @@
     {
       "source": "templates/work/docs/memory/TASK-PROTOCOL.md",
       "translation": "locales/ru/templates/work/docs/memory/TASK-PROTOCOL.md",
-      "sourceSha256": "4ad7c27f27641fe3c85a1b02efaa7f18f357333ca85223911bcfa035cdda6203",
-      "translationSha256": "ac71ce2a0328617226e2048b43a014a213ee4a255362d88c479193d967baa4eb"
+      "sourceSha256": "a718fb68998ebe86d088d4a237ca707b9b9c41498279ca1e1b957ab6a0e823f8",
+      "translationSha256": "8ce362db6ef504fff425a629a816ffb22fafa682ab62ec705c6f48a0d2515ec4"
     },
     {
-      "source": "templates/work/docs/memory/tasks/orchestration/HANDOFF.md",
-      "translation": "locales/ru/templates/work/docs/memory/tasks/orchestration/HANDOFF.md",
-      "sourceSha256": "bdf1145225334c8ecb1a57ecd7f4425ead72d869322b2a0a912db280b71cd360",
-      "translationSha256": "8f745453d6b9cc34c31375a35d69cb1802ef0ac03eb25a669f22a294bc20a4ac"
+      "source": "templates/work/docs/memory/roles/consultant.md",
+      "translation": "locales/ru/templates/work/docs/memory/roles/consultant.md",
+      "sourceSha256": "0a80f5c5548639161649d75df6ad123922bd97df7f0a2352714f8e428d0afc84",
+      "translationSha256": "2db4ef59ba94cb8d1d9cd32e3ae1bdf3ddccb30909be9e9ce739dab6e792f2ff"
+    },
+    {
+      "source": "templates/work/docs/memory/roles/coordinator.md",
+      "translation": "locales/ru/templates/work/docs/memory/roles/coordinator.md",
+      "sourceSha256": "f2158f9e08670d7a837d184b91acca705af97c0c0adfcecaa0e5cc83ae40103e",
+      "translationSha256": "bdc1f38d6d53267a8cc8e1bbe05c11f1e7d1acb332b8353739243846bfd27ec9"
+    },
+    {
+      "source": "templates/work/docs/memory/roles/worker.md",
+      "translation": "locales/ru/templates/work/docs/memory/roles/worker.md",
+      "sourceSha256": "155a2a658f0b057cc395822156bf9b2502ad59a0bbc745c7f3b189202ec1e13a",
+      "translationSha256": "2b741ccfbe48e14b4f82aeece6bf37f35667180970e0bf4ad640e7629ae091d7"
     },
     {
       "source": "templates/work/docs/memory/tasks/SMALL-TEMPLATE.md",
       "translation": "locales/ru/templates/work/docs/memory/tasks/SMALL-TEMPLATE.md",
-      "sourceSha256": "297f37d5446a86e1d409a5e91fdbd7729d1177cc355cd1541aa3499653d7be0d",
-      "translationSha256": "0129c84fcc4ea0b9b80c3ccc60d9e6f18c5311276040025f6ed93e74008eb5ee"
+      "sourceSha256": "9b0012333c056d194fc5f1e0722149bb53dea96247e6d6bedd4680091f5e43b0",
+      "translationSha256": "4512fff874d4d035a923577895edb6f5f801f7d15652a22e390e12e538989a9d"
     },
     {
       "source": "templates/work/docs/memory/tasks/START-TEMPLATE.md",
       "translation": "locales/ru/templates/work/docs/memory/tasks/START-TEMPLATE.md",
-      "sourceSha256": "5ea4d8fceae9460ff4d0cf5cf5abed98deb9eada1c4c6d2204a5e836935da9a3",
-      "translationSha256": "92aa053fb956b683f693c047c5c616fdf7fde9f3972856e9219f596da895438a"
+      "sourceSha256": "4999127e306f36c566085b3172ea2767d2168d06afe51407d2ae805ed92ab79d",
+      "translationSha256": "031e602f9dd80d058bad71cad3fb0b8f2d05b85e6bf9e9c7cddc792768102337"
     },
     {
       "source": "templates/work/docs/memory/tasks/TEMPLATE.md",
       "translation": "locales/ru/templates/work/docs/memory/tasks/TEMPLATE.md",
-      "sourceSha256": "a21cc9455734eabd91f5b3014f3de25695a6317a8cbfc00f1a8b91d1ab6b774d",
-      "translationSha256": "fd8ef153b5e8545f92630f69f1c09a20eceba08840d10478721b97a7d90d637f"
+      "sourceSha256": "809dc215729ddfb5ba49d30f97d51670db9a1b296d51abc27557d1dbcc92e091",
+      "translationSha256": "abae43b7e3ca13928134c8fc3886b81072a6e113c5f6d07d94f777269fde625c"
     },
     {
-      "source": "templates/work/INSTALL.md",
-      "translation": "locales/ru/templates/work/INSTALL.md",
-      "sourceSha256": "f14f98130fc613ed0bfb8d56b648ac8caf7b487106640575191eea29d3505c6e",
-      "translationSha256": "f3dc845ee9a6a3cd41e6172c78f31cf81509dd18788ab49bd41d2db7a8e369ba"
+      "source": "templates/work/docs/memory/tasks/orchestration/HANDOFF.md",
+      "translation": "locales/ru/templates/work/docs/memory/tasks/orchestration/HANDOFF.md",
+      "sourceSha256": "3673723e1918c0ee0d3c3f0383032eb8fd601eb2da385515c9037f5edd873d7b",
+      "translationSha256": "6ec33ea8273f2a789e41909ce078a8553a9addb3a80f14f2c640e7c9060a9fe2"
     },
     {
       "source": "templates/work/skills/ocmi-ci-triage/SKILL.md",
       "translation": "locales/ru/templates/work/skills/ocmi-ci-triage/SKILL.md",
-      "sourceSha256": "70a3bf7effaa24016954139e12aac5835891010ceb0c68c30609aa16fa4b9d27",
-      "translationSha256": "41cfce0134bcaf0947740d9134b0f5488f7a7c52b5bfe03920d0c4edbd3d94a0"
+      "sourceSha256": "39b0f0a62f5a373e39084939f42f0471d35595fd1a97757f8276fcb72811900b",
+      "translationSha256": "a292647e8092760361dce7b8184de38eecb78e5eb05ff0f7d31fe1157c2b7126"
     },
     {
       "source": "templates/work/skills/ocmi-review/SKILL.md",
@@ -380,38 +440,8 @@
     {
       "source": "templates/work/skills/ocmi-test-design/SKILL.md",
       "translation": "locales/ru/templates/work/skills/ocmi-test-design/SKILL.md",
-      "sourceSha256": "65c2734b7c1bf84b73b6f4d11108c7c77caa78a939a1608939345048f4b03d47",
-      "translationSha256": "64c25570f59b0064bc5c7b8b1c8872eddce83183f27b599da3da75aac4543ecf"
-    },
-    {
-      "source": "templates/work/VERSION.md",
-      "translation": "locales/ru/templates/work/VERSION.md",
-      "sourceSha256": "5e2774a54ecd1894d73585f99dcf9d8d2d0cabd3a54bd1d0eab7fb25af831b51",
-      "translationSha256": "13bc70d652f52fee6385cc7bbf3b8672fc7e6b32030423e83d187a24310e2ab0"
-    },
-    {
-      "source": "VERSION.md",
-      "translation": "locales/ru/VERSION.md",
-      "sourceSha256": "2b2fa776311f952d41090a70b2b9304b7f2687322e7b8fed8497c5842f2f6b5e",
-      "translationSha256": "db8e860273972129560a84aa04b35a6a9ee6268a87e8d57c25895acafc4e44ed"
-    },
-    {
-      "source": "docs/context.md",
-      "translation": "locales/ru/docs/context.md",
-      "sourceSha256": "f93a64dd2d7e9744d49b970d050080babacfdcbe98e49cfd2639dbd6a41dac86",
-      "translationSha256": "6e33728db9025b361e681c7595c7ab9e669d1b9a7595cbd3e672931c442434c0"
-    },
-    {
-      "source": "templates/work/docs/guides/context.md",
-      "translation": "locales/ru/templates/work/docs/guides/context.md",
-      "sourceSha256": "bbc3b0f548dd05a6363ba6419ced5bcb69db84cf34452d0f75d6e906015a3c7c",
-      "translationSha256": "aecfe484c305134d0545e6f194e0dca9dfc87f7da196bd3fc555791668957e2f"
-    },
-    {
-      "source": "docs/releases/1.3.4.md",
-      "translation": "locales/ru/docs/releases/1.3.4.md",
-      "sourceSha256": "7ade6c8c8d16fed4704b9ea207a38d41279cb54744df2c1f70047d67469e3b85",
-      "translationSha256": "99716da1e90065d36a15fed1a05662f5869d316d97656fc11feb3d30e0b17723"
+      "sourceSha256": "e81150183ebfdad2028804c8f4fe70975fa7f2ccc31a6b639182a1a8d270e9a3",
+      "translationSha256": "ea7469d232f4c4a3c2c5913984bf50661ef864f8367b789ac1297ef11b32abd8"
     }
   ]
 }

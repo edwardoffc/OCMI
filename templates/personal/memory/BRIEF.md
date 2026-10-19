@@ -25,3 +25,5 @@ Status: template. Fill only known information; mark unknowns explicitly.
 
 Explicitly authorized external areas: none specified.
 Add specific materials only on a direct user request.
+
+Optional continuity identity: [stable topic ID, current copy/source and transfer date when relevant].

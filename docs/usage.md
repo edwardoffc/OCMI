@@ -86,3 +86,5 @@ File rules guide context selection; they do not establish technical access permi
 [Layout](layout.md) · [Checks](../scripts/README.md).
 
 Historical work 1.2.2 and lightweight 1.2.1 introduced sanitization before persistence/sharing. Current profiles share the OCMI release number. Merge those rules explicitly; do not replace active memory or protected packages. See the security policy before publishing logs.
+
+For long operations use [bounded waiting](waiting.md); for everyday topics use [personal memory](personal-memory.md). Ask normally; no user JSON, polling command or extra work-role setup is required.

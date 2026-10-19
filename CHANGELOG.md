@@ -2,6 +2,18 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## OCMI 1.3.5 — bounded continuation and everyday memory, 2026-10-19
+
+- Executing/external-wait/no-progress distinction, resumable checkpoints and bounded observation; no implicit monitoring/restart.
+- Self-contained personal-topic guide: undecided subjects, another chat/AI, explicit move/merge, stale facts, archive and selective cloud handover/conflicts.
+- Added bilingual instruction regressions and real synthetic UTF-8/link/copy/conflict/boundary fixtures to native CI.
+
+- Risky nonstandard check premises require relevant control evidence before START.
+- Unexplained setup/barrier failures require targeted diagnosis before speculative algorithm changes or retries.
+- Known preparation stays with its bounded result; separate/repeated research needs decision-changing evidence.
+- Reconcile affected current statuses/next actions, preserving protected history and safety gates.
+- Unified six-profile release; previous refs/assets stay fixed. Existing installations require an explicit preserving merge.
+
 ## OCMI 1.3.4 — diagnostics, selected skills and code context, 2026-10-16
 
 - Scoped code indexing/context assembly: fresh content fingerprints, disposable session outlines,

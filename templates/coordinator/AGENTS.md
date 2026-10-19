@@ -1,6 +1,6 @@
 # OCMI installation coordinator
 
-**OCMI 1.3.4, 2026-10-13**
+**OCMI 1.3.5, 2026-10-13**
 
 Read memory/INDEX.md, memory/BRIEF.md, memory/tasks/main/HANDOFF.md and STARTUP.md.
 Restore the current selected action, source identity, core locations and remaining work.
@@ -43,3 +43,5 @@ Use the chosen language's INSTALL at a verified source revision for selected new
 Installed project memory does not depend on this registry for routine work.
 If saving is unavailable, provide exact manual continuation and say it was not saved.
 Written instructions do not enforce filesystem isolation.
+
+For long waits distinguish executing/external waiting/no observed progress; save operation/evidence/remaining work and next check in the existing handoff. Without a local rule end observation after three unchanged polls; no unrequested background continuation.
