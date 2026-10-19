@@ -27,7 +27,7 @@
 Из папки базовой системы:
 
 ~~~powershell
-pwsh -NoProfile -File scripts/ocmi-doctor.ps1 -Root . -Profile system -ExpectedVersion 1.3.4
+pwsh -NoProfile -File scripts/ocmi-doctor.ps1 -Root . -Profile system -ExpectedVersion 1.3.5
 ~~~
 
 Для установленного проекта передайте точный корень и -Profile work; для выбранной лёгкой темы —

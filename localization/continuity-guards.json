@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "guards": [
+    {
+      "path": "templates/work/docs/guides/waiting.md",
+      "en": ["Executing", "Waiting externally", "No observed progress", "Silence alone does not prove a hang", "stop after three unchanged polls in one turn", "Prefer a supported event/completion wait", "next event/check and observation limit", "revalidate assignment, permissions, WIP and the saved operation", "not proof of failure or permission to restart", "cannot wake a stalled client/model turn", "without supported capability and authorization"],
+      "ru": ["Выполнение", "Внешнее ожидание", "Нет наблюдаемого прогресса", "Тишина не доказывает зависание", "после трёх неизменных опросов за ход", "Предпочитай поддерживаемое ожидание события/завершения", "следующее событие/check и предел", "сверь назначение, полномочия, WIP и сохранённую операцию", "не доказывает ошибку и не разрешает перезапуск", "не разбудят зависший ход клиента/модели", "без поддержки и полномочий"]
+    },
+    {
+      "path": "templates/work/docs/memory/RULES.md",
+      "en": ["executing, waiting for a named external event, and no observed progress", "silence alone does not prove a hang", "stop after three unchanged polls in one turn", "existing Result/handoff", "Revalidate the same operation before resuming", "do not duplicate it or promise unrequested background monitoring"],
+      "ru": ["Различай выполнение, ожидание названного внешнего события и отсутствие наблюдаемого прогресса", "тишина сама по себе не доказывает зависание", "после трёх неизменных опросов за ход", "В действующем Result/handoff", "До возобновления сверь ту же операцию", "не запускай дубликат и не обещай незапрошенный фоновый мониторинг"]
+    },
+    {
+      "path": "templates/personal/AGENTS.md",
+      "en": ["relevant scenario in.*memory/GUIDE.md", "No whole-store scan or work protocol is required", "three unchanged polls", "no duplicate operation or background promise", "only for useful unique context", "do not duplicate the handoff or transcribe the chat"],
+      "ru": ["нужный сценарий.*memory/GUIDE.md", "Без сканирования всего хранилища и рабочего протокола", "трёх неизменных опросов", "без дубликата операции и обещания фоновой работы", "только для полезного уникального контекста", "не дублируй handoff и не переписывай весь чат"]
+    },
+    {
+      "path": "templates/personal/memory/GUIDE.md",
+      "en": ["inbox/<stable-topic-id>/", "temporary name is sufficient", "stable ID survives a rename", "not the whole personal store", "read-only attachments", "one writable current copy", "authorization for both topics", "Do not overwrite a conflicting file or choose truth by newest timestamp", "unresolved facts stay unknown", "default to leaving files in place", "UTF-8 text and relative links", "review the exact file list and content before sharing", "require the selected destination and current authority", "Sync conflicts retain both copies", "symlinks and absolute paths", "report incomplete/manual transfer", "not technical access"],
+      "ru": ["inbox/<stable-topic-id>/", "Достаточно временного имени", "Стабильный ID сохраняется при переименовании", "не всё личное хранилище", "вложениях только на чтение", "одну текущую изменяемую копию", "доступа к обеим темам", "Не перезаписывай конфликтующий файл и не выбирай истину по свежей дате", "неразрешённый факт остаётся неизвестным", "по умолчанию файлы остаются на месте", "текст UTF-8 и относительные ссылки", "точный список файлов и содержимое", "требуют выбранного назначения и текущих полномочий", "Конфликт синхронизации сохраняет обе версии", "symlinks и абсолютные пути", "укажи неполную/ручную передачу", "не технический доступ"]
+    },
+    {
+      "path": "templates/coordinator/AGENTS.md",
+      "en": ["executing/external waiting/no observed progress", "three unchanged polls", "no unrequested background continuation"],
+      "ru": ["выполнение/внешнее ожидание/отсутствие наблюдаемого прогресса", "трёх неизменных опросов", "без незапрошенного фонового продолжения"]
+    }
+  ]
+}

@@ -29,6 +29,9 @@ foreach ($language in @('en','ru')) {
   foreach ($pair in @(@('protocol','TASK-PROTOCOL.md'),@('coordinator','roles/coordinator.md'),@('worker','roles/worker.md'),@('rules','RULES.md'),@('orchestration','ORCHESTRATION.md'))) {
     $texts[$pair[0]]=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory $pair[1]))
   }
+  foreach ($pair in @(@('testdesign','ocmi-test-design'),@('triage','ocmi-ci-triage'))) {
+    $texts[$pair[0]]=[IO.File]::ReadAllText((Get-OCMIScopedFile (Join-Path $repo ($prefix+'templates/work')) ('skills/'+$pair[1]+'/SKILL.md')))
+  }
   $small=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory 'tasks/SMALL-TEMPLATE.md'))
   Compact $small @($guards.fields.$language); $passed++
   foreach ($field in $guards.fields.$language) {
@@ -46,6 +49,13 @@ foreach ($language in @('en','ru')) {
       Reject {Clauses ($lines -join "`n") $patterns}
     }
   }
+  $weakenings=@($guards.weakenings.$language)
+  Require ($weakenings.Count -eq 5) 'Missing weakening controls'
+  foreach($case in $weakenings){
+    Require ($texts[$case[0]].Contains($case[1])) 'Weakening control input missing'
+    $mutated=$texts[$case[0]].Replace($case[1],$case[2])
+    Reject {foreach($guard in @($guards.guards|Where-Object {$_.input -ceq $case[0]})){Clauses $mutated @($guard.$language)}}
+  }
 }
 foreach ($pair in @(@('orchestration','ORCHESTRATION.md'),@('coordinator','roles/coordinator.md'))) {
   $text=[IO.File]::ReadAllText((Get-OCMIScopedFile $repo ('docs/memory/'+$pair[1])))
@@ -53,4 +63,4 @@ foreach ($pair in @(@('orchestration','ORCHESTRATION.md'),@('coordinator','roles
     Clauses $text @($guard.en); $passed++
   }
 }
-Write-Output "PASS: $passed bilingual compact/schema/coverage/preflight/retry/recovery and shared-baseline guards, negative mutations and development-rule parity. Instruction checks, not live-agent behavior."
+Write-Output "PASS: $passed bilingual compact/readiness/oracle/diagnosis/granularity/recovery guards, negative mutations and development-rule parity. Instruction checks, not live-agent behavior."

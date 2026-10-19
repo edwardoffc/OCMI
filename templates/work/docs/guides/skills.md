@@ -1,6 +1,6 @@
 # Selected skills and optional specialists
 
-OCMI 1.3.4. A skill is a reusable procedure inside the current role, not a new agent or permission.
+OCMI 1.3.5. A skill is a reusable procedure inside the current role, not a new agent or permission.
 The orchestrator reads only [catalog metadata](../../skills/catalog.json), identifies an actual gap,
 and loads the relevant SKILL.md. No gap means no skill; ordinary tasks need no extra ceremony.
 

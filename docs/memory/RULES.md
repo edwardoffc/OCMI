@@ -1,6 +1,6 @@
 # Project memory rules
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-19**
 
 ## One primary location per fact
 
@@ -42,6 +42,15 @@ Narrow truncated output. Report absence only after an adequate search of the rel
 Incomplete search, an unavailable source, and unknown information are not evidence of absence.
 Expand targeted retrieval within the authorized scope when needed; denied access does not expand that scope.
 Do not exclude necessary callers, contracts, tests, or fixtures to meet a pass/file-count limit.
+
+
+## Waiting and continuation
+
+Distinguish executing, waiting for a named external event, and no observed progress;
+silence alone does not prove a hang. For long waits use [bounded observation](../waiting.md).
+Keep operation/cursor, latest evidence, WIP/remaining work and next event/check in existing Result/handoff.
+Without a local policy stop after three unchanged polls in one turn and save a checkpoint.
+Revalidate the same operation before resuming; do not duplicate it or promise unrequested background monitoring.
 
 ## Writing and preservation
 

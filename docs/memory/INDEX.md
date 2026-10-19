@@ -1,10 +1,12 @@
 # OCMI development memory
 
-Scope: this repository. Updated: 2026-10-16.
+Scope: this repository. Updated: 2026-10-19.
 [Rules](RULES.md) · [Roles](ORCHESTRATION.md) · [Brief](BRIEF.md) ·
 [PLAN](PLAN.md) · [STATE](STATE.md) · [CODEMAP](CODEMAP.md).
 
 [Current handoff](tasks/orchestration/HANDOFF.md).
+[Current 1.3.5 work](tasks/OCMI-RELEASE-032/HANDOFF.md): bounded waiting, everyday topics, publication and selected preserving adoption.
+[Current workflow correction](tasks/OCMI-FLOW-031/HANDOFF.md): control evidence, early diagnosis and bounded preparation.
 [OCMI 1.3.4 release](tasks/OCMI-RELEASE-030/HANDOFF.md) · [Release guide](../releases/1.3.4.md).
 [Code context](tasks/OCMI-CONTEXT-021/HANDOFF.md): explicit scope, fresh symbol candidates and budgeted required inputs.
 [Current skill pack](tasks/OCMI-SPECIAL-019/HANDOFF.md): selected skills and optional specialist methods.

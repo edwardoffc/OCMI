@@ -1,6 +1,6 @@
 # OCMI PLAN
 
-Updated: 2026-10-16. The only development queue.
+Updated: 2026-10-19. The only development queue.
 
 | ID | Outcome | Status |
 | --- | --- | --- |
@@ -33,6 +33,8 @@ Updated: 2026-10-16. The only development queue.
 | OCMI-ADOPT-028 | Provenance-aware installed-copy upgrade preview and conflict preservation | Deferred; after DOCTOR-020; read-only preview before any write mode |
 | OCMI-DOCTOR-029 | Coordinator-led diagnostics without user commands/JSON | [Source accepted locally](tasks/OCMI-DOCTOR-029/HANDOFF.md); PS7/5.1 checks pass; exact scope, in-memory selection and legacy review |
 | OCMI-RELEASE-030 | Package and publish accepted base stages as unified OCMI 1.3.4 | [Release record](tasks/OCMI-RELEASE-030/HANDOFF.md); owner-authorized validation/delivery; installed-project adoption and roadmap review follow later |
+| OCMI-FLOW-031 | Actionable risky-premise readiness, early diagnosis and bounded preparation | [Accepted locally](tasks/OCMI-FLOW-031/HANDOFF.md); included in RELEASE-032; historical packs/records retained |
+| OCMI-RELEASE-032 | Bounded waiting, everyday topic memory and unified 1.3.5; publication and selected adoption | [Task record](tasks/OCMI-RELEASE-032/HANDOFF.md); owner-authorized implementation/validation/delivery and preserving work upgrades |
 
 ## Revised development scope — later stages remain deferred
 
@@ -46,7 +48,8 @@ method/baseline, then scoped DOCTOR-020 and coordinator-facing DOCTOR-029 implem
 continues on ordinary tasks. Owner then authorized SPECIAL-019 and subsequently CONTEXT-021 implementation/checks in the base.
 Owner now authorizes packaging/publication as OCMI 1.3.4 under RELEASE-030. Feature expansion stops;
 installed-project adoption, future roadmap review and personal-profile discussion follow later.
-No CHANGE/ADOPT/AUTO START or live model experiment is assigned. Order below remains priority, not compulsory ceremony.
+FLOW-031 was accepted locally. On 2026-10-19 the owner authorizes RELEASE-032: bounded waiting/personal scenarios,
+unified 1.3.5 publication and preserving upgrades of the selected work installations. No CHANGE/ADOPT/AUTO START or live model experiment is assigned. Order below remains priority, not compulsory ceremony.
 
 1. **EVAL-001 — baseline and pilot gates, throughout.** Reuse normal completed-task Acceptance:
    outcome/integration, missed requirements, returns/causes, costly checks/reasons, observed read volume,

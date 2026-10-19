@@ -26,7 +26,7 @@ Coordinator setup/client binding uses its existing restore procedure; doctor nev
 From the base system folder:
 
 ~~~powershell
-pwsh -NoProfile -File scripts/ocmi-doctor.ps1 -Root . -Profile system -ExpectedVersion 1.3.4
+pwsh -NoProfile -File scripts/ocmi-doctor.ps1 -Root . -Profile system -ExpectedVersion 1.3.5
 ~~~
 
 For an installed project pass its exact root and -Profile work; for a selected lightweight topic

@@ -1,6 +1,6 @@
 # Consultant procedure
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-13**
 
 Read INDEX and only the sources needed for the specific question.
 Do not change files, start processes/checks, or assign tasks.

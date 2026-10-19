@@ -27,3 +27,5 @@ Status: not started. Updated: [date]. Scope and constraints: [brief](../../BRIEF
 [For code: checkout/worktree, branch, commit, relevant uncommitted changes.
 For other tasks: source material version. Running processes and unsaved results, if any.
 Do not record secrets.]
+
+For an interrupted/waiting operation: [executing / external wait / no observed progress; ID/cursor, last evidence/time, remaining work, next event/check and observation limit].

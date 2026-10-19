@@ -1,6 +1,6 @@
-# OCMI 1.3.4 — task and handoff format
+# OCMI 1.3.5 — task and handoff format
 
-**OCMI 1.3.4, rules revision 2026-10-14**
+**OCMI 1.3.5, rules revision 2026-10-19**
 
 Compatible update to the OCMI 1 process; the task schema and existing exporter fields are preserved.
 [ORCHESTRATION](ORCHESTRATION.md) routes readiness/checks/review; [RULES](RULES.md) defines memory.
@@ -19,6 +19,10 @@ Keep a large contract in the package and link to it. Do not create a separate Re
 A new task record contains relevant facts, the matrix, and differences from the previous revision;
 do not copy permanent rules or past history. Links must lead to accessible pinned inputs;
 "same as before" is insufficient for a new chat.
+
+Keep known sequential preparation with its bounded result; split only for an independent deliverable,
+unresolved decision or resource/authority boundary. Research names the unanswered question, decision-changing
+evidence and stop condition; repeat only for a new question/evidence/decision, not to occupy free slots.
 
 ## Task format selection
 

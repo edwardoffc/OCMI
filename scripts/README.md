@@ -20,7 +20,7 @@ check-doctor exercises the optional [scoped diagnostic CLI](../docs/doctor.md): 
 bounded inputs, canonical diagnostic blocks, dependency/resource/protected-input findings, real exits
 and target preservation. It runs through check-all on Windows/macOS; no installed projects are read.
 
-check-flow checks compact fields, risk selection, coverage, preflight, causal retries, repeated rework and verified continuation in both languages. Missing-field/schema/policy mutations must be rejected. These are instruction regressions, not live-agent or cost measurements.
+check-flow checks compact fields, readiness/control evidence, early failure diagnosis, bounded preparation/research, current-state consistency and existing retry/recovery safeguards in both languages. Omission and explicit weakening mutations must fail. These are instruction regressions, not engine-oracle, live-agent or cost measurements.
 
 check-localization checks the maintained translation inventory, reviewed hashes, stable template
 paths, and license copies. Hash agreement detects drift; human review establishes meaning.
@@ -29,7 +29,7 @@ The manifest is updated deliberately after review, never by a validation run.
 check-onboarding checks the setup/development entry route, installer/coordinator handover and access
 clauses in both languages, negative text mutations, unsafe/missing inputs, coordinator
 versions/licenses and exact source/ZIP bytes. This checks instructions, not agent execution.
-check-release and check-onboarding use the current unified six-profile receipt; default or -Version 1.3.4 selects OCMI 1.3.4;
+check-release and check-onboarding use the current unified six-profile receipt; default or -Version 1.3.5 selects OCMI 1.3.5;
 -Version 1.3.0 or 1.3.1 with -ArchivesOnly checks historical coordinator distributions.
 Startup validation requires six fields, including the expected client project/binding.
 
@@ -69,6 +69,8 @@ CI downloads native Windows x64/macOS ARM64/macOS x64 Gitleaks 8.30.1 binaries f
 The checkout action is pinned by commit, credentials are not persisted, tokens are read-only, and PRs receive no secrets.
 Scan limits fail closed. Temporary extracted copies are removed only from the invocation-created temp directory.
 
-Default and -Version 1.3.4 verify all profiles at OCMI 1.3.4. Historical 1.3.3 requires -Version 1.3.3 -ArchivesOnly. check-versioning rejects component-version drift and independent counters. Original 1.3.3 components require -Version 1.3.3 -LegacyComponents -ArchivesOnly; earlier receipts use their version with -ArchivesOnly.
+Default and -Version 1.3.5 verify all profiles at OCMI 1.3.5; historical 1.3.4 uses -Version 1.3.4 -ArchivesOnly. Historical 1.3.3 requires -Version 1.3.3 -ArchivesOnly. check-versioning rejects component-version drift and independent counters. Original 1.3.3 components require -Version 1.3.3 -LegacyComponents -ArchivesOnly; earlier receipts use their version with -ArchivesOnly.
 The old security-validation.json is historical: use -SecurityBaseline -ArchivesOnly.
 Both INSTALL entry gates and neutral routing are covered by bilingual check-onboarding guards.
+
+check-continuity validates bilingual waiting/topic safeguards and synthetic UTF-8 topic move/merge/export/link/conflict boundaries. It copies only fixtures; no live cloud/client isolation or monitoring is tested.

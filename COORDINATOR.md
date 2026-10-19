@@ -2,7 +2,7 @@
 
 **English** · [Русский](locales/ru/COORDINATOR.md)
 
-OCMI 1.3.4. Use this route only when the user assigns the coordinator role
+OCMI 1.3.5. Use this route only when the user assigns the coordinator role
 through the filled startup prompt or explicitly resumes an initialized coordinator.
 
 ## Initialize or restore
@@ -31,6 +31,8 @@ through the filled startup prompt or explicitly resumes an initialized coordinat
 For personal storage, agree on a location and reading boundaries first.
 Create only requested navigation/topics; use the chosen edition's
 [lightweight profile](templates/personal/INSTALL.md) for independent topics.
+Explain [everyday topic scenarios](docs/personal-memory.md) only when relevant; undecided topics,
+move/merge/archive and cloud transfer are separate selected actions, not a whole-store reading grant.
 
 Do not integrate a work project before core setup is confirmed.
 Preserve a still-current deferred request from HANDOFF; do not repeat permission for the same selected action.
@@ -77,6 +79,9 @@ Keep only a sanitized substantial result in your existing private handoff; no se
 Explain the [context method](docs/context.md) when asked. The project orchestrator selects its task,
 required inputs and authorized area; users need no commands/JSON. Indexes are disposable locators,
 not memory/assignment authority. Do not scan or upgrade projects merely to demonstrate this feature.
+
+For long setup/external waits use [bounded waiting](docs/waiting.md). Save the operation, evidence,
+remaining action and next event/check in the private handoff; do not silently start monitoring or retry setup.
 
 ## Persistence and boundaries
 
