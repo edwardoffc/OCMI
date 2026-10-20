@@ -58,44 +58,80 @@
     {
       "id": "validated-risky-premise",
       "input": "coordinator",
-      "en": ["validate risky nonstandard setup/concurrency/transaction/recovery premises on the actual engine/harness","Link the relevant known-correct control and targeted wrong behavior or justified oracle in this matrix","static advice or an unrelated passing control is insufficient","Unverified material premises prevent START","Reuse valid controls under their dependency/condition rules"],
-      "ru": ["рискованные нестандартные предпосылки подготовки/конкурентности/транзакций/восстановления проверены на настоящем движке/harness","В этой матрице укажи релевантный корректный контроль и адресное неверное поведение либо обоснованный oracle","статического совета или постороннего зелёного контроля недостаточно","Непроверенные существенные предпосылки исключают START","Актуальный контроль используй повторно по условиям зависимостей/среды"]
+      "en": ["validate risky nonstandard setup/concurrency/transaction/recovery premises on the actual engine/harness", "Link the relevant known-correct control and targeted wrong behavior or justified oracle in this matrix", "static advice or an unrelated passing control is insufficient", "Unverified material premises prevent START", "Reuse valid controls under their dependency/condition rules"],
+      "ru": ["рискованные нестандартные предпосылки подготовки/конкурентности/транзакций/восстановления проверены на настоящем движке/harness", "В этой матрице укажи релевантный корректный контроль и адресное неверное поведение либо обоснованный oracle", "статического совета или постороннего зелёного контроля недостаточно", "Непроверенные существенные предпосылки исключают START", "Актуальный контроль используй повторно по условиям зависимостей/среды"]
     },
     {
       "id": "early-failure-diagnosis-main",
       "input": "coordinator",
-      "en": ["unexplained setup/barrier failures before behavioral assertions.*discriminating diagnostic","before speculative product changes or repeats","observation/hypothesis/next check in existing Result/Acceptance"],
-      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions.*различающую диагностику","до предположительных правок продукта или повторов","наблюдение/гипотезу/следующий check запиши в действующем Result/Acceptance"]
+      "en": ["unexplained setup/barrier failures before behavioral assertions.*discriminating diagnostic", "before speculative product changes or repeats", "observation/hypothesis/next check in existing Result/Acceptance"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions.*различающую диагностику", "до предположительных правок продукта или повторов", "наблюдение/гипотезу/следующий check запиши в действующем Result/Acceptance"]
     },
     {
       "id": "early-failure-diagnosis-worker",
       "input": "worker",
-      "en": ["unexplained setup/barrier failures before behavioral assertions","smallest authorized discriminating diagnostic before changing the product algorithm or repeating the run","Record observation/hypothesis/next check in Result","demonstrated implementation defect may be fixed directly","Diagnosis stays within AllowedPaths/resources","Preserve failures/conditions and recurrence hypotheses/next diagnostic"],
-      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions","минимальную разрешённую различающую диагностику до изменения алгоритма продукта или повторного запуска","Наблюдение/гипотезу/следующий check запиши в Result","доказанный дефект реализации можно исправлять сразу","Диагностика ограничена AllowedPaths/ресурсами","Сохраняй падения/условия и при повторении гипотезы/следующую диагностику"]
+      "en": ["unexplained setup/barrier failures before behavioral assertions", "smallest authorized discriminating diagnostic before changing the product algorithm or repeating the run", "Record observation/hypothesis/next check in Result", "demonstrated implementation defect may be fixed directly", "Diagnosis stays within AllowedPaths/resources", "Preserve failures/conditions and recurrence hypotheses/next diagnostic"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions", "минимальную разрешённую различающую диагностику до изменения алгоритма продукта или повторного запуска", "Наблюдение/гипотезу/следующий check запиши в Result", "доказанный дефект реализации можно исправлять сразу", "Диагностика ограничена AllowedPaths/ресурсами", "Сохраняй падения/условия и при повторении гипотезы/следующую диагностику"]
     },
     {
       "id": "bounded-preparation-research",
       "input": "protocol",
-      "en": ["Keep known sequential preparation with its bounded result","split only for an independent deliverable","unresolved decision or resource/authority boundary","Research names the unanswered question, decision-changing","evidence and stop condition","repeat only for a new question/evidence/decision, not to occupy free slots"],
-      "ru": ["Известную последовательную подготовку оставляй с её ограниченным результатом","отделяй только самостоятельный результат","нерешённый вопрос или границу ресурсов/полномочий","Исследование называет неизвестный вопрос, влияющее на решение","evidence и условие остановки","повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов"]
+      "en": ["Keep known sequential preparation with its bounded result", "split only for an independent deliverable", "unresolved decision or resource/authority boundary", "Research names the unanswered question, decision-changing", "evidence and stop condition", "repeat only for a new question/evidence/decision, not to occupy free slots"],
+      "ru": ["Известную последовательную подготовку оставляй с её ограниченным результатом", "отделяй только самостоятельный результат", "нерешённый вопрос или границу ресурсов/полномочий", "Исследование называет неизвестный вопрос, влияющее на решение", "evidence и условие остановки", "повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов"]
     },
     {
       "id": "affected-current-consistency",
       "input": "coordinator",
-      "en": ["reconcile affected IDs/status/next action across current entries","explicitly supersede conflicting instructions","Do not rewrite issued packages"],
-      "ru": ["согласовать затронутые ID/статус/следующее действие в текущих записях","явно отменить противоречащие указания","Не переписывать выданные пакеты"]
+      "en": ["reconcile affected IDs/status/next action across current entries", "explicitly supersede conflicting instructions", "Do not rewrite issued packages"],
+      "ru": ["согласовать затронутые ID/статус/следующее действие в текущих записях", "явно отменить противоречащие указания", "Не переписывать выданные пакеты"]
     },
     {
       "id": "selected-oracle-control",
       "input": "testdesign",
-      "en": ["exact premise on the actual engine/harness before ready","Separate the behavioral invariant from scheduler/internal observations","Link the relevant control command/result","Static advice or another case.s green control is insufficient","not a separate control task for every assertion","issued protected checker changes only through an explicit revision"],
-      "ru": ["точную предпосылку на настоящем движке/harness до ready","Отделите поведенческий инвариант от наблюдений за планировщиком/внутренним устройством","укажите команду/результат релевантного контроля","Статического совета или зелёного контроля другого случая недостаточно","не отдельная контрольная задача для каждого assertion","выданный защищённый checker меняется лишь явной редакцией"]
+      "en": ["exact premise on the actual engine/harness before ready", "Separate the behavioral invariant from scheduler/internal observations", "Link the relevant control command/result", "Static advice or another case.s green control is insufficient", "not a separate control task for every assertion", "issued protected checker changes only through an explicit revision"],
+      "ru": ["точную предпосылку на настоящем движке/harness до ready", "Отделите поведенческий инвариант от наблюдений за планировщиком/внутренним устройством", "укажите команду/результат релевантного контроля", "Статического совета или зелёного контроля другого случая недостаточно", "не отдельная контрольная задача для каждого assertion", "выданный защищённый checker меняется лишь явной редакцией"]
     },
     {
       "id": "selected-early-triage",
       "input": "triage",
-      "en": ["unexplained setup/barrier failure.*before behavioral assertions","before speculative product-algorithm changes or repeats","run only authorized diagnostics","demonstrated implementation defect may be fixed directly","control that disproves a test premise does not validate the product","protected inputs still require an explicit orchestrator revision"],
-      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions","до предположительных правок алгоритма продукта или повторов","выполняйте только разрешённую диагностику","Доказанный дефект реализации можно исправлять сразу","Контроль, опровергший предпосылку теста, не подтверждает продукт","защищённые входы по-прежнему требуют явной ревизии оркестровщика"]
+      "en": ["unexplained setup/barrier failure.*before behavioral assertions", "before speculative product-algorithm changes or repeats", "run only authorized diagnostics", "demonstrated implementation defect may be fixed directly", "control that disproves a test premise does not validate the product", "protected inputs still require an explicit orchestrator revision"],
+      "ru": ["необъяснённом падении подготовки/барьера до поведенческих assertions", "до предположительных правок алгоритма продукта или повторов", "выполняйте только разрешённую диагностику", "Доказанный дефект реализации можно исправлять сразу", "Контроль, опровергший предпосылку теста, не подтверждает продукт", "защищённые входы по-прежнему требуют явной ревизии оркестровщика"]
+    },
+    {
+      "id": "progress-checkpoints",
+      "input": "coordinator",
+      "en": ["At existing Result/review checkpoints, progress means a verified agreed criterion or evidence resolving a named uncertainty", "activity, file/test counts and report edits alone are not progress", "Research/documentation use their agreed criteria", "two consecutive preparation/review checkpoints without progress, reassess the assignment itself"],
+      "ru": ["В существующих точках Result/ревью прогресс — проверенный согласованный критерий или evidence, разрешающее названный вопрос", "активность, число файлов/тестов и правки отчёта сами по себе не прогресс", "Для исследования/текста действуют их критерии", "двух последовательных точек подготовки/ревью без прогресса, пересмотри само задание"]
+    },
+    {
+      "id": "bounded-process-review",
+      "input": "coordinator",
+      "en": ["Allow one bounded changed attempt justified by that evidence; another failure or no-progress checkpoint stops equivalent returns", "use ocmi-review once for a bounded process review", "authorized independent advice if available", "otherwise label self-review honestly", "Do not repeat that review without new evidence", "stop affected work if no justified route remains", "Escalate only missing authority/input/owner decisions", "bypassing STOP"],
+      "ru": ["Разрешена одна ограниченная изменённая попытка с этим обоснованием; новая неудача или точка без прогресса прекращает однотипные возвраты", "один раз примени ocmi-review для ограниченного разбора процесса", "разрешённый независимый вклад при наличии", "иначе честно назови самопроверку", "Без новых evidence этот разбор не повторять", "при отсутствии обоснованного пути сохранить WIP и остановить затронутую работу", "Передавай владельцу только нехватку полномочий/входа/его решение", "обойти STOP"]
+    },
+    {
+      "id": "development-test-ownership",
+      "input": "coordinator",
+      "en": ["Freeze independent acceptance checks/inputs", "Permit worker-owned development tests/fixtures in AllowedPaths; these do not replace independent acceptance", "A premise probe answers one named uncertainty", "Before freezing a new executable fixture/adapter, validate actual calls/formats and a relevant control within authority", "Syntax or a stub is insufficient; unavailable validation stays design-only"],
+      "ru": ["Независимые приёмочные проверки/входы фиксируются", "Разреши тесты/fixtures исполнителя в AllowedPaths; они не заменяют независимую приёмку", "Контроль предпосылки отвечает на один названный вопрос", "До фиксации новой исполнимой fixture/адаптера проверь реальные вызовы/форматы и релевантный контроль в пределах полномочий", "Синтаксиса или заглушки мало; недоступная проверка остаётся проектом"]
+    },
+    {
+      "id": "worker-development-tests",
+      "input": "worker",
+      "en": ["Own tests/fixtures may evolve with implementation inside AllowedPaths", "They do not replace independent acceptance or permit protected-input edits"],
+      "ru": ["Собственные тесты/fixtures можно развивать вместе с реализацией в AllowedPaths", "Они не заменяют независимую приёмку и не разрешают правки защищённых входов"]
+    },
+    {
+      "id": "process-review-output",
+      "input": "review",
+      "en": ["For a stalled chain, review the assignment itself once", "command permissions, duplicated preparation and evidence reuse", "smallest discriminating check", "Do not demand a rewritten report or run product checks for this process review", "no repeat without new evidence", "self-review is not independent review"],
+      "ru": ["Для застрявшей цепочки один раз проверьте само задание", "полномочия команд, дублирование подготовки и reuse evidence", "минимальную различающую проверку", "Ради этого разбора не требуйте переписывать отчёт и не запускайте продуктовые проверки", "без новых evidence его не повторять", "самопроверка не является независимым ревью"]
+    },
+    {
+      "id": "bounded-premise-probe",
+      "input": "testdesign",
+      "en": ["Keep a premise probe to its named uncertainty", "instead of building a second feature", "actual caller arguments, compatible data and a relevant control within authority", "syntax-only/stub success is design-only", "worker development tests in AllowedPaths separate from fixed independent acceptance"],
+      "ru": ["Ограничьте контроль предпосылки названным вопросом", "вместо второй реализации функции", "реальными аргументами потребителя, совместимыми данными и релевантным контролем в пределах полномочий", "один синтаксис/заглушка означают лишь проект", "Тесты разработки исполнителя в AllowedPaths отделяйте от фиксированной независимой приёмки"]
     }
   ],
   "weakenings": {
@@ -104,14 +140,24 @@
       ["worker", "diagnostic before changing", "diagnostic after changing"],
       ["testdesign", "exact premise on the actual engine/harness before ready", "exact premise on the actual engine/harness after ready"],
       ["triage", "does not validate the product", "validates the product"],
-      ["protocol", "repeat only for a new question/evidence/decision, not to occupy free slots", "repeat to occupy free slots"]
+      ["protocol", "repeat only for a new question/evidence/decision, not to occupy free slots", "repeat to occupy free slots"],
+      ["coordinator", "Allow one bounded changed attempt", "Allow unlimited changed attempts"],
+      ["coordinator", "another failure or no-progress checkpoint stops equivalent returns", "another failure or no-progress checkpoint allows equivalent returns"],
+      ["coordinator", "two consecutive preparation/review checkpoints without progress, reassess the assignment itself", "two consecutive preparation/review checkpoints without progress, keep the same assignment"],
+      ["worker", "They do not replace independent acceptance or permit protected-input edits", "They replace independent acceptance and permit protected-input edits"],
+      ["review", "self-review is not independent review", "self-review is independent review"]
     ],
     "ru": [
       ["coordinator", "Непроверенные существенные предпосылки исключают START", "Непроверенные существенные предпосылки разрешают START"],
       ["worker", "диагностику до изменения", "диагностику после изменения"],
       ["testdesign", "точную предпосылку на настоящем движке/harness до ready", "точную предпосылку на настоящем движке/harness после ready"],
       ["triage", "не подтверждает продукт", "подтверждает продукт"],
-      ["protocol", "повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов", "повторять для занятости свободных слотов"]
+      ["protocol", "повторять только ради нового вопроса/evidence/решения, не для занятости свободных слотов", "повторять для занятости свободных слотов"],
+      ["coordinator", "Разрешена одна ограниченная изменённая попытка", "Разрешены неограниченные изменённые попытки"],
+      ["coordinator", "новая неудача или точка без прогресса прекращает однотипные возвраты", "новая неудача или точка без прогресса разрешает однотипные возвраты"],
+      ["coordinator", "двух последовательных точек подготовки/ревью без прогресса, пересмотри само задание", "двух последовательных точек подготовки/ревью без прогресса, сохрани прежнее задание"],
+      ["worker", "Они не заменяют независимую приёмку и не разрешают правки защищённых входов", "Они заменяют независимую приёмку и разрешают правки защищённых входов"],
+      ["review", "самопроверка не является независимым ревью", "самопроверка является независимым ревью"]
     ]
   },
   "fields": {

@@ -2,6 +2,12 @@
 
 [English](CHANGELOG.md) · [Русский](locales/ru/CHANGELOG.md)
 
+## OCMI 1.3.5 — in-place orchestration update, 2026-10-21
+
+- Reassess stalled assignments at existing checkpoints; bound changed attempts and process review, preserving safety/authority.
+- Separate worker development tests from independent acceptance; validate new executable adapters/fixtures, keep unavailable validation design-only.
+- Same OCMI 1.3.5 release; earlier assets remain available. Existing installations require an explicit preserving update.
+
 ## OCMI 1.3.5 — bounded continuation and everyday memory, 2026-10-19
 
 - Executing/external-wait/no-progress distinction, resumable checkpoints and bounded observation; no implicit monitoring/restart.

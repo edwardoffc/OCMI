@@ -1,10 +1,19 @@
 # OCMI development handoff
 
-**OCMI 1.3.4, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-21**
 
-Updated: 2026-10-19. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
+Updated: 2026-10-21. [PLAN](../../PLAN.md) · [STATE](../../STATE.md).
 
-## Current: OCMI-RELEASE-032 / OCMI 1.3.5
+## Current: OCMI-FLOW-033 / bounded orchestration decisions
+
+Owner authorizes concise base-only correction/checks. [Task record](../OCMI-FLOW-033/HANDOFF.md)
+owns outcome, new bilingual guards/scenarios and immutable artifact evidence. Keep OCMI 1.3.5
+as the same release number; the owner now authorizes GitHub publication. No project/private-memory reads, chats/models or runtime monitoring.
+Accepted locally: complete PS7/5.1 suites, 352 bilingual flow checks and exact new work packs;
+132 original artifacts and 22 original task files preserved. Live efficacy/native macOS CI remain unverified.
+No next roadmap stage is assigned. Preserve original release/assignments and authority boundaries.
+
+## Historical: OCMI-RELEASE-032 / OCMI 1.3.5
 
 Owner authorizes waiting/recovery and everyday personal-memory scenarios, inclusion of FLOW-031,
 unified packaging/publication and preserving upgrades of the two selected work installations.

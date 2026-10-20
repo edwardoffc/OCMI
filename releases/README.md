@@ -1,6 +1,13 @@
 # Distributions
 
-## Current OCMI 1.3.5
+## Current OCMI 1.3.5 — updated 2026-10-21
+
+Bounded orchestration decisions; same release number. Existing projects require an explicit preserving update.
+[Receipt](../docs/releases/1.3.5-update.json) · [English ZIP](ocmi-work-1.3.5-en-2026-10-21-r2.zip) · [Русский ZIP](ocmi-work-1.3.5-ru-2026-10-21-r2.zip).
+
+Personal/coordinator packs below are unchanged. [Historical source preparation](../docs/releases/1.3.5-flow.json).
+
+## Initial OCMI 1.3.5 — 2026-10-19
 
 All profiles share OCMI 1.3.5. Full-system setup remains required; component packs support coordinator-led selected actions.
 Existing projects require a preserving merge. [Receipt](../docs/releases/1.3.5.json) · [Guide](../docs/releases/1.3.5.md).

@@ -20,7 +20,7 @@ check-doctor exercises the optional [scoped diagnostic CLI](../docs/doctor.md): 
 bounded inputs, canonical diagnostic blocks, dependency/resource/protected-input findings, real exits
 and target preservation. It runs through check-all on Windows/macOS; no installed projects are read.
 
-check-flow checks compact fields, readiness/control evidence, early failure diagnosis, bounded preparation/research, current-state consistency and existing retry/recovery safeguards in both languages. Omission and explicit weakening mutations must fail. These are instruction regressions, not engine-oracle, live-agent or cost measurements.
+check-flow guards bilingual readiness, scoped test ownership, progress checkpoints and bounded process review, including omission/weakening controls. These are instruction regressions, not live-model or cost measurements.
 
 check-localization checks the maintained translation inventory, reviewed hashes, stable template
 paths, and license copies. Hash agreement detects drift; human review establishes meaning.

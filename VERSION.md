@@ -1,6 +1,7 @@
 # OCMI 1.3.5
 
 One release number covers the system and all work, personal and coordinator profiles in both languages.
+The 2026-10-21 in-place update adds bounded assignment/process review and scoped development tests.
 This release adds bounded waiting/recovery, everyday portable topic memory and actionable test-premise/
 failure-diagnosis safeguards. Installation flow, role authority and task schema remain compatible.
 Installed projects adopt changes by an explicitly requested merge preserving local rules, language,

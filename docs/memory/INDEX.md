@@ -1,10 +1,11 @@
 # OCMI development memory
 
-Scope: this repository. Updated: 2026-10-19.
+Scope: this repository. Updated: 2026-10-21.
 [Rules](RULES.md) · [Roles](ORCHESTRATION.md) · [Brief](BRIEF.md) ·
 [PLAN](PLAN.md) · [STATE](STATE.md) · [CODEMAP](CODEMAP.md).
 
 [Current handoff](tasks/orchestration/HANDOFF.md).
+[Current orchestration correction](tasks/OCMI-FLOW-033/HANDOFF.md): bounded assignment review and development/acceptance test separation; owner-authorized same-version 1.3.5 delivery.
 [Current 1.3.5 work](tasks/OCMI-RELEASE-032/HANDOFF.md): bounded waiting, everyday topics, publication and selected preserving adoption.
 [Current workflow correction](tasks/OCMI-FLOW-031/HANDOFF.md): control evidence, early diagnosis and bounded preparation.
 [OCMI 1.3.4 release](tasks/OCMI-RELEASE-030/HANDOFF.md) · [Release guide](../releases/1.3.4.md).
