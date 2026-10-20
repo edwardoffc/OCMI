@@ -1,9 +1,14 @@
 # OCMI 1.3.5
 
-**OCMI 1.3.5, rules revision 2026-10-13**
+**OCMI 1.3.5, rules revision 2026-10-21**
 
 Orchestration, Context Memory & Indexing.
 All current profiles use OCMI 1.3.5; existing authority, task schema and protected assignments remain.
+
+## In-place update — 2026-10-21
+
+- Bounded reassessment of stalled assignments and one process review; no automatic agents or monitoring.
+- Worker development tests remain distinct from fixed independent acceptance; validate executable fixtures before freezing.
 
 ## Changes in 1.3.5
 

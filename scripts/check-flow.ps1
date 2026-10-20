@@ -29,7 +29,7 @@ foreach ($language in @('en','ru')) {
   foreach ($pair in @(@('protocol','TASK-PROTOCOL.md'),@('coordinator','roles/coordinator.md'),@('worker','roles/worker.md'),@('rules','RULES.md'),@('orchestration','ORCHESTRATION.md'))) {
     $texts[$pair[0]]=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory $pair[1]))
   }
-  foreach ($pair in @(@('testdesign','ocmi-test-design'),@('triage','ocmi-ci-triage'))) {
+  foreach ($pair in @(@('testdesign','ocmi-test-design'),@('triage','ocmi-ci-triage'),@('review','ocmi-review'))) {
     $texts[$pair[0]]=[IO.File]::ReadAllText((Get-OCMIScopedFile (Join-Path $repo ($prefix+'templates/work')) ('skills/'+$pair[1]+'/SKILL.md')))
   }
   $small=[IO.File]::ReadAllText((Get-OCMIScopedFile $memory 'tasks/SMALL-TEMPLATE.md'))
@@ -50,7 +50,7 @@ foreach ($language in @('en','ru')) {
     }
   }
   $weakenings=@($guards.weakenings.$language)
-  Require ($weakenings.Count -eq 5) 'Missing weakening controls'
+  Require ($weakenings.Count -eq 10) 'Missing weakening controls'
   foreach($case in $weakenings){
     Require ($texts[$case[0]].Contains($case[1])) 'Weakening control input missing'
     $mutated=$texts[$case[0]].Replace($case[1],$case[2])

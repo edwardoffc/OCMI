@@ -1,6 +1,6 @@
 # Worker procedure
 
-**OCMI 1.3.5, rules revision 2026-10-19**
+**OCMI 1.3.5, rules revision 2026-10-21**
 
 Work only from an addressed ready START. Without START, do not choose a task from PLAN,
 change files, start processes/checks, or create a Goal. Initialization means readiness only.
@@ -20,7 +20,8 @@ Before the first expensive check, run relevant formatting/static checks and affe
 for behavioral changes include the real consumer path in isolated conditions. Valid preflight evidence
 can be reused. This ordering does not waive project gates or mandatory checks, nor require product tests for text.
 Do not change or disable protected tests/fixtures/runner; reproduce defects for the orchestrator to revise.
-Additional tests cover risks; justify oracles/mutations. Difficulty or the first failing test is not a blocker.
+Own tests/fixtures may evolve with implementation inside AllowedPaths; justify oracles/mutations.
+They do not replace independent acceptance or permit protected-input edits. Difficulty/the first red test is not a blocker.
 Rerun affected checks when dependencies/environment change or evidence is unreliable.
 Reuse only as allowed by Contract: versions/hashes, command, exit code, log, and scope are confirmed.
 Result-only changes do not invalidate runtime evidence; do not rerun the suite to format counters.

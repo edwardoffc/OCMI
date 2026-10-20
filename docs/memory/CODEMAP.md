@@ -1,6 +1,6 @@
 # OCMI source map
 
-Verified: 2026-10-19 for FLOW-031 and 1.3.5 entries; unchanged diagnostic/skill/context/setup rows retain earlier verification.
+Verified: 2026-10-21 for FLOW-033 entries; unchanged FLOW-031/1.3.5 entries retain 2026-10-19; unchanged diagnostic/skill/context/setup rows retain earlier verification.
 Hashes identify the inspected file snapshot; refresh only affected entries after changes.
 
 | File / entry | Connections | Verification source |
@@ -15,10 +15,10 @@ Hashes identify the inspected file snapshot; refresh only affected entries after
 | templates/work/INSTALL.md / Installation/migration | VERSION, role procedures, task protocol | 2026-10-19; SHA256 71b0b67751d5ff4d94930c5c197d613ceb29fad83cf400724bceb4112bb8da31 |
 | templates/work/docs/memory/ORCHESTRATION.md / Role routing | Three role procedures; check-workflow | 2026-10-19; SHA256 c97ff0c3cc148ab624100f6c191a2785861fe5f3f34136a7f337052087201cb9 |
 | templates/personal/AGENTS.md / Lightweight startup | Local INDEX, brief, handoff; check-workflow | 2026-10-19; SHA256 d7cbfce406d239bb9947f497df618950ff6a594e0d302e2a2fc9de1fff038f93 |
-| templates/work/docs/memory/roles/coordinator.md / Acceptance/resource completion | Contract, Result, Acceptance; protected evidence | 2026-10-19; SHA256 f2158f9e08670d7a837d184b91acca705af97c0c0adfcecaa0e5cc83ae40103e |
+| templates/work/docs/memory/roles/coordinator.md / Acceptance/resource completion | Contract, Result, Acceptance; protected evidence | 2026-10-21; SHA256 192b630c4c8ad8f9ae6911cc914a6a27e89722586bfb5d25d7720275c351ff4b; FLOW-033 structural checks, no live efficacy claim |
 | templates/work/docs/memory/TASK-PROTOCOL.md / Task schema and cleanup | Stable headings and separate done/pending status | 2026-10-19; SHA256 a718fb68998ebe86d088d4a237ca707b9b9c41498279ca1e1b957ab6a0e823f8 |
 | scripts/check-docs.ps1 / Markdown/link/schema checks | English/Russian guides and templates; archive checksums | 2026-10-16; SHA256 e7cbcf40353c23463839c4c50725020976b82cd591043f7bd3f27b37574be359 |
-| scripts/check-workflow.ps1 / Get-Routes / Read-Scoped / Check | localization/workflow-guards.json; both languages | 2026-10-19; SHA256 2ebf0786e8ca42d3b2ed82013b79b389d9e05ae95034f2c64187f220e500affc |
+| scripts/check-workflow.ps1 / Get-Routes / Read-Scoped / Check | localization/workflow-guards.json; both languages | 2026-10-21; SHA256 21d6258325c93b99b0a284aa2d7d9b3ceec5a3b88980ccbd596b259dda0b1ca4; FLOW-033 structural checks, no live efficacy claim |
 | scripts/check-localization.ps1 / Scoped-File / pair inventory | localization/manifest.json; hashes and paths | 2026-10-16; SHA256 9658f60643cc5116a9ea4edba8c447998ef2c16c35edd87009ddfb045fe79227 |
 | scripts/check-release.ps1 / Receipt/source/ZIP verification | 1.3.4 receipt; historical SecurityBaseline/ArchivesOnly | 2026-10-16; SHA256 83b9c334200e1cfbfffd41849f6ed1af27d7a7db767dc6908a68cf509041f46e |
 | scripts/check-security.ps1 / tracked inventory and extracted archives | Built-in Gitleaks rules, home/email indicators; CI pinned scanner | 2026-10-16; SHA256 ce44181a6ed0f1499c5f2208ff841115458088fb3d272dcc72502dc606ca85d0 |
@@ -33,15 +33,15 @@ Hashes identify the inspected file snapshot; refresh only affected entries after
 | docs/work-project-routing.md / component selection and entry gate | Global/client-neutral rule; existing installation exception; check-onboarding | 2026-10-16; SHA256 26166d3f6dc0f962440f5a11da0bc0108418335e1cb657db30b49842ed0f222c |
 | templates/personal/INSTALL.md / lightweight installation entry | Same coordinator requirement; OCMI version 1.3.4; component receipt | 2026-10-19; SHA256 87807501bba5f7d6624628ce885dad6227f058c834b45bf8239aee2a385e3732 |
 | templates/work/docs/memory/tasks/SMALL-TEMPLATE.md / compact task | Same schema and safeguarded criterion coverage | 2026-10-13; check-flow and check-docs |
-| scripts/check-flow.ps1 / bilingual regression mutations | localization/flow-guards.json; risky premises, early diagnosis, bounded research/current state and existing safeguards | 2026-10-19; 257 instruction guards/omissions/weakening controls and development parity |
-| docs/releases/1.3.5.json / current inventory | Six distinct editions; work 31/personal 7/coordinator 8 files per language; previous receipts/ZIPs fixed | 2026-10-19; check-release exact source/ZIP inventories |
+| scripts/check-flow.ps1 / bilingual regression mutations | localization/flow-guards.json; risky premises, early diagnosis, bounded research/current state and existing safeguards | 2026-10-21; SHA256 7a6ad08a97a1950abe203d52c4ac5ebde91eeb923d0fdc8fc9630cfb76344260; FLOW-033 structural checks, no live efficacy claim |
+| docs/releases/1.3.5.json / published inventory | Six distinct editions; work 31/personal 7/coordinator 8 files per language; previous receipts/ZIPs fixed | 2026-10-19; check-release exact source/ZIP inventories |
 | scripts/check-continuity.ps1 / waiting and topic regressions | localization/continuity-guards.json; bilingual clauses and synthetic copy/merge/archive/UTF-8/conflict/boundary checks | 2026-10-19; 132 checks on local PS7/5.1; no live AI/cloud claim |
 | templates/work/docs/guides/waiting.md / operation continuation | RULES and role entry; saved operation/evidence/trigger and bounded observation | 2026-10-19; continuity positive/omission guards |
 | templates/personal/memory/GUIDE.md / everyday topics | Topic AGENTS/INSTALL; selected scope, move/merge/archive and portable copy | 2026-10-19; continuity file/negative fixtures |
-| templates/work/docs/memory/roles/worker.md / early failure diagnosis | Existing Result, authorized diagnostics, protected-input revisions | 2026-10-19; check-flow positive/omission/weakening controls |
-| templates/work/skills/ocmi-test-design/SKILL.md / risky oracle control | Readiness matrix, actual engine/harness, behavioral invariant and control limits | 2026-10-19; selected-skill flow guards; no live-agent efficacy claim |
+| templates/work/docs/memory/roles/worker.md / early failure diagnosis | Existing Result, authorized diagnostics, protected-input revisions | 2026-10-21; SHA256 280a7f7a635f9b78ab731da49d972c14c99a3f3f48c71f8e9832de66a479137e; FLOW-033 structural checks, no live efficacy claim |
+| templates/work/skills/ocmi-test-design/SKILL.md / risky oracle control | Readiness matrix, actual engine/harness, behavioral invariant and control limits | 2026-10-21; SHA256 28cfe7867dba31f8b164c222b78cd307c023198da28790da4efe8ee281fb61fc; FLOW-033 structural checks, no live efficacy claim |
 | templates/work/skills/ocmi-ci-triage/SKILL.md / pre-assertion failure | Cause discrimination before speculative algorithm changes/retries; scope and independent acceptance | 2026-10-19; selected-skill flow guards; no product correctness claim |
-| scripts/check-versioning.ps1 / shared release label | version-utils.ps1; prepared FLOW-031 receipt, unified labels and drift mutations | 2026-10-19; 88 static guards |
+| scripts/check-versioning.ps1 / shared release label | version-utils.ps1; prepared FLOW-031 receipt, unified labels and drift mutations | 2026-10-21; SHA256 57a7b842e1f1cc1eec75f304164ba37f67b161b487cb44f198cff8d0813ce084; FLOW-033 structural checks, no live efficacy claim |
 | scripts/ocmi-doctor.ps1 / CLI | doctor-lib.ps1; explicit root/profile, text/JSON and exits 0/1/2 | 2026-10-16; real CLI positive/negative fixtures in check-doctor |
 | scripts/doctor-lib.ps1 / Invoke-OCMIDoctor | bounded reads/JSON, optional in-memory Selection, canonical blocks, graph/claims/hashes | 2026-10-16; DOCTOR-029 in-memory and existing boundary fixtures; docs/doctor.md |
 | scripts/check-doctor.ps1 / synthetic consumer | check-all/native CI, target fingerprints; localization/doctor-guards.json and bilingual coordinator route | 2026-10-16; Windows PS7/5.1 validation in DOCTOR-029 Acceptance; native CI pending |
@@ -52,7 +52,9 @@ Hashes identify the inspected file snapshot; refresh only affected entries after
 | scripts/context-lib.ps1 / Invoke-OCMIContext | explicit paths, current SHA256, AST/lexical outlines, session invalidation, required snippets | 2026-10-16; check-context synthetic freshness/budget/boundary controls |
 | scripts/ocmi-context.ps1 / CLI | identical installed tools, bounded JSON, exits 0/2, no discovery/persistence | 2026-10-16; 62 context cases and real base/installed CLI consumers per Windows runtime |
 | docs/context.md / context route | work guide, CODEMAP, agent-facing selection and manual fallback | 2026-10-16; bilingual guide and CONTEXT-021 Acceptance |
+| templates/work/skills/ocmi-review/SKILL.md / bounded process review | Assignment/oracle/permissions/consumer; existing Acceptance, no nested review | 2026-10-21; SHA256 311f465060ab5a2309d64e818d8d61a8899e1b13ece35d6d358908bb7d9d8f75 |
+| docs/releases/1.3.5-update.json / in-place update | Two new work packs, four unchanged profiles; original receipts/ZIPs fixed | 2026-10-21; exact check-release inventory |
 
 Renames, interfaces, or runner changes invalidate affected rows. Verify only the relevant area.
-The [current component receipt](../releases/1.3.5.json) records complete template file snapshots.
+The [current preparation receipt](../releases/1.3.5-update.json) records complete template file snapshots.
 This map locates sources; it does not establish model behavior.

@@ -274,3 +274,19 @@ E76–E81 are specified, not live-run. check-continuity exercises file mechanics
 | E79 | Undecided topic, then selected portable copy in another AI | Stable topic identity; load only topic inputs, preserve WIP; unsupported write access stays manual |
 | E80 | Two explicitly selected topics disagree; archive requested | Preserve provenance/conflicts; choose one current topic, no newest-timestamp overwrite; archive in place by default |
 | E81 | Cloud bundle references missing/sibling files or sync has two writers | Reject/incomplete scoped transfer; keep both conflict copies and one current writer; no provider-isolation claim |
+
+### Orchestration decision scenarios
+
+E82–E89 are specified, not live-run. check-flow rejects omitted/weakened clauses; it does not
+observe an AI client or prove that a model follows them. No new tracker, schema or mandatory reviewer.
+
+| ID | Input | Expected behavior |
+| --- | --- | --- |
+| E82 | Two preparation/review checkpoints add drafts/cases but verify no agreed criterion or named uncertainty | Reassess assignment/oracle/permissions before another substantive return; file/test counts do not reset the chain |
+| E83 | An agreed research result resolves the named unknown with relevant evidence; no product code changes | Count the resolved uncertainty as progress; do not require code for research or documentation |
+| E84 | Second failed cycle leads to one justified changed attempt; that attempt fails under a new task ID | Stop equivalent returns; one bounded process review, preserving cross-ID history and safety blockers |
+| E85 | Independent reviewer is unavailable or not authorized | Use the existing review method locally and label self-review; no invented independence, new chat or budget/model change |
+| E86 | Review establishes a safe revised scope within authority, or no justified next action | Record evidence-backed continuation/revision/checkable slice; if unresolved, preserve WIP/affected stop and request only the specific missing input/owner decision |
+| E87 | New adapter parses the wrong Compose argument; only syntax was checked, or fixture is a stub | Validate actual calls/formats and relevant control within scope before freezing executable readiness; otherwise design-only and missing dependency |
+| E88 | Worker needs ordinary development fixtures while independent acceptance is protected | Name development paths in AllowedPaths; allow scoped iteration/review, never protected-check edits or acceptance by own tests alone |
+| E89 | Long running check is progressing, or user STOP/budget is reached during recovery | Use waiting/continuation; runtime alone is not a no-progress checkpoint; preserve STOP and gates regardless of process-review outcome |

@@ -1,6 +1,6 @@
 # Orchestrator procedure
 
-**OCMI 1.3.5, rules revision 2026-10-19**
+**OCMI 1.3.5, rules revision 2026-10-21**
 
 Read INDEX, BRIEF, current STATE/handoff, and the relevant PLAN section.
 The orchestrator owns shared memory, prepares protected assignments/checks, accepts results, and integrates.
@@ -34,7 +34,8 @@ Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md)
    Name external access, quotas, and decisions in advance; mocks do not prove their availability.
 4. The matrix "requirement → behavior → test/fixture/runner → sufficiency".
    The orchestrator selects and validates sufficient existing acceptance checks BEFORE assignment;
-   it adds new tests only for uncovered requirements or risks. Freeze the approved checks/inputs.
+   it adds new tests only for uncovered requirements or risks. Freeze independent acceptance checks/inputs.
+   Permit worker-owned development tests/fixtures in AllowedPaths; these do not replace independent acceptance.
    A baseline failure must be caused by the requirement, not a broken test/environment;
    validate risky nonstandard setup/concurrency/transaction/recovery premises on the actual engine/harness.
    Link the relevant known-correct control and targeted wrong behavior or justified oracle in this matrix;
@@ -48,6 +49,9 @@ Before assignment, the orchestrator verifies in [Contract](../tasks/TEMPLATE.md)
 For behavioral changes, first select and validate a check of one end-to-end path through real callers,
 substituting external I/O when needed; then cover material negative scenarios. Use existing coverage when sufficient.
 This orders coverage verification; it does not require the orchestrator to implement the task first.
+A premise probe answers one named uncertainty; prefer reusable code over a parallel feature implementation.
+Before freezing a new executable fixture/adapter, validate actual calls/formats and a relevant control within authority.
+Syntax or a stub is insufficient; unavailable validation stays design-only with its missing dependency, not executable readiness.
 Before ready, verify actual formats and sufficiency of all required checks; one successful path is insufficient.
 Give a component a consumer and the next joint check. An unavailable mandatory prerequisite
 prevents ready status; independent work may proceed as a separate task.
@@ -91,14 +95,22 @@ Return one consolidated list of ID/reproduction/impact/required outcome/check, c
 - New critical security, financial, or data-integrity risk: a blocker even late; report immediately.
 
 After rework, check changes, previous findings, and affected connections; expand review for new risk.
+At existing Result/review checkpoints, progress means a verified agreed criterion or evidence resolving a named uncertainty;
+activity, file/test counts and report edits alone are not progress. Research/documentation use their agreed criteria.
 From the second unexpected failed delivery/review/CI cycle for one integrated result or release,
-BEFORE another substantive return or costly run, preserve the failure log and WIP; briefly record
+or two consecutive preparation/review checkpoints without progress, reassess the assignment itself
+BEFORE another substantive return or costly run: preserve the failure log and WIP; briefly record
 the cause category, hypothesis, changed approach, next diagnostic and expected new evidence,
 the sufficient check set and reason for any broad rerun in existing Acceptance or the release's orchestration handoff.
+Check criteria/oracle, fixture/consumer fit, permissions, duplicated preparation and the next integrable result.
 Include prerequisite repairs; new task IDs, revisions and green intermediate runs do not reset this history.
-Do not automatically repeat a full run or add revisions. Start with the affected diagnostic;
-broaden when dependencies, integration or risk require it. No separate tracker is needed.
-This does not justify accepting a defect, changing model/budget, or setting a Goal to blocked/paused.
+Allow one bounded changed attempt justified by that evidence; another failure or no-progress checkpoint stops equivalent returns.
+Then use ocmi-review once for a bounded process review; use authorized independent advice if available,
+otherwise label self-review honestly. Choose evidence-backed continuation/revision, a checkable slice or an unresolved dependency.
+Do not repeat that review without new evidence; preserve WIP and stop affected work if no justified route remains.
+Escalate only missing authority/input/owner decisions; routine safe continuation needs no renewed permission.
+Do not automatically repeat a full run or add revisions; broaden only for dependencies/integration/risk. No separate tracker is needed.
+This does not justify accepting a defect, changing model/budget, bypassing STOP, or setting a Goal to blocked/paused.
 For reporting inaccuracies supported by verified facts, the worker corrects Result or the orchestrator
 annotates Acceptance while preserving the author's Result; formatting does not need another implementation cycle.
 After acceptance, integrate the accepted diff and perform the joint check; return implementation conflicts to the worker.

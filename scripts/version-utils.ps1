@@ -8,6 +8,7 @@ function Get-OCMIReleaseReceipt([string]$Version) {
   if ($Version -cnotmatch '^\d+\.\d+\.\d+$' -or [version]$Version -lt [version]'1.3.3') {throw 'Unsupported unified release'}
   if ($Version -ceq '1.3.3') {return 'docs/releases/1.3.3-context.json'}
   if ($Version -ceq '1.3.4') {return 'docs/releases/1.3.4-flow.json'}
+  if ($Version -ceq '1.3.5') {return 'docs/releases/1.3.5-update.json'}
   return "docs/releases/$Version.json"
 }
 function Assert-OCMIUnifiedReceipt($Receipt,[string]$Version) {
