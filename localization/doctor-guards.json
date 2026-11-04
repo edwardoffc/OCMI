@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "en": [
+    "user does not run commands or fill JSON.",
+    "registry is not permission.",
+    "unavailable execution stays unverified;",
+    "Diagnosis grants no readiness/acceptance/release, repair or wider access."
+  ],
+  "ru": [
+    "Пользователь не запускает команды и не заполняет JSON.",
+    "реестр не даёт доступа.",
+    "недоступное исполнение остаются непроверенными;",
+    "Диагностика не разрешает START/приёмку/выпуск, исправление или расширение доступа."
+  ]
+}

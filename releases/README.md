@@ -1,0 +1,118 @@
+# Distributions
+
+## Current OCMI 1.3.5 — updated 2026-10-21
+
+Bounded orchestration decisions; same release number. Existing projects require an explicit preserving update.
+[Receipt](../docs/releases/1.3.5-update.json) · [English ZIP](ocmi-work-1.3.5-en-2026-10-21-r2.zip) · [Русский ZIP](ocmi-work-1.3.5-ru-2026-10-21-r2.zip).
+
+Personal/coordinator packs below are unchanged. [Historical source preparation](../docs/releases/1.3.5-flow.json).
+
+## Initial OCMI 1.3.5 — 2026-10-19
+
+All profiles share OCMI 1.3.5. Full-system setup remains required; component packs support coordinator-led selected actions.
+Existing projects require a preserving merge. [Receipt](../docs/releases/1.3.5.json) · [Guide](../docs/releases/1.3.5.md).
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| work 1.3.5 | [ZIP](ocmi-work-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-work-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-work-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-work-1.3.5-ru-2026-10-19.zip.sha256) |
+| personal 1.3.5 | [ZIP](ocmi-personal-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-personal-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-personal-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-personal-1.3.5-ru-2026-10-19.zip.sha256) |
+| coordinator 1.3.5 | [ZIP](ocmi-coordinator-1.3.5-en-2026-10-19.zip) · [SHA256](ocmi-coordinator-1.3.5-en-2026-10-19.zip.sha256) | [ZIP](ocmi-coordinator-1.3.5-ru-2026-10-19.zip) · [SHA256](ocmi-coordinator-1.3.5-ru-2026-10-19.zip.sha256) |
+
+## Historical OCMI 1.3.4 preparation
+
+Unpublished source clarification, 2026-10-19: two prepared work packs below; no new numbered release
+or GitHub delivery. The [original published receipt](../docs/releases/1.3.4.json) and its archives remain fixed.
+
+All six profiles use OCMI 1.3.4. The full repository is the system; these component ZIPs support
+coordinator-led setup/integration. Choose one language. Existing projects need an explicit merge
+preserving local rules, assignments and WIP. Personal-profile behavior is unchanged.
+[Exact six-profile receipt](../docs/releases/1.3.4-flow.json) · [Release guide](../docs/releases/1.3.4.md).
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| work 1.3.4 | [ZIP](ocmi-work-1.3.4-en-2026-10-19.zip) · [SHA256](ocmi-work-1.3.4-en-2026-10-19.zip.sha256) | [ZIP](ocmi-work-1.3.4-ru-2026-10-19.zip) · [SHA256](ocmi-work-1.3.4-ru-2026-10-19.zip.sha256) |
+| personal 1.3.4 | [ZIP](ocmi-personal-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-personal-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-personal-1.3.4-ru-2026-10-16.zip.sha256) |
+| coordinator 1.3.4 | [ZIP](ocmi-coordinator-1.3.4-en-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-en-2026-10-16.zip.sha256) | [ZIP](ocmi-coordinator-1.3.4-ru-2026-10-16.zip) · [SHA256](ocmi-coordinator-1.3.4-ru-2026-10-16.zip.sha256) |
+
+## OCMI 1.3.3 — preserved preparation
+
+All profiles use OCMI 1.3.3, including components whose behavior did not change.
+The full repository is the system; these component ZIPs support coordinator-led setup/integration.
+Choose one language. Existing projects require an explicit merge preserving local rules and WIP.
+[Exact six-profile receipt](../docs/releases/1.3.3-context.json) · [Numbering correction](../docs/releases/1.3.3-unified.md).
+Locally prepared work editions include selected skills/specialist procedures of 2026-10-16;
+the other four editions are unchanged. This does not claim new GitHub publication.
+The [original unified receipt](../docs/releases/1.3.3-unified.json) and every prior archive remain immutable.
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| work 1.3.3 | [ZIP](ocmi-work-1.3.3-en-2026-10-16-r3.zip) · [SHA256](ocmi-work-1.3.3-en-2026-10-16-r3.zip.sha256) | [ZIP](ocmi-work-1.3.3-ru-2026-10-16-r3.zip) · [SHA256](ocmi-work-1.3.3-ru-2026-10-16-r3.zip.sha256) |
+| personal 1.3.3 | [ZIP](ocmi-personal-1.3.3-en-2026-10-13.zip) · [SHA256](ocmi-personal-1.3.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-personal-1.3.3-ru-2026-10-13.zip) · [SHA256](ocmi-personal-1.3.3-ru-2026-10-13.zip.sha256) |
+| coordinator 1.3.3 | [ZIP](ocmi-coordinator-1.3.3-en-2026-10-13.zip) · [SHA256](ocmi-coordinator-1.3.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-coordinator-1.3.3-ru-2026-10-13.zip) · [SHA256](ocmi-coordinator-1.3.3-ru-2026-10-13.zip.sha256) |
+
+## Historical distributions and original separate labels
+
+The sections below describe preserved older editions. Use the unified editions above for current installation.
+
+Coordinator/lightweight 1.3.2 distributions use the `-r2` suffix for the local coordinator-memory correction.
+Original 1.3.2 archives are historical; their [coordinator receipt](../docs/releases/1.3.2-initial-validation.json)
+and [component receipt](../docs/releases/1.3.2-initial-components.json) retain the original inventories.
+
+[English](README.md) · [Русский](../locales/ru/releases/README.md)
+
+These are component profiles for the configured coordinator to install into selected targets.
+Choose one language and extract a complete profile. Current editions include [MIT](../LICENSE).
+Work uses protocol 1.2.3; lightweight uses 1.2.1. Installation does not update existing projects automatically.
+
+System [1.3.3](../VERSION.md) starts with [brief orientation](../BOOTSTRAP.md).
+After installation is selected, a full local system copy and coordinator service memory are required.
+The ZIP below contains only the service profile; personal topics and work integration are optional.
+[System installation](../docs/install-system.md) explains handover to a separate chat.
+
+| Service profile | English | Russian |
+| --- | --- | --- |
+| Coordinator 1.3.2 | [ZIP](ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip.sha256) |
+| Historical 1.3.1 | [ZIP](ocmi-coordinator-1.3.1-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.1-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.1-ru-2026-10-12.zip.sha256) |
+| Historical 1.3.0 | [ZIP](ocmi-coordinator-1.3.0-en-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-en-2026-10-12.zip.sha256) | [ZIP](ocmi-coordinator-1.3.0-ru-2026-10-12.zip) · [SHA256](ocmi-coordinator-1.3.0-ru-2026-10-12.zip.sha256) |
+
+[1.3.2 receipt](../docs/releases/1.3.2-validation.json) verifies eight files per language
+and all previous archives. [1.3.0 receipt](../docs/releases/1.3.0-validation.json) remains
+available for historical ZIPs. System setup requires a bound client project and confirmed coordinator;
+Both INSTALLs below check core setup and the coordinator role for new installations.
+Work 1.2.3 adds compact tasks and sufficient/causal checks; coordinator/lightweight editions are reused unchanged.
+
+| Profile | English | Russian |
+| --- | --- | --- |
+| Work 1.2.3 | [ZIP](ocmi-work-1.2.3-en-2026-10-13.zip) · [SHA256](ocmi-work-1.2.3-en-2026-10-13.zip.sha256) | [ZIP](ocmi-work-1.2.3-ru-2026-10-13.zip) · [SHA256](ocmi-work-1.2.3-ru-2026-10-13.zip.sha256) |
+| Historical work 1.2.2 | [ZIP](ocmi-work-1.2.2-en-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-work-1.2.2-ru-2026-10-12-r2.zip) · [SHA256](ocmi-work-1.2.2-ru-2026-10-12-r2.zip.sha256) |
+| Lightweight 1.2.1 | [ZIP](ocmi-personal-1.2.1-en-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-en-2026-10-12-r2.zip.sha256) | [ZIP](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip) · [SHA256](ocmi-personal-1.2.1-ru-2026-10-12-r2.zip.sha256) |
+
+[Original 1.3.3 component receipt](../docs/releases/1.3.3-components.json) records exact source/ZIP inventories (20 work files per language). [Historical 1.3.2 receipt](../docs/releases/1.3.2-components.json) remains available with -Version 1.3.2 -ArchivesOnly.
+Use scripts/check-release.ps1 from the repository root to verify all four editions.
+
+The 2026-10-11 editions and [security receipt](../docs/releases/security-validation.json) remain historical.
+Check with scripts/check-release.ps1 -SecurityBaseline -ArchivesOnly.
+For new installation use current editions; old instructions do not supersede current routing.
+
+## Historical archives
+
+The following original Russian releases are immutable, including their receipts.
+They are retained for recovery. Historical ZIPs do not contain LICENSE; include the repository's
+MIT license when redistributing them. Byte measurements in old reports refer to the original language.
+
+| Version | Archive | SHA256 |
+| --- | --- | --- |
+| Work 1.2.1, 2026-10-11 | [ZIP](ocmi-1.2.1-2026-10-11.zip) | [Checksum](ocmi-1.2.1-2026-10-11.zip.sha256) |
+| OCMI 1, 2026-10-03 | [ZIP](ocmi-1-2026-10-03.zip) | [Checksum](ocmi-1-2026-10-03.zip.sha256) |
+| OCMI 1.1, 2026-10-05 | [ZIP](ocmi-1.1-2026-10-05.zip) | [Checksum](ocmi-1.1-2026-10-05.zip.sha256) |
+| Work 1.2, 2026-10-11 | [ZIP](ocmi-1.2-2026-10-11.zip) | [Checksum](ocmi-1.2-2026-10-11.zip.sha256) |
+| Lightweight 1.2, 2026-10-11 | [ZIP](ocmi-personal-1.2-2026-10-11.zip) | [Checksum](ocmi-personal-1.2-2026-10-11.zip.sha256) |
+
+[1.2.1 report](../docs/releases/1.2.1.md) · [Receipt](../docs/releases/1.2.1-validation.json) ·
+[1.2 report](../docs/releases/1.2.md) · [Receipt](../docs/releases/1.2-validation.json).
+Use check-release -Version 1.2.1 -ArchivesOnly (or -Version 1.2) for historical verification.
+Original commit/tag references may not exist in a standalone public distribution.
+ZIPs and receipts provide content recovery without that Git history.
+Never overwrite a published archive; use a new edition filename for changed contents.
+
+The [previous language-edition receipt](../docs/releases/languages-validation.json) retains the four original English/Russian 1.2.1/1.2 distributions unchanged.

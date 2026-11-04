@@ -1,0 +1,10 @@
+* text=auto eol=lf
+/.local export-ignore
+/packaging/notices/* -text whitespace=cr-at-eol,-blank-at-eof
+*.zip -text
+releases/*.sha256 -text whitespace=cr-at-eol
+
+/docs/memory export-ignore
+/docs/research export-ignore
+/locales/ru/docs/research export-ignore
+/diagnostics export-ignore

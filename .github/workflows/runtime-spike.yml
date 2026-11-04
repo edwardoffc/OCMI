@@ -1,0 +1,32 @@
+name: Runtime preview qualification
+on:
+  workflow_dispatch:
+  push:
+    paths: ['runtime/**', 'scripts/check-runtime-preview.ps1', 'packaging/fixtures/**', '.github/workflows/runtime-spike.yml']
+  pull_request:
+    paths: ['runtime/**', 'scripts/check-runtime-preview.ps1', 'packaging/fixtures/**', '.github/workflows/runtime-spike.yml']
+permissions:
+  contents: read
+concurrency:
+  group: runtime-spike-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  native:
+    name: Preview (${{ matrix.runner }})
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [windows-latest, macos-15, macos-15-intel, ubuntu-24.04]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version: '1.26.2'
+          cache: false
+      - name: Qualify runtime, transfer, SDK adapter and storage/process probes
+        shell: pwsh
+        run: ./scripts/check-runtime-preview.ps1
