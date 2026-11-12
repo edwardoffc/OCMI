@@ -1,0 +1,112 @@
+{
+    "schemaVersion":  1,
+    "version":  "OCMI 1.3.0",
+    "date":  "2026-10-12",
+    "workVersion":  "1.2.2",
+    "lightweightVersion":  "1.2.1",
+    "profiles":  [
+                     {
+                         "profile":  "coordinator",
+                         "language":  "en",
+                         "version":  "1.3.0",
+                         "archive":  "releases/ocmi-coordinator-1.3.0-en-2026-10-12.zip",
+                         "sha256":  "a4f6763d21821c5e14eb3aaf36d1535095acfeebe9a744b69c2aa25a6c18a514",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  3113,
+                                           "sha256":  "c9b47f9ba3e8bcd16516d56f26d23159e99b2af7fd141238714255e00d842440"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  2272,
+                                           "sha256":  "0f9e20ce2f91d68fb3d425de12b56db0ab9ebc926a1d51e61e62e66d25264215"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "memory/BRIEF.md",
+                                           "bytes":  997,
+                                           "sha256":  "f70c9374cb3f41a0707c3c9ef80a540fb66dc128024606cb0c625bc986dff5db"
+                                       },
+                                       {
+                                           "path":  "memory/INDEX.md",
+                                           "bytes":  833,
+                                           "sha256":  "bc67235e3237442ffa3f3248623867f58724ae918cfb4a744ea9acb2c54ac4ef"
+                                       },
+                                       {
+                                           "path":  "memory/tasks/main/HANDOFF.md",
+                                           "bytes":  691,
+                                           "sha256":  "021cb1ed5b9b989d9d21474dbcfcd931ab421eeefa81fe662e866ebbe4942bb8"
+                                       },
+                                       {
+                                           "path":  "VERSION.md",
+                                           "bytes":  321,
+                                           "sha256":  "1adbed6e9dbc26f379c84629250031f396fa9f63515a616c893ddddf3f8c9176"
+                                       }
+                                   ]
+                     },
+                     {
+                         "profile":  "coordinator",
+                         "language":  "ru",
+                         "version":  "1.3.0",
+                         "archive":  "releases/ocmi-coordinator-1.3.0-ru-2026-10-12.zip",
+                         "sha256":  "618b37e89dfdf042c0d3d1a2e17ecd02d6f3985b02f494a9a7de4e755498d166",
+                         "files":  [
+                                       {
+                                           "path":  "AGENTS.md",
+                                           "bytes":  5456,
+                                           "sha256":  "8632edba40f63464dd1d14b1caae8794469f525c12e1081a28c068b647245992"
+                                       },
+                                       {
+                                           "path":  "INSTALL.md",
+                                           "bytes":  3990,
+                                           "sha256":  "487208cedf3853cf48b3fdf3973f348016632274bbd647b4670a79dccd08101a"
+                                       },
+                                       {
+                                           "path":  "LICENSE",
+                                           "bytes":  1067,
+                                           "sha256":  "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+                                       },
+                                       {
+                                           "path":  "memory/BRIEF.md",
+                                           "bytes":  1723,
+                                           "sha256":  "489c28d5879e95015b63a7ad8f9f2c5a7ea671e00d6dd4fb12349b55283774c0"
+                                       },
+                                       {
+                                           "path":  "memory/INDEX.md",
+                                           "bytes":  1423,
+                                           "sha256":  "a2e84511a57256f7522b9f500030b860f0faa7ead00ffed697618845ca81de05"
+                                       },
+                                       {
+                                           "path":  "memory/tasks/main/HANDOFF.md",
+                                           "bytes":  1318,
+                                           "sha256":  "986174d02c596baddec0fdb904c3e7ea6a769375db914efd7580927fbcc899ef"
+                                       },
+                                       {
+                                           "path":  "VERSION.md",
+                                           "bytes":  557,
+                                           "sha256":  "0e89c17796bc5d711c91930157b67ea69c595a83c2e93ac8d8b49928d2ad4683"
+                                       }
+                                   ]
+                     }
+                 ],
+    "historicalArchives":  {
+                               "ocmi-1-2026-10-03.zip":  "d578cbb24535ad61d8d051f703754060242dd31f09fee4c40ce85e81c6046047",
+                               "ocmi-1.1-2026-10-05.zip":  "92c4c865d5f0dce6cbffa36e0002fb38370049446611d8c3e22cfab58ec0c737",
+                               "ocmi-1.2-2026-10-11.zip":  "f251abb6d1ce103e69a3c2c31fa5fd6cbfe1122380783caba4250398634216d8",
+                               "ocmi-1.2.1-2026-10-11.zip":  "b1367343658d68e93ccf2fa85e1c357fe3b5238d8ae9d0bd4aa3a866f7849a4e",
+                               "ocmi-personal-1.2-2026-10-11.zip":  "7274c588c176b34658a7355c1892506c179d49282e7a41dcbe00076776db4536",
+                               "ocmi-personal-1.2-en-2026-10-11.zip":  "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
+                               "ocmi-personal-1.2-ru-2026-10-11.zip":  "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
+                               "ocmi-personal-1.2.1-en-2026-10-11.zip":  "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+                               "ocmi-personal-1.2.1-ru-2026-10-11.zip":  "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+                               "ocmi-work-1.2.1-en-2026-10-11.zip":  "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
+                               "ocmi-work-1.2.1-ru-2026-10-11.zip":  "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb",
+                               "ocmi-work-1.2.2-en-2026-10-11.zip":  "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
+                               "ocmi-work-1.2.2-ru-2026-10-11.zip":  "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e"
+                           }
+}

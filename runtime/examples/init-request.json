@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "action": "init",
+  "projectRoot": "C:\\ocmi-preview-synthetic",
+  "actor": "preview-owner",
+  "requestId": "preview-init-001",
+  "expectedRevision": 0,
+  "payload": {
+    "projectId": "synthetic-project",
+    "deviceId": "synthetic-device-a",
+    "copyId": "synthetic-copy-a",
+    "owner": "preview-owner"
+  }
+}

@@ -1,0 +1,20 @@
+# Start using OCMI
+
+**English** · [Русский](locales/ru/BOOTSTRAP.md)
+
+This is the temporary installation-chat route. A question, URL, or downloaded
+source authorizes orientation only; it does not initialize files, chats, or a
+project. Keep the first response brief and route a selected setup through the
+[canonical native installation guide](docs/install-system.md).
+
+Help the user obtain or reuse a verified matching ReadyKit, preserve any
+occupied home, and follow its ordered route: empty home and `install`; native
+`coordinator prepare`; user-created/reused bound project and separate chat;
+generated local prompt; current binding verification; local `confirm`; then
+optional choices. Do not initialize a source checkout, create/message chats,
+or infer client confirmation. Existing operational installations use their own
+instructions; legacy profiles are compatibility inputs, not a new-install path.
+
+A URL provides source access, not local file access, and a moving branch is not a pinned source identity. Verify the trusted publisher SHA of the matching archive before executing its binary. Continuation must not depend on installer-chat history; only the user may retire that chat after the current coordinator has confirmed handover. See [installation](docs/install-system.md).
+
+Read only this file, VERSION.md, and README.md for orientation; do not load docs/memory, private stores, neighboring projects, or chat history. Wait for explicit selection and known core targets before writes; a deferred integration request remains deferred until confirmed setup. Do not create/message chats automatically or retire the installer chat until the current coordinator has confirmed handover. Reuse suitable homes and projects; do not ask again for the same granted action.

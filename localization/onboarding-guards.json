@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "clauses": [
+    {
+      "id": "local coordinator default",
+      "input": "nativeInstall",
+      "en": "OCMI_Sync/coordinator",
+      "ru": "OCMI_Sync/coordinator"
+    },
+    {
+      "id": "ignore before private writes",
+      "input": "install",
+      "en": "before saving user values",
+      "ru": "До записи значений проверь"
+    },
+    {
+      "id": "preserve local updates",
+      "input": "install",
+      "en": "preserve it when updating/replacing the source",
+      "ru": "сохраняй её при обновлении/замене исходника"
+    },
+    {
+      "id": "no installed folder publication",
+      "input": "install",
+      "en": "never ZIP the installed folder",
+      "ru": "не архивируй всю установленную папку"
+    },
+    {
+      "id": "no automatic external memory migration",
+      "input": "install",
+      "en": "not moved without an explicit migration request",
+      "ru": "не переноси без явного запроса миграции"
+    },
+    {
+      "id": "orientation inputs",
+      "input": "bootstrap",
+      "en": "do not load docs/memory, private stores, neighboring projects",
+      "ru": "не читайте\\s+память разработки, личные хранилища, соседние проекты"
+    },
+    {
+      "id": "short first response",
+      "input": "bootstrap",
+      "en": "Keep the first response brief",
+      "ru": "Ответьте\\s+кратко"
+    },
+    {
+      "id": "advanced menu deferred",
+      "input": "nativeInstall",
+      "en": "Only after confirmation may the coordinator offer optional",
+      "ru": "Только после подтверждения передачи роли координатор предлагает"
+    },
+    {
+      "id": "selection before changes",
+      "input": "bootstrap",
+      "en": "Wait for explicit selection and known core targets before writes",
+      "ru": "До\\s+записи ждите явного выбора и известных локальных целей"
+    },
+    {
+      "id": "existing authorization",
+      "input": "bootstrap",
+      "en": "do not ask again for the same granted action",
+      "ru": "не повторяйте вопрос о том же уже разрешённом\\s+действии"
+    },
+    {
+      "id": "local core required",
+      "input": "nativeInstall",
+      "en": "unpack the kit into an empty chosen",
+      "ru": "распакуйте комплект в новую пустую"
+    },
+    {
+      "id": "separate project chat",
+      "input": "nativeInstall",
+      "en": "project bound to that exact home,\\s+opens a separate coordinator chat",
+      "ru": "проект клиента, привязанный к этой\\s+папке, открывает отдельный чат координатора"
+    },
+    {
+      "id": "filled prompt handover",
+      "input": "nativeInstall",
+      "en": "local/bindings/coordinator/STARTUP\\.md",
+      "ru": "local/bindings/coordinator/STARTUP\\.md"
+    },
+    {
+      "id": "confirmation before retirement",
+      "input": "bootstrap",
+      "en": "only the user may retire that chat after the current coordinator has confirmed handover",
+      "ru": "(?s)не закрывайте чат установки до\\s+подтверждения передачи роли"
+    },
+    {
+      "id": "no automatic chat actions",
+      "input": "bootstrap",
+      "en": "Do not create/message chats automatically",
+      "ru": "Не\\s+создавайте и не пишите чатам автоматически"
+    },
+    {
+      "id": "no automatic retirement",
+      "input": "bootstrap",
+      "en": "only the user may retire that chat after the current coordinator has confirmed handover",
+      "ru": "не закрывайте чат установки до\\s+подтверждения передачи роли"
+    },
+    {
+      "id": "installer history unnecessary",
+      "input": "bootstrap",
+      "en": "Continuation must not depend on installer-chat history",
+      "ru": "Продолжение должно опираться на сохранённые входы, а не на историю\\s+чата установки"
+    },
+    {
+      "id": "URL capability limit",
+      "input": "bootstrap",
+      "en": "A URL provides source access, not local file access",
+      "ru": "Ссылка даёт доступ к исходникам, а не к локальному"
+    },
+    {
+      "id": "source identity",
+      "input": "bootstrap",
+      "en": "a moving branch is not a pinned source identity",
+      "ru": "изменяемая ветка\\s+не является закреплённой ревизией"
+    },
+    {
+      "id": "preserve existing memory",
+      "input": "install",
+      "en": "do not create a competing brief, registry or handoff",
+      "ru": "не создавай вторые описание, реестр или handoff"
+    },
+    {
+      "id": "private coordinator",
+      "input": "agent",
+      "en": "excluded from Git and public distributions",
+      "ru": "исключена из Git и публичных комплектов"
+    },
+    {
+      "id": "pointer is not authority",
+      "input": "agent",
+      "en": "entry or link does not authorize access",
+      "ru": "или ссылка не разрешает доступ"
+    },
+    {
+      "id": "project ownership",
+      "input": "agent",
+      "en": "Project orchestrators own their plans",
+      "ru": "Оркестровщики проектов ведут собственные планы"
+    },
+    {
+      "id": "sanitize records",
+      "input": "agent",
+      "en": "Sanitize evidence before persistence/sharing",
+      "ru": "Очищай доказательства до сохранения/передачи"
+    },
+    {
+      "id": "unselected defaults",
+      "input": "brief",
+      "en": "not selected",
+      "ru": "не выбрано"
+    },
+    {
+      "id": "optional advanced actions",
+      "input": "coordinator",
+      "en": "Only after confirmed handover offer optional personal storage or project\\s+integration",
+      "ru": "Только после подтверждённой передачи роли предлагайте необязательное личное хранилище или\\s+внедрение в проект"
+    },
+    {
+      "id": "inaccessible inputs block confirmation",
+      "input": "coordinator",
+      "en": "A missing required input prevents confirmation",
+      "ru": "Недоступный обязательный вход не позволяет подтвердить запуск"
+    },
+    {
+      "id": "bounded service access",
+      "input": "coordinator",
+      "en": "Do not scan unrelated roots",
+      "ru": "Не сканируйте чужие корни"
+    },
+    {
+      "id": "record handover",
+      "input": "coordinator",
+      "en": "local/bindings/coordinator/coordinator\\.json",
+      "ru": "local/bindings/coordinator/coordinator\\.json"
+    },
+    {
+      "id": "route initial integration",
+      "input": "bootstrap",
+      "en": "a deferred integration request remains deferred until confirmed setup",
+      "ru": "Отложенная просьба о\\s+внедрении остаётся отложенной до подтверждённой базовой настройки"
+    },
+    {
+      "id": "defer target integration",
+      "input": "bootstrap",
+      "en": "a deferred integration request remains deferred until confirmed setup",
+      "ru": "Отложенная просьба о\\s+внедрении остаётся отложенной до подтверждённой базовой настройки"
+    },
+    {
+      "id": "reuse project",
+      "input": "nativeInstall",
+      "en": "The user creates or reuses the client project",
+      "ru": "Пользователь создаёт или переиспользует проект клиента"
+    },
+    {
+      "id": "no loose chat completion",
+      "input": "coordinator",
+      "en": "(?s)current project\\s+association.*report setup pending",
+      "ru": "(?s)текущую связь\\s+проекта.*настройка ожидает завершения"
+    },
+    {
+      "id": "explicit user checklist",
+      "input": "nativeInstall",
+      "en": "(?m)^1\\. Obtain",
+      "ru": "(?m)^1\\. Получите"
+    },
+    {
+      "id": "current binding evidence",
+      "input": "coordinator",
+      "en": "using tools or current user confirmation",
+      "ru": "инструментами или текущим подтверждением пользователя"
+    },
+    {
+      "id": "binding blocks completion",
+      "input": "coordinator",
+      "en": "(?s)If anything is missing,.*report setup pending",
+      "ru": "(?s)При недостающем,.*настройка ожидает завершения"
+    },
+    {
+      "id": "entry integration gate",
+      "input": "entry",
+      "en": "Defer target integration until confirmed",
+      "ru": "Defer target integration until confirmed"
+    },
+    {
+      "id": "download route README",
+      "input": "readme",
+      "en": "### From a downloaded copy",
+      "ru": "### Из скачанной копии"
+    },
+    {
+      "id": "common outcome README",
+      "input": "nativeInstall",
+      "en": "A URL or downloaded source is\\s+orientation only",
+      "ru": "Ссылка или\\s+скачанный исходный код служит для знакомства и получения подходящего"
+    },
+    {
+      "id": "workInstall coordinator actor",
+      "input": "workInstall",
+      "en": "OCMI installation coordinator performing the action",
+      "ru": "координатор установки ОКПИ"
+    },
+    {
+      "id": "workInstall missing core defers",
+      "input": "workInstall",
+      "en": "If the coordinator is missing or unconfirmed, defer target installation",
+      "ru": "Если координатор отсутствует или не подтверждён, отложи установку в цель"
+    },
+    {
+      "id": "workInstall standalone ZIP insufficient",
+      "input": "workInstall",
+      "en": "a component ZIP alone is insufficient",
+      "ru": "отдельного ZIP компонента недостаточно"
+    },
+    {
+      "id": "workInstall existing installation continuation",
+      "input": "workInstall",
+      "en": "An existing operational OCMI installation continues routine work and explicitly requested upgrades",
+      "ru": "Действующая установка ОКПИ продолжает обычную работу и явно запрошенные обновления"
+    },
+    {
+      "id": "workInstall no target work before core",
+      "input": "workInstall",
+      "en": "Do not copy templates, create memory or inspect target code/tests before confirmation",
+      "ru": "Не копируй шаблоны, не создавай память и не изучай код/тесты цели до подтверждения"
+    },
+    {
+      "id": "personalInstall coordinator actor",
+      "input": "personalInstall",
+      "en": "OCMI installation coordinator performing the action",
+      "ru": "координатор установки ОКПИ"
+    },
+    {
+      "id": "personalInstall missing core defers",
+      "input": "personalInstall",
+      "en": "If the coordinator is missing or unconfirmed, defer target installation",
+      "ru": "Если координатор отсутствует или не подтверждён, отложи установку в цель"
+    },
+    {
+      "id": "personalInstall standalone ZIP insufficient",
+      "input": "personalInstall",
+      "en": "a component ZIP alone is insufficient",
+      "ru": "отдельного ZIP компонента недостаточно"
+    },
+    {
+      "id": "personalInstall existing installation continuation",
+      "input": "personalInstall",
+      "en": "An existing operational OCMI installation continues routine work and explicitly requested upgrades",
+      "ru": "Действующая установка ОКПИ продолжает обычную работу и явно запрошенные обновления"
+    },
+    {
+      "id": "personalInstall no target work before core",
+      "input": "personalInstall",
+      "en": "Do not copy templates, create memory or inspect target code/tests before confirmation",
+      "ru": "Не копируй шаблоны, не создавай память и не изучай код/тесты цели до подтверждения"
+    },
+    {
+      "id": "routing coordinator actor",
+      "input": "routing",
+      "en": "Every new installation is performed by an initialized installation coordinator",
+      "ru": "Каждую новую установку выполняет настроенный координатор установки"
+    },
+    {
+      "id": "routing existing continuation",
+      "input": "routing",
+      "en": "Existing operational installations use their own instructions, memory and current assignments",
+      "ru": "Действующая установка использует свои инструкции, память и текущие задания"
+    },
+    {
+      "id": "bootstrap installed target exception",
+      "input": "bootstrap",
+      "en": "Existing operational installations use their own\\s+instructions",
+      "ru": "Действующие установки используют собственные правила"
+    }
+  ]
+}

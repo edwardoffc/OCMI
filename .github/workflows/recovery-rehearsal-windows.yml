@@ -1,0 +1,198 @@
+name: Synthetic recovery rehearsal (Windows)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['codex/recovery-rehearsal-20261104']
+    paths:
+      - 'scripts/acceptance/recovery-rehearsal/**'
+      - '.github/workflows/recovery-rehearsal-windows.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  old_device_prepare:
+    name: Old fictional device — prepare closed transport
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Download and verify published Windows ready kit
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $env:RUNNER_TEMP 'ocmi-old-fixture'
+          $archive = Join-Path $env:RUNNER_TEMP 'preview-2026-11-04-windows-amd64.zip'
+          # Immutable public release input; no source build, Go, or private cache is used.
+          Invoke-WebRequest -Uri 'https://github.com/edwardoffc/OCMI/releases/download/preview-2026-11-04/ocmi-ready-20261104-windows-amd64.zip' -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne '04f45487be60e43ac343094383bbd2a2f42b57043539885bca4028cabdbb621b') { throw 'published kit SHA256 mismatch' }
+          New-Item -ItemType Directory -Path $root | Out-Null
+          Expand-Archive -LiteralPath $archive -DestinationPath $root
+          $info = Get-Content (Join-Path $root 'build-info.json') -Raw | ConvertFrom-Json
+          if ($info.sourceCommit -ne 'c42c83c2bbb8ed8b9a2ae92b02bae5dcab2ec8f8') { throw 'published kit source identity mismatch' }
+          $binary = Join-Path $root 'bin/ocmi.exe'
+          if (!(Test-Path -LiteralPath $binary)) { throw 'missing native Windows binary' }
+          $header = [System.IO.File]::ReadAllBytes($binary)
+          if ($header.Length -lt 2 -or $header[0] -ne 0x4d -or $header[1] -ne 0x5a) { throw 'wrong native Windows binary' }
+          "KIT_ROOT=$root" >> $env:GITHUB_ENV
+          "KIT_BINARY=$binary" >> $env:GITHUB_ENV
+      - name: Prepare synthetic closed transport
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $fixture = Join-Path $env:RUNNER_TEMP 'old-device'
+          New-Item -ItemType Directory -Path $fixture | Out-Null
+          $python = (Get-Command python -ErrorAction Stop).Source
+          & $python -B -c 'import sys; print(sys.executable)'
+          if ($LASTEXITCODE -ne 0) { throw 'hosted Python binding failed' }
+          & $python -B scripts/acceptance/recovery-rehearsal/recovery_harness.py --binary $env:KIT_BINARY --root $fixture --stage prepare
+          if ($LASTEXITCODE -ne 0) { throw 'synthetic prepare failed' }
+          if (!(Test-Path -LiteralPath (Join-Path $fixture 'closed-transport'))) { throw 'prepare did not create closed transport' }
+      - name: Independently seal selected recovery state
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $fixture = Join-Path $env:RUNNER_TEMP 'old-device'
+          $python = (Get-Command python -ErrorAction Stop).Source
+          & $python -B scripts/acceptance/recovery-rehearsal/verify_recovery.py --phase seal --root $fixture
+          if ($LASTEXITCODE -ne 0) { throw 'independent recovery seal failed' }
+      - name: Always retain closed transport
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: selected-recovery-transport
+          path: ${{ runner.temp }}/old-device/closed-transport
+          if-no-files-found: warn
+          retention-days: 1
+      - name: Always retain old-device diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: recovery-consumer-old-report
+          path: ${{ runner.temp }}/old-device/report
+          if-no-files-found: warn
+          retention-days: 1
+      - name: Always teardown owned old-device paths
+        if: always()
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          function Remove-Owned([string]$Path) {
+            $temp = ([IO.Path]::GetFullPath($env:RUNNER_TEMP)).TrimEnd('\') + '\'
+            $full = [IO.Path]::GetFullPath($Path)
+            if (!$full.StartsWith($temp, [StringComparison]::OrdinalIgnoreCase)) { throw "refusing non-temporary path: $full" }
+            if (Test-Path -LiteralPath $full) { Remove-Item -LiteralPath $full -Recurse -Force -ErrorAction Stop }
+            if (Test-Path -LiteralPath $full) { throw "teardown retained: $full" }
+          }
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'old-device')
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'ocmi-old-fixture')
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'preview-2026-11-04-windows-amd64.zip')
+
+  new_device_restore:
+    name: New fictional device — restore only closed transport
+    needs: old_device_prepare
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: selected-recovery-transport
+          path: ${{ runner.temp }}/new-device/closed-transport
+      - name: Download and verify separate published Windows ready kit
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $env:RUNNER_TEMP 'ocmi-new-fixture'
+          $archive = Join-Path $env:RUNNER_TEMP 'preview-2026-11-04-windows-amd64.zip'
+          Invoke-WebRequest -Uri 'https://github.com/edwardoffc/OCMI/releases/download/preview-2026-11-04/ocmi-ready-20261104-windows-amd64.zip' -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne '04f45487be60e43ac343094383bbd2a2f42b57043539885bca4028cabdbb621b') { throw 'published kit SHA256 mismatch' }
+          New-Item -ItemType Directory -Path $root | Out-Null
+          Expand-Archive -LiteralPath $archive -DestinationPath $root
+          $info = Get-Content (Join-Path $root 'build-info.json') -Raw | ConvertFrom-Json
+          if ($info.sourceCommit -ne 'c42c83c2bbb8ed8b9a2ae92b02bae5dcab2ec8f8') { throw 'published kit source identity mismatch' }
+          $binary = Join-Path $root 'bin/ocmi.exe'
+          if (!(Test-Path -LiteralPath $binary)) { throw 'missing native Windows binary' }
+          "KIT_BINARY=$binary" >> $env:GITHUB_ENV
+      - name: Restore synthetic closed transport and run task checks
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $fixture = Join-Path $env:RUNNER_TEMP 'new-device'
+          if (!(Test-Path -LiteralPath (Join-Path $fixture 'closed-transport'))) { throw 'closed transport missing' }
+          $python = (Get-Command python -ErrorAction Stop).Source
+          & $python -B -c 'import sys; print(sys.executable)'
+          if ($LASTEXITCODE -ne 0) { throw 'hosted Python binding failed' }
+          & $python -B scripts/acceptance/recovery-rehearsal/recovery_harness.py --binary $env:KIT_BINARY --root $fixture --stage preflight
+          if ($LASTEXITCODE -ne 0) { throw 'synthetic preflight failed' }
+          & $python -B scripts/acceptance/recovery-rehearsal/recovery_harness.py --binary $env:KIT_BINARY --root $fixture --stage restore
+          if ($LASTEXITCODE -ne 0) { throw 'synthetic restore failed' }
+      - name: Independently check restored recovery state
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $fixture = Join-Path $env:RUNNER_TEMP 'new-device'
+          $reportDirectory = Join-Path $fixture 'report'
+          $report = Join-Path $reportDirectory 'recovery-independent.json'
+          New-Item -ItemType Directory -Path $reportDirectory -Force | Out-Null
+          $python = (Get-Command python -ErrorAction Stop).Source
+          & $python -B scripts/acceptance/recovery-rehearsal/verify_recovery.py --phase check --binary $env:KIT_BINARY --root $fixture --report $report
+          if ($LASTEXITCODE -ne 0) { throw 'independent recovery check failed' }
+      - name: Prove defect, bind, patch, and accept the synthetic task cycle
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $fixture = Join-Path $env:RUNNER_TEMP 'new-device'
+          $project = Join-Path $fixture 'new-device/project'
+          $acceptance = Join-Path $project 'acceptance'
+          $bindReport = Join-Path $fixture 'report/task-cycle-bind.json'
+          $acceptReport = Join-Path $fixture 'report/task-cycle-accept.json'
+          New-Item -ItemType Directory -Path $acceptance -Force | Out-Null
+          New-Item -ItemType Directory -Path (Split-Path -Parent $bindReport) -Force | Out-Null
+          Copy-Item -LiteralPath scripts/acceptance/recovery-rehearsal/protected_task_test.py -Destination (Join-Path $acceptance 'verify.py')
+          $python = (Get-Command python -ErrorAction Stop).Source
+          Push-Location $project
+          try {
+            & $python -B acceptance/verify.py --oracle-control
+            if ($LASTEXITCODE -ne 0) { throw 'independent protected-test oracle control failed' }
+            $defect = & $python -B acceptance/verify.py . 2>&1
+            $defectExit = $LASTEXITCODE
+            $defect | Write-Output
+            if ($defectExit -eq 0) { throw 'protected test unexpectedly passed before candidate change' }
+            if (($defect -join "`n") -notmatch 'AssertionError') { throw 'protected test did not prove its expected assertion failure' }
+            & $python -B $env:GITHUB_WORKSPACE/scripts/acceptance/recovery-rehearsal/task_cycle.py --phase bind --binary $env:KIT_BINARY --project $project --report $bindReport
+            if ($LASTEXITCODE -ne 0) { throw 'task-cycle bind failed' }
+            Copy-Item -LiteralPath $env:GITHUB_WORKSPACE/scripts/acceptance/recovery-rehearsal/candidate_labels.py -Destination (Join-Path $project 'labels.py')
+            & $python -B $env:GITHUB_WORKSPACE/scripts/acceptance/recovery-rehearsal/task_cycle.py --phase accept --binary $env:KIT_BINARY --project $project --report $acceptReport
+            if ($LASTEXITCODE -ne 0) { throw 'task-cycle accept failed' }
+            git -C $env:GITHUB_WORKSPACE diff --exit-code
+            if ($LASTEXITCODE -ne 0) { throw 'source checkout changed during recovery rehearsal' }
+          } finally { Pop-Location }
+      - name: Always retain new-device report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: recovery-consumer-new-report
+          path: ${{ runner.temp }}/new-device/report
+          if-no-files-found: warn
+          retention-days: 1
+      - name: Always teardown owned new-device paths
+        if: always()
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          function Remove-Owned([string]$Path) {
+            $temp = ([IO.Path]::GetFullPath($env:RUNNER_TEMP)).TrimEnd('\') + '\'
+            $full = [IO.Path]::GetFullPath($Path)
+            if (!$full.StartsWith($temp, [StringComparison]::OrdinalIgnoreCase)) { throw "refusing non-temporary path: $full" }
+            if (Test-Path -LiteralPath $full) { Remove-Item -LiteralPath $full -Recurse -Force -ErrorAction Stop }
+            if (Test-Path -LiteralPath $full) { throw "teardown retained: $full" }
+          }
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'new-device')
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'ocmi-new-fixture')
+          Remove-Owned (Join-Path $env:RUNNER_TEMP 'preview-2026-11-04-windows-amd64.zip')

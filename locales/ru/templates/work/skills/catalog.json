@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "language": "ru",
+  "skills": [
+    {
+      "id": "ocmi-search-first",
+      "description": "Найти существующую реализацию в разрешённой области или подходящую зависимость до создания новой возможности.",
+      "need": "reuse",
+      "intents": [
+        "bug",
+        "change",
+        "research"
+      ],
+      "path": "skills/ocmi-search-first/SKILL.md"
+    },
+    {
+      "id": "ocmi-ci-triage",
+      "description": "Разобрать падающую проверку или повторные возвраты по причинным доказательствам до следующего дорогого запуска.",
+      "need": "diagnose",
+      "intents": [
+        "bug",
+        "change",
+        "release"
+      ],
+      "path": "skills/ocmi-ci-triage/SKILL.md"
+    },
+    {
+      "id": "ocmi-test-design",
+      "description": "Закрыть подтверждённый пробел приёмочного покрытия достаточными проверками до фиксации или изменения задания.",
+      "need": "tests",
+      "intents": [
+        "bug",
+        "change",
+        "review"
+      ],
+      "path": "skills/ocmi-test-design/SKILL.md"
+    },
+    {
+      "id": "ocmi-review",
+      "description": "Проверить один ограниченный результат на согласованное поведение и качество одним сводным проходом по доказательствам.",
+      "need": "review",
+      "intents": [
+        "change",
+        "review",
+        "release"
+      ],
+      "path": "skills/ocmi-review/SKILL.md"
+    },
+    {
+      "id": "ocmi-security-review",
+      "description": "Разобрать запрошенное ревью безопасности или конкретный риск границы доверия в разрешённом изменении.",
+      "need": "security",
+      "intents": [
+        "bug",
+        "change",
+        "review",
+        "release",
+        "question"
+      ],
+      "path": "skills/ocmi-security-review/SKILL.md"
+    }
+  ]
+}
