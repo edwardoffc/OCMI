@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "skills": [
+    {
+      "id": "ocmi-search-first",
+      "description": "Find an existing in-scope implementation or suitable dependency before building a new capability.",
+      "need": "reuse",
+      "intents": [
+        "bug",
+        "change",
+        "research"
+      ],
+      "path": "skills/ocmi-search-first/SKILL.md"
+    },
+    {
+      "id": "ocmi-ci-triage",
+      "description": "Diagnose a failing or repeatedly returning check using causal evidence before another costly run.",
+      "need": "diagnose",
+      "intents": [
+        "bug",
+        "change",
+        "release"
+      ],
+      "path": "skills/ocmi-ci-triage/SKILL.md"
+    },
+    {
+      "id": "ocmi-test-design",
+      "description": "Close a demonstrated acceptance-coverage gap with sufficient checks before freezing or revising an assignment.",
+      "need": "tests",
+      "intents": [
+        "bug",
+        "change",
+        "review"
+      ],
+      "path": "skills/ocmi-test-design/SKILL.md"
+    },
+    {
+      "id": "ocmi-review",
+      "description": "Review one bounded result for agreed behavior and quality in a single consolidated evidence-based pass.",
+      "need": "review",
+      "intents": [
+        "change",
+        "review",
+        "release"
+      ],
+      "path": "skills/ocmi-review/SKILL.md"
+    },
+    {
+      "id": "ocmi-security-review",
+      "description": "Examine a requested security review or a concrete trust-boundary risk within the authorized change.",
+      "need": "security",
+      "intents": [
+        "bug",
+        "change",
+        "review",
+        "release",
+        "question"
+      ],
+      "path": "skills/ocmi-security-review/SKILL.md"
+    }
+  ]
+}

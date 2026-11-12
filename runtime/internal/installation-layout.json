@@ -1,0 +1,1 @@
+{"schemaVersion":1,"layoutVersion":1,"kind":"installation","paths":{"system":"system","bin":"system/bin","sync":"OCMI_Sync","coordinator":"OCMI_Sync/coordinator","personal":"OCMI_Sync/personal","recovery":"OCMI_Sync/recovery","local":"local","state":"local/state","store":"local/state/state.sqlite","bindings":"local/bindings","cache":"local/cache","runs":"local/runs"}}

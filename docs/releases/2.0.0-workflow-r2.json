@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 2,
+  "numbering": "unified",
+  "version": "OCMI 2.0.0",
+  "profiles": [
+    {
+      "profile": "work",
+      "language": "en",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-work-2.0.0-en-2026-11-11-r2.zip",
+      "sha256": "ed22abc4031127011863eb485b712fed84405e5e6981d8432a8743009a19a8aa",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "9a986cd711bb156f19e5d5ff4d6b874d7225d638bc4bce2b50aac8dbf95fa3fc",
+          "bytes": 1343
+        },
+        {
+          "path": "docs/memory/tasks/START-TEMPLATE.md",
+          "sha256": "dceb40872eef80adba6a8c1bd2e43513947a483a4a4d1f1fb4ef4dd8afe2a670",
+          "bytes": 1479
+        },
+        {
+          "path": "docs/memory/tasks/SMALL-TEMPLATE.md",
+          "sha256": "dfd0f4ebc515b3b914a30792a401f51670a72dade46af22d55aa519ef736db63",
+          "bytes": 1915
+        },
+        {
+          "path": "docs/memory/roles/worker.md",
+          "sha256": "437bf00bfa1a9516f478bba3b80efa079fcd830d4fe19fa269934d88d9c1be1e",
+          "bytes": 3909
+        },
+        {
+          "path": "docs/memory/roles/coordinator.md",
+          "sha256": "1897b4cbfc79de6965d1ab18b874c3dfb0c61b578ad17eafc774bb1bd15cdfbd",
+          "bytes": 14418
+        },
+        {
+          "path": "docs/memory/roles/consultant.md",
+          "sha256": "38aacdec4d87431e2f5b51d971eaf78ff95777698e09d8805f6b2e4633f9ec5b",
+          "bytes": 713
+        },
+        {
+          "path": "skills/ocmi-test-design/SKILL.md",
+          "sha256": "28cfe7867dba31f8b164c222b78cd307c023198da28790da4efe8ee281fb61fc",
+          "bytes": 2650
+        },
+        {
+          "path": "skills/ocmi-security-review/SKILL.md",
+          "sha256": "b967e2277211d849cf90bcabdef5cf562a954d62c0001d72826e1d4504b1e339",
+          "bytes": 1629
+        },
+        {
+          "path": "skills/ocmi-search-first/SKILL.md",
+          "sha256": "ae62f6f70e1de78c87f876c759d29114bf275164af00bc466a928c5b6c069ec6",
+          "bytes": 1665
+        },
+        {
+          "path": "skills/ocmi-review/SKILL.md",
+          "sha256": "311f465060ab5a2309d64e818d8d61a8899e1b13ece35d6d358908bb7d9d8f75",
+          "bytes": 2264
+        },
+        {
+          "path": "skills/ocmi-ci-triage/SKILL.md",
+          "sha256": "39b0f0a62f5a373e39084939f42f0471d35595fd1a97757f8276fcb72811900b",
+          "bytes": 2308
+        },
+        {
+          "path": "docs/memory/TASK-PROTOCOL.md",
+          "sha256": "d422f5fb3e6e9c2b8e2cfd341cd7ebbf4d25302b6d855bd06775dff59b1e3e8d",
+          "bytes": 7338
+        },
+        {
+          "path": "docs/memory/STATE.md",
+          "sha256": "47c07faacf186845770929480cfaf2a40f038d2c0be7e46e2bf2579ea2160d85",
+          "bytes": 1329
+        },
+        {
+          "path": "docs/memory/RULES.md",
+          "sha256": "2b8fc9f452c91e2473ff096b34e72c927269bdc1cd59340865ed995a4e600022",
+          "bytes": 6683
+        },
+        {
+          "path": "docs/memory/tasks/TEMPLATE.md",
+          "sha256": "5946a98abc4e692736fc2100f10400b0c881a4423be42f30ef97a5e35c9e3363",
+          "bytes": 4537
+        },
+        {
+          "path": "docs/memory/PLAN.md",
+          "sha256": "ce5718c8a4cdf7af35309437a7e42b7bcdb4206ee7405919824c6fc2dd1d6554",
+          "bytes": 694
+        },
+        {
+          "path": "docs/memory/INDEX.md",
+          "sha256": "a2f1c6488159c07504570525141b54ffd08460fce8919e40f9352c21f5c9148b",
+          "bytes": 1228
+        },
+        {
+          "path": "docs/memory/CODEMAP.md",
+          "sha256": "267cdf862d70bc1d21f219a285666f60aaf667ad0e21654a749d3df3c7df8437",
+          "bytes": 1373
+        },
+        {
+          "path": "docs/memory/BRIEF.md",
+          "sha256": "43f8f40245e716c74310dcc6456375e4560894f300ca41cebe3455bab5f06911",
+          "bytes": 459
+        },
+        {
+          "path": "docs/guides/waiting.md",
+          "sha256": "c43b6c81dc1b2313e61fb205cf5981d62d4e987c327784c57261aa586f929e8a",
+          "bytes": 3049
+        },
+        {
+          "path": "docs/guides/skills.md",
+          "sha256": "6ae8e5ad47cccb50905c8841d2126821e9c80d32bda7cdeb9ac7c9f3fabfaf69",
+          "bytes": 4972
+        },
+        {
+          "path": "docs/guides/context.md",
+          "sha256": "bbc3b0f548dd05a6363ba6419ced5bcb69db84cf34452d0f75d6e906015a3c7c",
+          "bytes": 4187
+        },
+        {
+          "path": "docs/guides/agent-workflow.md",
+          "sha256": "d1f6bc8494aa9b38f6e24475fc189d21b778aa07f5571e3221b8fced80e6f310",
+          "bytes": 5384
+        },
+        {
+          "path": "tools/ocmi-context.ps1",
+          "sha256": "e145cae713ceda10d9f3c5642d2c3fcc74177d2d9a81c80742025696210e7deb",
+          "bytes": 859
+        },
+        {
+          "path": "tools/context-lib.ps1",
+          "sha256": "9c5fc2389157b3d4561a597f277c20f2a622c10940a7999a8c566a8531e1be89",
+          "bytes": 10989
+        },
+        {
+          "path": "skills/catalog.json",
+          "sha256": "10ef3f5e016fde1276efdec1209399272ef7bad01038564016650f6ff5063c18",
+          "bytes": 1718
+        },
+        {
+          "path": "VERSION.md",
+          "sha256": "92566261db5a5539f3cace2f4c2bfe7a2d58543b941e53a6859ccae999ab87fb",
+          "bytes": 4613
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "36fca2333fcca3794b94ba74d41507876f177b3449a363da658e79e94e6c2373",
+          "bytes": 10247
+        },
+        {
+          "path": "docs/memory/ORCHESTRATION.md",
+          "sha256": "c01080ba08c2c6c974ca8050854d58d9b4f10a24e36dd0af7a40b4e1380b6cf4",
+          "bytes": 1723
+        },
+        {
+          "path": "docs/memory/tasks/orchestration/HANDOFF.md",
+          "sha256": "34b58528daf79dd89f9bb3b212f26b8c373beb9a4959dc3d0c581491a445c1fc",
+          "bytes": 1579
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "language": "en",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-personal-2.0.0-en-2026-11-11-r2.zip",
+      "sha256": "ebdf9cc2471323aada3705d7f4ce50a815b838ef7b955d6fe4f862f9153686a5",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "f7ec88ba15d213069b26d409ca5cb09ec73ff3be833859389da293f76d29f4f8",
+          "bytes": 4810
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "dc4ce9ae95524f78e96ed2646c2efccc0c5ca2b653e1c27e7b7e109c07c830e4",
+          "bytes": 6757
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "sha256": "175aed3d12e2f6b69d1f52150cc390fdbca298d1522dc2bdde9c4d33428cf31e",
+          "bytes": 937
+        },
+        {
+          "path": "memory/GUIDE.md",
+          "sha256": "7ac893c66ff21296ec916ff56edeebcd186e2725dbdfee0c5631bcadf24c3f63",
+          "bytes": 5711
+        },
+        {
+          "path": "memory/INDEX.md",
+          "sha256": "7b65f5738e26cced7b298476c5f971c7e233e82da01f2c58311045a71c475a3b",
+          "bytes": 573
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "sha256": "251b8edfddd880833e4953ba7885125424d2379fe44edfbecba16efe9cc378cc",
+          "bytes": 1027
+        }
+      ]
+    },
+    {
+      "profile": "coordinator",
+      "language": "en",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-coordinator-2.0.0-en-2026-11-11-r2.zip",
+      "sha256": "97fc35a6eb0ff5f0e82354760315fca025b0628fd244c423173460ae10e25fe6",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "42e3a8e167194779e035ab517d1a94b6d60efea3b4a128228687373f9f6766dd",
+          "bytes": 3492
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "211b4b46fd4a638fe604b9fe7581cb43e4133b1a3b8e4114eeca37afd3db1a80",
+          "bytes": 3374
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "STARTUP.md",
+          "sha256": "1c741f5878108cf8bce02613f294600a7e096a35bb7fb8d1ac1a27312f65582d",
+          "bytes": 1895
+        },
+        {
+          "path": "VERSION.md",
+          "sha256": "47c4c42e308c944a7c76ac96c9003c3c5564bd6068f1ea59b3a7a5271c470055",
+          "bytes": 756
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "sha256": "eab451de5375d9772b655e310e6189a7bc5b0b915a57072c50c88595a183cdcd",
+          "bytes": 1354
+        },
+        {
+          "path": "memory/INDEX.md",
+          "sha256": "3709717d20a70b13f931ba24a49d42db2837fa03b06186abccabfca3b85b38d9",
+          "bytes": 853
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "sha256": "a74bea794ff807a5acb574caa642d685207174a37676198e4c0ee61b95345e02",
+          "bytes": 1403
+        }
+      ]
+    },
+    {
+      "profile": "work",
+      "language": "ru",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-work-2.0.0-ru-2026-11-11-r2.zip",
+      "sha256": "81fcad3e11f3afc85d9fab1910577161d50930083d931b4e111eab882c6f8323",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "e2ac7a8c26b8c57aa25961614d7acbce6b097983ed235465ce65fa342ca5863d",
+          "bytes": 2265
+        },
+        {
+          "path": "docs/memory/tasks/START-TEMPLATE.md",
+          "sha256": "94026afbc788f33e3c2a9beb91ace8d11dd890435c96c06284cfbde3dbff8145",
+          "bytes": 2360
+        },
+        {
+          "path": "docs/memory/tasks/SMALL-TEMPLATE.md",
+          "sha256": "ad8a543c7fed2dd13536b69bb1736f3a073de7ca14321d826c6e0d16f6a25d6b",
+          "bytes": 3380
+        },
+        {
+          "path": "docs/memory/roles/worker.md",
+          "sha256": "9849e96643baf4ac03e6ec76fbad3b10c92bf0c767c56c42f7ead0bb1a48f620",
+          "bytes": 6480
+        },
+        {
+          "path": "docs/memory/roles/coordinator.md",
+          "sha256": "3adb5ec3a0414c86cd182071df105c2cece3f1396e24281ffa6b5e5deee9c8be",
+          "bytes": 25420
+        },
+        {
+          "path": "docs/memory/roles/consultant.md",
+          "sha256": "5643589cb5900e5b0a61ab4f0d40efc0745bca6a7d35fb8ade4907858510f2ba",
+          "bytes": 1290
+        },
+        {
+          "path": "skills/ocmi-test-design/SKILL.md",
+          "sha256": "3e28179fbb5acb9553b145a20d2acff7caebd93611a96896f7c001740d0a5bc0",
+          "bytes": 5077
+        },
+        {
+          "path": "skills/ocmi-security-review/SKILL.md",
+          "sha256": "38a7d012142656168d3e9c9c8eeafcce2d64addda92cd89a6a1885d583ccdbfe",
+          "bytes": 2925
+        },
+        {
+          "path": "skills/ocmi-search-first/SKILL.md",
+          "sha256": "ffed0d5538cba2086118d29cb55cce070d2135272c40e94fdc9b95bfa81a5543",
+          "bytes": 2980
+        },
+        {
+          "path": "skills/ocmi-review/SKILL.md",
+          "sha256": "06e889f5a2b9b8005202dce3069a5b24bb33dba6fc173a140cd9c44d442cd726",
+          "bytes": 4253
+        },
+        {
+          "path": "skills/ocmi-ci-triage/SKILL.md",
+          "sha256": "a292647e8092760361dce7b8184de38eecb78e5eb05ff0f7d31fe1157c2b7126",
+          "bytes": 4222
+        },
+        {
+          "path": "docs/memory/TASK-PROTOCOL.md",
+          "sha256": "2489bb644e7131adce7da8f322bce587f28f17e8343b635bb0eb933fd7393168",
+          "bytes": 12199
+        },
+        {
+          "path": "docs/memory/STATE.md",
+          "sha256": "006837e2fc9f24ba5c10b94d47b78423cb3e02e5d98ce3f533b58da0c3091f7d",
+          "bytes": 2360
+        },
+        {
+          "path": "docs/memory/RULES.md",
+          "sha256": "cb12f87bc75c488d688036f34cfd5ec147d0a5d229378f75b92113230ff18791",
+          "bytes": 11068
+        },
+        {
+          "path": "docs/memory/tasks/TEMPLATE.md",
+          "sha256": "074906790453643e82717c09d98969052afe688a8ae38b1ea6b754c97dd3c987",
+          "bytes": 7660
+        },
+        {
+          "path": "docs/memory/PLAN.md",
+          "sha256": "1afc4b60ed0d9bbc7b4a552683ca371e4ec42174530da38c9746542d71d63f9d",
+          "bytes": 1133
+        },
+        {
+          "path": "docs/memory/INDEX.md",
+          "sha256": "bb9c61bdd5ec7b96edbf44c281d48b5c6fc3199c2e4cdac03adcbb376d2dfff3",
+          "bytes": 2100
+        },
+        {
+          "path": "docs/memory/CODEMAP.md",
+          "sha256": "571b306256d1f77a11369b3d994cd9a35f7108afcec61ca441597233c7b50ab2",
+          "bytes": 2304
+        },
+        {
+          "path": "docs/memory/BRIEF.md",
+          "sha256": "9b9041ea69a8135d9f12fec65f66749449ac9fadf0ada99ccf24d1f0e6a3e727",
+          "bytes": 834
+        },
+        {
+          "path": "docs/guides/waiting.md",
+          "sha256": "202d68b340b3000025f96d32a9f849ed4e630776953002cc3d276eb0e41e1694",
+          "bytes": 5569
+        },
+        {
+          "path": "docs/guides/skills.md",
+          "sha256": "467f2990f35853d5f82ee7895e46da123a8179c67fed91b66ea3216397133c89",
+          "bytes": 9089
+        },
+        {
+          "path": "docs/guides/context.md",
+          "sha256": "aecfe484c305134d0545e6f194e0dca9dfc87f7da196bd3fc555791668957e2f",
+          "bytes": 7297
+        },
+        {
+          "path": "docs/guides/agent-workflow.md",
+          "sha256": "60d8e0194f5cf3d623b350f27b8b89650489a9ef4fa7724585c028d0f0e0fa0e",
+          "bytes": 9567
+        },
+        {
+          "path": "tools/ocmi-context.ps1",
+          "sha256": "e145cae713ceda10d9f3c5642d2c3fcc74177d2d9a81c80742025696210e7deb",
+          "bytes": 859
+        },
+        {
+          "path": "tools/context-lib.ps1",
+          "sha256": "9c5fc2389157b3d4561a597f277c20f2a622c10940a7999a8c566a8531e1be89",
+          "bytes": 10989
+        },
+        {
+          "path": "skills/catalog.json",
+          "sha256": "68c2fbfbfaea82334b304c799c0886c79626fef5c2be26a17bc13132c8fbb1b7",
+          "bytes": 2244
+        },
+        {
+          "path": "VERSION.md",
+          "sha256": "aaf2f9b7dfc0597a62ef0f24b9a970adcc7ba6f01202fc5a8eacc6c9e0f53295",
+          "bytes": 8620
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "5134f4e3dba57909b74b7e2bab2cc9820af26e030645c3f946b43d9383cd9c8a",
+          "bytes": 17951
+        },
+        {
+          "path": "docs/memory/ORCHESTRATION.md",
+          "sha256": "c58d4bd72a6c42c3a5ff97078585a6dccbc73f1ffdd9b045207c93200dbf614f",
+          "bytes": 2747
+        },
+        {
+          "path": "docs/memory/tasks/orchestration/HANDOFF.md",
+          "sha256": "0586176e316cfb4a919a754e1c739f6920ac28689dafbb21e5139f2d46da2175",
+          "bytes": 2649
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "language": "ru",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-personal-2.0.0-ru-2026-11-11-r2.zip",
+      "sha256": "ba4e978b61bd24ae1367976bf686b678b3a64488db184dedbedce173768d8890",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "9f56eecd1ac5ad6830360c678aea91888a7c2143f797b9c8326e6161ca4e40bd",
+          "bytes": 8952
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "0483778bdbaae5d087579604cd19450e1aac4c04fc502f7a8884a3d69ad8774c",
+          "bytes": 12580
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "sha256": "3a0c870cb36198fe8453fbf096113181585a5daeeeaae5837dcb5ba500189ea3",
+          "bytes": 1820
+        },
+        {
+          "path": "memory/GUIDE.md",
+          "sha256": "b0fe4266a36a2a79cd0a3dda86bc92493ddf51e968c80a2bc4dde287a851e166",
+          "bytes": 10398
+        },
+        {
+          "path": "memory/INDEX.md",
+          "sha256": "20aa343d63d0f99285e859c25d95771331f1b8d084b947ba463804ed2c77cf86",
+          "bytes": 988
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "sha256": "0de188234c744f5c868afc9df3ae050e0e4378cad5d5336f9d0afee2332e1ad4",
+          "bytes": 1985
+        }
+      ]
+    },
+    {
+      "profile": "coordinator",
+      "language": "ru",
+      "version": "2.0.0",
+      "archive": "releases/ocmi-coordinator-2.0.0-ru-2026-11-11-r2.zip",
+      "sha256": "da6fe4a3e70a997d3a311070b6c5544f5d77dab4c5f54849d4ae1032a539464b",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "c7256c565023b94b2e0d957c02ac7005c7b48a2c1ae3f869ade9c3bae3c377f5",
+          "bytes": 6257
+        },
+        {
+          "path": "INSTALL.md",
+          "sha256": "31110fd280d0b894e0804bae5f8005d440b96dab19e820ef240e6ba30ecb0ad0",
+          "bytes": 5768
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e",
+          "bytes": 1067
+        },
+        {
+          "path": "STARTUP.md",
+          "sha256": "73ff957065edb00914997a681385d14a1eb743d08007226fca8482d8bf576d3a",
+          "bytes": 3410
+        },
+        {
+          "path": "VERSION.md",
+          "sha256": "22e1d149311ae5e96d9062fe33fe0e70a3136dd762643dad03538270f1a4ee1d",
+          "bytes": 1377
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "sha256": "36c47ef100d475a06d41e59a152cf09e1e54f05701c26c77fcb869c42cc31eb9",
+          "bytes": 2368
+        },
+        {
+          "path": "memory/INDEX.md",
+          "sha256": "63ba392d776b6918d1891c352539a966596c36e52a8d14827ea3a25c3b92a1b7",
+          "bytes": 1470
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "sha256": "9c44d42aa9f4f459f5f8ebf35ae684038580d7e5bc1f1dd7af55fab6a8e504b3",
+          "bytes": 2677
+        }
+      ]
+    }
+  ],
+  "historicalArchives": {
+    "ocmi-1-2026-10-03.zip": "d578cbb24535ad61d8d051f703754060242dd31f09fee4c40ce85e81c6046047",
+    "ocmi-1.1-2026-10-05.zip": "92c4c865d5f0dce6cbffa36e0002fb38370049446611d8c3e22cfab58ec0c737",
+    "ocmi-1.2-2026-10-11.zip": "f251abb6d1ce103e69a3c2c31fa5fd6cbfe1122380783caba4250398634216d8",
+    "ocmi-1.2.1-2026-10-11.zip": "b1367343658d68e93ccf2fa85e1c357fe3b5238d8ae9d0bd4aa3a866f7849a4e",
+    "ocmi-coordinator-1.3.0-en-2026-10-12.zip": "a4f6763d21821c5e14eb3aaf36d1535095acfeebe9a744b69c2aa25a6c18a514",
+    "ocmi-coordinator-1.3.0-ru-2026-10-12.zip": "618b37e89dfdf042c0d3d1a2e17ecd02d6f3985b02f494a9a7de4e755498d166",
+    "ocmi-coordinator-1.3.1-en-2026-10-12.zip": "bae4ae90542345962e76f4ce7ab0bc955ff0f9dcb00900a6dae7b484d6a3173b",
+    "ocmi-coordinator-1.3.1-ru-2026-10-12.zip": "65f8898b57f2ece12949b6e410746fdf44a43bb8182bf0474e28fa469264c5ea",
+    "ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip": "27eb2a8dba917c90f55111ec2f0a20ff8524425314f184bdb9b5d29dfd8db782",
+    "ocmi-coordinator-1.3.2-en-2026-10-12.zip": "6c2a982bf6ec57e3f4ef595800788d199aeace50152439dc0f347a43c5eaa4b7",
+    "ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip": "367145a9746d72c9c23e64e8184b1d23b54b5d72e69abb53ac8f13e1ca9f6e98",
+    "ocmi-coordinator-1.3.2-ru-2026-10-12.zip": "f23b58bdc17ee93cedeee06c0776149a6c063fe6df4c38571d219e506508bb0f",
+    "ocmi-coordinator-1.3.3-en-2026-10-13.zip": "2659c28bef6331610eb0db8234e206e0eb48b0663d4b93c0f5c4cc5c5711f14e",
+    "ocmi-coordinator-1.3.3-ru-2026-10-13.zip": "6932d0ede2a8ba9a6407c54ffbf7c1f130b20a68a59bf3bdb9d3daa8c25943fc",
+    "ocmi-coordinator-1.3.4-en-2026-10-16.zip": "69b43dd913d2d1d7790a793561c93bb7a46189f3ba331af5a2f1af8c35e1aa47",
+    "ocmi-coordinator-1.3.4-ru-2026-10-16.zip": "cb7a7ba4d469a3a71c029c0670fa6151fb3c2b0a15c915f6c1f09a763afc9ad1",
+    "ocmi-coordinator-1.3.5-en-2026-10-19.zip": "8966f32a82d8c8911bd0218a9add0bcd79589c2eec1ea808d0f244c0b22b13da",
+    "ocmi-coordinator-1.3.5-ru-2026-10-19.zip": "9c5164f93fb6d158065b4e4fbc59fa149ede81b164f4f7278df2a0be3b16589f",
+    "ocmi-coordinator-2.0.0-en-2026-11-11.zip": "fc0935eaf64a82d457d8a639d6da2a70ee0d962758738407d3913dcf5c604759",
+    "ocmi-coordinator-2.0.0-ru-2026-11-11.zip": "9b570abd22ca6ac9efa9882f34bd1577a42fcbc3cf17cbb1b9cf8ddce7f22ed4",
+    "ocmi-personal-1.2-2026-10-11.zip": "7274c588c176b34658a7355c1892506c179d49282e7a41dcbe00076776db4536",
+    "ocmi-personal-1.2-en-2026-10-11.zip": "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
+    "ocmi-personal-1.2-ru-2026-10-11.zip": "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
+    "ocmi-personal-1.2.1-en-2026-10-11.zip": "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+    "ocmi-personal-1.2.1-en-2026-10-12-r2.zip": "15762427d098f5cc124e07e7456ddfbd3225ad7fb51df96cc9ce8a1a3a3419b6",
+    "ocmi-personal-1.2.1-en-2026-10-12.zip": "ca5bfafbce25a36ef047526dab0eb433f9e2a59ccc30f0c974c64f2115e0f7ef",
+    "ocmi-personal-1.2.1-ru-2026-10-11.zip": "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+    "ocmi-personal-1.2.1-ru-2026-10-12-r2.zip": "975a2ffc5dbecc057bc11182a279130a8d7e608a0a74ec14d2302848068a8497",
+    "ocmi-personal-1.2.1-ru-2026-10-12.zip": "2a7d6cad4068e1e07d085db697f1bae27ed7357105f29fdc30889017c07449c1",
+    "ocmi-personal-1.3.3-en-2026-10-13.zip": "a17c1e2370f56558d3fcb97b4874c6b96070ebd2351ed8df877cda0e0589c2a4",
+    "ocmi-personal-1.3.3-ru-2026-10-13.zip": "32c9be8955d08a57bc5566b930f8d7f7a5e6902d4b6b83cfb789b9befe518275",
+    "ocmi-personal-1.3.4-en-2026-10-16.zip": "155d78faf36e8fc283c233deaafbb0c66cd0f0dc600b6c50a16df458d7bd4420",
+    "ocmi-personal-1.3.4-ru-2026-10-16.zip": "c72f377225bb495bb653fcf658ef397246f8c7a573bd6b008170f22e48a249d7",
+    "ocmi-personal-1.3.5-en-2026-10-19.zip": "f744e6c61a754be0ce0870d7528199afd24bebafde8728e5aef449f9d33e6f8b",
+    "ocmi-personal-1.3.5-ru-2026-10-19.zip": "12421ce49f33e545075bb10120b63eff8743cf876dbf68ba0014878a227cac09",
+    "ocmi-personal-2.0.0-en-2026-11-11.zip": "575a7267f50a2a80637a3688acc54f7775fabf45710dac5b1927b7a147dfaa5b",
+    "ocmi-personal-2.0.0-ru-2026-11-11.zip": "f77fac354272f4095a4e364ad58c9fafdf1f49b30df1572abd26857556d54d71",
+    "ocmi-work-1.2.1-en-2026-10-11.zip": "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
+    "ocmi-work-1.2.1-ru-2026-10-11.zip": "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb",
+    "ocmi-work-1.2.2-en-2026-10-11.zip": "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
+    "ocmi-work-1.2.2-en-2026-10-12-r2.zip": "4fbdb6b63b2d30658925a70fb69a6aa69a7e7e63d34501d9b0772954cc1baae7",
+    "ocmi-work-1.2.2-en-2026-10-12.zip": "798ce311ea7eae6de24c9c15bebb3e798f916d33d9c3bf665774c74e9f4a6b53",
+    "ocmi-work-1.2.2-ru-2026-10-11.zip": "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e",
+    "ocmi-work-1.2.2-ru-2026-10-12-r2.zip": "cc6cdabb6cd1911e85bfd98842455ab179a395c6642bad7d613d5b3de19dc145",
+    "ocmi-work-1.2.2-ru-2026-10-12.zip": "592e8305d5a89cf723d7796bb523565af7e1f070f4106c99d4e4727a85abbb91",
+    "ocmi-work-1.2.3-en-2026-10-13.zip": "bdbf4dea8af9768443de9a01311f1f74f1cedd1edaf6d5f691c931eec89ecf71",
+    "ocmi-work-1.2.3-ru-2026-10-13.zip": "6e3b6f71488dfdeac14758374013158623cafe86c26ab667548391aa0e090e6b",
+    "ocmi-work-1.3.3-en-2026-10-13.zip": "13a2db083ce11ec6aad6ffe8c76db10ac0f55bf3ffc376d024572775265233c3",
+    "ocmi-work-1.3.3-en-2026-10-14.zip": "cccd1996f51b4232463f56a094d76320c58e4b8371345775dca18e65f9eae016",
+    "ocmi-work-1.3.3-en-2026-10-16-r2.zip": "0629b7ac1dfad89532426c42b56e057b5a2f041941d056ef8b9464c2ead9d7ac",
+    "ocmi-work-1.3.3-en-2026-10-16-r3.zip": "21d3d0bd6165a0a9fdb9187886ae137fe41bbba8f8ff483f72239d06da4377dc",
+    "ocmi-work-1.3.3-ru-2026-10-13.zip": "096d36b1879922872d6477f55581bcb1ed3468f005794d2c8ca4449a7af16a04",
+    "ocmi-work-1.3.3-ru-2026-10-14.zip": "3ed5fb1a920a6a55e7e5fa502bc55ffe33ecc79ac96ea72559afe455cf38d0ba",
+    "ocmi-work-1.3.3-ru-2026-10-16-r2.zip": "df288af4d85428541b6a3c59cb772ab64cdb02b934a2766b238b5840aa06e94a",
+    "ocmi-work-1.3.3-ru-2026-10-16-r3.zip": "614251bc7301935f322ec66ca9eb8243e12b2c8737c7acb3ef69c69e50406bf6",
+    "ocmi-work-1.3.4-en-2026-10-16.zip": "525272b6d84296adbf2990cff31499b457aeefaa14e6a15c1241fff12c23a9aa",
+    "ocmi-work-1.3.4-en-2026-10-19.zip": "0f48ee4ed258db0235c0862b096a782469f4352fbacac12ef219be843135d268",
+    "ocmi-work-1.3.4-ru-2026-10-16.zip": "57733a71306867c5590c95594f5dce17f40efe6bdc22261f5aa348defcaab8c1",
+    "ocmi-work-1.3.4-ru-2026-10-19.zip": "3e547545f9ca025f542699d5afb931d891199363a0c609d012049d50e3cacc77",
+    "ocmi-work-1.3.5-en-2026-10-19.zip": "705aae6cc861880e7782a4f0cc33fefb4535fa4fc8d92c721918e050c66d5647",
+    "ocmi-work-1.3.5-en-2026-10-21-r2.zip": "853a5cefb53b103d4c92d0332d43c4e3fa1bb6a1545ebfa42e247595d777e85b",
+    "ocmi-work-1.3.5-en-2026-10-21.zip": "1fd2898c64f856c9a867c1041bfaf7c722ab01e4db64e8e3f1048d183d7c6b40",
+    "ocmi-work-1.3.5-ru-2026-10-19.zip": "ed3bdd591010fbb8e7e6f2b85e69e45b644063141d69732f1d4471526d513da2",
+    "ocmi-work-1.3.5-ru-2026-10-21-r2.zip": "2ed7232b8fbd154a327e33b149bca008af753d0d28c787bc01c36544f6c0d9cd",
+    "ocmi-work-1.3.5-ru-2026-10-21.zip": "c57a4eb46c10f7323a079c8fe67cff456169600e3965126c2fab55d2cf747da0",
+    "ocmi-work-2.0.0-en-2026-11-11.zip": "0e9aa3137ff89680a8ea3e1262d76196dc89dfd23179a694317fe54429812242",
+    "ocmi-work-2.0.0-ru-2026-11-11.zip": "507ad1d2109e7980f53ec92dff92c38d1a9bd4a51e5c0967d96bf440cc5659d9"
+  }
+}
