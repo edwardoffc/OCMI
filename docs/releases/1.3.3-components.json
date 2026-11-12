@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "version": "OCMI 1.3.3",
+  "date": "2026-10-13",
+  "installerVersion": "1.3.2",
+  "workVersion": "1.2.3",
+  "lightweightVersion": "1.2.1",
+  "profiles": [
+    {
+      "profile": "work",
+      "language": "en",
+      "version": "1.2.3",
+      "installerVersion": "1.3.2",
+      "archive": "releases/ocmi-work-1.2.3-en-2026-10-13.zip",
+      "sha256": "bdbf4dea8af9768443de9a01311f1f74f1cedd1edaf6d5f691c931eec89ecf71",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 1040,
+          "sha256": "59fb201a11fd068a8b4925d7955583fe0ce21cc9676f9994830b1b946ea137ae"
+        },
+        {
+          "path": "docs/guides/agent-workflow.md",
+          "bytes": 4807,
+          "sha256": "280d823a697429337a1dd8d0af779150787a567a119f510995976894ffb7b818"
+        },
+        {
+          "path": "docs/memory/BRIEF.md",
+          "bytes": 459,
+          "sha256": "43f8f40245e716c74310dcc6456375e4560894f300ca41cebe3455bab5f06911"
+        },
+        {
+          "path": "docs/memory/CODEMAP.md",
+          "bytes": 1173,
+          "sha256": "4869170ebb1d2f5d925c3f6a5682b58d46c7f41e5a7a1e234821cc3573ad5677"
+        },
+        {
+          "path": "docs/memory/INDEX.md",
+          "bytes": 1002,
+          "sha256": "1fb25a713be0ebf399995e20440d8c17dc3f72341a3b3125ec82f3fe243ddb8a"
+        },
+        {
+          "path": "docs/memory/ORCHESTRATION.md",
+          "bytes": 1349,
+          "sha256": "b6c60e07d36b66d37c0d2d6daf97d296abb97ca16a25ef0fa299b7c62e1a9327"
+        },
+        {
+          "path": "docs/memory/PLAN.md",
+          "bytes": 694,
+          "sha256": "ce5718c8a4cdf7af35309437a7e42b7bcdb4206ee7405919824c6fc2dd1d6554"
+        },
+        {
+          "path": "docs/memory/roles/consultant.md",
+          "bytes": 713,
+          "sha256": "cdd331151f8cc4bdfc1f1baed2af1658491f1f6bb32399ac743faa23418096e1"
+        },
+        {
+          "path": "docs/memory/roles/coordinator.md",
+          "bytes": 11275,
+          "sha256": "c154a4a04d3349755c11d7dcc9cb15b7608da632cfc96542ce6d60bac8aa1197"
+        },
+        {
+          "path": "docs/memory/roles/worker.md",
+          "bytes": 3315,
+          "sha256": "e8165c37b0f87eb0def400264266055a8878856d5e2075815331fe44b291d9ac"
+        },
+        {
+          "path": "docs/memory/RULES.md",
+          "bytes": 5870,
+          "sha256": "97875415c7a16000944ea41daac846050fae079ac3782a08ac3c7261b1b6a35c"
+        },
+        {
+          "path": "docs/memory/STATE.md",
+          "bytes": 1176,
+          "sha256": "e86ae55afcd5d229cb04bcf6e6fe571aca2f86ecbaee012e57de8322fc81e51a"
+        },
+        {
+          "path": "docs/memory/TASK-PROTOCOL.md",
+          "bytes": 6736,
+          "sha256": "8ecdd7edadefabf45cb1b737b0e32acbba537514d03b677bc87b25e5d8118ac0"
+        },
+        {
+          "path": "docs/memory/tasks/orchestration/HANDOFF.md",
+          "bytes": 1377,
+          "sha256": "c874f16cae48f2ce612db9a122a945e1f5d160a9b480a72428b1ca3c29bc6f40"
+        },
+        {
+          "path": "docs/memory/tasks/SMALL-TEMPLATE.md",
+          "bytes": 1660,
+          "sha256": "2b341eab7d6d5214de2db3c8484a5c7f9d0c9701e74bc5c74b39144a55849616"
+        },
+        {
+          "path": "docs/memory/tasks/START-TEMPLATE.md",
+          "bytes": 1479,
+          "sha256": "760807f8a340f195816bea174123fe262b0b238064c94a29733d36340b267495"
+        },
+        {
+          "path": "docs/memory/tasks/TEMPLATE.md",
+          "bytes": 4537,
+          "sha256": "99ae733a02d8713cdbd6adf42a930de864cbce38115c63b2541da69a0c9d0673"
+        },
+        {
+          "path": "INSTALL.md",
+          "bytes": 8822,
+          "sha256": "87ccd26aaaee86d5d54adb9f6dba84010d450a42596b5a6d474d316ab55c77cf"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1067,
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+        },
+        {
+          "path": "VERSION.md",
+          "bytes": 3257,
+          "sha256": "82f7238ee3c84d3ec3505b38c388faf664c5edde94f46159d97cbd7416ab2e61"
+        }
+      ]
+    },
+    {
+      "profile": "work",
+      "language": "ru",
+      "version": "1.2.3",
+      "installerVersion": "1.3.2",
+      "archive": "releases/ocmi-work-1.2.3-ru-2026-10-13.zip",
+      "sha256": "6e3b6f71488dfdeac14758374013158623cafe86c26ab667548391aa0e090e6b",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 1754,
+          "sha256": "92aad9fc60a2aa810c7dabae5ec8a11f473c6d8774f3c323880738f73a55c414"
+        },
+        {
+          "path": "docs/guides/agent-workflow.md",
+          "bytes": 8484,
+          "sha256": "1a2466de7773c39a42cfcf3cf824c41ac08f76109082d6f9ef09329565743bd7"
+        },
+        {
+          "path": "docs/memory/BRIEF.md",
+          "bytes": 834,
+          "sha256": "9b9041ea69a8135d9f12fec65f66749449ac9fadf0ada99ccf24d1f0e6a3e727"
+        },
+        {
+          "path": "docs/memory/CODEMAP.md",
+          "bytes": 1925,
+          "sha256": "36340edd235975ea7fd2c9fa668fc3b408d2af81a9c429a88e6bf8cbd1fc204a"
+        },
+        {
+          "path": "docs/memory/INDEX.md",
+          "bytes": 1706,
+          "sha256": "c4fdfda5715bc985945266f6dd7fe70da5545411fae84133c3bb591d62e75646"
+        },
+        {
+          "path": "docs/memory/ORCHESTRATION.md",
+          "bytes": 2025,
+          "sha256": "59566d9fd90cd9f1b2d0ac2f6fa06630ba3a2f09886191d9f71a85882e6ff029"
+        },
+        {
+          "path": "docs/memory/PLAN.md",
+          "bytes": 1133,
+          "sha256": "1afc4b60ed0d9bbc7b4a552683ca371e4ec42174530da38c9746542d71d63f9d"
+        },
+        {
+          "path": "docs/memory/roles/consultant.md",
+          "bytes": 1290,
+          "sha256": "37fbabfcb36caef17416177a702d4aa41d6a7c887f5e85cda62870e87960e5cf"
+        },
+        {
+          "path": "docs/memory/roles/coordinator.md",
+          "bytes": 19437,
+          "sha256": "787197dc5aa2812041a0cc00dd027b7e171ffb06a9b8f7d0674aade57790b587"
+        },
+        {
+          "path": "docs/memory/roles/worker.md",
+          "bytes": 5400,
+          "sha256": "3681e6bd0e60a31495d37f882d898f6937c1d3bb5cf5b1a151331d37e4a0bc13"
+        },
+        {
+          "path": "docs/memory/RULES.md",
+          "bytes": 9614,
+          "sha256": "9c89c54bbf26e18e1af7e1c26dba5002a17c76798e0d3478b410d4937edc3b95"
+        },
+        {
+          "path": "docs/memory/STATE.md",
+          "bytes": 2078,
+          "sha256": "7852da03917a6132a89c2022e0c792ec11923488563abcf9163e41cfebf9c4f3"
+        },
+        {
+          "path": "docs/memory/TASK-PROTOCOL.md",
+          "bytes": 11018,
+          "sha256": "0969eb5c68a75419f6647e4e71be3e5476410118fc6cb4b0ec40ad92569b66ec"
+        },
+        {
+          "path": "docs/memory/tasks/orchestration/HANDOFF.md",
+          "bytes": 2311,
+          "sha256": "03e2559e8cdbc27cd2c9af97b4f55fc8af458406b912253de3710bb610926b1f"
+        },
+        {
+          "path": "docs/memory/tasks/SMALL-TEMPLATE.md",
+          "bytes": 2913,
+          "sha256": "c6f71a26d9428113b03f17f887b593345cb559869a713aaaf224ad6223a7a7f4"
+        },
+        {
+          "path": "docs/memory/tasks/START-TEMPLATE.md",
+          "bytes": 2360,
+          "sha256": "7e5e5fd1f0e8985cb290c4335e7f6aef92e8d5fd6e427c316f782a463972fe0e"
+        },
+        {
+          "path": "docs/memory/tasks/TEMPLATE.md",
+          "bytes": 7660,
+          "sha256": "d615448208ef2d2afa47b07515860869e9acc5ef966e04ec15dcc828f037e921"
+        },
+        {
+          "path": "INSTALL.md",
+          "bytes": 15336,
+          "sha256": "9688d8522138c2ecb5214d4240bb400d23ee4397b7cbc35800a316d2f5c0c6ac"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1067,
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+        },
+        {
+          "path": "VERSION.md",
+          "bytes": 5955,
+          "sha256": "ffc766644ddf40e0260a86e7aefa09ae8cc13e919c4f17e1c3b064100a68e940"
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "language": "en",
+      "version": "1.2.1",
+      "installerVersion": "1.3.2",
+      "distributionRevision": "r2",
+      "archive": "releases/ocmi-personal-1.2.1-en-2026-10-12-r2.zip",
+      "sha256": "15762427d098f5cc124e07e7456ddfbd3225ad7fb51df96cc9ce8a1a3a3419b6",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 4165,
+          "sha256": "73fd35223e827af7fabe87ba1aae9fb7b6098256943dd395c1e6dcbb16f35da6"
+        },
+        {
+          "path": "INSTALL.md",
+          "bytes": 6272,
+          "sha256": "f0f461495722dd1a6384ff2d76513d4d0adc066cafb645cad1888ef389cd616e"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1067,
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "bytes": 834,
+          "sha256": "44dd4639eaf2316bc5e170e379e099470df30d573467ce28b36e416106e2084e"
+        },
+        {
+          "path": "memory/INDEX.md",
+          "bytes": 573,
+          "sha256": "7b65f5738e26cced7b298476c5f971c7e233e82da01f2c58311045a71c475a3b"
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "bytes": 849,
+          "sha256": "7e08c191bd6bd4295f0b643d48bbb1926408da15d0ca58984f8d9ad3663c4b50"
+        }
+      ]
+    },
+    {
+      "profile": "personal",
+      "language": "ru",
+      "version": "1.2.1",
+      "installerVersion": "1.3.2",
+      "distributionRevision": "r2",
+      "archive": "releases/ocmi-personal-1.2.1-ru-2026-10-12-r2.zip",
+      "sha256": "975a2ffc5dbecc057bc11182a279130a8d7e608a0a74ec14d2302848068a8497",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 7792,
+          "sha256": "9cc7fe5bb2bd0dfb2092967dc4ecb12d6816afe85e7e5c79a98718105abbd913"
+        },
+        {
+          "path": "INSTALL.md",
+          "bytes": 11633,
+          "sha256": "843b654a59d0b6246d3e50caeff972261bfadf0c3b251a3eb90f83279a9af5e5"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1067,
+          "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+        },
+        {
+          "path": "memory/BRIEF.md",
+          "bytes": 1622,
+          "sha256": "5650f9a19b571e096914e1d5a6ebc4e389870c8a752acbedbb29274ffc240587"
+        },
+        {
+          "path": "memory/INDEX.md",
+          "bytes": 988,
+          "sha256": "20aa343d63d0f99285e859c25d95771331f1b8d084b947ba463804ed2c77cf86"
+        },
+        {
+          "path": "memory/tasks/main/HANDOFF.md",
+          "bytes": 1678,
+          "sha256": "65845b345361d33a7aa8387c8ea1685cdb688571ef729367edd318398f4d0f39"
+        }
+      ]
+    }
+  ],
+  "historicalArchives": {
+    "ocmi-1-2026-10-03.zip": "d578cbb24535ad61d8d051f703754060242dd31f09fee4c40ce85e81c6046047",
+    "ocmi-1.1-2026-10-05.zip": "92c4c865d5f0dce6cbffa36e0002fb38370049446611d8c3e22cfab58ec0c737",
+    "ocmi-1.2-2026-10-11.zip": "f251abb6d1ce103e69a3c2c31fa5fd6cbfe1122380783caba4250398634216d8",
+    "ocmi-1.2.1-2026-10-11.zip": "b1367343658d68e93ccf2fa85e1c357fe3b5238d8ae9d0bd4aa3a866f7849a4e",
+    "ocmi-coordinator-1.3.0-en-2026-10-12.zip": "a4f6763d21821c5e14eb3aaf36d1535095acfeebe9a744b69c2aa25a6c18a514",
+    "ocmi-coordinator-1.3.0-ru-2026-10-12.zip": "618b37e89dfdf042c0d3d1a2e17ecd02d6f3985b02f494a9a7de4e755498d166",
+    "ocmi-coordinator-1.3.1-en-2026-10-12.zip": "bae4ae90542345962e76f4ce7ab0bc955ff0f9dcb00900a6dae7b484d6a3173b",
+    "ocmi-coordinator-1.3.1-ru-2026-10-12.zip": "65f8898b57f2ece12949b6e410746fdf44a43bb8182bf0474e28fa469264c5ea",
+    "ocmi-coordinator-1.3.2-en-2026-10-12-r2.zip": "27eb2a8dba917c90f55111ec2f0a20ff8524425314f184bdb9b5d29dfd8db782",
+    "ocmi-coordinator-1.3.2-en-2026-10-12.zip": "6c2a982bf6ec57e3f4ef595800788d199aeace50152439dc0f347a43c5eaa4b7",
+    "ocmi-coordinator-1.3.2-ru-2026-10-12-r2.zip": "367145a9746d72c9c23e64e8184b1d23b54b5d72e69abb53ac8f13e1ca9f6e98",
+    "ocmi-coordinator-1.3.2-ru-2026-10-12.zip": "f23b58bdc17ee93cedeee06c0776149a6c063fe6df4c38571d219e506508bb0f",
+    "ocmi-personal-1.2-2026-10-11.zip": "7274c588c176b34658a7355c1892506c179d49282e7a41dcbe00076776db4536",
+    "ocmi-personal-1.2-en-2026-10-11.zip": "ea66fb08f280ec750870197af29f770ab2ee1f75004f10684a4d1d3451a11666",
+    "ocmi-personal-1.2-ru-2026-10-11.zip": "d5382ddcbfa4d85dfbd79c7893a7813df2da52c2fb919bed37d3fb1b0c0bfa85",
+    "ocmi-personal-1.2.1-en-2026-10-11.zip": "b485078096143de536f27a4e06a9efd176e26b188949c9a8cd4b2c371b8674c3",
+    "ocmi-personal-1.2.1-en-2026-10-12-r2.zip": "15762427d098f5cc124e07e7456ddfbd3225ad7fb51df96cc9ce8a1a3a3419b6",
+    "ocmi-personal-1.2.1-en-2026-10-12.zip": "ca5bfafbce25a36ef047526dab0eb433f9e2a59ccc30f0c974c64f2115e0f7ef",
+    "ocmi-personal-1.2.1-ru-2026-10-11.zip": "070a71bea9628a786fab2553049d55c686b7abbe66571bb09c2a3fc2ca7e1035",
+    "ocmi-personal-1.2.1-ru-2026-10-12-r2.zip": "975a2ffc5dbecc057bc11182a279130a8d7e608a0a74ec14d2302848068a8497",
+    "ocmi-personal-1.2.1-ru-2026-10-12.zip": "2a7d6cad4068e1e07d085db697f1bae27ed7357105f29fdc30889017c07449c1",
+    "ocmi-work-1.2.1-en-2026-10-11.zip": "7a9edc92afcfe0409e973dab145c5544ca9da643bd42229a1eac011219657e95",
+    "ocmi-work-1.2.1-ru-2026-10-11.zip": "b43925ed867b1005fa1c443ef51ad94892b55b7b7317d8e1836da0dbb981dafb",
+    "ocmi-work-1.2.2-en-2026-10-11.zip": "33c6b19b6ab6ee478d24d005e39a3906d14219d6fe482c9565a2b0a38bd00237",
+    "ocmi-work-1.2.2-en-2026-10-12-r2.zip": "4fbdb6b63b2d30658925a70fb69a6aa69a7e7e63d34501d9b0772954cc1baae7",
+    "ocmi-work-1.2.2-en-2026-10-12.zip": "798ce311ea7eae6de24c9c15bebb3e798f916d33d9c3bf665774c74e9f4a6b53",
+    "ocmi-work-1.2.2-ru-2026-10-11.zip": "ae77b4f160b15d040393e35d212f08076c4e05dcb3b4f2b38f41b528ebca010e",
+    "ocmi-work-1.2.2-ru-2026-10-12-r2.zip": "cc6cdabb6cd1911e85bfd98842455ab179a395c6642bad7d613d5b3de19dc145",
+    "ocmi-work-1.2.2-ru-2026-10-12.zip": "592e8305d5a89cf723d7796bb523565af7e1f070f4106c99d4e4727a85abbb91"
+  }
+}

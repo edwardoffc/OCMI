@@ -1,0 +1,106 @@
+name: Ready system kit qualification
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: ['codex/recovery-rehearsal-20261104']
+    paths: ['scripts/build-runtime-preview.ps1', 'scripts/acceptance/check_ready_kit.py', 'scripts/acceptance/check_install_home.py', 'scripts/acceptance/check_update_home.py', 'packaging/**', 'locales/ru/packaging/home/**', 'templates/**', 'locales/ru/templates/**', 'VERSION.md', 'locales/ru/VERSION.md', '.gitattributes', 'runtime/**', '.github/workflows/ready-kit.yml']
+  pull_request:
+    paths: ['scripts/build-runtime-preview.ps1', 'scripts/acceptance/check_ready_kit.py', 'scripts/acceptance/check_install_home.py', 'scripts/acceptance/check_update_home.py', 'packaging/**', 'locales/ru/packaging/home/**', 'templates/**', 'locales/ru/templates/**', 'VERSION.md', 'locales/ru/VERSION.md', '.gitattributes', 'runtime/**', '.github/workflows/ready-kit.yml']
+permissions:
+  contents: read
+concurrency:
+  group: ready-kit-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  native-package:
+    name: Ready kit (${{ matrix.target }})
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-latest
+            target: windows-amd64
+          - runner: macos-15
+            target: darwin-arm64
+          - runner: macos-15-intel
+            target: darwin-amd64
+          - runner: ubuntu-24.04
+            target: linux-amd64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16
+        with:
+          go-version: '1.26.2'
+          cache: false
+      - name: Checkout pinned previous ready-kit fixture
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 4dfb138f97f4906e08aacdbbd0a9037cddf790fe
+          path: .local/build/ready-kit/previous-source
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Build and exercise this native ready kit
+        id: package
+        shell: pwsh
+        env:
+          KIT_TARGET: ${{ matrix.target }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $owned = Join-Path $env:GITHUB_WORKSPACE '.local/build/ready-kit'
+          $tmp = Join-Path $owned 'tmp'
+          New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+          $env:GOPATH = Join-Path $owned 'gopath'
+          $env:GOMODCACHE = Join-Path $env:GOPATH 'pkg/mod'
+          $env:GOCACHE = Join-Path $owned 'gocache'
+          $env:GOTMPDIR = $tmp; $env:TEMP = $tmp; $env:TMP = $tmp; $env:TMPDIR = $tmp
+          $env:GOTOOLCHAIN = 'local'; $env:GOWORK = 'off'; $env:CGO_ENABLED = '0'
+          $env:GOFLAGS = '-buildvcs=false -mod=readonly'; $env:GIT_OPTIONAL_LOCKS = '0'
+          $env:PYTHONDONTWRITEBYTECODE = '1'; $env:PYTHONUTF8 = '1'
+          # Prepare the entire pinned graph without modifying source go.mod/go.sum.
+          # A cold native cache must also support the producer's offline module inventory.
+          $prepareMod = Join-Path $owned 'prepare.mod'
+          Copy-Item -LiteralPath runtime/go.mod -Destination $prepareMod
+          Copy-Item -LiteralPath runtime/go.sum -Destination (Join-Path $owned 'prepare.sum')
+          $env:GOENV = 'off'
+          go -C runtime mod download "-modfile=$prepareMod" all
+          if ($LASTEXITCODE -ne 0) { throw 'Pinned module preparation failed' }
+          $id = 'ocmi-ready-ci-' + $env:GITHUB_RUN_ID + '-' + $env:KIT_TARGET
+          $output = Join-Path $owned 'distributions'
+          $previousCommit = '4dfb138f97f4906e08aacdbbd0a9037cddf790fe'
+          $previousSource = [IO.Path]::GetFullPath((Join-Path $owned 'previous-source'))
+          if ((& git -C $previousSource rev-parse HEAD).Trim() -ne $previousCommit) { throw 'Pinned previous source checkout is not at the required commit' }
+          $previousId = 'ocmi-ready-previous-' + $env:GITHUB_RUN_ID + '-' + $env:KIT_TARGET
+          $previousOutput = Join-Path $owned 'previous-distributions'
+          $previousNotices = [IO.Path]::GetFullPath((Join-Path $previousSource 'packaging/notices/manifest.json'))
+          & (Join-Path $previousSource 'scripts/build-runtime-preview.ps1') -ReadyKit -SourceCommit $previousCommit -Target $env:KIT_TARGET -PreviewId $previousId -OutputRoot $previousOutput -NoticesManifest $previousNotices
+          if ($LASTEXITCODE -ne 0) { throw 'Pinned previous ReadyKit producer failed' }
+          $extension = if ($env:KIT_TARGET -eq 'windows-amd64') { '.zip' } else { '.tar.gz' }
+          $previousArchive = Join-Path (Join-Path $previousOutput $previousId) ($previousId + '-' + $env:KIT_TARGET + $extension)
+          if (!(Test-Path -LiteralPath $previousArchive -PathType Leaf)) { throw 'Pinned previous ReadyKit archive is missing' }
+          ./scripts/build-runtime-preview.ps1 -ReadyKit -SourceCommit $env:GITHUB_SHA -Target $env:KIT_TARGET -PreviewId $id -OutputRoot $output -NoticesManifest packaging/notices/manifest.json
+          $distribution = Join-Path $output $id
+          $archive = Join-Path $distribution ($id + '-' + $env:KIT_TARGET + $extension)
+          $python = (Get-Command python3 -ErrorAction SilentlyContinue).Source
+          if (!$python) { $python = (Get-Command python -ErrorAction Stop).Source }
+          $evidence = Join-Path $distribution 'consumer.log'
+          & $python -B scripts/acceptance/check_ready_kit.py --archive $archive --source-root $env:GITHUB_WORKSPACE --source-commit $env:GITHUB_SHA --target $env:KIT_TARGET --exercise-recovery --scratch-root $tmp --previous-archive $previousArchive --previous-source-root $previousSource --previous-source-commit $previousCommit 2>&1 | Tee-Object -FilePath $evidence
+          if ($LASTEXITCODE -ne 0) { throw 'Ready kit native consumer failed' }
+          Write-Output ('READY_KIT_ARCHIVE_SHA256 ' + $env:KIT_TARGET + ' ' + (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant())
+          "archive=$archive" >> $env:GITHUB_OUTPUT
+          "sums=$(Join-Path $distribution 'SHA256SUMS-archives.txt')" >> $env:GITHUB_OUTPUT
+          "evidence=$evidence" >> $env:GITHUB_OUTPUT
+      - name: Retain exact qualified public artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2, verified upstream v4 reference
+        with:
+          name: ocmi-ready-${{ github.run_id }}-${{ matrix.target }}
+          path: |
+            ${{ steps.package.outputs.archive }}
+            ${{ steps.package.outputs.sums }}
+            ${{ steps.package.outputs.evidence }}
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 7

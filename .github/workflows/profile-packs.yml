@@ -1,0 +1,28 @@
+name: Profile distribution qualification
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/build-profile-packs.ps1', 'scripts/check-profile-packs.ps1', 'scripts/check-release.ps1', 'scripts/check-onboarding.ps1', 'scripts/check-versioning.ps1', 'scripts/version-utils.ps1', 'scripts/path-utils.ps1', 'templates/**', 'locales/ru/templates/**', 'VERSION.md', 'locales/ru/VERSION.md', '.github/workflows/profile-packs.yml']
+  pull_request:
+    paths: ['scripts/build-profile-packs.ps1', 'scripts/check-profile-packs.ps1', 'scripts/check-release.ps1', 'scripts/check-onboarding.ps1', 'scripts/check-versioning.ps1', 'scripts/version-utils.ps1', 'scripts/path-utils.ps1', 'templates/**', 'locales/ru/templates/**', 'VERSION.md', 'locales/ru/VERSION.md', '.github/workflows/profile-packs.yml']
+permissions:
+  contents: read
+concurrency:
+  group: profile-packs-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  profiles:
+    name: Profiles (${{ matrix.runner }})
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [windows-latest, macos-15, macos-15-intel, ubuntu-24.04]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Qualify bounded immutable profile generation
+        shell: pwsh
+        run: ./scripts/check-profile-packs.ps1

@@ -1,0 +1,50 @@
+name: Runtime preview qualification
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: ['codex/recovery-rehearsal-20261104']
+    paths: ['runtime/**', 'scripts/check-runtime-preview.ps1', 'scripts/runtime-durable-selector.ps1', 'scripts/test-runtime-durable-selector.ps1', 'scripts/acceptance/check_install_home.py', 'scripts/acceptance/check_update_home.py', 'scripts/acceptance/test_install_fixture.py', 'scripts/acceptance/check_update_diagnostics.py', 'packaging/fixtures/**', 'packaging/home/**', 'locales/ru/packaging/home/**', '.github/workflows/runtime-spike.yml']
+  pull_request:
+    paths: ['runtime/**', 'scripts/check-runtime-preview.ps1', 'scripts/runtime-durable-selector.ps1', 'scripts/test-runtime-durable-selector.ps1', 'scripts/acceptance/check_install_home.py', 'scripts/acceptance/check_update_home.py', 'scripts/acceptance/test_install_fixture.py', 'scripts/acceptance/check_update_diagnostics.py', 'packaging/fixtures/**', 'packaging/home/**', 'locales/ru/packaging/home/**', '.github/workflows/runtime-spike.yml']
+permissions:
+  contents: read
+concurrency:
+  group: runtime-spike-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  native:
+    name: Preview (${{ matrix.runner }}, ${{ matrix.mode }}, ${{ matrix.shard }})
+    # Intel runs the core and three complete durable partitions independently.
+    # Retain the existing job and per-test deadlines.
+    timeout-minutes: ${{ matrix.runner == 'macos-15-intel' && 30 || 20 }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: windows-latest, mode: All, shard: 0, count: 1 }
+          - { runner: macos-15, mode: All, shard: 0, count: 1 }
+          - { runner: ubuntu-24.04, mode: All, shard: 0, count: 1 }
+          - { runner: macos-15-intel, mode: CoreOnly, shard: 0, count: 1 }
+          - { runner: macos-15-intel, mode: DurableOnly, shard: 0, count: 3 }
+          - { runner: macos-15-intel, mode: DurableOnly, shard: 1, count: 3 }
+          - { runner: macos-15-intel, mode: DurableOnly, shard: 2, count: 3 }
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version: '1.26.2'
+          cache: false
+      - name: Qualify runtime, transfer, SDK adapter and storage/process probes
+        shell: pwsh
+        run: ./scripts/check-runtime-preview.ps1 -Mode ${{ matrix.mode }} -ShardIndex ${{ matrix.shard }} -ShardCount ${{ matrix.count }}
+      - name: Retain sanitized update failure report only
+        if: ${{ failure() && matrix.mode != 'DurableOnly' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ocmi-update-report-${{ github.run_id }}-${{ matrix.runner }}-${{ matrix.mode }}-${{ matrix.shard }}
+          path: .local/build/runtime/tmp/ocmi-update-report-*.json
+          if-no-files-found: ignore
+          retention-days: 3

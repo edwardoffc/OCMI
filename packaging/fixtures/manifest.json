@@ -1,0 +1,196 @@
+[
+  {
+    "schema": "schema-v1",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+      },
+      {
+        "path": "runtime/go.mod",
+        "sha256": "cdc3b605a8f8042582046184a11d8e42d2285c6c9363df6666c0930549a92d47"
+      },
+      {
+        "path": "runtime/go.sum",
+        "sha256": "9f1f37049a3c0b2d277c77743c568c701c541b23d2b8aa782d897f4ee0ecc253"
+      },
+      {
+        "path": "runtime/adapters/adapters.go",
+        "sha256": "a4cdcdc7c75aad79eb9c0e429b7d953b968ee3e6591e71ef267d9fb7bb46faf8"
+      },
+      {
+        "path": "runtime/cmd/ocmi/main.go",
+        "sha256": "6d5c6e2bb5d2238357a9e5c69675101f5ce89cd65cfdc96d88d3d16d72f30192"
+      },
+      {
+        "path": "runtime/internal/portable.go",
+        "sha256": "322f26635b2930ac84824e7bcc6f1d17f9f65c1778d9df67fd6d95b3833fb42a"
+      },
+      {
+        "path": "runtime/internal/runner_unix.go",
+        "sha256": "160ad55d6b51885fe2045712a344e46bd241151c149d5ff81067d6e7b4c72d32"
+      },
+      {
+        "path": "runtime/internal/runner_windows.go",
+        "sha256": "ddace8548c40070f8cd38308b853e6338cb1807d3b6feddc8cb6c7506ea6bef1"
+      },
+      {
+        "path": "runtime/internal/runner.go",
+        "sha256": "ad5fa0ebb15a760a0409875fd336de741fa7722f50c3d0b79540c08d3859577a"
+      },
+      {
+        "path": "runtime/internal/service.go",
+        "sha256": "9acc2c29d7fa5aa28c46c3aa879cdecff178852aaa2695ac4895a45e6e880741"
+      }
+    ],
+    "aggregateSha256": "ea27c28f1e5d3ed82408e95d70ea7ed24929872c6625594c2c828c7a1f2e0397"
+  },
+  {
+    "schema": "schema-v2",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+      },
+      {
+        "path": "runtime/go.mod",
+        "sha256": "cdc3b605a8f8042582046184a11d8e42d2285c6c9363df6666c0930549a92d47"
+      },
+      {
+        "path": "runtime/go.sum",
+        "sha256": "9f1f37049a3c0b2d277c77743c568c701c541b23d2b8aa782d897f4ee0ecc253"
+      },
+      {
+        "path": "runtime/adapters/adapters.go",
+        "sha256": "04535564f38f7f063018c273b57ebd379fff6d51b1d2f49bdc2e42d3c3da4018"
+      },
+      {
+        "path": "runtime/cmd/ocmi/main.go",
+        "sha256": "6d5c6e2bb5d2238357a9e5c69675101f5ce89cd65cfdc96d88d3d16d72f30192"
+      },
+      {
+        "path": "runtime/internal/lifecycle.go",
+        "sha256": "135b3987b5bd74e0f138364b0d8b2f3de2281469fa9dd34b4c219ee8a19c27b2"
+      },
+      {
+        "path": "runtime/internal/portable.go",
+        "sha256": "4924ff31af8aede4ccf57e8cfe1d8b40256ab955ae246caba724cffb283874d5"
+      },
+      {
+        "path": "runtime/internal/recovery_common.go",
+        "sha256": "d676d179e1078dc166b9f8e25031aa89aa87d48d3706796b0872307f916ab5ec"
+      },
+      {
+        "path": "runtime/internal/recovery_context_darwin.go",
+        "sha256": "ae6e204831e72d1f80f1c5cfb7922a4254baf9790d8e0f8d067cc12d5c772195"
+      },
+      {
+        "path": "runtime/internal/recovery_context_linux.go",
+        "sha256": "31f32e0d729c7b1251d431a35c0ad9918496c8fbec652aaa0c5b03317c8d4552"
+      },
+      {
+        "path": "runtime/internal/recovery_context_other.go",
+        "sha256": "3961a8683e13b820f8880d9a29292a86932284c1c997802520e2bd2bc87c3c69"
+      },
+      {
+        "path": "runtime/internal/recovery_unix.go",
+        "sha256": "b02a4f59f8e516f3ac26ea6566095f91a709caee7b2f6f3ecc53a335b315daee"
+      },
+      {
+        "path": "runtime/internal/recovery_windows.go",
+        "sha256": "566b7491cc79fd4794c72a15b916dcfaf1c2c47019aba4d180f003948617bf1f"
+      },
+      {
+        "path": "runtime/internal/runner_unix.go",
+        "sha256": "e2d94760b7cf0331e43cb990adcebc43a434d6bf1655c400339e4b9bc5b62a8c"
+      },
+      {
+        "path": "runtime/internal/runner_windows.go",
+        "sha256": "9e145d48750c23b30fc43714d88c8b6987bb1e98ebb6b281a69f359c4cdd9793"
+      },
+      {
+        "path": "runtime/internal/runner.go",
+        "sha256": "d377410823be75b13301bdb0da8cab41edeb4a6d866389fb1be49537e53751eb"
+      },
+      {
+        "path": "runtime/internal/service.go",
+        "sha256": "e03a0fda3d25a0b4a0eea717b450cd7da4db98cec68c471d10c0cb8566ddfc81"
+      }
+    ],
+    "aggregateSha256": "6711dae80039c04ffb9952491f448f0921b9f9ee078ba60ba8bf31ab2bc17c15"
+  },
+  {
+    "schema": "schema-v3",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "ab87df8bdd2d8dd87a9fedd34207df7b6fadd971170126a68c305ace4854f95e"
+      },
+      {
+        "path": "runtime/go.mod",
+        "sha256": "cdc3b605a8f8042582046184a11d8e42d2285c6c9363df6666c0930549a92d47"
+      },
+      {
+        "path": "runtime/go.sum",
+        "sha256": "9f1f37049a3c0b2d277c77743c568c701c541b23d2b8aa782d897f4ee0ecc253"
+      },
+      {
+        "path": "runtime/adapters/adapters.go",
+        "sha256": "04535564f38f7f063018c273b57ebd379fff6d51b1d2f49bdc2e42d3c3da4018"
+      },
+      {
+        "path": "runtime/cmd/ocmi/main.go",
+        "sha256": "6d5c6e2bb5d2238357a9e5c69675101f5ce89cd65cfdc96d88d3d16d72f30192"
+      },
+      {
+        "path": "runtime/internal/lifecycle.go",
+        "sha256": "c205f44343ef118edbc86a8484cd3eaeb69c333d736cb9d2aeaf91c5e3662687"
+      },
+      {
+        "path": "runtime/internal/portable.go",
+        "sha256": "d88bf9d99c7de77787f4a331b4061ecc83aaaa4dc8a79e024c3991ac5386bc35"
+      },
+      {
+        "path": "runtime/internal/recovery_common.go",
+        "sha256": "c85b8d21319b9542abe946afff774e8e5f09feaa9c774182a5c1ee6c01f72754"
+      },
+      {
+        "path": "runtime/internal/recovery_context_darwin.go",
+        "sha256": "ae6e204831e72d1f80f1c5cfb7922a4254baf9790d8e0f8d067cc12d5c772195"
+      },
+      {
+        "path": "runtime/internal/recovery_context_linux.go",
+        "sha256": "31f32e0d729c7b1251d431a35c0ad9918496c8fbec652aaa0c5b03317c8d4552"
+      },
+      {
+        "path": "runtime/internal/recovery_context_other.go",
+        "sha256": "3961a8683e13b820f8880d9a29292a86932284c1c997802520e2bd2bc87c3c69"
+      },
+      {
+        "path": "runtime/internal/recovery_unix.go",
+        "sha256": "b02a4f59f8e516f3ac26ea6566095f91a709caee7b2f6f3ecc53a335b315daee"
+      },
+      {
+        "path": "runtime/internal/recovery_windows.go",
+        "sha256": "566b7491cc79fd4794c72a15b916dcfaf1c2c47019aba4d180f003948617bf1f"
+      },
+      {
+        "path": "runtime/internal/runner_unix.go",
+        "sha256": "2284012e3a785bd9c3521dcd34f9a237ddf358b56b648bef521dda4741093ed4"
+      },
+      {
+        "path": "runtime/internal/runner_windows.go",
+        "sha256": "9e145d48750c23b30fc43714d88c8b6987bb1e98ebb6b281a69f359c4cdd9793"
+      },
+      {
+        "path": "runtime/internal/runner.go",
+        "sha256": "d377410823be75b13301bdb0da8cab41edeb4a6d866389fb1be49537e53751eb"
+      },
+      {
+        "path": "runtime/internal/service.go",
+        "sha256": "446db9e9c171c812434a0652217894c4121e57b819d5dd9d635fdc0bf51b75ac"
+      }
+    ],
+    "aggregateSha256": "418c224b43570b2423c9961157824b6849ecf4c3d8b962b4c5d01494cb1f8cb4"
+  }
+]
